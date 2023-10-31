@@ -15,23 +15,56 @@ struct TodoListView: View {
     private var items: [TodoItem]
 
     var body: some View {
-        VStack {
-            ForEach(items) {
-                Text($0.name)
+        
+        ZStack {
+            VStack {
+                Spacer()
+                    .frame(height: WidgetConfig.topBarHeight)
+                
+                Spacer()
+                ForEach(items) {
+                    Text($0.name)
+                }
+                
+                Spacer()
+            }
+            
+            VStack {
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    AddTodoItemButton()
+                    .frame(width: 44, height: 44)
+                    .buttonStyle(.borderless)
+                }
             }
         }
     }
 }
 
-#Preview {
-    TodoListView()
-        .modelContainer(
-            AppModelContainer.testStore.makePreviewContainer(itemCount: 1)
-        )
-        .previewContext(WidgetPreviewContext(family: .systemLarge))
-        .padding()
-        .background {
-            RoundedRectangle(cornerRadius: 16)
-                .fill(.yellow)
+// MARK: - Preview
+#if DEBUG
+struct TodoListPreviewWidget: Widget {
+    let kind: String = "UltimateWidgetTodo"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(
+            kind: kind,
+            provider: WidgetTodoProvider()
+        ) { entry in
+            TodoListView()
+                .containerBackground(for: .widget) {
+                    WidgetBackgroundView()
+                }
+                .modelContainer(AppModelContainer.shared.container)
         }
+    }
 }
+
+#Preview(as: .systemLarge) {
+    TodoListPreviewWidget()
+} timeline: {
+    TodoItemEntry(date: .now, emoji: "😀")
+}
+#endif
