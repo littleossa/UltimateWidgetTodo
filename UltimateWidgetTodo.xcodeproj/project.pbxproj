@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
-		979E23A72AF12679003559D2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* Item.swift */; };
 		979E23A92AF1267A003559D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23A82AF1267A003559D2 /* Assets.xcassets */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
 		979E23B92AF1290D003559D2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979E23B82AF1290D003559D2 /* WidgetKit.framework */; };
@@ -21,6 +20,9 @@
 		979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */; };
 		979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */; };
 		979E23D02AF12B22003559D2 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CF2AF12B22003559D2 /* TodoListView.swift */; };
+		979E23D52AF12DEA003559D2 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* AppModelContainer.swift */; };
+		979E23D62AF12FCB003559D2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* Item.swift */; };
+		979E23D72AF12FEE003559D2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskProvider.swift; sourceTree = "<group>"; };
 		979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemEntry.swift; sourceTree = "<group>"; };
 		979E23CF2AF12B22003559D2 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		979E23D42AF12DEA003559D2 /* AppModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModelContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +113,6 @@
 			children = (
 				979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */,
 				979E23A42AF12679003559D2 /* ContentView.swift */,
-				979E23A62AF12679003559D2 /* Item.swift */,
 				979E23A82AF1267A003559D2 /* Assets.xcassets */,
 				979E23AA2AF1267A003559D2 /* Preview Content */,
 			);
@@ -137,6 +139,7 @@
 		979E23BC2AF1290D003559D2 /* UltimateWidgetTodoWidget */ = {
 			isa = PBXGroup;
 			children = (
+				979E23D32AF12DB0003559D2 /* SwiftData */,
 				979E23D22AF12D56003559D2 /* Views */,
 				979E23D12AF12D1B003559D2 /* Widget */,
 				979E23C12AF1290F003559D2 /* Assets.xcassets */,
@@ -162,6 +165,15 @@
 				979E23CF2AF12B22003559D2 /* TodoListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		979E23D32AF12DB0003559D2 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				979E23D42AF12DEA003559D2 /* AppModelContainer.swift */,
+				979E23A62AF12679003559D2 /* Item.swift */,
+			);
+			path = SwiftData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
-				979E23A72AF12679003559D2 /* Item.swift in Sources */,
+				979E23D72AF12FEE003559D2 /* Item.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +291,9 @@
 				979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */,
 				979E23D02AF12B22003559D2 /* TodoListView.swift in Sources */,
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
+				979E23D62AF12FCB003559D2 /* Item.swift in Sources */,
 				979E23BE2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift in Sources */,
+				979E23D52AF12DEA003559D2 /* AppModelContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
