@@ -14,7 +14,9 @@ struct UltimateWidgetTodoWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: WidgetTodoProvider()) { entry in
             TodoListView()
-                .containerBackground(.widgetBackground, for: .widget)
+                .containerBackground(for: .widget) {
+                    WidgetBackgroundView()
+                }
                 .modelContainer(AppModelContainer.shared.container)
         }
         .configurationDisplayName("Ultimate Widget Todo")
