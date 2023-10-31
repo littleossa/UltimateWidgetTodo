@@ -10,7 +10,7 @@ class AppModelContainer {
     
     private init(isTesting: Bool) {
         let schema = Schema([
-            Item.self,
+            TodoItem.self,
         ])
         let configuration = ModelConfiguration(schema: schema,
                                                isStoredInMemoryOnly: isTesting)
@@ -26,10 +26,5 @@ class AppModelContainer {
     static let shared = AppModelContainer(isTesting: false)
     static let testStore = AppModelContainer(isTesting: true)
     
-    private let container: ModelContainer
-    
-    @MainActor
-    var context: ModelContext {
-        return container.mainContext
-    }
+    let container: ModelContainer
 }
