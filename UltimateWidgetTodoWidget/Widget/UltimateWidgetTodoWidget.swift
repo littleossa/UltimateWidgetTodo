@@ -24,6 +24,21 @@ struct UltimateWidgetTodoWidget: Widget {
     }
 }
 
+struct WidgetBackgroundView: View {
+    
+    let topBarColor = LinearGradient(colors: [.indigo, .blue, .cyan, .mint], startPoint: .topLeading, endPoint: .bottomTrailing)
+    
+    var body: some View {
+        VStack {
+            Rectangle()
+                .fill(topBarColor)
+                .frame(height: WidgetConfig.topBarHeight)
+            
+            Spacer()
+        }
+    }
+}
+
 #Preview(as: .systemLarge) {
     UltimateWidgetTodoWidget()
 } timeline: {

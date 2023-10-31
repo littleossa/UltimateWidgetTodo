@@ -22,11 +22,9 @@
 		979E23D52AF12DEA003559D2 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* AppModelContainer.swift */; };
 		979E23D62AF12FCB003559D2 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* TodoItem.swift */; };
 		979E23D92AF14281003559D2 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CF2AF12B22003559D2 /* TodoListView.swift */; };
-		979E23DA2AF14502003559D2 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CF2AF12B22003559D2 /* TodoListView.swift */; };
 		979E23DB2AF1450D003559D2 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* AppModelContainer.swift */; };
 		979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* TodoItem.swift */; };
-		979E23E02AF1A337003559D2 /* WidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23DF2AF1A337003559D2 /* WidgetBackgroundView.swift */; };
-		979E23E12AF1A343003559D2 /* WidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23DF2AF1A337003559D2 /* WidgetBackgroundView.swift */; };
+		979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +69,7 @@
 		979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemEntry.swift; sourceTree = "<group>"; };
 		979E23CF2AF12B22003559D2 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		979E23D42AF12DEA003559D2 /* AppModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModelContainer.swift; sourceTree = "<group>"; };
-		979E23DF2AF1A337003559D2 /* WidgetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundView.swift; sourceTree = "<group>"; };
+		979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +158,7 @@
 				979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */,
 				979E23BD2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift */,
 				979E23BF2AF1290D003559D2 /* UltimateWidgetTodoWidget.swift */,
-				979E23DF2AF1A337003559D2 /* WidgetBackgroundView.swift */,
+				979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -286,8 +284,6 @@
 				979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */,
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
-				979E23DA2AF14502003559D2 /* TodoListView.swift in Sources */,
-				979E23E02AF1A337003559D2 /* WidgetBackgroundView.swift in Sources */,
 				979E23DB2AF1450D003559D2 /* AppModelContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,11 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */,
 				979E23C02AF1290D003559D2 /* UltimateWidgetTodoWidget.swift in Sources */,
 				979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */,
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
 				979E23D62AF12FCB003559D2 /* TodoItem.swift in Sources */,
-				979E23E12AF1A343003559D2 /* WidgetBackgroundView.swift in Sources */,
 				979E23D92AF14281003559D2 /* TodoListView.swift in Sources */,
 				979E23BE2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift in Sources */,
 				979E23D52AF12DEA003559D2 /* AppModelContainer.swift in Sources */,
