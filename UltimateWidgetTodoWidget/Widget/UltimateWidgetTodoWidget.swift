@@ -14,7 +14,7 @@ struct UltimateWidgetTodoWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: WidgetTodoProvider()) { entry in
             TodoListView()
-                .containerBackground(.fill.tertiary, for: .widget)
+                .containerBackground(.widgetBackground, for: .widget)
                 .modelContainer(AppModelContainer.shared.container)
         }
         .configurationDisplayName("Ultimate Widget Todo")
@@ -22,7 +22,7 @@ struct UltimateWidgetTodoWidget: Widget {
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview(as: .systemLarge) {
     UltimateWidgetTodoWidget()
 } timeline: {
     TodoItemEntry(date: .now, emoji: "😀")
