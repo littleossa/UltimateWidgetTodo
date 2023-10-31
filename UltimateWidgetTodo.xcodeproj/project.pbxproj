@@ -25,6 +25,7 @@
 		979E23DB2AF1450D003559D2 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* AppModelContainer.swift */; };
 		979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* TodoItem.swift */; };
 		979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */; };
+		979E23E82AF1BBBA003559D2 /* AddTodoItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		979E23CF2AF12B22003559D2 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		979E23D42AF12DEA003559D2 /* AppModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModelContainer.swift; sourceTree = "<group>"; };
 		979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConfig.swift; sourceTree = "<group>"; };
+		979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoItemButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				979E23CF2AF12B22003559D2 /* TodoListView.swift */,
+				979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */,
 				979E23C02AF1290D003559D2 /* UltimateWidgetTodoWidget.swift in Sources */,
 				979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */,
+				979E23E82AF1BBBA003559D2 /* AddTodoItemButton.swift in Sources */,
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
 				979E23D62AF12FCB003559D2 /* TodoItem.swift in Sources */,
 				979E23D92AF14281003559D2 /* TodoListView.swift in Sources */,
