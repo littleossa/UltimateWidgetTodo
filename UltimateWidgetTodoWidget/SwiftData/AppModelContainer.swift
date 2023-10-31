@@ -49,4 +49,15 @@ class AppModelContainer {
             throw NSError(domain: "todo item not found", code: 1)
         }
     }
+    
+    func makePreviewContainer(itemCount: Int) -> ModelContainer {
+        guard itemCount > 0 else {
+            return container
+        }
+        
+        for i in 1...itemCount {
+            addItem(name: "Example Item \(i)")
+        }
+        return container
+    }
 }
