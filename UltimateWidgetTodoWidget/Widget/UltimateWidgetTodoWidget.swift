@@ -36,6 +36,7 @@ struct WidgetBackgroundView: View {
             
             Spacer()
         }
+        .background(.widgetBackground)
     }
 }
 
