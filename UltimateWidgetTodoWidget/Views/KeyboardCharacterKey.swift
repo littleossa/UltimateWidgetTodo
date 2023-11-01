@@ -1,5 +1,5 @@
 //
-//  WidgetKeyboardKey.swift
+//  KeyboardCharacterKey.swift
 //  UltimateWidgetTodo
 //
 //
