@@ -7,5 +7,5 @@
 import Foundation
 
 class WidgetConfig {
-    static let topBarHeight: CGFloat = 60
+    static let topBarHeight: CGFloat = 32
 }
