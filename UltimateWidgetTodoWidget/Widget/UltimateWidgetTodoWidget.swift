@@ -19,6 +19,7 @@ struct UltimateWidgetTodoWidget: Widget {
                 }
                 .modelContainer(AppModelContainer.shared.container)
         }
+        .supportedFamilies([.systemLarge])
         .configurationDisplayName("Ultimate Widget Todo")
         .description("This is an Ultimate Todo List App with a Widget.")
     }
