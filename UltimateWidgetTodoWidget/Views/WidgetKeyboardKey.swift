@@ -21,12 +21,12 @@ struct KeyboardCharacterKey: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(Color(uiColor: .darkGray))
-                    .frame(width: 28, height: 34)
+                    .frame(width: 26, height: 34)
                     .offset(y: 2)
                 
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.white)
-                    .frame(width: 28, height: 34)
+                    .frame(width: 26, height: 34)
             }
             .overlay {
                 Text(character)
