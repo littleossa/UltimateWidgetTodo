@@ -101,6 +101,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		975484082AF2FD8B00A09B11 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				975484052AF27A2900A09B11 /* KeyboardCharacterKey.swift */,
+				975484032AF2787500A09B11 /* WidgetKeyboard.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		975484092AF2FDBC00A09B11 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */,
+				979E23CF2AF12B22003559D2 /* TodoListView.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
 		979E23962AF12679003559D2 = {
 			isa = PBXGroup;
 			children = (
@@ -175,11 +193,9 @@
 		979E23D22AF12D56003559D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				979E23CF2AF12B22003559D2 /* TodoListView.swift */,
+				975484092AF2FDBC00A09B11 /* TodoList */,
 				975484012AF277B100A09B11 /* AddTodoItemView.swift */,
-				979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */,
-				975484032AF2787500A09B11 /* WidgetKeyboard.swift */,
-				975484052AF27A2900A09B11 /* KeyboardCharacterKey.swift */,
+				975484082AF2FD8B00A09B11 /* Keyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
