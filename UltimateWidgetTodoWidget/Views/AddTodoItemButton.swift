@@ -32,7 +32,9 @@ struct AddTodoItemButtonIntent: AppIntent {
     @Parameter(title: "tapAddButton")
     var id: String
     
-    init() {}
+    init() {
+        self.id = "tapAddButton"
+    }
     
     func perform() async throws -> some IntentResult {
         // TODO: Do something
