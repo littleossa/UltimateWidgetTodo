@@ -34,9 +34,10 @@ struct TodoListView: View {
                 
                 HStack {
                     Spacer()
+                    
                     AddTodoItemButton()
                     .frame(width: 44, height: 44)
-                    .buttonStyle(.borderless)
+                    .buttonStyle(.plain)
                 }
             }
         }
@@ -57,7 +58,7 @@ struct TodoListPreviewWidget: Widget {
                 .containerBackground(for: .widget) {
                     WidgetBackgroundView()
                 }
-                .modelContainer(AppModelContainer.shared.container)
+                .modelContainer(AppModelContainer.testStore.container)
         }
     }
 }
