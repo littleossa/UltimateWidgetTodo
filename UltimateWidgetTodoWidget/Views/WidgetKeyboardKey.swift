@@ -7,33 +7,37 @@
 import AppIntents
 import SwiftUI
 
-struct WidgetKeyboardKey: View {
+struct KeyboardCharacterKey: View {
     
-    let character: String
+    init(_ character: String) {
+        self.character = character
+    }
+    
+    private let character: String
     
     var body: some View {
         
-        Button(intent: WidgetKeyboardKeyIntent(character: character)) {
+        Button(intent: KeyboardCharacterKeyIntent(character: character)) {
             ZStack {
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: 6)
                     .fill(Color(uiColor: .darkGray))
-                    .frame(width: 50, height: 64)
+                    .frame(width: 28, height: 34)
                     .offset(y: 2)
                 
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: 6)
                     .fill(.white)
-                    .frame(width: 50, height: 64)
+                    .frame(width: 28, height: 34)
             }
             .overlay {
                 Text(character)
                     .foregroundStyle(Color(uiColor: .label))
-                    .font(.system(size: 32))
+                    .font(.system(size: 20))
             }
         }
     }
 }
 
-struct WidgetKeyboardKeyIntent: AppIntent {
+struct KeyboardCharacterKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Keyboard key"
     
@@ -48,6 +52,7 @@ struct WidgetKeyboardKeyIntent: AppIntent {
     
     func perform() async throws -> some IntentResult {
         // TODO: Do something
+        print(id)
         return .result()
     }
 }
@@ -56,6 +61,6 @@ struct WidgetKeyboardKeyIntent: AppIntent {
 #Preview {
     Color.gray
         .overlay {
-            WidgetKeyboardKey(character: "A")
+            KeyboardCharacterKey("A")
         }
 }
