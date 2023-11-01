@@ -18,10 +18,9 @@ struct WidgetTodoProvider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<TodoItemEntry>) -> ()) {
         
-        // Entries is empty because TimeLine does not use
-        let entries: [TodoItemEntry] = []
+        // Entries are not used but it must be set for rendering the widget
+        let entries: [TodoItemEntry] = [TodoItemEntry(date: Date(), emoji: "😀")]
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
 }
-
