@@ -33,6 +33,7 @@
 		975484322AF45E6D00A09B11 /* UserDefaultsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */; };
 		975484392AF4614700A09B11 /* KeyboardInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputManager.swift */; };
 		9754843A2AF4614700A09B11 /* KeyboardInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputManager.swift */; };
+		9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -100,6 +101,7 @@
 		9754842F2AF45E6D00A09B11 /* UltimateWidgetTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltimateWidgetTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStoreTests.swift; sourceTree = "<group>"; };
 		975484382AF4614700A09B11 /* KeyboardInputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputManager.swift; sourceTree = "<group>"; };
+		9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOverlayBackgroundView.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,14 @@
 			path = UltimateWidgetTodoTests;
 			sourceTree = "<group>";
 		};
+		9754843B2AF4666400A09B11 /* WidgetBackground */ = {
+			isa = PBXGroup;
+			children = (
+				9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */,
+			);
+			path = WidgetBackground;
+			sourceTree = "<group>";
+		};
 		979E23962AF12679003559D2 = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +288,7 @@
 		979E23D12AF12D1B003559D2 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				9754843B2AF4666400A09B11 /* WidgetBackground */,
 				979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */,
 				979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */,
 				979E23BD2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift */,
@@ -489,6 +500,7 @@
 				975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */,
 				979E23BE2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift in Sources */,
 				979E23D52AF12DEA003559D2 /* AppModelContainer.swift in Sources */,
+				9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
