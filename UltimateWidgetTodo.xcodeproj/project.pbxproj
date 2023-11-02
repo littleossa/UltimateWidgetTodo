@@ -13,6 +13,8 @@
 		975484072AF27A2900A09B11 /* KeyboardCharacterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardCharacterKey.swift */; };
 		9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */; };
 		9754840D2AF43D3A00A09B11 /* CapsLockKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */; };
+		9754840F2AF445F100A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
+		975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23A92AF1267A003559D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23A82AF1267A003559D2 /* Assets.xcassets */; };
@@ -63,6 +65,7 @@
 		975484032AF2787500A09B11 /* WidgetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKeyboard.swift; sourceTree = "<group>"; };
 		975484052AF27A2900A09B11 /* KeyboardCharacterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCharacterKey.swift; sourceTree = "<group>"; };
 		9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsLockKey.swift; sourceTree = "<group>"; };
+		9754840E2AF445F100A09B11 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +126,14 @@
 			path = TodoList;
 			sourceTree = "<group>";
 		};
+		975484112AF445F900A09B11 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9754840E2AF445F100A09B11 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		979E23962AF12679003559D2 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +156,7 @@
 		979E23A12AF12679003559D2 /* UltimateWidgetTodo */ = {
 			isa = PBXGroup;
 			children = (
+				975484112AF445F900A09B11 /* Extensions */,
 				979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */,
 				979E23A42AF12679003559D2 /* ContentView.swift */,
 				979E23A82AF1267A003559D2 /* Assets.xcassets */,
@@ -318,6 +330,7 @@
 				9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */,
 				979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */,
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
+				9754840F2AF445F100A09B11 /* Color+Extensions.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
 				979E23DB2AF1450D003559D2 /* AppModelContainer.swift in Sources */,
 			);
@@ -338,6 +351,7 @@
 				979E23D62AF12FCB003559D2 /* TodoItem.swift in Sources */,
 				979E23D92AF14281003559D2 /* TodoListView.swift in Sources */,
 				975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */,
+				975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */,
 				979E23BE2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift in Sources */,
 				979E23D52AF12DEA003559D2 /* AppModelContainer.swift in Sources */,
 			);

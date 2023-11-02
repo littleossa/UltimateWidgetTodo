@@ -30,7 +30,7 @@ struct KeyboardCharacterKey: View {
             }
             .overlay {
                 Text(character)
-                    .foregroundStyle(Color(uiColor: .label))
+                    .foregroundStyle(Color.label)
                     .font(.system(size: 20))
             }
         }
