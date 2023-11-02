@@ -15,9 +15,9 @@
 		9754840D2AF43D3A00A09B11 /* CapsLockKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */; };
 		9754840F2AF445F100A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
 		975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
+		975484122AF4494300A09B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23C12AF1290F003559D2 /* Assets.xcassets */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
-		979E23A92AF1267A003559D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23A82AF1267A003559D2 /* Assets.xcassets */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
 		979E23B92AF1290D003559D2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979E23B82AF1290D003559D2 /* WidgetKit.framework */; };
 		979E23BB2AF1290D003559D2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979E23BA2AF1290D003559D2 /* SwiftUI.framework */; };
@@ -70,7 +70,6 @@
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		979E23A62AF12679003559D2 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		979E23A82AF1267A003559D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		979E23B62AF1290C003559D2 /* UltimateWidgetTodoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UltimateWidgetTodoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23B82AF1290D003559D2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -159,7 +158,6 @@
 				975484112AF445F900A09B11 /* Extensions */,
 				979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */,
 				979E23A42AF12679003559D2 /* ContentView.swift */,
-				979E23A82AF1267A003559D2 /* Assets.xcassets */,
 				979E23AA2AF1267A003559D2 /* Preview Content */,
 			);
 			path = UltimateWidgetTodo;
@@ -307,7 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */,
-				979E23A92AF1267A003559D2 /* Assets.xcassets in Resources */,
+				975484122AF4494300A09B11 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
