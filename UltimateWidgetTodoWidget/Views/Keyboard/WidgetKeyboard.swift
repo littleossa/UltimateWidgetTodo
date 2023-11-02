@@ -60,7 +60,7 @@ struct WidgetKeyboard: View {
                 NumberModeKey()
                 EmojiModeKey()
                 SpaceKey()
-                Spacer()
+                DoneKey(inputText: "a")
             }
         }
         .background(.keyboardBackground)
