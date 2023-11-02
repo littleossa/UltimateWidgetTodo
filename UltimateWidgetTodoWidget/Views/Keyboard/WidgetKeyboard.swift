@@ -55,10 +55,11 @@ struct WidgetKeyboard: View {
                 }
             }
             
-            HStack(spacing: 6) {
+            HStack(spacing: 4) {
                 
                 NumberModeKey()
                 EmojiModeKey()
+                SpaceKey()
                 Spacer()
             }
         }
