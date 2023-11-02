@@ -58,6 +58,7 @@ struct WidgetKeyboard: View {
             HStack(spacing: 6) {
                 
                 NumberModeKey()
+                EmojiModeKey()
                 Spacer()
             }
         }
