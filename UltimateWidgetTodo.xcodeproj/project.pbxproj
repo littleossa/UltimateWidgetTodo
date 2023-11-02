@@ -30,6 +30,7 @@
 		975484272AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484252AF45A0B00A09B11 /* UserDefaultsStore.swift */; };
 		975484292AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484282AF45D4400A09B11 /* KeyboardInputMode.swift */; };
 		9754842A2AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484282AF45D4400A09B11 /* KeyboardInputMode.swift */; };
+		975484322AF45E6D00A09B11 /* UserDefaultsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -51,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		975484332AF45E6D00A09B11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 979E23972AF12679003559D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 979E239E2AF12679003559D2;
+			remoteInfo = UltimateWidgetTodo;
+		};
 		979E23C42AF1290F003559D2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 979E23972AF12679003559D2 /* Project object */;
@@ -87,6 +95,8 @@
 		9754841F2AF455DE00A09B11 /* DoneKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneKey.swift; sourceTree = "<group>"; };
 		975484252AF45A0B00A09B11 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 		975484282AF45D4400A09B11 /* KeyboardInputMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputMode.swift; sourceTree = "<group>"; };
+		9754842F2AF45E6D00A09B11 /* UltimateWidgetTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltimateWidgetTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStoreTests.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +118,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9754842C2AF45E6D00A09B11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		979E239C2AF12679003559D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,11 +201,20 @@
 			path = UserDefaultsStore;
 			sourceTree = "<group>";
 		};
+		975484302AF45E6D00A09B11 /* UltimateWidgetTodoTests */ = {
+			isa = PBXGroup;
+			children = (
+				975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */,
+			);
+			path = UltimateWidgetTodoTests;
+			sourceTree = "<group>";
+		};
 		979E23962AF12679003559D2 = {
 			isa = PBXGroup;
 			children = (
 				979E23A12AF12679003559D2 /* UltimateWidgetTodo */,
 				979E23BC2AF1290D003559D2 /* UltimateWidgetTodoWidget */,
+				975484302AF45E6D00A09B11 /* UltimateWidgetTodoTests */,
 				979E23B72AF1290D003559D2 /* Frameworks */,
 				979E23A02AF12679003559D2 /* Products */,
 			);
@@ -199,6 +225,7 @@
 			children = (
 				979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */,
 				979E23B62AF1290C003559D2 /* UltimateWidgetTodoWidgetExtension.appex */,
+				9754842F2AF45E6D00A09B11 /* UltimateWidgetTodoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,6 +305,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9754842E2AF45E6D00A09B11 /* UltimateWidgetTodoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 975484352AF45E6D00A09B11 /* Build configuration list for PBXNativeTarget "UltimateWidgetTodoTests" */;
+			buildPhases = (
+				9754842B2AF45E6D00A09B11 /* Sources */,
+				9754842C2AF45E6D00A09B11 /* Frameworks */,
+				9754842D2AF45E6D00A09B11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				975484342AF45E6D00A09B11 /* PBXTargetDependency */,
+			);
+			name = UltimateWidgetTodoTests;
+			productName = UltimateWidgetTodoTests;
+			productReference = 9754842F2AF45E6D00A09B11 /* UltimateWidgetTodoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		979E239E2AF12679003559D2 /* UltimateWidgetTodo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 979E23AF2AF1267A003559D2 /* Build configuration list for PBXNativeTarget "UltimateWidgetTodo" */;
@@ -324,6 +369,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					9754842E2AF45E6D00A09B11 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 979E239E2AF12679003559D2;
+					};
 					979E239E2AF12679003559D2 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -347,11 +396,19 @@
 			targets = (
 				979E239E2AF12679003559D2 /* UltimateWidgetTodo */,
 				979E23B52AF1290C003559D2 /* UltimateWidgetTodoWidgetExtension */,
+				9754842E2AF45E6D00A09B11 /* UltimateWidgetTodoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9754842D2AF45E6D00A09B11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		979E239D2AF12679003559D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +429,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9754842B2AF45E6D00A09B11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				975484322AF45E6D00A09B11 /* UserDefaultsStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		979E239B2AF12679003559D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,6 +489,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		975484342AF45E6D00A09B11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 979E239E2AF12679003559D2 /* UltimateWidgetTodo */;
+			targetProxy = 975484332AF45E6D00A09B11 /* PBXContainerItemProxy */;
+		};
 		979E23C52AF1290F003559D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 979E23B52AF1290C003559D2 /* UltimateWidgetTodoWidgetExtension */;
@@ -432,6 +502,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		975484362AF45E6D00A09B11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V4975L824;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.lilossa.UltimateWidgetTodoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UltimateWidgetTodo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UltimateWidgetTodo";
+			};
+			name = Debug;
+		};
+		975484372AF45E6D00A09B11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V4975L824;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.lilossa.UltimateWidgetTodoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UltimateWidgetTodo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UltimateWidgetTodo";
+			};
+			name = Release;
+		};
 		979E23AD2AF1267A003559D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -668,6 +774,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		975484352AF45E6D00A09B11 /* Build configuration list for PBXNativeTarget "UltimateWidgetTodoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				975484362AF45E6D00A09B11 /* Debug */,
+				975484372AF45E6D00A09B11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		979E239A2AF12679003559D2 /* Build configuration list for PBXProject "UltimateWidgetTodo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
