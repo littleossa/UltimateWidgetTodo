@@ -18,7 +18,7 @@ class UserDefaultsStore {
     
     private let userDefaults: UserDefaults
     
-    enum Key: String {
+    enum Key: String, CaseIterable {
         case inputText
         case isCapsLocked
         case isShownKeyboard
@@ -62,6 +62,12 @@ class UserDefaultsStore {
         }
         set {
             userDefaults.set(newValue.rawValue, forKey: Key.keyboardInputMode.rawValue)
+        }
+    }
+    
+    func removeAll() {
+        Key.allCases.forEach {
+            userDefaults.removeObject(forKey: $0.rawValue)
         }
     }
 }
