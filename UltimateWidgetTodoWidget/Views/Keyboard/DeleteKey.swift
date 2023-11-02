@@ -23,12 +23,9 @@ struct DeleteKey: View {
                     .frame(width: 36, height: 34)
             }
             .overlay {
-                
-                ZStack {
-                    Image(systemName: "delete.backward")
-                        .font(.system(size: 20))
-                        .foregroundStyle(Color.label)
-                }
+                Image(systemName: "delete.backward")
+                    .font(.system(size: 20))
+                    .foregroundStyle(Color.label)
             }
         }
     }

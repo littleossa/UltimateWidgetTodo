@@ -25,15 +25,12 @@ struct CapsLockKey: View {
                     .frame(width: 36, height: 34)
             }
             .overlay {
-                
-                ZStack {
-                    Image(systemName: isCapsLocked ? "arrowshape.left.fill": "arrowshape.left")
-                        .resizable()
-                        .frame(width: 24)
-                        .rotationEffect(.degrees(90))
-                        .scaleEffect(0.6)
-                        .foregroundStyle(isCapsLocked ? .black : Color.label)
-                }
+                Image(systemName: isCapsLocked ? "arrowshape.left.fill": "arrowshape.left")
+                    .resizable()
+                    .frame(width: 24)
+                    .rotationEffect(.degrees(90))
+                    .scaleEffect(0.6)
+                    .foregroundStyle(isCapsLocked ? .black : Color.label)
             }
         }
     }

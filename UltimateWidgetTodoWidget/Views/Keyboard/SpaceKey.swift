@@ -23,7 +23,6 @@ struct SpaceKey: View {
                     .frame(width: 154, height: 34)
             }
             .overlay {
-                
                 Text("space")
                     .font(.system(size: 14))
                     .foregroundStyle(Color.label)

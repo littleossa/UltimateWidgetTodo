@@ -25,13 +25,10 @@ struct DoneKey: View {
                     .frame(width: 74, height: 34)
             }
             .overlay {
-                
-                ZStack {
-                    Text("done")
-                        .font(.system(size: 14))
-                        .bold()
-                        .foregroundStyle(inputText.isEmpty ? .gray : .white)
-                }
+                Text("done")
+                    .font(.system(size: 14))
+                    .bold()
+                    .foregroundStyle(inputText.isEmpty ? .gray : .white)
             }
         }
     }

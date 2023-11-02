@@ -29,12 +29,9 @@ struct EmojiModeKey: View {
                     .frame(width: 36, height: 34)
             }
             .overlay {
-                
-                ZStack {
-                    Image(systemName: isLightMode ? "face.smiling" : "face.smiling.fill")
-                        .font(.system(size: 14))
-                        .foregroundStyle(Color.label)
-                }
+                Image(systemName: isLightMode ? "face.smiling" : "face.smiling.fill")
+                    .font(.system(size: 14))
+                    .foregroundStyle(Color.label)
             }
         }
     }

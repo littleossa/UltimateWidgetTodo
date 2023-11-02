@@ -23,12 +23,9 @@ struct NumberModeKey: View {
                     .frame(width: 36, height: 34)
             }
             .overlay {
-                
-                ZStack {
-                    Image(systemName: "textformat.123")
-                        .font(.system(size: 14))
-                        .foregroundStyle(Color.label)
-                }
+                Image(systemName: "textformat.123")
+                    .font(.system(size: 14))
+                    .foregroundStyle(Color.label)
             }
         }
     }
