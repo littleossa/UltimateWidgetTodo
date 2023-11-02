@@ -9,7 +9,7 @@ import WidgetKit
 
 struct WidgetKeyboard: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 10) {
             HStack(spacing: 6) {
                 KeyboardCharacterKey("Q")
                 KeyboardCharacterKey("W")
@@ -35,6 +35,12 @@ struct WidgetKeyboard: View {
             }
             
             HStack(spacing: 6) {
+                
+                HStack {
+                    CapsLockKey(isCapsLocked: true)
+                    Spacer().frame(width: 6)
+                }
+                
                 KeyboardCharacterKey("Z")
                 KeyboardCharacterKey("X")
                 KeyboardCharacterKey("C")
@@ -42,6 +48,11 @@ struct WidgetKeyboard: View {
                 KeyboardCharacterKey("B")
                 KeyboardCharacterKey("N")
                 KeyboardCharacterKey("M")
+                
+                HStack {
+                    Spacer().frame(width: 6)
+                    CapsLockKey(isCapsLocked: true)
+                }
             }
         }
         .background(.gray)

@@ -11,6 +11,8 @@
 		975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484032AF2787500A09B11 /* WidgetKeyboard.swift */; };
 		975484062AF27A2900A09B11 /* KeyboardCharacterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardCharacterKey.swift */; };
 		975484072AF27A2900A09B11 /* KeyboardCharacterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardCharacterKey.swift */; };
+		9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */; };
+		9754840D2AF43D3A00A09B11 /* CapsLockKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23A92AF1267A003559D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23A82AF1267A003559D2 /* Assets.xcassets */; };
@@ -60,6 +62,7 @@
 		975484012AF277B100A09B11 /* AddTodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoItemView.swift; sourceTree = "<group>"; };
 		975484032AF2787500A09B11 /* WidgetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKeyboard.swift; sourceTree = "<group>"; };
 		975484052AF27A2900A09B11 /* KeyboardCharacterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCharacterKey.swift; sourceTree = "<group>"; };
+		9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsLockKey.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				975484052AF27A2900A09B11 /* KeyboardCharacterKey.swift */,
+				9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */,
 				975484032AF2787500A09B11 /* WidgetKeyboard.swift */,
 			);
 			path = Keyboard;
@@ -311,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				975484062AF27A2900A09B11 /* KeyboardCharacterKey.swift in Sources */,
+				9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */,
 				979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */,
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
@@ -322,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9754840D2AF43D3A00A09B11 /* CapsLockKey.swift in Sources */,
 				979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */,
 				979E23C02AF1290D003559D2 /* UltimateWidgetTodoWidget.swift in Sources */,
 				979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */,
