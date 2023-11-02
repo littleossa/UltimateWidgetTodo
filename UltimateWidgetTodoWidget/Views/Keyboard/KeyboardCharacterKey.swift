@@ -20,12 +20,12 @@ struct KeyboardCharacterKey: View {
         Button(intent: KeyboardCharacterKeyIntent(character: character)) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(Color(uiColor: .darkGray))
+                    .fill(.keyShadow)
                     .frame(width: 26, height: 34)
-                    .offset(y: 2)
+                    .offset(y: 1)
                 
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(.white)
+                    .fill(.keyWhite)
                     .frame(width: 26, height: 34)
             }
             .overlay {

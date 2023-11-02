@@ -16,22 +16,23 @@ struct CapsLockKey: View {
         Button(intent: CapsLockKeyIntent(isCapsLocked: isCapsLocked)) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(Color(uiColor: .darkGray))
+                    .fill(.keyShadow)
                     .frame(width: 36, height: 34)
-                    .offset(y: 2)
+                    .offset(y: 1)
                 
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(.white)
+                    .fill(isCapsLocked ? .staticKeyWhite : .keyDarkGray)
                     .frame(width: 36, height: 34)
             }
             .overlay {
                 
                 ZStack {
-                    Image(systemName: "arrowshape.left.fill")
+                    Image(systemName: isCapsLocked ? "arrowshape.left.fill": "arrowshape.left")
                         .resizable()
                         .frame(width: 24)
                         .rotationEffect(.degrees(90))
                         .scaleEffect(0.6)
+                        .foregroundStyle(isCapsLocked ? .black : Color.label)
                 }
             }
         }

@@ -55,7 +55,7 @@ struct WidgetKeyboard: View {
                 }
             }
         }
-        .background(.gray)
+        .background(.keyboardBackground)
         .buttonStyle(.plain)
     }
 }
