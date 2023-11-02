@@ -54,6 +54,12 @@ struct WidgetKeyboard: View {
                     DeleteKey()
                 }
             }
+            
+            HStack(spacing: 6) {
+                
+                NumberModeKey()
+                Spacer()
+            }
         }
         .background(.keyboardBackground)
         .buttonStyle(.plain)
