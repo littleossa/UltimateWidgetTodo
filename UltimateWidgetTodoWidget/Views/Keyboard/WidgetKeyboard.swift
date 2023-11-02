@@ -51,7 +51,7 @@ struct WidgetKeyboard: View {
                 
                 HStack {
                     Spacer().frame(width: 6)
-                    CapsLockKey(isCapsLocked: true)
+                    DeleteKey()
                 }
             }
         }
