@@ -19,12 +19,12 @@ final class UserDefaultsStoreTests: XCTestCase {
         
         store.inputText = "Input"
         store.isCapsLocked = true
-        store.isShownKeyboard = true
+        store.addItemViewIsPresented = true
         store.keyboardInputMode = .emoji
         store.screenType = .addItem
         XCTAssertEqual(store.inputText, "Input")
         XCTAssertTrue(store.isCapsLocked)
-        XCTAssertTrue(store.isShownKeyboard)
+        XCTAssertTrue(store.addItemViewIsPresented)
         XCTAssertEqual(store.keyboardInputMode, .emoji)
         XCTAssertEqual(store.screenType, .addItem)
         
@@ -32,7 +32,7 @@ final class UserDefaultsStoreTests: XCTestCase {
         
         XCTAssertEqual(store.inputText, "")
         XCTAssertFalse(store.isCapsLocked)
-        XCTAssertFalse(store.isShownKeyboard)
+        XCTAssertFalse(store.addItemViewIsPresented)
         XCTAssertEqual(store.keyboardInputMode, .alphabet)
         XCTAssertEqual(store.screenType, .todoList)
     }
@@ -54,11 +54,11 @@ final class UserDefaultsStoreTests: XCTestCase {
         XCTAssertFalse(store.isCapsLocked)
     }
     
-    func test_isShownKeyboard() {
-        store.isShownKeyboard = true
-        XCTAssertTrue(store.isShownKeyboard)
-        store.isShownKeyboard = false
-        XCTAssertFalse(store.isShownKeyboard)
+    func test_addItemViewIsPresented() {
+        store.addItemViewIsPresented = true
+        XCTAssertTrue(store.addItemViewIsPresented)
+        store.addItemViewIsPresented = false
+        XCTAssertFalse(store.addItemViewIsPresented)
     }
     
     func test_keyboardInputMode() {

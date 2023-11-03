@@ -38,7 +38,7 @@ struct CloseButtonIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        UserDefaultsStore.shared.isShownKeyboard = false
+//        UserDefaultsStore.shared.isShownKeyboard = false
         return .result()
     }
 }

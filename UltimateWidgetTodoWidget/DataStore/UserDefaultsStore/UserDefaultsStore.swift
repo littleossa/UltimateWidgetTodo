@@ -21,7 +21,7 @@ class UserDefaultsStore {
     enum Key: String, CaseIterable {
         case inputText
         case isCapsLocked
-        case isShownKeyboard
+        case addItemViewIsPresented
         case keyboardInputMode
         case screenType
     }
@@ -44,12 +44,12 @@ class UserDefaultsStore {
         }
     }
     
-    var isShownKeyboard: Bool {
+    var addItemViewIsPresented: Bool {
         get {
-            return userDefaults.bool(forKey: Key.isShownKeyboard.rawValue)
+            return userDefaults.bool(forKey: Key.addItemViewIsPresented.rawValue)
         }
         set {
-            userDefaults.set(newValue, forKey: Key.isShownKeyboard.rawValue)
+            userDefaults.set(newValue, forKey: Key.addItemViewIsPresented.rawValue)
         }
     }
     
