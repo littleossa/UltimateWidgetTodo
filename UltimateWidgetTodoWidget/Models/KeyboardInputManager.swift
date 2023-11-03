@@ -31,6 +31,10 @@ class KeyboardInputManager {
         return userDefaultsStore.isCapsLocked
     }
     
+    func clearInputText() {
+        return userDefaultsStore.inputText = ""
+    }
+    
     func input(_ character: String) {
         userDefaultsStore.inputText += character        
     }
