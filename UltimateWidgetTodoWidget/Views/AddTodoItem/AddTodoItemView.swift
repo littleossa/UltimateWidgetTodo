@@ -22,7 +22,7 @@ struct AddTodoItemView: View {
             
             Spacer()
             
-            InputForm(text: "")
+            InputForm(text: KeyboardInputManager.shared.inputText)
                         
             Spacer().frame(height: 28)
                         

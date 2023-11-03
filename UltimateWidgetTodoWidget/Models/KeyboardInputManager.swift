@@ -23,8 +23,12 @@ class KeyboardInputManager {
     
     private let userDefaultsStore: UserDefaultsStore
     
+    var inputText: String {
+        return userDefaultsStore.inputText
+    }
+    
     var isCapsLocked: Bool {
-        userDefaultsStore.isCapsLocked
+        return userDefaultsStore.isCapsLocked
     }
     
     func input(_ character: String) {
