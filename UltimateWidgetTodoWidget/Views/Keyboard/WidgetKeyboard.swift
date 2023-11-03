@@ -16,27 +16,15 @@ struct WidgetKeyboard: View {
     var body: some View {
         VStack(spacing: 10) {
             HStack(spacing: 6) {
-                KeyboardCharacterKey("Q", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("W", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("E", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("R", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("T", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("Y", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("U", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("I", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("O", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("P", isCapsLocked: isCapsLocked)
+                ForEach(KeyboardInputManager.topRowLetters, id: \.self) {
+                    KeyboardCharacterKey($0, isCapsLocked: isCapsLocked)
+                }
             }
+            
             HStack(spacing: 6) {
-                KeyboardCharacterKey("A", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("S", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("D", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("F", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("G", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("H", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("J", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("K", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("L", isCapsLocked: isCapsLocked)
+                ForEach(KeyboardInputManager.centerRowLetters, id: \.self) {
+                    KeyboardCharacterKey($0, isCapsLocked: isCapsLocked)
+                }
             }
             
             HStack(spacing: 6) {
@@ -46,13 +34,9 @@ struct WidgetKeyboard: View {
                     Spacer().frame(width: 6)
                 }
                 
-                KeyboardCharacterKey("Z", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("X", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("C", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("V", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("B", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("N", isCapsLocked: isCapsLocked)
-                KeyboardCharacterKey("M", isCapsLocked: isCapsLocked)
+                ForEach(KeyboardInputManager.bottomRowLetters, id: \.self) {
+                    KeyboardCharacterKey($0, isCapsLocked: isCapsLocked)
+                }
                 
                 HStack {
                     Spacer().frame(width: 6)

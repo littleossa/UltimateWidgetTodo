@@ -6,6 +6,12 @@
 
 import Foundation
 
+extension KeyboardInputManager {
+    static let topRowLetters = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
+    static let centerRowLetters = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
+    static let bottomRowLetters = ["Z", "X", "C", "V", "B", "N", "M"]
+}
+
 class KeyboardInputManager {
     
     static let shared = KeyboardInputManager(store: .shared)
