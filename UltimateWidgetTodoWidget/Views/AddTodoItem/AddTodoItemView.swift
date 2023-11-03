@@ -14,7 +14,7 @@ struct AddTodoItemView: View {
             Spacer().frame(height: WidgetConfig.colorHeaderHeight - 16)
             
             HStack {
-                BackButton()
+                CloseButton()
                 .offset(x: -8)
                 
                 Spacer()

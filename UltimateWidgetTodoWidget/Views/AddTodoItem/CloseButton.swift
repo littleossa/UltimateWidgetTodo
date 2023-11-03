@@ -7,12 +7,12 @@
 import AppIntents
 import SwiftUI
 
-struct BackButton: View {
+struct CloseButton: View {
     
     var body: some View {
         
-        Button(intent: BackButtonIntent()) {
-            Image(systemName: "chevron.left")
+        Button(intent: CloseButtonIntent()) {
+            Image(systemName: "xmark")
                 .font(.system(size: 24))
         }
         .foregroundStyle(.blue)
@@ -23,18 +23,18 @@ struct BackButton: View {
 }
 
 #Preview {
-    BackButton()
+    CloseButton()
 }
 
-struct BackButtonIntent: AppIntent {
+struct CloseButtonIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Back Button"
+    static var title: LocalizedStringResource = "Close Button"
     
-    @Parameter(title: "Back Button")
+    @Parameter(title: "Close Button")
     var id: String
     
     init() {
-        id = "backButton"
+        id = "closeButton"
     }
     
     func perform() async throws -> some IntentResult {
