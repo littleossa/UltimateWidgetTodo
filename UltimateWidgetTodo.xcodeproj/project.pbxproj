@@ -34,6 +34,8 @@
 		975484392AF4614700A09B11 /* KeyboardInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputManager.swift */; };
 		9754843A2AF4614700A09B11 /* KeyboardInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputManager.swift */; };
 		9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */; };
+		975484402AF4D32200A09B11 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843F2AF4D32200A09B11 /* InputForm.swift */; };
+		975484412AF4D34200A09B11 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843F2AF4D32200A09B11 /* InputForm.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -102,6 +104,7 @@
 		975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStoreTests.swift; sourceTree = "<group>"; };
 		975484382AF4614700A09B11 /* KeyboardInputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputManager.swift; sourceTree = "<group>"; };
 		9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOverlayBackgroundView.swift; sourceTree = "<group>"; };
+		9754843F2AF4D32200A09B11 /* InputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputForm.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -223,6 +226,15 @@
 			path = WidgetBackground;
 			sourceTree = "<group>";
 		};
+		9754843E2AF4D30800A09B11 /* AddTodoItem */ = {
+			isa = PBXGroup;
+			children = (
+				975484012AF277B100A09B11 /* AddTodoItemView.swift */,
+				9754843F2AF4D32200A09B11 /* InputForm.swift */,
+			);
+			path = AddTodoItem;
+			sourceTree = "<group>";
+		};
 		979E23962AF12679003559D2 = {
 			isa = PBXGroup;
 			children = (
@@ -302,7 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				975484092AF2FDBC00A09B11 /* TodoList */,
-				975484012AF277B100A09B11 /* AddTodoItemView.swift */,
+				9754843E2AF4D30800A09B11 /* AddTodoItem */,
 				975484082AF2FD8B00A09B11 /* Keyboard */,
 			);
 			path = Views;
@@ -470,6 +482,7 @@
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
 				975484142AF44B6100A09B11 /* DeleteKey.swift in Sources */,
 				979E23DB2AF1450D003559D2 /* AppModelContainer.swift in Sources */,
+				975484412AF4D34200A09B11 /* InputForm.swift in Sources */,
 				975484202AF455DE00A09B11 /* DoneKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +497,7 @@
 				9754843A2AF4614700A09B11 /* KeyboardInputManager.swift in Sources */,
 				979E23C02AF1290D003559D2 /* UltimateWidgetTodoWidget.swift in Sources */,
 				979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */,
+				975484402AF4D32200A09B11 /* InputForm.swift in Sources */,
 				9754841B2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
 				979E23E82AF1BBBA003559D2 /* AddTodoItemButton.swift in Sources */,
 				975484272AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,

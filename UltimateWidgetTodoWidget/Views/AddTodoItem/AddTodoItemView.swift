@@ -28,22 +28,7 @@ struct AddTodoItemView: View {
             
             Spacer()
             
-            RoundedRectangle(cornerRadius: 6)
-                .stroke(lineWidth: 1)
-                .foregroundStyle(.keyboardBackground)
-                .frame(width: 280, height: 40)
-                .overlay {
-                    
-                    HStack {
-                        Text("Add your task here..")
-                            .multilineTextAlignment(.leading)
-                            .foregroundStyle(.placeholder)
-                            .padding(8)
-                        
-                        Spacer().frame(minWidth: 8)
-                    }
-                    .frame(width: 280)
-                }
+            InputForm(text: "")
                         
             Spacer().frame(height: 28)
                         
@@ -77,3 +62,4 @@ struct AddTodoItemPreviewWidget: Widget {
     TodoItemEntry(date: .now, emoji: "😀")
 }
 #endif
+
