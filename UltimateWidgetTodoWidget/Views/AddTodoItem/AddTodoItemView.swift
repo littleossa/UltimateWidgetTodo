@@ -16,7 +16,7 @@ struct AddTodoItemView: View {
             HStack {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Image(systemName: "chevron.left")
-                        .font(.system(size: 28))
+                        .font(.system(size: 24))
                 })
                 .foregroundStyle(.blue)
                 .frame(width: WidgetConfig.topBarHeight,
