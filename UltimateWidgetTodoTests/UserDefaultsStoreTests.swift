@@ -21,10 +21,12 @@ final class UserDefaultsStoreTests: XCTestCase {
         store.isCapsLocked = true
         store.isShownKeyboard = true
         store.keyboardInputMode = .emoji
+        store.screenType = .addItem
         XCTAssertEqual(store.inputText, "Input")
         XCTAssertTrue(store.isCapsLocked)
         XCTAssertTrue(store.isShownKeyboard)
         XCTAssertEqual(store.keyboardInputMode, .emoji)
+        XCTAssertEqual(store.screenType, .addItem)
         
         store.removeAll()
         
@@ -32,6 +34,7 @@ final class UserDefaultsStoreTests: XCTestCase {
         XCTAssertFalse(store.isCapsLocked)
         XCTAssertFalse(store.isShownKeyboard)
         XCTAssertEqual(store.keyboardInputMode, .alphabet)
+        XCTAssertEqual(store.screenType, .todoList)
     }
     
     func test_inputText() {
@@ -65,5 +68,14 @@ final class UserDefaultsStoreTests: XCTestCase {
         XCTAssertEqual(store.keyboardInputMode, .number)
         store.keyboardInputMode = .alphabet
         XCTAssertEqual(store.keyboardInputMode, .alphabet)
+    }
+    
+    func test_screenType() {
+        store.screenType = .addItem
+        XCTAssertEqual(store.screenType, .addItem)
+        store.screenType = .editItem
+        XCTAssertEqual(store.screenType, .editItem)
+        store.screenType = .todoList
+        XCTAssertEqual(store.screenType, .todoList)
     }
 }
