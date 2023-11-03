@@ -14,7 +14,7 @@ struct KeyboardOverlayBackgroundView: View {
         VStack {
             Rectangle()
                 .fill(topBarColor)
-                .frame(height: WidgetConfig.topBarHeight)
+                .frame(height: WidgetConfig.colorHeaderHeight)
             
             Spacer().frame(height: 40)
             

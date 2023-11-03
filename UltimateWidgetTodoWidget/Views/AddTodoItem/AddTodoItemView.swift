@@ -11,7 +11,7 @@ struct AddTodoItemView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Spacer().frame(height: WidgetConfig.topBarHeight - 16)
+            Spacer().frame(height: WidgetConfig.colorHeaderHeight - 16)
             
             HStack {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {

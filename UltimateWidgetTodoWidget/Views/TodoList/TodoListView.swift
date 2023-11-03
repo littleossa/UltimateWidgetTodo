@@ -19,7 +19,7 @@ struct TodoListView: View {
         ZStack {
             VStack {
                 Spacer()
-                    .frame(height: WidgetConfig.topBarHeight)
+                    .frame(height: WidgetConfig.colorHeaderHeight)
                 
                 Spacer()
                 ForEach(items) {
