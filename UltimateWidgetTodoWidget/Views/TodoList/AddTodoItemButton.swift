@@ -37,7 +37,7 @@ struct AddTodoItemButtonIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-//        UserDefaultsStore.shared.isShownKeyboard = true
+        ScreenManager.shared.switchToScreen(.addItem)
         return .result()
     }
 }
