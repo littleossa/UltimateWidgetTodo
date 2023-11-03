@@ -19,7 +19,8 @@ struct AddTodoItemView: View {
                         .font(.system(size: 28))
                 })
                 .foregroundStyle(.blue)
-                .frame(width: 40, height: 40)
+                .frame(width: WidgetConfig.topBarHeight,
+                       height: WidgetConfig.topBarHeight)
                 .buttonStyle(.plain)
                 .offset(x: -8)
                 

@@ -16,7 +16,7 @@ struct KeyboardOverlayBackgroundView: View {
                 .fill(topBarColor)
                 .frame(height: WidgetConfig.colorHeaderHeight)
             
-            Spacer().frame(height: 40)
+            Spacer().frame(height: WidgetConfig.topBarHeight)
             
             Divider()
             
