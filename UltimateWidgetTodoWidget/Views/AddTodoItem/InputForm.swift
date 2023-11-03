@@ -26,7 +26,7 @@ struct InputForm: View {
                     }
                     
                     Text(text.isEmpty ? placeholderText : text)
-                        .multilineTextAlignment(.leading)
+                        .font(.system(size: 16))
                         .foregroundStyle(text.isEmpty ? .placeholderGray : .label)
                         .padding(text.isEmpty ? 0 : 8)
                         .offset(x: text.isEmpty ? -6 : 0)
@@ -36,7 +36,7 @@ struct InputForm: View {
                             .offset(x: -6)
                     }
                     
-                    Spacer().frame(minWidth: 8)
+                    Spacer()
                 }
                 .frame(width: 280)
             }
@@ -52,6 +52,6 @@ struct InputForm: View {
 #Preview {
     VStack {
         InputForm(text: "")
-        InputForm(text: "coffee")
+        InputForm(text: "coffeecoffeecoffeecoffeecoffeecoffeecoffeecoffee")
     }
 }
