@@ -75,9 +75,3 @@ class UserDefaultsStore {
         }
     }
 }
-
-enum ScreenType: String {
-    case todoList
-    case addItem
-    case editItem
-}
