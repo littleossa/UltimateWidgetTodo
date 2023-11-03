@@ -41,6 +41,9 @@ struct TodoListView: View {
                 }
             }
         }
+        .containerBackground(for: .widget) {
+            WidgetBackgroundView()
+        }
     }
 }
 
@@ -55,9 +58,6 @@ struct TodoListPreviewWidget: Widget {
             provider: WidgetTodoProvider()
         ) { entry in
             TodoListView()
-                .containerBackground(for: .widget) {
-                    WidgetBackgroundView()
-                }
                 .modelContainer(AppModelContainer.testStore.container)
         }
     }
