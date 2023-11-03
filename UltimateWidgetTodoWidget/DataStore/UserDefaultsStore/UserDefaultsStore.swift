@@ -23,6 +23,7 @@ class UserDefaultsStore {
         case isCapsLocked
         case isShownKeyboard
         case keyboardInputMode
+        case screenType
     }
     
     var inputText: String {
@@ -65,9 +66,28 @@ class UserDefaultsStore {
         }
     }
     
+    var screenType: ScreenType {
+        get {
+            let value = userDefaults.string(forKey: Key.screenType.rawValue) ?? ""
+            if let type = ScreenType(rawValue: value) {
+                return type
+            }
+            return .todoList
+        }
+        set {
+            userDefaults.set(newValue.rawValue, forKey: Key.screenType.rawValue)
+        }
+    }
+    
     func removeAll() {
         Key.allCases.forEach {
             userDefaults.removeObject(forKey: $0.rawValue)
         }
     }
+}
+
+enum ScreenType: String {
+    case todoList
+    case addItem
+    case editItem
 }
