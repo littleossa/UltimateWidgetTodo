@@ -18,7 +18,6 @@ struct TodoListRow: View {
                 Toggle(isOn: false, intent: TodoCompleteIntent(item: item)) {
                     EmptyView()
                 }
-                .frame(width: 40, height: 40)
                 .toggleStyle(TodoToggleStyle())
                 
                 Text(item.name)
@@ -36,7 +35,7 @@ struct TodoToggleStyle: ToggleStyle {
         
     func makeBody(configuration: Configuration) -> some View {
         Image(systemName: configuration.isOn ? "checkmark.circle.fill" : "circle")
-            .font(.system(size: 32))
+            .font(.system(size: 24))
             .foregroundColor( configuration.isOn ? .mint : .placeholderGray)
     }
 }
