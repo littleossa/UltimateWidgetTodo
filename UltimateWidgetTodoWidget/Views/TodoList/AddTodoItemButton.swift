@@ -37,7 +37,7 @@ struct AddTodoItemButtonIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Do something
+        UserDefaultsStore.shared.isShownKeyboard = true
         return .result()
     }
 }

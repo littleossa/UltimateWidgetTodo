@@ -36,6 +36,9 @@
 		9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */; };
 		975484402AF4D32200A09B11 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843F2AF4D32200A09B11 /* InputForm.swift */; };
 		975484412AF4D34200A09B11 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843F2AF4D32200A09B11 /* InputForm.swift */; };
+		975484432AF4DDEA00A09B11 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484422AF4DDEA00A09B11 /* BackButton.swift */; };
+		975484442AF4DE1700A09B11 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484422AF4DDEA00A09B11 /* BackButton.swift */; };
+		975484452AF4DEB600A09B11 /* WidgetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -105,6 +108,7 @@
 		975484382AF4614700A09B11 /* KeyboardInputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputManager.swift; sourceTree = "<group>"; };
 		9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOverlayBackgroundView.swift; sourceTree = "<group>"; };
 		9754843F2AF4D32200A09B11 /* InputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputForm.swift; sourceTree = "<group>"; };
+		975484422AF4DDEA00A09B11 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				975484012AF277B100A09B11 /* AddTodoItemView.swift */,
+				975484422AF4DDEA00A09B11 /* BackButton.swift */,
 				9754843F2AF4D32200A09B11 /* InputForm.swift */,
 			);
 			path = AddTodoItem;
@@ -469,11 +474,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				975484392AF4614700A09B11 /* KeyboardInputManager.swift in Sources */,
+				975484452AF4DEB600A09B11 /* WidgetConfig.swift in Sources */,
 				975484262AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				9754841D2AF4529300A09B11 /* SpaceKey.swift in Sources */,
 				975484292AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */,
 				975484062AF27A2900A09B11 /* KeyboardCharacterKey.swift in Sources */,
 				9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */,
+				975484442AF4DE1700A09B11 /* BackButton.swift in Sources */,
 				979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */,
 				9754841A2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
@@ -495,6 +502,7 @@
 				979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */,
 				9754842A2AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */,
 				9754843A2AF4614700A09B11 /* KeyboardInputManager.swift in Sources */,
+				975484432AF4DDEA00A09B11 /* BackButton.swift in Sources */,
 				979E23C02AF1290D003559D2 /* UltimateWidgetTodoWidget.swift in Sources */,
 				979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */,
 				975484402AF4D32200A09B11 /* InputForm.swift in Sources */,

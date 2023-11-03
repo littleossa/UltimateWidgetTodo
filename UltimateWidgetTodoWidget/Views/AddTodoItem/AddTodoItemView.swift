@@ -14,14 +14,7 @@ struct AddTodoItemView: View {
             Spacer().frame(height: WidgetConfig.colorHeaderHeight - 16)
             
             HStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image(systemName: "chevron.left")
-                        .font(.system(size: 24))
-                })
-                .foregroundStyle(.blue)
-                .frame(width: WidgetConfig.topBarHeight,
-                       height: WidgetConfig.topBarHeight)
-                .buttonStyle(.plain)
+                BackButton()
                 .offset(x: -8)
                 
                 Spacer()

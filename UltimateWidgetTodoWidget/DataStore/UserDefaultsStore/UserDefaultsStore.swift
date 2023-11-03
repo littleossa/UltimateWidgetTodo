@@ -16,7 +16,7 @@ class UserDefaultsStore {
         userDefaults = UserDefaults(suiteName: suiteName) ?? UserDefaults()
     }
     
-    private let userDefaults: UserDefaults
+    private(set) var userDefaults: UserDefaults
     
     enum Key: String, CaseIterable {
         case inputText
