@@ -27,7 +27,7 @@ struct InputForm: View {
                     
                     Text(text.isEmpty ? placeholderText : text)
                         .font(.system(size: 16))
-                        .foregroundStyle(text.isEmpty ? .placeholderGray : .label)
+                        .foregroundStyle(text.isEmpty ? Color.placeholderGray : .label)
                         .padding(text.isEmpty ? 0 : 8)
                         .offset(x: text.isEmpty ? -6 : 0)
                     
