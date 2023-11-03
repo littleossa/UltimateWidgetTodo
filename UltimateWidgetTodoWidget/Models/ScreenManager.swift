@@ -23,11 +23,12 @@ class ScreenManager {
         return userDefaultsStore.screenType
     }
     
-    var userDefaults: UserDefaults {
-        return userDefaultsStore.userDefaults
-    }
-    
     func switchToScreen(_ type: ScreenType) {
+        
+        if type == .addItem {
+            // creating a new task item, start with an uppercase letter.
+            userDefaultsStore.isCapsLocked = true
+        }
         userDefaultsStore.screenType = type
     }
 }

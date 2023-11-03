@@ -8,12 +8,12 @@ import AppIntents
 import SwiftUI
 
 struct CapsLockKey: View {
-    
+        
     var isCapsLocked: Bool
         
     var body: some View {
         
-        Button(intent: CapsLockKeyIntent(isCapsLocked: isCapsLocked)) {
+        Button(intent: CapsLockKeyIntent()) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
@@ -50,18 +50,15 @@ struct CapsLockKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Caps lock key"
     
-    @Parameter(title: "isCapsLocked")
-    var isCapsLocked: Bool
+    @Parameter(title: "Is Caps Locked")
+    var id: String
     
-    init() {}
-    
-    init(isCapsLocked: Bool) {
-        self.isCapsLocked = isCapsLocked
+    init() {
+        id = "isCapsLocked"
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Do something
-        print(isCapsLocked)
+        KeyboardInputManager.shared.toggleCapsLock()
         return .result()
     }
 }

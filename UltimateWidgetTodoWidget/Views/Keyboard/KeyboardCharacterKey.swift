@@ -9,8 +9,12 @@ import SwiftUI
 
 struct KeyboardCharacterKey: View {
     
-    init(_ character: String) {
-        self.character = character
+    init(_ character: String, isCapsLocked: Bool) {
+        if isCapsLocked {
+            self.character = character.uppercased()
+        } else {
+            self.character = character.lowercased()
+        }
     }
     
     private let character: String
@@ -42,17 +46,16 @@ struct KeyboardCharacterKeyIntent: AppIntent {
     static var title: LocalizedStringResource = "Keyboard key"
     
     @Parameter(title: "Keyboard key")
-    var id: String
+    var character: String
     
     init() {}
     
     init(character: String) {
-        self.id = character
+        self.character = character
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Do something
-        print(id)
+        KeyboardInputManager.shared.input(character)
         return .result()
     }
 }
@@ -61,6 +64,9 @@ struct KeyboardCharacterKeyIntent: AppIntent {
 #Preview {
     Color.gray
         .overlay {
-            KeyboardCharacterKey("A")
+            HStack {
+                KeyboardCharacterKey("A", isCapsLocked: true)
+                KeyboardCharacterKey("A", isCapsLocked: false)
+            }
         }
 }
