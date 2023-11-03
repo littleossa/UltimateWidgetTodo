@@ -17,13 +17,13 @@ struct WidgetKeyboard: View {
         VStack(spacing: 10) {
             HStack(spacing: 6) {
                 ForEach(KeyboardInputManager.topRowLetters, id: \.self) {
-                    KeyboardCharacterKey($0, isCapsLocked: isCapsLocked)
+                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
                 }
             }
             
             HStack(spacing: 6) {
                 ForEach(KeyboardInputManager.centerRowLetters, id: \.self) {
-                    KeyboardCharacterKey($0, isCapsLocked: isCapsLocked)
+                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
                 }
             }
             
@@ -35,7 +35,7 @@ struct WidgetKeyboard: View {
                 }
                 
                 ForEach(KeyboardInputManager.bottomRowLetters, id: \.self) {
-                    KeyboardCharacterKey($0, isCapsLocked: isCapsLocked)
+                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
                 }
                 
                 HStack {

@@ -1,5 +1,5 @@
 //
-//  KeyboardCharacterKey.swift
+//  KeyboardLetterKey.swift
 //  UltimateWidgetTodo
 //
 //
@@ -7,21 +7,21 @@
 import AppIntents
 import SwiftUI
 
-struct KeyboardCharacterKey: View {
+struct KeyboardLetterKey: View {
     
-    init(_ character: String, isCapsLocked: Bool) {
+    init(_ letter: String, isCapsLocked: Bool) {
         if isCapsLocked {
-            self.character = character.uppercased()
+            self.letter = letter.uppercased()
         } else {
-            self.character = character.lowercased()
+            self.letter = letter.lowercased()
         }
     }
     
-    private let character: String
+    private let letter: String
     
     var body: some View {
         
-        Button(intent: KeyboardCharacterKeyIntent(character: character)) {
+        Button(intent: KeyboardLetterKeyIntent(letter: letter)) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
@@ -33,7 +33,7 @@ struct KeyboardCharacterKey: View {
                     .frame(width: 26, height: 34)
             }
             .overlay {
-                Text(character)
+                Text(letter)
                     .foregroundStyle(Color.label)
                     .font(.system(size: 20))
             }
@@ -41,21 +41,21 @@ struct KeyboardCharacterKey: View {
     }
 }
 
-struct KeyboardCharacterKeyIntent: AppIntent {
+struct KeyboardLetterKeyIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Keyboard key"
+    static var title: LocalizedStringResource = "Keyboard letter key"
     
-    @Parameter(title: "Keyboard key")
-    var character: String
+    @Parameter(title: "Keyboard letter key")
+    var letter: String
     
     init() {}
     
-    init(character: String) {
-        self.character = character
+    init(letter: String) {
+        self.letter = letter
     }
     
     func perform() async throws -> some IntentResult {
-        KeyboardInputManager.shared.input(character)
+        KeyboardInputManager.shared.input(letter)
         return .result()
     }
 }
@@ -65,8 +65,8 @@ struct KeyboardCharacterKeyIntent: AppIntent {
     Color.gray
         .overlay {
             HStack {
-                KeyboardCharacterKey("A", isCapsLocked: true)
-                KeyboardCharacterKey("A", isCapsLocked: false)
+                KeyboardLetterKey("A", isCapsLocked: true)
+                KeyboardLetterKey("A", isCapsLocked: false)
             }
         }
 }
