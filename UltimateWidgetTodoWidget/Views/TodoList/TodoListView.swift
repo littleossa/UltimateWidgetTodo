@@ -58,7 +58,7 @@ struct TodoListPreviewWidget: Widget {
             provider: WidgetTodoProvider()
         ) { entry in
             TodoListView()
-                .modelContainer(AppModelContainer.testStore.container)
+                .modelContainer(SwiftDataStore.testStore.container)
         }
     }
 }

@@ -46,7 +46,7 @@ struct KeyboardOverlayBackgroundPreviewWidget: Widget {
                 .containerBackground(for: .widget) {
                     KeyboardOverlayBackgroundView()
                 }
-                .modelContainer(AppModelContainer.testStore.container)
+                .modelContainer(SwiftDataStore.testStore.container)
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  AppModelContainer.swift
+//  SwiftDataStore.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -8,7 +8,7 @@ import Foundation
 import SwiftData
 
 @MainActor
-class AppModelContainer {
+class SwiftDataStore {
     
     private init(isTesting: Bool) {
         let schema = Schema([
@@ -25,8 +25,8 @@ class AppModelContainer {
         }
     }
     
-    static let shared = AppModelContainer(isTesting: false)
-    static let testStore = AppModelContainer(isTesting: true)
+    static let shared = SwiftDataStore(isTesting: false)
+    static let testStore = SwiftDataStore(isTesting: true)
     
     let container: ModelContainer
     

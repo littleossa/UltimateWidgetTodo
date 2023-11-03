@@ -54,10 +54,10 @@
 		979E23C62AF1290F003559D2 /* UltimateWidgetTodoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 979E23B62AF1290C003559D2 /* UltimateWidgetTodoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */; };
 		979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */; };
-		979E23D52AF12DEA003559D2 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* AppModelContainer.swift */; };
+		979E23D52AF12DEA003559D2 /* SwiftDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */; };
 		979E23D62AF12FCB003559D2 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* TodoItem.swift */; };
 		979E23D92AF14281003559D2 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CF2AF12B22003559D2 /* TodoListView.swift */; };
-		979E23DB2AF1450D003559D2 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* AppModelContainer.swift */; };
+		979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */; };
 		979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* TodoItem.swift */; };
 		979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */; };
 		979E23E82AF1BBBA003559D2 /* AddTodoItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */; };
@@ -130,7 +130,7 @@
 		979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskProvider.swift; sourceTree = "<group>"; };
 		979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemEntry.swift; sourceTree = "<group>"; };
 		979E23CF2AF12B22003559D2 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
-		979E23D42AF12DEA003559D2 /* AppModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModelContainer.swift; sourceTree = "<group>"; };
+		979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataStore.swift; sourceTree = "<group>"; };
 		979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConfig.swift; sourceTree = "<group>"; };
 		979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoItemButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -336,7 +336,7 @@
 		979E23D32AF12DB0003559D2 /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
-				979E23D42AF12DEA003559D2 /* AppModelContainer.swift */,
+				979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */,
 				979E23A62AF12679003559D2 /* TodoItem.swift */,
 			);
 			path = SwiftData;
@@ -498,7 +498,7 @@
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
 				975484142AF44B6100A09B11 /* DeleteKey.swift in Sources */,
-				979E23DB2AF1450D003559D2 /* AppModelContainer.swift in Sources */,
+				979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */,
 				975484412AF4D34200A09B11 /* InputForm.swift in Sources */,
 				975484202AF455DE00A09B11 /* DoneKey.swift in Sources */,
 			);
@@ -532,7 +532,7 @@
 				975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */,
 				975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */,
 				979E23BE2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift in Sources */,
-				979E23D52AF12DEA003559D2 /* AppModelContainer.swift in Sources */,
+				979E23D52AF12DEA003559D2 /* SwiftDataStore.swift in Sources */,
 				9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */,
 				975484472AF5233900A09B11 /* ScreenManager.swift in Sources */,
 			);

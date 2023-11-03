@@ -45,7 +45,7 @@ struct AddTodoItemPreviewWidget: Widget {
             provider: WidgetTodoProvider()
         ) { entry in
             AddTodoItemView()
-                .modelContainer(AppModelContainer.testStore.container)
+                .modelContainer(SwiftDataStore.testStore.container)
         }
     }
 }
