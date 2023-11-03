@@ -21,9 +21,8 @@ struct TodoListView: View {
                 Spacer()
                     .frame(height: WidgetConfig.colorHeaderHeight)
                 
-                Spacer()
                 ForEach(items) {
-                    Text($0.name)
+                    TodoListRow(item: $0)
                 }
                 
                 Spacer()

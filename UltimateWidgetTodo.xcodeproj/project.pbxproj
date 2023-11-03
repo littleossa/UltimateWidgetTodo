@@ -43,6 +43,8 @@
 		975484482AF5299200A09B11 /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484462AF5233900A09B11 /* ScreenManager.swift */; };
 		9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484492AF52D1500A09B11 /* ScreenType.swift */; };
 		9754844B2AF52D2600A09B11 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484492AF52D1500A09B11 /* ScreenType.swift */; };
+		9754844D2AF53F2B00A09B11 /* TodoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754844C2AF53F2B00A09B11 /* TodoListRow.swift */; };
+		9754844E2AF53F3100A09B11 /* TodoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754844C2AF53F2B00A09B11 /* TodoListRow.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -115,6 +117,7 @@
 		975484422AF4DDEA00A09B11 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		975484462AF5233900A09B11 /* ScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
 		975484492AF52D1500A09B11 /* ScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
+		9754844C2AF53F2B00A09B11 /* TodoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRow.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -181,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */,
+				9754844C2AF53F2B00A09B11 /* TodoListRow.swift */,
 				979E23CF2AF12B22003559D2 /* TodoListView.swift */,
 			);
 			path = TodoList;
@@ -485,6 +489,7 @@
 				9754844B2AF52D2600A09B11 /* ScreenType.swift in Sources */,
 				975484452AF4DEB600A09B11 /* WidgetConfig.swift in Sources */,
 				975484262AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
+				9754844E2AF53F3100A09B11 /* TodoListRow.swift in Sources */,
 				9754841D2AF4529300A09B11 /* SpaceKey.swift in Sources */,
 				975484292AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */,
 				975484062AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,
@@ -526,6 +531,7 @@
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
 				9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */,
 				975484022AF277B100A09B11 /* AddTodoItemView.swift in Sources */,
+				9754844D2AF53F2B00A09B11 /* TodoListRow.swift in Sources */,
 				979E23D62AF12FCB003559D2 /* TodoItem.swift in Sources */,
 				9754841E2AF4529300A09B11 /* SpaceKey.swift in Sources */,
 				979E23D92AF14281003559D2 /* TodoListView.swift in Sources */,
