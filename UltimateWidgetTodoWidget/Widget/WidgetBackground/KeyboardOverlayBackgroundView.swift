@@ -17,9 +17,7 @@ struct KeyboardOverlayBackgroundView: View {
                 .frame(height: WidgetConfig.colorHeaderHeight)
             
             Spacer().frame(height: WidgetConfig.topBarHeight)
-            
-            Divider()
-            
+                        
             Spacer()
             
             Rectangle()

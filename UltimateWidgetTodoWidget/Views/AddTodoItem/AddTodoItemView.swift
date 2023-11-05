@@ -19,12 +19,19 @@ struct AddTodoItemView: View {
                 
                 Spacer()
             }
+            .frame(height: WidgetConfig.topBarHeight)
+            
+            Line()
+                .stroke(style: .init(lineWidth: 2))
+                .foregroundStyle(.gray)
+                .frame(height: 2)
+                .padding(.bottom, 4)
             
             Spacer()
             
             InputForm(text: KeyboardInputManager.shared.inputText)
                         
-            Spacer().frame(height: 28)
+            Spacer().frame(height: 26)
                         
             WidgetKeyboard()
         }

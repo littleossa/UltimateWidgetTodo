@@ -7,7 +7,7 @@
 import Foundation
 
 class WidgetConfig {
-    static let colorHeaderHeight: CGFloat = 28
-    static let keyboardHeight: CGFloat = 200
+    static let colorHeaderHeight: CGFloat = 26
+    static let keyboardHeight: CGFloat = 194
     static let topBarHeight: CGFloat = 40
 }

@@ -4,7 +4,6 @@
 //
 //
 
-import AppIntents
 import SwiftUI
 
 struct TodoListRow: View {
@@ -13,51 +12,31 @@ struct TodoListRow: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 0) {
             HStack {
-                Toggle(isOn: false, intent: TodoCompleteIntent(item: item)) {
-                    EmptyView()
-                }
-                .toggleStyle(TodoToggleStyle())
+                TodoCompleteButton(item: item)
                 
                 Text(item.name)
                     .font(.system(size: 16))
                 
                 Spacer()
             }
+            .padding(.vertical, 8)
             
-            Divider()
+            Line()
+                .stroke(style: .init(dash: [3, 3]))
+                .foregroundColor(.gray)
+                .frame(height: 0.5)
+                .padding(.leading, 32)
         }
     }
 }
 
-struct TodoToggleStyle: ToggleStyle {
-        
-    func makeBody(configuration: Configuration) -> some View {
-        Image(systemName: configuration.isOn ? "checkmark.circle.fill" : "circle")
-            .font(.system(size: 24))
-            .foregroundColor( configuration.isOn ? .mint : .placeholderGray)
-    }
-}
-
-struct TodoCompleteIntent: AppIntent {
-    
-    static var title: LocalizedStringResource = "Todo Complete"
-    
-    @Parameter(title: "Todo Item")
-    var id: String
-    
-    init() {}
-    
-    init(item: TodoItem) {
-        self.id = item.itemId.uuidString
-    }
-    
-    func perform() async throws -> some IntentResult {
-        if let uuid = UUID(uuidString: id) {
-            try await SwiftDataStore.shared.deleteItem(id: uuid)
-        }
-        
-        return .result()
+struct Line: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: rect.width, y: 0))
+        return path
     }
 }
