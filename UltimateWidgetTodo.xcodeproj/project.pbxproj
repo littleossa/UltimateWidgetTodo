@@ -13,7 +13,6 @@
 		975484072AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */; };
 		9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */; };
 		9754840D2AF43D3A00A09B11 /* CapsLockKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */; };
-		9754840F2AF445F100A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
 		975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
 		975484122AF4494300A09B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23C12AF1290F003559D2 /* Assets.xcassets */; };
 		975484142AF44B6100A09B11 /* DeleteKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484132AF44B6100A09B11 /* DeleteKey.swift */; };
@@ -198,14 +197,6 @@
 			path = TodoList;
 			sourceTree = "<group>";
 		};
-		975484112AF445F900A09B11 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9754840E2AF445F100A09B11 /* Color+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		975484222AF459A700A09B11 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +255,7 @@
 		975484552AF8E09300A09B11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9754840E2AF445F100A09B11 /* Color+Extensions.swift */,
 				975484562AF8E0AE00A09B11 /* LinerGradient+Extensions.swift */,
 			);
 			path = Extensions;
@@ -293,7 +285,6 @@
 		979E23A12AF12679003559D2 /* UltimateWidgetTodo */ = {
 			isa = PBXGroup;
 			children = (
-				975484112AF445F900A09B11 /* Extensions */,
 				979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */,
 				979E23A42AF12679003559D2 /* ContentView.swift */,
 				979E23AA2AF1267A003559D2 /* Preview Content */,
@@ -321,9 +312,9 @@
 		979E23BC2AF1290D003559D2 /* UltimateWidgetTodoWidget */ = {
 			isa = PBXGroup;
 			children = (
+				975484232AF459C100A09B11 /* DataStore */,
 				975484552AF8E09300A09B11 /* Extensions */,
 				975484222AF459A700A09B11 /* Models */,
-				975484232AF459C100A09B11 /* DataStore */,
 				979E23D22AF12D56003559D2 /* Views */,
 				979E23D12AF12D1B003559D2 /* Widget */,
 				979E23C12AF1290F003559D2 /* Assets.xcassets */,
@@ -517,7 +508,6 @@
 				979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */,
 				9754841A2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
-				9754840F2AF445F100A09B11 /* Color+Extensions.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
 				975484142AF44B6100A09B11 /* DeleteKey.swift in Sources */,
