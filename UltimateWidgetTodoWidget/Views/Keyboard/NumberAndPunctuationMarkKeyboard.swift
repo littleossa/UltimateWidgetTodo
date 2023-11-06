@@ -1,30 +1,25 @@
 //
-//  AlphabetKeyboard.swift
+//  NumberAndPunctuationMarkKeyboard.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
 
 import SwiftUI
 
-struct AlphabetKeyboard: View {
-    
-    var isCapsLocked: Bool {
-        KeyboardInputManager.shared.isCapsLocked
-    }
-    
+struct NumberAndPunctuationMarkKeyboard: View {
     var body: some View {
         
         VStack(spacing: 10) {
             HStack(spacing: 6) {
-                ForEach(KeyboardInputManager.topRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
+                ForEach(KeyboardInputManager.topRowNumbers, id: \.self) {
+                    KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 26, height: 34)
                 }
             }
             
             HStack(spacing: 6) {
-                ForEach(KeyboardInputManager.centerRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
+                ForEach(KeyboardInputManager.centerRowPunctuationMarks, id: \.self) {
+                    KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 26, height: 34)
                 }
             }
@@ -32,14 +27,13 @@ struct AlphabetKeyboard: View {
             HStack(spacing: 6) {
                 
                 HStack {
-                    CapsLockKey(isCapsLocked: isCapsLocked)
-                        .frame(width: 36, height: 34)
+                    // TODO: more punctuation marks button
                     Spacer().frame(width: 6)
                 }
                 
-                ForEach(KeyboardInputManager.bottomRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
-                        .frame(width: 26, height: 34)
+                ForEach(KeyboardInputManager.bottomRowPunctuationMarks, id: \.self) {
+                    KeyboardLetterKey($0, isCapsLocked: false)
+                        .frame(width: 36, height: 34)
                 }
                 
                 HStack {
@@ -50,4 +44,8 @@ struct AlphabetKeyboard: View {
             }
         }
     }
+}
+
+#Preview {
+    NumberAndPunctuationMarkKeyboard()
 }

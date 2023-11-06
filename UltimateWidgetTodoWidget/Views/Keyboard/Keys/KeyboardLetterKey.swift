@@ -25,12 +25,10 @@ struct KeyboardLetterKey: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
-                    .frame(width: 26, height: 34)
                     .offset(y: 1)
                 
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyWhite)
-                    .frame(width: 26, height: 34)
             }
             .overlay {
                 Text(letter)

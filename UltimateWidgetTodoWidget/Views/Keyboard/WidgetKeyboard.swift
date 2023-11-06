@@ -13,14 +13,25 @@ struct WidgetKeyboard: View {
         
         VStack(spacing: 10) {
             
-            AlphabetKeyboard()
+            switch KeyboardInputManager.shared.inputMode {
+            case .alphabet:
+                AlphabetKeyboard()
+            case .emoji:
+                EmptyView()
+            case .number:
+                NumberAndPunctuationMarkKeyboard()
+            }
             
             HStack(spacing: 4) {
                 
                 NumberModeKey()
+                    .frame(width: 36, height: 34)
                 EmojiModeKey()
+                    .frame(width: 36, height: 34)
                 SpaceKey()
+                    .frame(width: 154, height: 34)
                 DoneKey(inputText: "a")
+                    .frame(width: 74, height: 34)
             }
         }
         .background(.keyboardBackground)

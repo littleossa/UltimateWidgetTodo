@@ -15,12 +15,10 @@ struct DeleteKey: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
-                    .frame(width: 36, height: 34)
                     .offset(y: 1)
                 
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyDarkGray)
-                    .frame(width: 36, height: 34)
             }
             .overlay {
                 Image(systemName: "delete.backward")

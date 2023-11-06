@@ -53,6 +53,7 @@
 		9754845F2AF90C5A00A09B11 /* AddTaskButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754845E2AF90C5A00A09B11 /* AddTaskButtonImage.swift */; };
 		975484602AF90C5A00A09B11 /* AddTaskButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754845E2AF90C5A00A09B11 /* AddTaskButtonImage.swift */; };
 		975484632AF90ED000A09B11 /* AlphabetKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484622AF90ED000A09B11 /* AlphabetKeyboard.swift */; };
+		975484652AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484642AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -134,6 +135,7 @@
 		9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEmptyView.swift; sourceTree = "<group>"; };
 		9754845E2AF90C5A00A09B11 /* AddTaskButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskButtonImage.swift; sourceTree = "<group>"; };
 		975484622AF90ED000A09B11 /* AlphabetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetKeyboard.swift; sourceTree = "<group>"; };
+		975484642AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAndPunctuationMarkKeyboard.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				975484612AF90E8E00A09B11 /* Keys */,
 				975484622AF90ED000A09B11 /* AlphabetKeyboard.swift */,
+				975484642AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift */,
 				975484032AF2787500A09B11 /* WidgetKeyboard.swift */,
 			);
 			path = Keyboard;
@@ -559,6 +562,7 @@
 				9754843A2AF4614700A09B11 /* KeyboardInputManager.swift in Sources */,
 				975484602AF90C5A00A09B11 /* AddTaskButtonImage.swift in Sources */,
 				975484432AF4DDEA00A09B11 /* CloseButton.swift in Sources */,
+				975484652AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift in Sources */,
 				979E23C02AF1290D003559D2 /* UltimateWidgetTodoWidget.swift in Sources */,
 				975484632AF90ED000A09B11 /* AlphabetKeyboard.swift in Sources */,
 				975484502AF5A91700A09B11 /* TaskCompleteButton.swift in Sources */,

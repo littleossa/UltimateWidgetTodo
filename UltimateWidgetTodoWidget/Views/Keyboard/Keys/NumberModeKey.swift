@@ -15,12 +15,10 @@ struct NumberModeKey: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
-                    .frame(width: 36, height: 34)
                     .offset(y: 1)
                 
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyDarkGray)
-                    .frame(width: 36, height: 34)
             }
             .overlay {
                 Image(systemName: "textformat.123")
@@ -51,8 +49,7 @@ struct NumberModeIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Do something
-        print(id)
+        KeyboardInputManager.shared.changeMode(into: .number)
         return .result()
     }
 }

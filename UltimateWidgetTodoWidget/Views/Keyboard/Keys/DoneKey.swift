@@ -17,12 +17,10 @@ struct DoneKey: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
-                    .frame(width: 74, height: 34)
                     .offset(y: 1)
                 
                 RoundedRectangle(cornerRadius: 6)
                     .fill(inputText.isEmpty ? .keyDarkGray : .blue)
-                    .frame(width: 74, height: 34)
             }
             .overlay {
                 Text("done")
