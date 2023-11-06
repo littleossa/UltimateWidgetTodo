@@ -23,7 +23,7 @@ class ScreenManager {
         return userDefaultsStore.screenType
     }
     
-    func switchToScreen(_ type: ScreenType) {
+    func changeScreen(into type: ScreenType) {
         
         if type == .addTask {
             // creating a new task item, start with an uppercase letter.

@@ -60,7 +60,7 @@ struct DoneKeyIntent: AppIntent {
         let name = KeyboardInputManager.shared.inputText
         await SwiftDataStore.shared.addTask(name: name)
         KeyboardInputManager.shared.clearInputText()
-        ScreenManager.shared.switchToScreen(.main)
+        ScreenManager.shared.changeScreen(into: .main)
         
         return .result()
     }
