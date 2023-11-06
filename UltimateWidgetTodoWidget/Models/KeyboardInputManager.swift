@@ -16,6 +16,10 @@ extension KeyboardInputManager {
     static let topRowNumbers = ["1", "2", "3", "4", "5" , "6", "7", "8", "9", "0"]
     static let centerRowPunctuationMarks = ["-", "/", ":", ";", "(" , ")", "$", "&", "@", "“"]
     static let bottomRowPunctuationMarks = [".", ",", "?", "!", "‘"]
+    // MARK: - Extra punctuation marks mode keys
+    static let topRowExtraPunctuationMarks = ["[", "]", "{", "}", "#" , "%", "^", "*", "+", "="]
+    static let centerRowExtraPunctuationMarks = ["_", "\\", "|", "~", "<" , ">", "€", "£", "¥", "•"]
+    
 }
 
 class KeyboardInputManager {

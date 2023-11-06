@@ -1,5 +1,5 @@
 //
-//  MorePunctuationMarksKey.swift
+//  ExtraPunctuationMarksKey.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,11 +7,11 @@
 import AppIntents
 import SwiftUI
 
-struct MorePunctuationMarksKey: View {
+struct ExtraPunctuationMarksKey: View {
             
     var body: some View {
         
-        Button(intent: MorePunctuationMarksKeyIntent()) {
+        Button(intent: ExtraPunctuationMarksKeyIntent()) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
@@ -32,12 +32,12 @@ struct MorePunctuationMarksKey: View {
 #Preview {
     Color.keyboardBackground
         .overlay {
-            MorePunctuationMarksKey()
+            ExtraPunctuationMarksKey()
         }
 }
 
 
-struct MorePunctuationMarksKeyIntent: AppIntent {
+struct ExtraPunctuationMarksKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "More punctuation marks key"
     
@@ -49,7 +49,7 @@ struct MorePunctuationMarksKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        KeyboardInputManager.shared.deleteLastCharacter()
+        KeyboardInputManager.shared.changeMode(into: .extraPunctuationMarks)
         return .result()
     }
 }

@@ -27,7 +27,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
             HStack(spacing: 6) {
                 
                 HStack {
-                    MorePunctuationMarksKey()
+                    ExtraPunctuationMarksKey()
                         .frame(width: 36, height: 34)
                     Spacer().frame(width: 12)
                 }
