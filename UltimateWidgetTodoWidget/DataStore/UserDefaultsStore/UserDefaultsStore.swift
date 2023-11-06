@@ -62,7 +62,7 @@ class UserDefaultsStore {
             if let type = ScreenType(rawValue: value) {
                 return type
             }
-            return .todoList
+            return .main
         }
         set {
             userDefaults.set(newValue.rawValue, forKey: Key.screenType.rawValue)

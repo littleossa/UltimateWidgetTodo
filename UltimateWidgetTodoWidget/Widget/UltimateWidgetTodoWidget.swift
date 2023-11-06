@@ -9,35 +9,28 @@ import SwiftUI
 import WidgetKit
 
 struct UltimateWidgetTodoWidget: Widget {
+    
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: WidgetTodoProvider()) { entry in
-            TodoListView()
-                .containerBackground(for: .widget) {
-                    WidgetBackgroundView()
+            
+            Group {
+                switch ScreenManager.shared.currentScreen {
+                case .main:
+                    MainView()
+                case .addItem:
+                    AddTodoItemView()
+                case .editItem:
+                    Text("TODO: - editItem")
                 }
-                .modelContainer(AppModelContainer.shared.container)
+            }
+            .modelContainer(SwiftDataStore.shared.container)
+            
         }
         .supportedFamilies([.systemLarge])
         .configurationDisplayName("Ultimate Widget Todo")
         .description("This is an Ultimate Todo List App with a Widget.")
-    }
-}
-
-struct WidgetBackgroundView: View {
-    
-    let topBarColor = LinearGradient(colors: [.indigo, .blue, .cyan, .mint], startPoint: .topLeading, endPoint: .bottomTrailing)
-    
-    var body: some View {
-        VStack {
-            Rectangle()
-                .fill(topBarColor)
-                .frame(height: WidgetConfig.topBarHeight)
-            
-            Spacer()
-        }
-        .background(.widgetBackground)
     }
 }
 

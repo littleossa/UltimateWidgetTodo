@@ -34,7 +34,7 @@ struct WidgetBackgroundPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            TodoListView()
+            MainView()
                 .containerBackground(for: .widget) {
                     WidgetBackgroundView()
                 }

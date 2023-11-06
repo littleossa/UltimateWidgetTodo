@@ -1,5 +1,5 @@
 //
-//  TodoListView.swift
+//  MainView.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -8,7 +8,7 @@ import SwiftData
 import SwiftUI
 import WidgetKit
 
-struct TodoListView: View {
+struct MainView: View {
     
     @Environment(\.modelContext) private var modelContext
     @Query (sort: \TodoItem.createDate, order: .forward)
@@ -75,7 +75,7 @@ struct TodoListPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            TodoListView()
+            MainView()
                 .modelContainer(SwiftDataStore.testStore.container)
         }
     }

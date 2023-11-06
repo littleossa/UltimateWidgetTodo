@@ -5,7 +5,7 @@
 //
 
 enum ScreenType: String {
-    case todoList
+    case main
     case addItem
     case editItem
 }
