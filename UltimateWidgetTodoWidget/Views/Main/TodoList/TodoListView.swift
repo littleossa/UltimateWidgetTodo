@@ -1,21 +1,16 @@
 //
-//  MainView.swift
+//  TodoListView.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
 
-import SwiftData
 import SwiftUI
-import WidgetKit
 
-struct MainView: View {
+struct TodoListView: View {
     
-    @Environment(\.modelContext) private var modelContext
-    @Query (sort: \TodoItem.createDate, order: .forward)
-    private var items: [TodoItem]
-
+    let items: [TodoItem]
+    
     var body: some View {
-        
         ZStack {
             VStack(spacing: 0) {
                 Spacer()
@@ -59,15 +54,14 @@ struct MainView: View {
                 }
             }
         }
-        .containerBackground(for: .widget) {
-            WidgetBackgroundView()
-        }
     }
 }
 
 // MARK: - Preview
 #if DEBUG
-struct MainPreviewWidget: Widget {
+import WidgetKit
+
+struct TodoListPreviewWidget: Widget {
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
@@ -75,14 +69,17 @@ struct MainPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            MainView()
+            TodoListView(items: [])
+                .containerBackground(for: .widget) {
+                    WidgetBackgroundView()
+                }
                 .modelContainer(SwiftDataStore.testStore.container)
         }
     }
 }
 
 #Preview(as: .systemLarge) {
-    MainPreviewWidget()
+    TodoListPreviewWidget()
 } timeline: {
     TodoItemEntry(date: .now, emoji: "😀")
 }
