@@ -186,7 +186,7 @@
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
-		975484092AF2FDBC00A09B11 /* TodoList */ = {
+		975484092AF2FDBC00A09B11 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				979E23E62AF1BBB7003559D2 /* AddTodoItemButton.swift */,
@@ -194,7 +194,7 @@
 				9754844C2AF53F2B00A09B11 /* TodoListRow.swift */,
 				979E23CF2AF12B22003559D2 /* MainView.swift */,
 			);
-			path = TodoList;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		975484222AF459A700A09B11 /* Models */ = {
@@ -339,7 +339,7 @@
 		979E23D22AF12D56003559D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				975484092AF2FDBC00A09B11 /* TodoList */,
+				975484092AF2FDBC00A09B11 /* Main */,
 				9754843E2AF4D30800A09B11 /* AddTodoItem */,
 				975484082AF2FD8B00A09B11 /* Keyboard */,
 				975484532AF844B500A09B11 /* Line.swift */,
