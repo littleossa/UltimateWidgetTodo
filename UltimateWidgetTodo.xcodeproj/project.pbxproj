@@ -182,13 +182,7 @@
 		975484082AF2FD8B00A09B11 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */,
-				975484132AF44B6100A09B11 /* DeleteKey.swift */,
-				9754841F2AF455DE00A09B11 /* DoneKey.swift */,
-				975484192AF44EFF00A09B11 /* EmojiModeKey.swift */,
-				975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */,
-				975484162AF44DC400A09B11 /* NumberModeKey.swift */,
-				9754841C2AF4529300A09B11 /* SpaceKey.swift */,
+				975484612AF90E8E00A09B11 /* Keys */,
 				975484032AF2787500A09B11 /* WidgetKeyboard.swift */,
 			);
 			path = Keyboard;
@@ -278,6 +272,20 @@
 				9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */,
 			);
 			path = TaskList;
+			sourceTree = "<group>";
+		};
+		975484612AF90E8E00A09B11 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */,
+				975484132AF44B6100A09B11 /* DeleteKey.swift */,
+				9754841F2AF455DE00A09B11 /* DoneKey.swift */,
+				975484192AF44EFF00A09B11 /* EmojiModeKey.swift */,
+				975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */,
+				975484162AF44DC400A09B11 /* NumberModeKey.swift */,
+				9754841C2AF4529300A09B11 /* SpaceKey.swift */,
+			);
+			path = Keys;
 			sourceTree = "<group>";
 		};
 		979E23962AF12679003559D2 = {
