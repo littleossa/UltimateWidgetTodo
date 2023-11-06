@@ -9,40 +9,11 @@ import WidgetKit
 
 struct WidgetKeyboard: View {
     
-    var isCapsLocked: Bool {
-        KeyboardInputManager.shared.isCapsLocked
-    }
-    
     var body: some View {
+        
         VStack(spacing: 10) {
-            HStack(spacing: 6) {
-                ForEach(KeyboardInputManager.topRowLetters, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
-                }
-            }
             
-            HStack(spacing: 6) {
-                ForEach(KeyboardInputManager.centerRowLetters, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
-                }
-            }
-            
-            HStack(spacing: 6) {
-                
-                HStack {
-                    CapsLockKey(isCapsLocked: isCapsLocked)
-                    Spacer().frame(width: 6)
-                }
-                
-                ForEach(KeyboardInputManager.bottomRowLetters, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
-                }
-                
-                HStack {
-                    Spacer().frame(width: 6)
-                    DeleteKey()
-                }
-            }
+            AlphabetKeyboard()
             
             HStack(spacing: 4) {
                 
