@@ -57,8 +57,8 @@ struct DoneKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        let text = KeyboardInputManager.shared.inputText
-        await SwiftDataStore.shared.addItem(name: text)
+        let name = KeyboardInputManager.shared.inputText
+        await SwiftDataStore.shared.addTask(name: name)
         KeyboardInputManager.shared.clearInputText()
         ScreenManager.shared.switchToScreen(.main)
         

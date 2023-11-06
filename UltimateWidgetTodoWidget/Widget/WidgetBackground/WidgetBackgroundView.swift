@@ -44,6 +44,6 @@ struct WidgetBackgroundPreviewWidget: Widget {
 #Preview(as: .systemLarge) {
     WidgetBackgroundPreviewWidget()
 } timeline: {
-    TodoItemEntry(date: .now, emoji: "😀")
+    TaskEntry(date: .now)
 }
 #endif

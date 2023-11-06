@@ -19,9 +19,9 @@ struct UltimateWidgetTodoWidget: Widget {
                 switch ScreenManager.shared.currentScreen {
                 case .main:
                     MainView()
-                case .addItem:
-                    AddTodoItemView()
-                case .editItem:
+                case .addTask:
+                    AddTaskView()
+                case .editTask:
                     Text("TODO: - editItem")
                 }
             }
@@ -37,6 +37,6 @@ struct UltimateWidgetTodoWidget: Widget {
 #Preview(as: .systemLarge) {
     UltimateWidgetTodoWidget()
 } timeline: {
-    TodoItemEntry(date: .now, emoji: "😀")
-    TodoItemEntry(date: .now, emoji: "🤩")
+    TaskEntry(date: .now)
+    TaskEntry(date: .now)
 }

@@ -25,7 +25,7 @@ class ScreenManager {
     
     func switchToScreen(_ type: ScreenType) {
         
-        if type == .addItem {
+        if type == .addTask {
             // creating a new task item, start with an uppercase letter.
             userDefaultsStore.isCapsLocked = true
         }

@@ -1,22 +1,22 @@
 //
-//  TodoListRow.swift
+//  TaskListRow.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
 
 import SwiftUI
 
-struct TodoListRow: View {
+struct TaskListRow: View {
     
-    let item: TodoItem
+    let task: Task
     
     var body: some View {
         
         VStack(spacing: 0) {
             HStack {
-                TodoCompleteButton(item: item)
+                TaskCompleteButton(task: task)
                 
-                Text(item.name)
+                Text(task.name)
                     .font(.system(size: 16))
                 
                 Spacer()

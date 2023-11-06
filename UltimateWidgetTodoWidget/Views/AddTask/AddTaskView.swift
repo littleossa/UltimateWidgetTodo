@@ -1,5 +1,5 @@
 //
-//  AddTodoItemView.swift
+//  AddTaskView.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,7 +7,7 @@
 import SwiftUI
 import WidgetKit
 
-struct AddTodoItemView: View {
+struct AddTaskView: View {
     
     var body: some View {
         VStack(spacing: 0) {
@@ -43,7 +43,7 @@ struct AddTodoItemView: View {
 
 // MARK: - Preview
 #if DEBUG
-struct AddTodoItemPreviewWidget: Widget {
+struct AddTaskPreviewWidget: Widget {
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
@@ -51,16 +51,16 @@ struct AddTodoItemPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            AddTodoItemView()
+            AddTaskView()
                 .modelContainer(SwiftDataStore.testStore.container)
         }
     }
 }
 
 #Preview(as: .systemLarge) {
-    AddTodoItemPreviewWidget()
+    AddTaskPreviewWidget()
 } timeline: {
-    TodoItemEntry(date: .now, emoji: "😀")
+    TaskEntry(date: .now)
 }
 #endif
 

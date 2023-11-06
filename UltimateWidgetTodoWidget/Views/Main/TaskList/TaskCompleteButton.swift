@@ -1,5 +1,5 @@
 //
-//  TodoCompleteButton.swift
+//  TaskCompleteButton.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,19 +7,19 @@
 import AppIntents
 import SwiftUI
 
-struct TodoCompleteButton: View {
+struct TaskCompleteButton: View {
     
-    let item: TodoItem
+    let task: Task
     
     var body: some View {
-        Toggle(isOn: false, intent: TodoCompleteIntent(item: item)) {
+        Toggle(isOn: false, intent: TaskCompleteIntent(task: task)) {
             EmptyView()
         }
-        .toggleStyle(TodoToggleStyle())
+        .toggleStyle(TaskToggleStyle())
     }
 }
 
-struct TodoToggleStyle: ToggleStyle {
+struct TaskToggleStyle: ToggleStyle {
         
     func makeBody(configuration: Configuration) -> some View {
         Image(systemName: configuration.isOn ? "checkmark.circle.fill" : "circle")
@@ -28,7 +28,7 @@ struct TodoToggleStyle: ToggleStyle {
     }
 }
 
-struct TodoCompleteIntent: AppIntent {
+struct TaskCompleteIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Todo Complete"
     
@@ -37,13 +37,13 @@ struct TodoCompleteIntent: AppIntent {
     
     init() {}
     
-    init(item: TodoItem) {
-        self.id = item.itemId.uuidString
+    init(task: Task) {
+        self.id = task.taskId.uuidString
     }
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
-            try await SwiftDataStore.shared.deleteItem(id: uuid)
+            try await SwiftDataStore.shared.deleteTask(id: uuid)
         }
         
         return .result()

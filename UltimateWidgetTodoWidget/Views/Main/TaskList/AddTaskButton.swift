@@ -1,5 +1,5 @@
 //
-//  AddButton.swift
+//  AddTaskButton.swift
 //  UltimateWidgetTodo
 //
 //
@@ -8,11 +8,11 @@ import AppIntents
 import WidgetKit
 import SwiftUI
 
-struct AddTodoItemButton: View {
+struct AddTaskButton: View {
             
     var body: some View {
         
-        Button(intent: AddTodoItemButtonIntent()) {
+        Button(intent: AddTaskButtonIntent()) {
             ZStack {
                 Image(systemName: "circle.fill")
                     .resizable()
@@ -25,7 +25,7 @@ struct AddTodoItemButton: View {
     }
 }
 
-struct AddTodoItemButtonIntent: AppIntent {
+struct AddTaskButtonIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Tap Add button"
     
@@ -37,13 +37,13 @@ struct AddTodoItemButtonIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        ScreenManager.shared.switchToScreen(.addItem)
+        ScreenManager.shared.switchToScreen(.addTask)
         return .result()
     }
 }
 
 #Preview(as: .systemLarge) {
-    TodoListPreviewWidget()
+    TaskListPreviewWidget()
 } timeline: {
-    TodoItemEntry(date: .now, emoji: "😀")
+    TaskEntry(date: .now)
 }

@@ -11,8 +11,8 @@ import WidgetKit
 struct MainView: View {
     
     @Environment(\.modelContext) private var modelContext
-    @Query (sort: \TodoItem.createDate, order: .forward)
-    private var items: [TodoItem]
+    @Query (sort: \Task.createDate, order: .forward)
+    private var items: [Task]
 
     var body: some View {
         
@@ -41,7 +41,7 @@ struct MainView: View {
                     .padding(.bottom, 4)
                 
                 ForEach(items) {
-                    TodoListRow(item: $0)
+                    TaskListRow(task: $0)
                 }
                 
                 Spacer()
@@ -53,7 +53,7 @@ struct MainView: View {
                 HStack {
                     Spacer()
                     
-                    AddTodoItemButton()
+                    AddTaskButton()
                     .frame(width: 44, height: 44)
                     .buttonStyle(.plain)
                 }
@@ -84,6 +84,6 @@ struct MainPreviewWidget: Widget {
 #Preview(as: .systemLarge) {
     MainPreviewWidget()
 } timeline: {
-    TodoItemEntry(date: .now, emoji: "😀")
+    TaskEntry(date: .now)
 }
 #endif

@@ -12,7 +12,7 @@ class SwiftDataStore {
     
     private init(isTesting: Bool) {
         let schema = Schema([
-            TodoItem.self,
+            Task.self,
         ])
         let configuration = ModelConfiguration(schema: schema,
                                                isStoredInMemoryOnly: isTesting)
@@ -30,33 +30,33 @@ class SwiftDataStore {
     
     let container: ModelContainer
     
-    func addItem(name: String, createDate: Date = Date()) {
-        let newItem = TodoItem(name: name, createDate: createDate)
-        container.mainContext.insert(newItem)
+    func addTask(name: String, createDate: Date = Date()) {
+        let newTask = Task(name: name, createDate: createDate)
+        container.mainContext.insert(newTask)
     }
     
-    func deleteItem(id: UUID) throws {
-        let item = try fetchTodoItem(id: id)
-        container.mainContext.delete(item)
+    func deleteTask(id: UUID) throws {
+        let task = try fetchTask(id: id)
+        container.mainContext.delete(task)
     }
     
-    func fetchTodoItem(id: UUID) throws -> TodoItem {
-        let descriptor = FetchDescriptor<TodoItem>(predicate: #Predicate { $0.itemId == id })
-        if let item = try container.mainContext.fetch(descriptor).first {
-            return item
+    func fetchTask(id: UUID) throws -> Task {
+        let descriptor = FetchDescriptor<Task>(predicate: #Predicate { $0.taskId == id })
+        if let task = try container.mainContext.fetch(descriptor).first {
+            return task
         } else {
             // TODO: throw error
             throw NSError(domain: "todo item not found", code: 1)
         }
     }
     
-    func makePreviewContainer(itemCount: Int) -> ModelContainer {
-        guard itemCount > 0 else {
+    func makePreviewContainer(taskCount: Int) -> ModelContainer {
+        guard taskCount > 0 else {
             return container
         }
         
-        for i in 1...itemCount {
-            addItem(name: "Example Item \(i)")
+        for i in 1...taskCount {
+            addTask(name: "Example Item \(i)")
         }
         return container
     }

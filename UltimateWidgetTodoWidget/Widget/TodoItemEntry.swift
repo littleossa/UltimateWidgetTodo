@@ -1,13 +1,12 @@
 //
-//  TodoItemEntry.swift
+//  TaskEntry.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
 
 import WidgetKit
 
-struct TodoItemEntry: TimelineEntry {
+struct TaskEntry: TimelineEntry {
     let date: Date
-    let emoji: String
 }
 

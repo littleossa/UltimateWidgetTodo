@@ -1,14 +1,14 @@
 //
-//  TodoListView.swift
+//  TaskListView.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
 
 import SwiftUI
 
-struct TodoListView: View {
+struct TaskListView: View {
     
-    let items: [TodoItem]
+    let tasks: [Task]
     
     var body: some View {
         ZStack {
@@ -16,7 +16,7 @@ struct TodoListView: View {
                 Spacer()
                     .frame(height: WidgetConfig.colorHeaderHeight - 16)
                 HStack(alignment: .bottom) {
-                    Text(String(items.count))
+                    Text(String(tasks.count))
                         .font(.system(size: 30))
                         .bold()
                     Text("tasks")
@@ -35,8 +35,8 @@ struct TodoListView: View {
                     .frame(height: 2)
                     .padding(.bottom, 4)
                 
-                ForEach(items) {
-                    TodoListRow(item: $0)
+                ForEach(tasks) {
+                    TaskListRow(task: $0)
                 }
                 
                 Spacer()
@@ -48,7 +48,7 @@ struct TodoListView: View {
                 HStack {
                     Spacer()
                     
-                    AddTodoItemButton()
+                    AddTaskButton()
                     .frame(width: 44, height: 44)
                     .buttonStyle(.plain)
                 }
@@ -61,7 +61,7 @@ struct TodoListView: View {
 #if DEBUG
 import WidgetKit
 
-struct TodoListPreviewWidget: Widget {
+struct TaskListPreviewWidget: Widget {
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
@@ -69,7 +69,7 @@ struct TodoListPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            TodoListView(items: [])
+            TaskListView(tasks: [])
                 .containerBackground(for: .widget) {
                     WidgetBackgroundView()
                 }
@@ -79,8 +79,8 @@ struct TodoListPreviewWidget: Widget {
 }
 
 #Preview(as: .systemLarge) {
-    TodoListPreviewWidget()
+    TaskListPreviewWidget()
 } timeline: {
-    TodoItemEntry(date: .now, emoji: "😀")
+    TaskEntry(date: .now)
 }
 #endif

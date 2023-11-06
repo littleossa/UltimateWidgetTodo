@@ -1,5 +1,5 @@
 //
-//  TodoItem.swift
+//  Task.swift
 //  UltimateWidgetTodo
 //
 //
@@ -8,14 +8,14 @@ import Foundation
 import SwiftData
 
 @Model
-final class TodoItem {
-    let itemId: UUID
+final class Task {
+    let taskId: UUID
     let name: String
     let createDate: Date
     var updateDate: Date
     
     init(name: String, createDate: Date) {
-        self.itemId = UUID()
+        self.taskId = UUID()
         self.name = name
         self.createDate = createDate
         self.updateDate = createDate

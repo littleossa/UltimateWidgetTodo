@@ -6,6 +6,6 @@
 
 enum ScreenType: String {
     case main
-    case addItem
-    case editItem
+    case addTask
+    case editTask
 }

@@ -58,7 +58,7 @@ struct WidgetKeyboard: View {
 }
 
 #Preview(as: .systemLarge) {
-    AddTodoItemPreviewWidget()
+    AddTaskPreviewWidget()
 } timeline: {
-    TodoItemEntry(date: .now, emoji: "😀")
+    TaskEntry(date: .now)
 }
