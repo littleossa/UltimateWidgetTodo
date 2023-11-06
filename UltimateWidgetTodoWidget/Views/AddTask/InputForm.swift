@@ -9,7 +9,6 @@ import SwiftUI
 struct InputForm: View {
     
     let text: String
-    private let placeholderText = "Add your task here.."
     
     var body: some View {
         RoundedRectangle(cornerRadius: 6)
@@ -25,7 +24,7 @@ struct InputForm: View {
                             .padding(8)
                     }
                     
-                    Text(text.isEmpty ? placeholderText : text)
+                    Text(text.isEmpty ? "Add your task here.." : text)
                         .font(.system(size: 16))
                         .foregroundStyle(text.isEmpty ? Color.placeholderGray : .label)
                         .padding(text.isEmpty ? 0 : 8)
