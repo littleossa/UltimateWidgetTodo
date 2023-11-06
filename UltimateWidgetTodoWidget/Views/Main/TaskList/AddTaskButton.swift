@@ -9,20 +9,41 @@ import WidgetKit
 import SwiftUI
 
 struct AddTaskButton: View {
+    
+    let type: AddTaskButtonType
             
     var body: some View {
         
         Button(intent: AddTaskButtonIntent()) {
-            ZStack {
-                Image(systemName: "circle.fill")
-                    .resizable()
-                    .foregroundStyle(.widgetBackground)
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .foregroundStyle(.blue)
+            
+            switch type {
+            case .floatingAction:
+                AddButtonImage()
+            case .fullScreen:
+                Rectangle()
+                    .fill(.white.opacity(0.0001))
             }
         }
+        .buttonStyle(.plain)
     }
+}
+
+struct AddButtonImage: View {
+    var body: some View {
+        ZStack {
+            Image(systemName: "circle.fill")
+                .resizable()
+                .foregroundStyle(.widgetBackground)
+            Image(systemName: "plus.circle.fill")
+                .resizable()
+                .foregroundStyle(.blue)
+        }
+    }
+}
+
+enum AddTaskButtonType {
+    case floatingAction
+    case fullScreen
 }
 
 struct AddTaskButtonIntent: AppIntent {
