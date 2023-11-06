@@ -8,12 +8,10 @@ import SwiftUI
 
 struct WidgetBackgroundView: View {
     
-    let topBarColor = LinearGradient(colors: [.indigo, .blue, .cyan, .mint], startPoint: .topLeading, endPoint: .bottomTrailing)
-    
     var body: some View {
         VStack {
             Rectangle()
-                .fill(topBarColor)
+                .fill(LinearGradient.ultimateBlue)
                 .frame(height: WidgetConfig.colorHeaderHeight)
             
             Spacer()
