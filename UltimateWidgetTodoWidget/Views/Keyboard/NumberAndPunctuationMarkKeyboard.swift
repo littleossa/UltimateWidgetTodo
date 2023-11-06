@@ -27,8 +27,9 @@ struct NumberAndPunctuationMarkKeyboard: View {
             HStack(spacing: 6) {
                 
                 HStack {
-                    // TODO: more punctuation marks button
-                    Spacer().frame(width: 6)
+                    MorePunctuationMarksKey()
+                        .frame(width: 36, height: 34)
+                    Spacer().frame(width: 12)
                 }
                 
                 ForEach(KeyboardInputManager.bottomRowPunctuationMarks, id: \.self) {
@@ -37,7 +38,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
                 }
                 
                 HStack {
-                    Spacer().frame(width: 6)
+                    Spacer().frame(width: 12)
                     DeleteKey()
                         .frame(width: 36, height: 34)
                 }

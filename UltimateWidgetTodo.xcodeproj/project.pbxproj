@@ -54,6 +54,8 @@
 		975484602AF90C5A00A09B11 /* AddTaskButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754845E2AF90C5A00A09B11 /* AddTaskButtonImage.swift */; };
 		975484632AF90ED000A09B11 /* AlphabetKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484622AF90ED000A09B11 /* AlphabetKeyboard.swift */; };
 		975484652AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484642AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift */; };
+		975484672AF98BB000A09B11 /* MorePunctuationMarksKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484662AF98BB000A09B11 /* MorePunctuationMarksKey.swift */; };
+		975484682AF98C0B00A09B11 /* MorePunctuationMarksKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484662AF98BB000A09B11 /* MorePunctuationMarksKey.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -136,6 +138,7 @@
 		9754845E2AF90C5A00A09B11 /* AddTaskButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskButtonImage.swift; sourceTree = "<group>"; };
 		975484622AF90ED000A09B11 /* AlphabetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetKeyboard.swift; sourceTree = "<group>"; };
 		975484642AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAndPunctuationMarkKeyboard.swift; sourceTree = "<group>"; };
+		975484662AF98BB000A09B11 /* MorePunctuationMarksKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePunctuationMarksKey.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -288,6 +291,7 @@
 				9754841F2AF455DE00A09B11 /* DoneKey.swift */,
 				975484192AF44EFF00A09B11 /* EmojiModeKey.swift */,
 				975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */,
+				975484662AF98BB000A09B11 /* MorePunctuationMarksKey.swift */,
 				975484162AF44DC400A09B11 /* NumberModeKey.swift */,
 				9754841C2AF4529300A09B11 /* SpaceKey.swift */,
 			);
@@ -544,6 +548,7 @@
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
+				975484682AF98C0B00A09B11 /* MorePunctuationMarksKey.swift in Sources */,
 				9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */,
 				975484142AF44B6100A09B11 /* DeleteKey.swift in Sources */,
 				979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */,
@@ -585,6 +590,7 @@
 				979E23D62AF12FCB003559D2 /* Task.swift in Sources */,
 				9754841E2AF4529300A09B11 /* SpaceKey.swift in Sources */,
 				975484572AF8E0AE00A09B11 /* LinerGradient+Extensions.swift in Sources */,
+				975484672AF98BB000A09B11 /* MorePunctuationMarksKey.swift in Sources */,
 				979E23D92AF14281003559D2 /* MainView.swift in Sources */,
 				9754845A2AF8E1F400A09B11 /* TaskListView.swift in Sources */,
 				975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */,
