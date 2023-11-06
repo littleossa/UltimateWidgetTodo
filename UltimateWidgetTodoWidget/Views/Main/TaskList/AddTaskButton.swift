@@ -10,6 +10,11 @@ import SwiftUI
 
 struct AddTaskButton: View {
     
+    enum AddTaskButtonType {
+        case floatingAction
+        case fullScreen
+    }
+    
     let type: AddTaskButtonType
             
     var body: some View {
@@ -39,11 +44,6 @@ struct AddButtonImage: View {
                 .foregroundStyle(.blue)
         }
     }
-}
-
-enum AddTaskButtonType {
-    case floatingAction
-    case fullScreen
 }
 
 struct AddTaskButtonIntent: AppIntent {
