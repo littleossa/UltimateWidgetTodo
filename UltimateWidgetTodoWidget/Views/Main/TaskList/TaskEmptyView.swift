@@ -26,8 +26,8 @@ struct TaskEmptyView: View {
                         .fontWeight(.light)
                 }
                 
-                AddButtonImage()
-                .frame(width: 80, height: 80)
+                AddTaskButtonImage()
+                    .frame(width: 80, height: 80)
                 
                 Spacer()
             }
