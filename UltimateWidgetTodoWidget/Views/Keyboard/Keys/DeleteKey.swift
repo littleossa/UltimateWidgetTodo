@@ -49,8 +49,7 @@ struct DeleteKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Do something
-        print(id)
+        KeyboardInputManager.shared.deleteLastCharacter()
         return .result()
     }
 }

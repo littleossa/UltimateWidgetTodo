@@ -53,6 +53,14 @@ class KeyboardInputManager {
         userDefaultsStore.keyboardInputMode = mode
     }
     
+    func deleteLastCharacter() {
+        var inputText = userDefaultsStore.inputText
+        guard !inputText.isEmpty
+        else { return }
+        inputText.removeLast()
+        userDefaultsStore.inputText = inputText
+    }
+    
     func toggleCapsLock() {
         userDefaultsStore.isCapsLocked.toggle()
     }
