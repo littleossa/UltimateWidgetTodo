@@ -49,6 +49,7 @@
 		975484572AF8E0AE00A09B11 /* LinerGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484562AF8E0AE00A09B11 /* LinerGradient+Extensions.swift */; };
 		9754845A2AF8E1F400A09B11 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484592AF8E1F400A09B11 /* TaskListView.swift */; };
 		9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
+		9754845D2AF8E9A100A09B11 /* TaskEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -127,6 +128,7 @@
 		975484532AF844B500A09B11 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		975484562AF8E0AE00A09B11 /* LinerGradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinerGradient+Extensions.swift"; sourceTree = "<group>"; };
 		975484592AF8E1F400A09B11 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEmptyView.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				9754844F2AF5A91700A09B11 /* TaskCompleteButton.swift */,
 				9754844C2AF53F2B00A09B11 /* TaskListRow.swift */,
 				975484592AF8E1F400A09B11 /* TaskListView.swift */,
+				9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				975484212AF455DE00A09B11 /* DoneKey.swift in Sources */,
 				975484152AF44B6A00A09B11 /* DeleteKey.swift in Sources */,
 				975484072AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,
+				9754845D2AF8E9A100A09B11 /* TaskEmptyView.swift in Sources */,
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
 				9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */,
 				975484022AF277B100A09B11 /* AddTaskView.swift in Sources */,
