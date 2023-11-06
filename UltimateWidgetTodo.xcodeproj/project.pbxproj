@@ -15,8 +15,8 @@
 		9754840D2AF43D3A00A09B11 /* CapsLockKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */; };
 		975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
 		975484122AF4494300A09B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23C12AF1290F003559D2 /* Assets.xcassets */; };
-		975484142AF44B6100A09B11 /* DeleteKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484132AF44B6100A09B11 /* DeleteKey.swift */; };
-		975484152AF44B6A00A09B11 /* DeleteKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484132AF44B6100A09B11 /* DeleteKey.swift */; };
+		975484142AF44B6100A09B11 /* BackspaceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484132AF44B6100A09B11 /* BackspaceKey.swift */; };
+		975484152AF44B6A00A09B11 /* BackspaceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484132AF44B6100A09B11 /* BackspaceKey.swift */; };
 		975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484162AF44DC400A09B11 /* NumberModeKey.swift */; };
 		975484182AF44DC900A09B11 /* NumberModeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484162AF44DC400A09B11 /* NumberModeKey.swift */; };
 		9754841A2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484192AF44EFF00A09B11 /* EmojiModeKey.swift */; };
@@ -113,7 +113,7 @@
 		975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLetterKey.swift; sourceTree = "<group>"; };
 		9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsLockKey.swift; sourceTree = "<group>"; };
 		9754840E2AF445F100A09B11 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		975484132AF44B6100A09B11 /* DeleteKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteKey.swift; sourceTree = "<group>"; };
+		975484132AF44B6100A09B11 /* BackspaceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackspaceKey.swift; sourceTree = "<group>"; };
 		975484162AF44DC400A09B11 /* NumberModeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberModeKey.swift; sourceTree = "<group>"; };
 		975484192AF44EFF00A09B11 /* EmojiModeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModeKey.swift; sourceTree = "<group>"; };
 		9754841C2AF4529300A09B11 /* SpaceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceKey.swift; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */,
-				975484132AF44B6100A09B11 /* DeleteKey.swift */,
+				975484132AF44B6100A09B11 /* BackspaceKey.swift */,
 				9754841F2AF455DE00A09B11 /* DoneKey.swift */,
 				975484192AF44EFF00A09B11 /* EmojiModeKey.swift */,
 				975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */,
@@ -550,7 +550,7 @@
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
 				975484682AF98C0B00A09B11 /* MorePunctuationMarksKey.swift in Sources */,
 				9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */,
-				975484142AF44B6100A09B11 /* DeleteKey.swift in Sources */,
+				975484142AF44B6100A09B11 /* BackspaceKey.swift in Sources */,
 				979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */,
 				975484412AF4D34200A09B11 /* InputForm.swift in Sources */,
 				975484202AF455DE00A09B11 /* DoneKey.swift in Sources */,
@@ -579,7 +579,7 @@
 				975484272AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				975484182AF44DC900A09B11 /* NumberModeKey.swift in Sources */,
 				975484212AF455DE00A09B11 /* DoneKey.swift in Sources */,
-				975484152AF44B6A00A09B11 /* DeleteKey.swift in Sources */,
+				975484152AF44B6A00A09B11 /* BackspaceKey.swift in Sources */,
 				975484072AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,
 				9754845D2AF8E9A100A09B11 /* TaskEmptyView.swift in Sources */,
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,

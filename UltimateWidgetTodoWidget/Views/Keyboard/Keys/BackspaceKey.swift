@@ -1,5 +1,5 @@
 //
-//  DeleteKey.swift
+//  BackspaceKey.swift
 //  UltimateWidgetTodo
 //
 //
@@ -7,11 +7,11 @@
 import AppIntents
 import SwiftUI
 
-struct DeleteKey: View {
+struct BackspaceKey: View {
             
     var body: some View {
         
-        Button(intent: DeleteKeyIntent()) {
+        Button(intent: BackspaceKeyIntent()) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
@@ -32,20 +32,20 @@ struct DeleteKey: View {
 #Preview {
     Color.keyboardBackground
         .overlay {
-            DeleteKey()
+            BackspaceKey()
         }
 }
 
 
-struct DeleteKeyIntent: AppIntent {
+struct BackspaceKeyIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Delete key"
+    static var title: LocalizedStringResource = "Backspace key"
     
-    @Parameter(title: "Delete Key")
+    @Parameter(title: "Backspace Key")
     var id: String
     
     init() {
-        id = "deleteKey"
+        id = "backspaceKey"
     }
     
     func perform() async throws -> some IntentResult {

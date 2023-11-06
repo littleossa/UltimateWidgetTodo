@@ -39,7 +39,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
                 
                 HStack {
                     Spacer().frame(width: 12)
-                    DeleteKey()
+                    BackspaceKey()
                         .frame(width: 36, height: 34)
                 }
             }

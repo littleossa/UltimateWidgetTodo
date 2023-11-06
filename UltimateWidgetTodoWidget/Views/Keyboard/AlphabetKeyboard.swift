@@ -44,7 +44,7 @@ struct AlphabetKeyboard: View {
                 
                 HStack {
                     Spacer().frame(width: 6)
-                    DeleteKey()
+                    BackspaceKey()
                         .frame(width: 36, height: 34)
                 }
             }
