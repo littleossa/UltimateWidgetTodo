@@ -9,11 +9,13 @@ import SwiftUI
 
 struct DoneKey: View {
     
-    let inputText: String
+    private var inputText: String {
+        return KeyboardInputManager.shared.inputText
+    }
             
     var body: some View {
         
-        Button(intent: DoneKeyIntent()) {
+        Button(intent: DoneKeyIntent(inputText: inputText)) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
@@ -36,8 +38,8 @@ struct DoneKey: View {
     Color.keyboardBackground
         .overlay {
             HStack {
-                DoneKey(inputText: "")
-                DoneKey(inputText: "a")
+                DoneKey()
+                DoneKey()
             }
         }
 }
@@ -50,13 +52,18 @@ struct DoneKeyIntent: AppIntent {
     @Parameter(title: "Done Key")
     var id: String
     
-    init() {
+    @Parameter(title: "Input text")
+    var inputText: String
+    
+    init() {}
+    
+    init(inputText: String) {
         id = "doneKey"
+        self.inputText = inputText
     }
     
     func perform() async throws -> some IntentResult {
-        let name = KeyboardInputManager.shared.inputText
-        await SwiftDataStore.shared.addTask(name: name)
+        await SwiftDataStore.shared.addTask(name: inputText)
         KeyboardInputManager.shared.clearInputText()
         ScreenManager.shared.changeScreen(into: .main)
         

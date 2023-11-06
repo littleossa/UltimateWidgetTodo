@@ -30,7 +30,7 @@ struct WidgetKeyboard: View {
                     .frame(width: 36, height: 34)
                 SpaceKey()
                     .frame(width: 154, height: 34)
-                DoneKey(inputText: "a")
+                DoneKey()
                     .frame(width: 74, height: 34)
             }
         }
