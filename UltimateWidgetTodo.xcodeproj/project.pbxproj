@@ -256,9 +256,8 @@
 		9754843E2AF4D30800A09B11 /* AddTask */ = {
 			isa = PBXGroup;
 			children = (
+				9754846C2AFA640C00A09B11 /* Components */,
 				975484012AF277B100A09B11 /* AddTaskView.swift */,
-				975484422AF4DDEA00A09B11 /* CloseButton.swift */,
-				9754843F2AF4D32200A09B11 /* InputForm.swift */,
 			);
 			path = AddTask;
 			sourceTree = "<group>";
@@ -275,10 +274,7 @@
 		975484582AF8E1B500A09B11 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				979E23E62AF1BBB7003559D2 /* AddTaskButton.swift */,
-				9754845E2AF90C5A00A09B11 /* AddTaskButtonImage.swift */,
-				9754844F2AF5A91700A09B11 /* TaskCompleteButton.swift */,
-				9754844C2AF53F2B00A09B11 /* TaskListRow.swift */,
+				9754846B2AFA63F900A09B11 /* Components */,
 				975484592AF8E1F400A09B11 /* TaskListView.swift */,
 				9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */,
 			);
@@ -299,6 +295,26 @@
 				9754841C2AF4529300A09B11 /* SpaceKey.swift */,
 			);
 			path = Keys;
+			sourceTree = "<group>";
+		};
+		9754846B2AFA63F900A09B11 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				979E23E62AF1BBB7003559D2 /* AddTaskButton.swift */,
+				9754845E2AF90C5A00A09B11 /* AddTaskButtonImage.swift */,
+				9754844F2AF5A91700A09B11 /* TaskCompleteButton.swift */,
+				9754844C2AF53F2B00A09B11 /* TaskListRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9754846C2AFA640C00A09B11 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				975484422AF4DDEA00A09B11 /* CloseButton.swift */,
+				9754843F2AF4D32200A09B11 /* InputForm.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		979E23962AF12679003559D2 = {
