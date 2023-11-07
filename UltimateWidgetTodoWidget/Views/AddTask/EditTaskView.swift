@@ -1,5 +1,5 @@
 //
-//  AddTaskView.swift
+//  EditTaskView.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,7 +7,9 @@
 import SwiftUI
 import WidgetKit
 
-struct AddTaskView: View {
+struct EditTaskView: View {
+    
+    let type: EditTaskType
     
     var body: some View {
         VStack(spacing: 0) {
@@ -46,7 +48,7 @@ struct AddTaskView: View {
                         
             Spacer().frame(height: 26)
                         
-            WidgetKeyboard()
+            WidgetKeyboard(taskType: .addNewTask)
         }
         .containerBackground(for: .widget) {
             KeyboardOverlayBackgroundView()
@@ -56,7 +58,7 @@ struct AddTaskView: View {
 
 // MARK: - Preview
 #if DEBUG
-struct AddTaskPreviewWidget: Widget {
+struct EditTaskPreviewWidget: Widget {
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
@@ -64,14 +66,14 @@ struct AddTaskPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            AddTaskView()
+            EditTaskView(type: .addNewTask)
                 .modelContainer(SwiftDataStore.testStore.container)
         }
     }
 }
 
 #Preview(as: .systemLarge) {
-    AddTaskPreviewWidget()
+    EditTaskPreviewWidget()
 } timeline: {
     TaskEntry(date: .now)
 }

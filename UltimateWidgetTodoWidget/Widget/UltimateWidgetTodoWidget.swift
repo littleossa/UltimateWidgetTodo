@@ -20,9 +20,9 @@ struct UltimateWidgetTodoWidget: Widget {
                 case .main:
                     MainView()
                 case .addTask:
-                    AddTaskView()
-                case .editTask:
-                    Text("TODO: - editItem")
+                    EditTaskView(type: .addNewTask)
+                case let .editTask(id):
+                    EditTaskView(type: .editTask(id: id))
                 }
             }
             .modelContainer(SwiftDataStore.shared.container)

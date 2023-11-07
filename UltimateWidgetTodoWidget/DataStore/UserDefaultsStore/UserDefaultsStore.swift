@@ -19,10 +19,24 @@ class UserDefaultsStore {
     private let userDefaults: UserDefaults
     
     enum Key: String, CaseIterable {
+        case editTaskId
         case inputText
         case isCapsLocked
         case keyboardInputMode
         case screenType
+    }
+    
+    var editTaskId: UUID? {
+        get {
+            guard let value = userDefaults.string(forKey: Key.editTaskId.rawValue),
+                  let uuid = UUID(uuidString: value)
+            else { return nil }
+            
+            return uuid
+        }
+        set {
+            userDefaults.set(newValue?.uuidString, forKey: Key.editTaskId.rawValue)
+        }
     }
     
     var inputText: String {
@@ -59,13 +73,26 @@ class UserDefaultsStore {
     var screenType: ScreenType {
         get {
             let value = userDefaults.string(forKey: Key.screenType.rawValue) ?? ""
-            if let type = ScreenType(rawValue: value) {
-                return type
+            
+            switch value {
+            case ScreenType.main.screenName:
+                return .main
+            case ScreenType.addTask.screenName:
+                return .addTask
+            case ScreenType.editTask(id: UUID()).screenName:
+                
+                if let editTaskId {
+                    return .editTask(id: editTaskId)
+                } else {
+                    fatalError("The screen name cannot be retrieved due to the lack of an editing ID")
+                }
+                
+            default:
+                fatalError("This screen name is not defined")
             }
-            return .main
         }
         set {
-            userDefaults.set(newValue.rawValue, forKey: Key.screenType.rawValue)
+            userDefaults.set(newValue.screenName, forKey: Key.screenType.rawValue)
         }
     }
     

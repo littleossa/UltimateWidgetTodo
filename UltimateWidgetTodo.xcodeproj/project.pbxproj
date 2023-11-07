@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		975484022AF277B100A09B11 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484012AF277B100A09B11 /* AddTaskView.swift */; };
+		975484022AF277B100A09B11 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484012AF277B100A09B11 /* EditTaskView.swift */; };
 		975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484032AF2787500A09B11 /* WidgetKeyboard.swift */; };
 		975484062AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */; };
 		975484072AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */; };
@@ -110,7 +110,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		975484012AF277B100A09B11 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		975484012AF277B100A09B11 /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 		975484032AF2787500A09B11 /* WidgetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKeyboard.swift; sourceTree = "<group>"; };
 		975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLetterKey.swift; sourceTree = "<group>"; };
 		9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsLockKey.swift; sourceTree = "<group>"; };
@@ -260,7 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				9754846C2AFA640C00A09B11 /* Components */,
-				975484012AF277B100A09B11 /* AddTaskView.swift */,
+				975484012AF277B100A09B11 /* EditTaskView.swift */,
 			);
 			path = AddTask;
 			sourceTree = "<group>";
@@ -606,7 +606,7 @@
 				9754845D2AF8E9A100A09B11 /* TaskEmptyView.swift in Sources */,
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
 				9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */,
-				975484022AF277B100A09B11 /* AddTaskView.swift in Sources */,
+				975484022AF277B100A09B11 /* EditTaskView.swift in Sources */,
 				9754844D2AF53F2B00A09B11 /* TaskListRow.swift in Sources */,
 				975484542AF844B500A09B11 /* Line.swift in Sources */,
 				979E23D62AF12FCB003559D2 /* Task.swift in Sources */,

@@ -8,6 +8,8 @@ import SwiftUI
 
 struct AlphabetKeyboard: View {
     
+    let taskType: EditTaskType
+    
     var isCapsLocked: Bool {
         KeyboardInputManager.shared.isCapsLocked
     }

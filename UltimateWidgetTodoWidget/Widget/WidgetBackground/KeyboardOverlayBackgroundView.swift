@@ -38,7 +38,7 @@ struct KeyboardOverlayBackgroundPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            AddTaskView()
+            EditTaskView(type: .addNewTask)
                 .containerBackground(for: .widget) {
                     KeyboardOverlayBackgroundView()
                 }
