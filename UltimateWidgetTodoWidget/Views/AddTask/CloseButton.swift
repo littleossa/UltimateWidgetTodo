@@ -16,8 +16,6 @@ struct CloseButton: View {
                 .font(.system(size: 24))
         }
         .foregroundStyle(.blue)
-        .frame(width: WidgetConfig.topBarHeight,
-               height: WidgetConfig.topBarHeight)
         .buttonStyle(.plain)
     }
 }

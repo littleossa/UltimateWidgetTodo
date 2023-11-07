@@ -15,9 +15,22 @@ struct AddTaskView: View {
             
             HStack {
                 CloseButton()
-                .offset(x: -8)
+                    .frame(width: WidgetConfig.topBarHeight,
+                           height: WidgetConfig.topBarHeight)
+                    .offset(x: -8)
                 
                 Spacer()
+                
+                Text("New")
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundStyle(Color.label)
+                
+                Spacer()
+                
+                Spacer()
+                    .frame(width: WidgetConfig.topBarHeight,
+                           height: WidgetConfig.topBarHeight)
             }
             .frame(height: WidgetConfig.topBarHeight)
             
