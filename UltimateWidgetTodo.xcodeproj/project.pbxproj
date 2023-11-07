@@ -58,6 +58,7 @@
 		975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484662AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift */; };
 		9754846A2AF98FCE00A09B11 /* AlphabetModeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484692AF98FCE00A09B11 /* AlphabetModeKey.swift */; };
 		9754846E2AFA65FC00A09B11 /* EditTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754846D2AFA65FC00A09B11 /* EditTaskType.swift */; };
+		9754846F2AFB02E000A09B11 /* EditTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754846D2AFA65FC00A09B11 /* EditTaskType.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -556,6 +557,7 @@
 			files = (
 				975484392AF4614700A09B11 /* KeyboardInputManager.swift in Sources */,
 				9754844B2AF52D2600A09B11 /* ScreenType.swift in Sources */,
+				9754846F2AFB02E000A09B11 /* EditTaskType.swift in Sources */,
 				975484452AF4DEB600A09B11 /* WidgetConfig.swift in Sources */,
 				975484262AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				9754845F2AF90C5A00A09B11 /* AddTaskButtonImage.swift in Sources */,

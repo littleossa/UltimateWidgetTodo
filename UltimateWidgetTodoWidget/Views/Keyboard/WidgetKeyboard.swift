@@ -9,7 +9,7 @@ import WidgetKit
 
 struct WidgetKeyboard: View {
     
-    let taskType: EditTaskType
+    let type: EditTaskType
     
     var body: some View {
         
@@ -17,11 +17,11 @@ struct WidgetKeyboard: View {
             
             switch KeyboardInputManager.shared.inputMode {
             case .alphabet:
-                AlphabetKeyboard(taskType: taskType)
+                AlphabetKeyboard(type: type)
             case .emoji:
                 EmptyView()
             case .extraPunctuationMarks, .number:
-                NumberAndPunctuationMarkKeyboard(taskType: taskType)
+                NumberAndPunctuationMarkKeyboard(type: type)
             }
         }
         .background(.keyboardBackground)

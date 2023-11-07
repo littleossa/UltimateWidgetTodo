@@ -48,7 +48,7 @@ struct EditTaskView: View {
                         
             Spacer().frame(height: 26)
                         
-            WidgetKeyboard(taskType: .addNewTask)
+            WidgetKeyboard(type: type)
         }
         .containerBackground(for: .widget) {
             KeyboardOverlayBackgroundView()

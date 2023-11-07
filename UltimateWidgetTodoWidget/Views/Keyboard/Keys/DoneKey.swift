@@ -6,8 +6,11 @@
 
 import AppIntents
 import SwiftUI
+import WidgetKit
 
 struct DoneKey: View {
+    
+    let type: EditTaskType
     
     private var inputText: String {
         return KeyboardInputManager.shared.inputText
@@ -15,7 +18,7 @@ struct DoneKey: View {
             
     var body: some View {
         
-        Button(intent: DoneKeyIntent(inputText: inputText)) {
+        Button(intent: DoneKeyIntent(type: type, taskName: inputText)) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
@@ -38,8 +41,8 @@ struct DoneKey: View {
     Color.keyboardBackground
         .overlay {
             HStack {
-                DoneKey()
-                DoneKey()
+                DoneKey(type: .addNewTask)
+                DoneKey(type: .addNewTask)
             }
         }
 }
@@ -52,21 +55,48 @@ struct DoneKeyIntent: AppIntent {
     @Parameter(title: "Done Key")
     var id: String
     
-    @Parameter(title: "Input text")
-    var inputText: String
+    @Parameter(title: "Task name")
+    var taskName: String
+    
+    var type: EditTaskType = .addNewTask
     
     init() {}
     
-    init(inputText: String) {
+    init(type: EditTaskType, taskName: String) {
         id = "doneKey"
-        self.inputText = inputText
+        self.taskName = taskName
+        self.type = type
     }
     
     func perform() async throws -> some IntentResult {
-        await SwiftDataStore.shared.addTask(name: inputText)
-        KeyboardInputManager.shared.clearInputText()
-        ScreenManager.shared.changeScreen(into: .main)
+        
+        switch type {
+        case .addNewTask:
+            await addTask(name: taskName)
+        case .editTask(let id):
+            await editTask(id: id, name: taskName)
+        }
         
         return .result()
+    }
+    
+    private func addTask(name: String) async {
+        await SwiftDataStore.shared.addTask(name: taskName)
+        KeyboardInputManager.shared.clearInputText()
+        ScreenManager.shared.changeScreen(into: .main)
+    }
+    
+    private func editTask(id: UUID, name: String) async {
+        do {
+            let task = try await SwiftDataStore.shared.fetchTask(id: id)
+            task.name = name
+            task.updateDate = Date()
+            KeyboardInputManager.shared.clearInputText()
+            
+            ScreenManager.shared.changeScreen(into: .main)
+        } catch {
+            // TODO: Error Handling
+            print("error", error)
+        }
     }
 }

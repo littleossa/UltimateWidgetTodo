@@ -10,7 +10,7 @@ import SwiftData
 @Model
 final class Task {
     let taskId: UUID
-    let name: String
+    var name: String
     let createDate: Date
     var updateDate: Date
     

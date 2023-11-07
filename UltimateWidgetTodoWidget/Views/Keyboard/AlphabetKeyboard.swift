@@ -8,7 +8,7 @@ import SwiftUI
 
 struct AlphabetKeyboard: View {
     
-    let taskType: EditTaskType
+    let type: EditTaskType
     
     var isCapsLocked: Bool {
         KeyboardInputManager.shared.isCapsLocked
@@ -59,7 +59,7 @@ struct AlphabetKeyboard: View {
                     .frame(width: 36, height: 34)
                 SpaceKey()
                     .frame(width: 154, height: 34)
-                DoneKey()
+                DoneKey(type: type)
                     .frame(width: 74, height: 34)
             }
         }

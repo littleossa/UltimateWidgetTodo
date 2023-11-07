@@ -8,7 +8,7 @@ import SwiftUI
 
 struct NumberAndPunctuationMarkKeyboard: View {
     
-    let taskType: EditTaskType
+    let type: EditTaskType
     
     private var topRowCharacters: [String] {
         if KeyboardInputManager.shared.isNumberMode {
@@ -78,7 +78,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
                     .frame(width: 36, height: 34)
                 SpaceKey()
                     .frame(width: 154, height: 34)
-                DoneKey()
+                DoneKey(type: type)
                     .frame(width: 74, height: 34)
             }
         }
@@ -86,5 +86,5 @@ struct NumberAndPunctuationMarkKeyboard: View {
 }
 
 #Preview {
-    NumberAndPunctuationMarkKeyboard(taskType: .addNewTask)
+    NumberAndPunctuationMarkKeyboard(type: .addNewTask)
 }
