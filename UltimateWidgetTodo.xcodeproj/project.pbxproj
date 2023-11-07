@@ -257,13 +257,13 @@
 			path = WidgetBackground;
 			sourceTree = "<group>";
 		};
-		9754843E2AF4D30800A09B11 /* AddTask */ = {
+		9754843E2AF4D30800A09B11 /* EditTask */ = {
 			isa = PBXGroup;
 			children = (
 				9754846C2AFA640C00A09B11 /* Components */,
 				975484012AF277B100A09B11 /* EditTaskView.swift */,
 			);
-			path = AddTask;
+			path = EditTask;
 			sourceTree = "<group>";
 		};
 		975484552AF8E09300A09B11 /* Extensions */ = {
@@ -400,7 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				975484092AF2FDBC00A09B11 /* Main */,
-				9754843E2AF4D30800A09B11 /* AddTask */,
+				9754843E2AF4D30800A09B11 /* EditTask */,
 				975484082AF2FD8B00A09B11 /* Keyboard */,
 				975484532AF844B500A09B11 /* Line.swift */,
 			);
