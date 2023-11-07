@@ -9,10 +9,12 @@ import SwiftUI
 
 struct CloseButton: View {
     
+    let type: EditTaskType
+    
     var body: some View {
         
         Button(intent: CloseButtonIntent()) {
-            Image(systemName: "xmark")
+            Image(systemName: type.closeButtonImageName)
                 .font(.system(size: 24))
         }
         .foregroundStyle(.blue)
@@ -21,7 +23,10 @@ struct CloseButton: View {
 }
 
 #Preview {
-    CloseButton()
+    HStack {
+        CloseButton(type: .addNewTask)
+        CloseButton(type: .editTask(id: UUID()))
+    }
 }
 
 struct CloseButtonIntent: AppIntent {

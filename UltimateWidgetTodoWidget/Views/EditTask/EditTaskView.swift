@@ -16,14 +16,14 @@ struct EditTaskView: View {
             Spacer().frame(height: WidgetConfig.colorHeaderHeight - 16)
             
             HStack {
-                CloseButton()
+                CloseButton(type: type)
                     .frame(width: WidgetConfig.topBarHeight,
                            height: WidgetConfig.topBarHeight)
                     .offset(x: -8)
                 
                 Spacer()
                 
-                Text("New")
+                Text(type.displayLabel)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundStyle(Color.label)
