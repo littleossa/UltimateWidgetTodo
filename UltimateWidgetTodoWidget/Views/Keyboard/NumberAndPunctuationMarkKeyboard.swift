@@ -7,18 +7,35 @@
 import SwiftUI
 
 struct NumberAndPunctuationMarkKeyboard: View {
+    
+    private var topRowCharacters: [String] {
+        if KeyboardInputManager.shared.isNumberMode {
+            return KeyboardInputManager.topRowNumbers
+        } else {
+            return KeyboardInputManager.topRowExtraPunctuationMarks
+        }
+    }
+    
+    private var centerRowCharacters: [String] {
+        if KeyboardInputManager.shared.isNumberMode {
+            return KeyboardInputManager.centerRowPunctuationMarks
+        } else {
+            return KeyboardInputManager.centerRowExtraPunctuationMarks
+        }
+    }
+    
     var body: some View {
         
         VStack(spacing: 10) {
             HStack(spacing: 6) {
-                ForEach(KeyboardInputManager.topRowNumbers, id: \.self) {
+                ForEach(topRowCharacters, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 26, height: 34)
                 }
             }
             
             HStack(spacing: 6) {
-                ForEach(KeyboardInputManager.centerRowPunctuationMarks, id: \.self) {
+                ForEach(centerRowCharacters, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 26, height: 34)
                 }
@@ -27,8 +44,15 @@ struct NumberAndPunctuationMarkKeyboard: View {
             HStack(spacing: 6) {
                 
                 HStack {
-                    ExtraPunctuationMarksKey()
-                        .frame(width: 36, height: 34)
+                    
+                    if KeyboardInputManager.shared.isNumberMode {
+                        ExtraPunctuationMarksKey()
+                            .frame(width: 36, height: 34)
+                    } else {
+                        NumberModeKey()
+                            .frame(width: 36, height: 34)
+                    }
+                    
                     Spacer().frame(width: 12)
                 }
                 

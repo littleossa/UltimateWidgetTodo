@@ -45,6 +45,10 @@ class KeyboardInputManager {
         return userDefaultsStore.isCapsLocked
     }
     
+    var isNumberMode: Bool {
+        return userDefaultsStore.keyboardInputMode == .number
+    }
+    
     func clearInputText() {
         return userDefaultsStore.inputText = ""
     }

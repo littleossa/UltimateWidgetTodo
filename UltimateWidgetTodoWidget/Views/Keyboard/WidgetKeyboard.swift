@@ -18,7 +18,7 @@ struct WidgetKeyboard: View {
                 AlphabetKeyboard()
             case .emoji:
                 EmptyView()
-            case .number:
+            case .extraPunctuationMarks, .number:
                 NumberAndPunctuationMarkKeyboard()
             }
         }
