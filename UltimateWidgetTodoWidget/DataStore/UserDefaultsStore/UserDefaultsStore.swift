@@ -26,7 +26,8 @@ class UserDefaultsStore {
         case screenType
     }
     
-    var editTaskId: UUID? {
+    /// The ID required to navigate to the task editing screen
+    private var editTaskId: UUID? {
         get {
             guard let value = userDefaults.string(forKey: Key.editTaskId.rawValue),
                   let uuid = UUID(uuidString: value)
@@ -92,6 +93,14 @@ class UserDefaultsStore {
             }
         }
         set {
+            
+            switch newValue {
+                
+            case .main, .addTask:
+                break
+            case .editTask(let id):
+                editTaskId = id
+            }
             userDefaults.set(newValue.screenName, forKey: Key.screenType.rawValue)
         }
     }
