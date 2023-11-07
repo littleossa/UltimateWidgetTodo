@@ -28,7 +28,7 @@ struct EmojiModeKey: View {
             }
             .overlay {
                 Image(systemName: isLightMode ? "face.smiling" : "face.smiling.fill")
-                    .font(.system(size: 14))
+                    .font(.system(size: 18))
                     .foregroundStyle(Color.label)
             }
         }
