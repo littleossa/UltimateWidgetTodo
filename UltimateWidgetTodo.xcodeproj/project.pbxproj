@@ -80,7 +80,7 @@
 		979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */; };
 		979E23DC2AF14510003559D2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* Task.swift */; };
 		979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */; };
-		979E23E82AF1BBBA003559D2 /* AddTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E62AF1BBB7003559D2 /* AddTaskButton.swift */; };
+		979E23E82AF1BBBA003559D2 /* presentAddTaskViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E62AF1BBB7003559D2 /* presentAddTaskViewButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,7 +167,7 @@
 		979E23CF2AF12B22003559D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataStore.swift; sourceTree = "<group>"; };
 		979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConfig.swift; sourceTree = "<group>"; };
-		979E23E62AF1BBB7003559D2 /* AddTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskButton.swift; sourceTree = "<group>"; };
+		979E23E62AF1BBB7003559D2 /* presentAddTaskViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentAddTaskViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,7 +307,7 @@
 		9754846B2AFA63F900A09B11 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				979E23E62AF1BBB7003559D2 /* AddTaskButton.swift */,
+				979E23E62AF1BBB7003559D2 /* presentAddTaskViewButton.swift */,
 				9754845E2AF90C5A00A09B11 /* AddTaskButtonImage.swift */,
 				9754844F2AF5A91700A09B11 /* TaskCompleteButton.swift */,
 				9754844C2AF53F2B00A09B11 /* TaskListRow.swift */,
@@ -627,7 +627,7 @@
 				975484782AFBCD7B00A09B11 /* ScreenStateRepository.swift in Sources */,
 				975484522AF8434600A09B11 /* WidgetBackgroundView.swift in Sources */,
 				975484762AFBCD6000A09B11 /* WidgetTodoCore.swift in Sources */,
-				979E23E82AF1BBBA003559D2 /* AddTaskButton.swift in Sources */,
+				979E23E82AF1BBBA003559D2 /* presentAddTaskViewButton.swift in Sources */,
 				975484272AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				975484182AF44DC900A09B11 /* NumberModeKey.swift in Sources */,
 				975484212AF455DE00A09B11 /* DoneKey.swift in Sources */,

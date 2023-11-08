@@ -31,7 +31,7 @@ struct TaskEmptyView: View {
                 
                 Spacer()
             }
-            AddTaskButton(type: .fullScreen)
+            presentAddTaskViewButton(type: .fullScreen)
         }
     }
 }
