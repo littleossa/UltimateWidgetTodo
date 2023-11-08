@@ -53,8 +53,8 @@ class KeyboardInputManager {
         return userDefaultsStore.inputText = ""
     }
     
-    func input(_ character: String) {
-        userDefaultsStore.inputText += character        
+    func input(_ text: String) {
+        userDefaultsStore.inputText += text
     }
     
     func changeMode(into mode: KeyboardInputMode) {

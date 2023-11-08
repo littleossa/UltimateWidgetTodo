@@ -47,19 +47,25 @@ struct TaskListRow: View {
 
 struct TaskListRowSelectIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Todo List Row"
+    static var title: LocalizedStringResource = "Task List Row"
     
-    @Parameter(title: "Todo Item ID")
+    @Parameter(title: "Task ID")
     var id: String
+    
+    @Parameter(title: "Task name")
+    var name: String
     
     init() {}
     
     init(task: Task) {
         self.id = task.taskId.uuidString
+        self.name = task.name
     }
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
+            KeyboardInputManager.shared.clearInputText()
+            KeyboardInputManager.shared.input(name)
             ScreenManager.shared.changeScreen(into: .editTask(id: uuid))
         }
         
