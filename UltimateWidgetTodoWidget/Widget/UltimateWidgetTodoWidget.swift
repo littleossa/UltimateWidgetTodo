@@ -10,13 +10,14 @@ import WidgetKit
 
 struct UltimateWidgetTodoWidget: Widget {
     
+    let model = WidgetTodoCore()
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: WidgetTodoProvider()) { entry in
             
             Group {
-                switch ScreenManager.shared.currentScreen {
+                switch model.currentScreen {
                 case .main:
                     MainView()
                 case .addTask:
@@ -25,7 +26,7 @@ struct UltimateWidgetTodoWidget: Widget {
                     EditTaskView(type: .editTask(id: id))
                 }
             }
-            .modelContainer(SwiftDataStore.shared.container)
+            .modelContainer(model.swiftDataContainer)
             
         }
         .supportedFamilies([.systemLarge])

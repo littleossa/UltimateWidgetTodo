@@ -43,7 +43,7 @@ struct TaskCompleteIntent: AppIntent {
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
-            try await SwiftDataStore.shared.deleteTask(id: uuid)
+            try await WidgetTodoCore().onTapCompleteTask(id: uuid)
         }
         
         return .result()

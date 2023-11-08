@@ -58,6 +58,11 @@
 		9754846E2AFA65FC00A09B11 /* EditTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754846D2AFA65FC00A09B11 /* EditTaskType.swift */; };
 		9754846F2AFB02E000A09B11 /* EditTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754846D2AFA65FC00A09B11 /* EditTaskType.swift */; };
 		975484722AFBC4EE00A09B11 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484712AFBC4EE00A09B11 /* TaskRepository.swift */; };
+		975484752AFBCB0100A09B11 /* WidgetTodoCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */; };
+		975484762AFBCD6000A09B11 /* WidgetTodoCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */; };
+		975484772AFBCD7100A09B11 /* KeyboardInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputRepository.swift */; };
+		975484782AFBCD7B00A09B11 /* ScreenStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484462AF5233900A09B11 /* ScreenStateRepository.swift */; };
+		975484792AFBCD7E00A09B11 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484712AFBC4EE00A09B11 /* TaskRepository.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -144,6 +149,7 @@
 		975484692AF98FCE00A09B11 /* AlphabetModeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetModeKey.swift; sourceTree = "<group>"; };
 		9754846D2AFA65FC00A09B11 /* EditTaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskType.swift; sourceTree = "<group>"; };
 		975484712AFBC4EE00A09B11 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTodoCore.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				975484732AFBCAB100A09B11 /* Enum */,
+				975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -587,6 +594,7 @@
 				979E23DC2AF14510003559D2 /* Task.swift in Sources */,
 				9754841A2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
+				975484752AFBCB0100A09B11 /* WidgetTodoCore.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
 				975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */,
@@ -609,13 +617,16 @@
 				975484602AF90C5A00A09B11 /* AddTaskButtonImage.swift in Sources */,
 				975484432AF4DDEA00A09B11 /* CloseButton.swift in Sources */,
 				975484652AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift in Sources */,
+				975484792AFBCD7E00A09B11 /* TaskRepository.swift in Sources */,
 				979E23C02AF1290D003559D2 /* UltimateWidgetTodoWidget.swift in Sources */,
 				975484632AF90ED000A09B11 /* AlphabetKeyboard.swift in Sources */,
 				975484502AF5A91700A09B11 /* TaskCompleteButton.swift in Sources */,
 				979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */,
 				975484402AF4D32200A09B11 /* InputForm.swift in Sources */,
 				9754841B2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
+				975484782AFBCD7B00A09B11 /* ScreenStateRepository.swift in Sources */,
 				975484522AF8434600A09B11 /* WidgetBackgroundView.swift in Sources */,
+				975484762AFBCD6000A09B11 /* WidgetTodoCore.swift in Sources */,
 				979E23E82AF1BBBA003559D2 /* AddTaskButton.swift in Sources */,
 				975484272AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				975484182AF44DC900A09B11 /* NumberModeKey.swift in Sources */,
@@ -635,6 +646,7 @@
 				979E23D92AF14281003559D2 /* MainView.swift in Sources */,
 				9754845A2AF8E1F400A09B11 /* TaskListView.swift in Sources */,
 				9754846E2AFA65FC00A09B11 /* EditTaskType.swift in Sources */,
+				975484772AFBCD7100A09B11 /* KeyboardInputRepository.swift in Sources */,
 				975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */,
 				975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */,
 				979E23BE2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift in Sources */,

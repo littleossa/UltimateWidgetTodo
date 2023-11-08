@@ -49,7 +49,7 @@ struct BackspaceKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        KeyboardInputManager.shared.deleteLastCharacter()
+        WidgetTodoCore().onTapBackspaceKey()
         return .result()
     }
 }

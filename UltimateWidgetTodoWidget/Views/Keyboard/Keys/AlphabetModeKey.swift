@@ -49,7 +49,7 @@ struct AlphabetModeKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        KeyboardInputManager.shared.changeMode(into: .alphabet)
+        WidgetTodoCore().onTapAlphabetModeKey()
         return .result()
     }
 }

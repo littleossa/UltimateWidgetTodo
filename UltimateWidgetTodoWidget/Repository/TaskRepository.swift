@@ -15,6 +15,10 @@ class TaskRepository {
     
     private let store: SwiftDataStore
     
+    var container: ModelContainer {
+        store.container
+    }
+    
     @MainActor
     func addTask(name: String, createDate: Date = Date()) {
         let newTask = Task(name: name, createDate: createDate)

@@ -15,7 +15,7 @@ struct WidgetKeyboard: View {
         
         VStack(spacing: 10) {
             
-            switch KeyboardInputManager.shared.inputMode {
+            switch WidgetTodoCore().keyboardInputMode {
             case .alphabet:
                 AlphabetKeyboard(type: type)
             case .emoji:

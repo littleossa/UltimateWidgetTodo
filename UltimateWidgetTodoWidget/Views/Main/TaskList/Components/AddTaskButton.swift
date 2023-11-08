@@ -45,7 +45,7 @@ struct AddTaskButtonIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        ScreenManager.shared.changeScreen(into: .addTask)
+        WidgetTodoCore().onTapPresentAddTaskView()
         return .result()
     }
 }

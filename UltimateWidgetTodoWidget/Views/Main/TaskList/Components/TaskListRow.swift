@@ -64,11 +64,8 @@ struct TaskListRowSelectIntent: AppIntent {
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
-            KeyboardInputManager.shared.clearInputText()
-            KeyboardInputManager.shared.input(name)
-            ScreenManager.shared.changeScreen(into: .editTask(id: uuid))
+            WidgetTodoCore().onTapTaskListRow(id: uuid, name: name)
         }
-        
         return .result()
     }
 }

@@ -49,7 +49,7 @@ struct ExtraPunctuationMarksKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        KeyboardInputManager.shared.changeMode(into: .extraPunctuationMarks)
+        WidgetTodoCore().onTapExtraPunctuationMarksKey()
         return .result()
     }
 }

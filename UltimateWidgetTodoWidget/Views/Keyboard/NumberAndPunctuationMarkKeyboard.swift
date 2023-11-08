@@ -8,21 +8,27 @@ import SwiftUI
 
 struct NumberAndPunctuationMarkKeyboard: View {
     
+    init(model: WidgetTodoCore = .init(), type: EditTaskType) {
+        self.model = model
+        self.type = type
+    }
+    
+    let model: WidgetTodoCore
     let type: EditTaskType
     
     private var topRowCharacters: [String] {
-        if KeyboardInputManager.shared.isNumberMode {
-            return KeyboardInputManager.topRowNumbers
+        if model.isNumberMode {
+            return KeyboardInputRepository.topRowNumbers
         } else {
-            return KeyboardInputManager.topRowExtraPunctuationMarks
+            return KeyboardInputRepository.topRowExtraPunctuationMarks
         }
     }
     
     private var centerRowCharacters: [String] {
-        if KeyboardInputManager.shared.isNumberMode {
-            return KeyboardInputManager.centerRowPunctuationMarks
+        if model.isNumberMode {
+            return KeyboardInputRepository.centerRowPunctuationMarks
         } else {
-            return KeyboardInputManager.centerRowExtraPunctuationMarks
+            return KeyboardInputRepository.centerRowExtraPunctuationMarks
         }
     }
     
@@ -47,7 +53,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
                 
                 HStack {
                     
-                    if KeyboardInputManager.shared.isNumberMode {
+                    if model.isNumberMode {
                         ExtraPunctuationMarksKey()
                             .frame(width: 36, height: 34)
                     } else {
@@ -58,7 +64,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
                     Spacer().frame(width: 12)
                 }
                 
-                ForEach(KeyboardInputManager.bottomRowPunctuationMarks, id: \.self) {
+                ForEach(KeyboardInputRepository.bottomRowPunctuationMarks, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 36, height: 34)
                 }

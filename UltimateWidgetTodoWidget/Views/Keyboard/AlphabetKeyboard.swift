@@ -8,25 +8,27 @@ import SwiftUI
 
 struct AlphabetKeyboard: View {
     
-    let type: EditTaskType
-    
-    var isCapsLocked: Bool {
-        KeyboardInputManager.shared.isCapsLocked
+    init(model: WidgetTodoCore = .init(), type: EditTaskType) {
+        self.model = model
+        self.type = type
     }
+    
+    let model: WidgetTodoCore
+    let type: EditTaskType
     
     var body: some View {
         
         VStack(spacing: 10) {
             HStack(spacing: 6) {
-                ForEach(KeyboardInputManager.topRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
+                ForEach(KeyboardInputRepository.topRowAlphabets, id: \.self) {
+                    KeyboardLetterKey($0, isCapsLocked: model.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }
             }
             
             HStack(spacing: 6) {
-                ForEach(KeyboardInputManager.centerRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
+                ForEach(KeyboardInputRepository.centerRowAlphabets, id: \.self) {
+                    KeyboardLetterKey($0, isCapsLocked: model.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }
             }
@@ -34,13 +36,13 @@ struct AlphabetKeyboard: View {
             HStack(spacing: 6) {
                 
                 HStack {
-                    CapsLockKey(isCapsLocked: isCapsLocked)
+                    CapsLockKey(isCapsLocked: model.isCapsLocked)
                         .frame(width: 36, height: 34)
                     Spacer().frame(width: 6)
                 }
                 
-                ForEach(KeyboardInputManager.bottomRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0, isCapsLocked: isCapsLocked)
+                ForEach(KeyboardInputRepository.bottomRowAlphabets, id: \.self) {
+                    KeyboardLetterKey($0, isCapsLocked: model.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }
                 

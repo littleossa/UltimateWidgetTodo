@@ -49,7 +49,7 @@ struct NumberModeIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        KeyboardInputManager.shared.changeMode(into: .number)
+        WidgetTodoCore().onTapNumberModeKey()
         return .result()
     }
 }

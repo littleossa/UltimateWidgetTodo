@@ -53,7 +53,7 @@ struct KeyboardLetterKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        KeyboardInputManager.shared.input(letter)
+        WidgetTodoCore().onTapCharacterKey(letter)
         return .result()
     }
 }

@@ -41,7 +41,7 @@ struct CloseButtonIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        ScreenManager.shared.changeScreen(into: .main)
+        WidgetTodoCore().onTapCloseButton()
         return .result()
     }
 }

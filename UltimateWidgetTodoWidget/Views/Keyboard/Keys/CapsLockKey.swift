@@ -9,7 +9,11 @@ import SwiftUI
 
 struct CapsLockKey: View {
         
-    var isCapsLocked: Bool
+    init(isCapsLocked: Bool = WidgetTodoCore().isCapsLocked) {
+        self.isCapsLocked = isCapsLocked
+    }
+    
+    let isCapsLocked: Bool
         
     var body: some View {
         
@@ -56,7 +60,7 @@ struct CapsLockKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        KeyboardInputManager.shared.toggleCapsLock()
+        WidgetTodoCore().onTapCapsLockKey()
         return .result()
     }
 }
