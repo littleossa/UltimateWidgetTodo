@@ -1,5 +1,5 @@
 //
-//  TaskCompleteButton.swift
+//  CompleteTaskButton.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,12 +7,12 @@
 import AppIntents
 import SwiftUI
 
-struct TaskCompleteButton: View {
+struct CompleteTaskButton: View {
     
     let task: Task
     
     var body: some View {
-        Toggle(isOn: false, intent: TaskCompleteIntent(task: task)) {
+        Toggle(isOn: false, intent: CompleteTaskIntent(task: task)) {
             EmptyView()
         }
         .toggleStyle(TaskToggleStyle())
@@ -28,11 +28,11 @@ struct TaskToggleStyle: ToggleStyle {
     }
 }
 
-struct TaskCompleteIntent: AppIntent {
+struct CompleteTaskIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Todo Complete"
+    static var title: LocalizedStringResource = "Complete Task"
     
-    @Parameter(title: "Todo Item")
+    @Parameter(title: "Task ID")
     var id: String
     
     init() {}
@@ -43,7 +43,7 @@ struct TaskCompleteIntent: AppIntent {
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
-            try await WidgetTodoCore().onTapCompleteTask(id: uuid)
+            try await WidgetTodoCore.shared.onTapCompleteTask(id: uuid)
         }
         
         return .result()

@@ -45,7 +45,7 @@ struct presentAddTaskViewIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore().onTapPresentAddTaskView()
+        WidgetTodoCore.shared.onTapPresentAddTaskView()
         return .result()
     }
 }

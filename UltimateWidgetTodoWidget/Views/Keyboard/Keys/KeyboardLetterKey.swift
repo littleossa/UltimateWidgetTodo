@@ -9,7 +9,7 @@ import SwiftUI
 
 struct KeyboardLetterKey: View {
     
-    init(_ letter: String, isCapsLocked: Bool) {
+    init(_ letter: String, isCapsLocked: Bool = WidgetTodoCore.shared.isCapsLocked) {
         if isCapsLocked {
             self.letter = letter.uppercased()
         } else {
@@ -53,7 +53,7 @@ struct KeyboardLetterKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore().onTapCharacterKey(letter)
+        WidgetTodoCore.shared.onTapCharacterKey(letter)
         return .result()
     }
 }

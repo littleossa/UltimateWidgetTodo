@@ -49,7 +49,7 @@ struct BackspaceKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore().onTapBackspaceKey()
+        WidgetTodoCore.shared.onTapBackspaceKey()
         return .result()
     }
 }

@@ -8,8 +8,11 @@ import Foundation
 import SwiftData
 
 class WidgetTodoCore {
+    
+    static let shared = WidgetTodoCore()
+    static let test = WidgetTodoCore(isTestMode: true)
         
-    init(isTestMode: Bool = false) {
+    private init(isTestMode: Bool = false) {
         self.keyboardInputRepository = .init(store: isTestMode ? .testStore : .shared)
         self.screenStateRepository = .init(store: isTestMode ? .testStore : .shared)
         self.taskRepository = .init(store: isTestMode ? .testStore : .shared)
@@ -29,10 +32,6 @@ class WidgetTodoCore {
     
     var isCapsLocked: Bool {
         return keyboardInputRepository.isCapsLocked
-    }
-    
-    var isEmptyInputText: Bool {
-        return keyboardInputRepository.inputText.isEmpty
     }
     
     var isNumberMode: Bool {

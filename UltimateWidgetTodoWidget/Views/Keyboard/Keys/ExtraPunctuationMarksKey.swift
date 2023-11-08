@@ -49,7 +49,7 @@ struct ExtraPunctuationMarksKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore().onTapExtraPunctuationMarksKey()
+        WidgetTodoCore.shared.onTapExtraPunctuationMarksKey()
         return .result()
     }
 }

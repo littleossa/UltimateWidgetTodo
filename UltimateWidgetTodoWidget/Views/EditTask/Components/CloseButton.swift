@@ -41,7 +41,7 @@ struct CloseButtonIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore().onTapCloseButton()
+        WidgetTodoCore.shared.onTapCloseButton()
         return .result()
     }
 }

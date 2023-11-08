@@ -49,7 +49,7 @@ struct AlphabetModeKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore().onTapAlphabetModeKey()
+        WidgetTodoCore.shared.onTapAlphabetModeKey()
         return .result()
     }
 }

@@ -10,11 +10,13 @@ import WidgetKit
 
 struct DoneKey: View {
     
-    let type: EditTaskType
-    
-    private var isEmptyText: Bool {
-        return WidgetTodoCore().isEmptyInputText
+    init(inputText: String = WidgetTodoCore.shared.inputText, type: EditTaskType) {
+        self.inputText = inputText
+        self.type = type
     }
+    
+    let inputText: String
+    let type: EditTaskType
             
     var body: some View {
         
@@ -25,13 +27,13 @@ struct DoneKey: View {
                     .offset(y: 1)
                 
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(isEmptyText ? .keyDarkGray : .blue)
+                    .fill(inputText.isEmpty ? .keyDarkGray : .blue)
             }
             .overlay {
                 Text("done")
                     .font(.system(size: 14))
                     .bold()
-                    .foregroundStyle(isEmptyText ? .gray : .white)
+                    .foregroundStyle(inputText.isEmpty ? .gray : .white)
             }
         }
     }
@@ -41,8 +43,8 @@ struct DoneKey: View {
     Color.keyboardBackground
         .overlay {
             HStack {
-                DoneKey(type: .addNewTask)
-                DoneKey(type: .addNewTask)
+                DoneKey(inputText: "", type: .addNewTask)
+                DoneKey(inputText: "something", type: .addNewTask)
             }
         }
 }
@@ -65,7 +67,7 @@ struct DoneKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        await WidgetTodoCore().onTapDoneKey(type: type)
+        await WidgetTodoCore.shared.onTapDoneKey(type: type)
         return .result()
     }
 }

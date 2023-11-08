@@ -16,7 +16,7 @@ struct TaskListRow: View {
         
         VStack(spacing: 0) {
             HStack {
-                TaskCompleteButton(task: task)
+                CompleteTaskButton(task: task)
                 
                 Button(intent: TaskListRowSelectIntent(task: task)) {
                     Rectangle()
@@ -64,7 +64,7 @@ struct TaskListRowSelectIntent: AppIntent {
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
-            WidgetTodoCore().onTapTaskListRow(id: uuid, name: name)
+            WidgetTodoCore.shared.onTapTaskListRow(id: uuid, name: name)
         }
         return .result()
     }

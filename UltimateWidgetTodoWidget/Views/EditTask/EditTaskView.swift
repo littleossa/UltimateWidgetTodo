@@ -44,7 +44,7 @@ struct EditTaskView: View {
             
             Spacer()
             
-            InputForm(text: WidgetTodoCore().inputText)
+            InputForm(text: WidgetTodoCore.shared.inputText)
                         
             Spacer().frame(height: 26)
                         

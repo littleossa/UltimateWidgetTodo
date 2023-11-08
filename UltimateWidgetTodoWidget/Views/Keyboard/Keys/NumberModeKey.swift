@@ -49,7 +49,7 @@ struct NumberModeIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore().onTapNumberModeKey()
+        WidgetTodoCore.shared.onTapNumberModeKey()
         return .result()
     }
 }
