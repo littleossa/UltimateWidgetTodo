@@ -30,8 +30,7 @@
 		975484292AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484282AF45D4400A09B11 /* KeyboardInputMode.swift */; };
 		9754842A2AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484282AF45D4400A09B11 /* KeyboardInputMode.swift */; };
 		975484322AF45E6D00A09B11 /* UserDefaultsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */; };
-		975484392AF4614700A09B11 /* KeyboardInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputManager.swift */; };
-		9754843A2AF4614700A09B11 /* KeyboardInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputManager.swift */; };
+		975484392AF4614700A09B11 /* KeyboardInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputRepository.swift */; };
 		9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */; };
 		975484402AF4D32200A09B11 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843F2AF4D32200A09B11 /* InputForm.swift */; };
 		975484412AF4D34200A09B11 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843F2AF4D32200A09B11 /* InputForm.swift */; };
@@ -126,7 +125,7 @@
 		975484282AF45D4400A09B11 /* KeyboardInputMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputMode.swift; sourceTree = "<group>"; };
 		9754842F2AF45E6D00A09B11 /* UltimateWidgetTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltimateWidgetTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStoreTests.swift; sourceTree = "<group>"; };
-		975484382AF4614700A09B11 /* KeyboardInputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputManager.swift; sourceTree = "<group>"; };
+		975484382AF4614700A09B11 /* KeyboardInputRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputRepository.swift; sourceTree = "<group>"; };
 		9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOverlayBackgroundView.swift; sourceTree = "<group>"; };
 		9754843F2AF4D32200A09B11 /* InputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputForm.swift; sourceTree = "<group>"; };
 		975484422AF4DDEA00A09B11 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -217,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				9754846D2AFA65FC00A09B11 /* EditTaskType.swift */,
-				975484382AF4614700A09B11 /* KeyboardInputManager.swift */,
 				975484282AF45D4400A09B11 /* KeyboardInputMode.swift */,
 				975484462AF5233900A09B11 /* ScreenManager.swift */,
 				975484492AF52D1500A09B11 /* ScreenType.swift */,
@@ -326,6 +324,7 @@
 		975484702AFBC4C200A09B11 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				975484382AF4614700A09B11 /* KeyboardInputRepository.swift */,
 				975484712AFBC4EE00A09B11 /* TaskRepository.swift */,
 			);
 			path = Repository;
@@ -566,7 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				975484392AF4614700A09B11 /* KeyboardInputManager.swift in Sources */,
+				975484392AF4614700A09B11 /* KeyboardInputRepository.swift in Sources */,
 				9754844B2AF52D2600A09B11 /* ScreenType.swift in Sources */,
 				9754846F2AFB02E000A09B11 /* EditTaskType.swift in Sources */,
 				975484452AF4DEB600A09B11 /* WidgetConfig.swift in Sources */,
@@ -600,7 +599,6 @@
 				9754840D2AF43D3A00A09B11 /* CapsLockKey.swift in Sources */,
 				979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */,
 				9754842A2AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */,
-				9754843A2AF4614700A09B11 /* KeyboardInputManager.swift in Sources */,
 				975484602AF90C5A00A09B11 /* AddTaskButtonImage.swift in Sources */,
 				975484432AF4DDEA00A09B11 /* CloseButton.swift in Sources */,
 				975484652AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift in Sources */,

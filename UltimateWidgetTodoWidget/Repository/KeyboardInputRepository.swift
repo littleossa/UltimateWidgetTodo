@@ -1,12 +1,12 @@
 //
-//  KeyboardInputManager.swift
+//  KeyboardInputRepository.swift
 //  UltimateWidgetTodo
 //
 //
 
 import Foundation
 
-extension KeyboardInputManager {
+extension KeyboardInputRepository {
     // MARK: - Alphabet mode keys
     static let topRowAlphabets = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
     static let centerRowAlphabets = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
@@ -22,54 +22,51 @@ extension KeyboardInputManager {
     
 }
 
-class KeyboardInputManager {
+class KeyboardInputRepository {
     
-    static let shared = KeyboardInputManager(store: .shared)
-    static let test = KeyboardInputManager(store: .testStore)
-        
-    private init(store userDefaultsStore: UserDefaultsStore) {
-        self.userDefaultsStore = userDefaultsStore
+    init(store: UserDefaultsStore = .shared) {
+        self.store = store
     }
     
-    private let userDefaultsStore: UserDefaultsStore
+    private let store: UserDefaultsStore
     
     var inputMode: KeyboardInputMode {
-        return userDefaultsStore.keyboardInputMode
+        return store.keyboardInputMode
     }
     
     var inputText: String {
-        return userDefaultsStore.inputText
+        return store.inputText
     }
     
     var isCapsLocked: Bool {
-        return userDefaultsStore.isCapsLocked
+        return store.isCapsLocked
     }
     
     var isNumberMode: Bool {
-        return userDefaultsStore.keyboardInputMode == .number
+        return store.keyboardInputMode == .number
     }
     
     func clearInputText() {
-        return userDefaultsStore.inputText = ""
+        return store.inputText = ""
     }
     
     func input(_ text: String) {
-        userDefaultsStore.inputText += text
+        store.inputText += text
     }
     
     func changeMode(into mode: KeyboardInputMode) {
-        userDefaultsStore.keyboardInputMode = mode
+        store.keyboardInputMode = mode
     }
     
     func deleteLastCharacter() {
-        var inputText = userDefaultsStore.inputText
+        var inputText = store.inputText
         guard !inputText.isEmpty
         else { return }
         inputText.removeLast()
-        userDefaultsStore.inputText = inputText
+        store.inputText = inputText
     }
     
     func toggleCapsLock() {
-        userDefaultsStore.isCapsLocked.toggle()
+        store.isCapsLocked.toggle()
     }
 }
