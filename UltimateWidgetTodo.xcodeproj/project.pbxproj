@@ -211,14 +211,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		975484222AF459A700A09B11 /* Models */ = {
+		975484222AF459A700A09B11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9754846D2AFA65FC00A09B11 /* EditTaskType.swift */,
-				975484282AF45D4400A09B11 /* KeyboardInputMode.swift */,
-				975484492AF52D1500A09B11 /* ScreenType.swift */,
+				975484732AFBCAB100A09B11 /* Enum */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		975484232AF459C100A09B11 /* DataStore */ = {
@@ -329,6 +327,16 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		975484732AFBCAB100A09B11 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9754846D2AFA65FC00A09B11 /* EditTaskType.swift */,
+				975484282AF45D4400A09B11 /* KeyboardInputMode.swift */,
+				975484492AF52D1500A09B11 /* ScreenType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		979E23962AF12679003559D2 = {
 			isa = PBXGroup;
 			children = (
@@ -382,7 +390,7 @@
 			children = (
 				975484232AF459C100A09B11 /* DataStore */,
 				975484552AF8E09300A09B11 /* Extensions */,
-				975484222AF459A700A09B11 /* Models */,
+				975484222AF459A700A09B11 /* Model */,
 				975484702AFBC4C200A09B11 /* Repository */,
 				979E23D22AF12D56003559D2 /* Views */,
 				979E23D12AF12D1B003559D2 /* Widget */,
