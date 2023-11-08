@@ -37,8 +37,7 @@
 		975484432AF4DDEA00A09B11 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484422AF4DDEA00A09B11 /* CloseButton.swift */; };
 		975484442AF4DE1700A09B11 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484422AF4DDEA00A09B11 /* CloseButton.swift */; };
 		975484452AF4DEB600A09B11 /* WidgetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */; };
-		975484472AF5233900A09B11 /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484462AF5233900A09B11 /* ScreenManager.swift */; };
-		975484482AF5299200A09B11 /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484462AF5233900A09B11 /* ScreenManager.swift */; };
+		975484482AF5299200A09B11 /* ScreenStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484462AF5233900A09B11 /* ScreenStateRepository.swift */; };
 		9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484492AF52D1500A09B11 /* ScreenType.swift */; };
 		9754844B2AF52D2600A09B11 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484492AF52D1500A09B11 /* ScreenType.swift */; };
 		9754844D2AF53F2B00A09B11 /* TaskListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754844C2AF53F2B00A09B11 /* TaskListRow.swift */; };
@@ -129,7 +128,7 @@
 		9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOverlayBackgroundView.swift; sourceTree = "<group>"; };
 		9754843F2AF4D32200A09B11 /* InputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputForm.swift; sourceTree = "<group>"; };
 		975484422AF4DDEA00A09B11 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
-		975484462AF5233900A09B11 /* ScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
+		975484462AF5233900A09B11 /* ScreenStateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateRepository.swift; sourceTree = "<group>"; };
 		975484492AF52D1500A09B11 /* ScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
 		9754844C2AF53F2B00A09B11 /* TaskListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRow.swift; sourceTree = "<group>"; };
 		9754844F2AF5A91700A09B11 /* TaskCompleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompleteButton.swift; sourceTree = "<group>"; };
@@ -217,7 +216,6 @@
 			children = (
 				9754846D2AFA65FC00A09B11 /* EditTaskType.swift */,
 				975484282AF45D4400A09B11 /* KeyboardInputMode.swift */,
-				975484462AF5233900A09B11 /* ScreenManager.swift */,
 				975484492AF52D1500A09B11 /* ScreenType.swift */,
 			);
 			path = Models;
@@ -325,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				975484382AF4614700A09B11 /* KeyboardInputRepository.swift */,
+				975484462AF5233900A09B11 /* ScreenStateRepository.swift */,
 				975484712AFBC4EE00A09B11 /* TaskRepository.swift */,
 			);
 			path = Repository;
@@ -576,7 +575,7 @@
 				975484062AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,
 				9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */,
 				975484442AF4DE1700A09B11 /* CloseButton.swift in Sources */,
-				975484482AF5299200A09B11 /* ScreenManager.swift in Sources */,
+				975484482AF5299200A09B11 /* ScreenStateRepository.swift in Sources */,
 				979E23DC2AF14510003559D2 /* Task.swift in Sources */,
 				9754841A2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
@@ -634,7 +633,6 @@
 				979E23D52AF12DEA003559D2 /* SwiftDataStore.swift in Sources */,
 				9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */,
 				9754846A2AF98FCE00A09B11 /* AlphabetModeKey.swift in Sources */,
-				975484472AF5233900A09B11 /* ScreenManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
