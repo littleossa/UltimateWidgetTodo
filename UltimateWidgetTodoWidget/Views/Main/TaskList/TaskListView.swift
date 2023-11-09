@@ -48,7 +48,7 @@ struct TaskListView: View {
                 HStack {
                     Spacer()
                     
-                    presentAddTaskViewButton(type: .floatingAction)
+                    PresentAddTaskViewButton(type: .floatingAction)
                     .frame(width: 44, height: 44)
                 }
             }

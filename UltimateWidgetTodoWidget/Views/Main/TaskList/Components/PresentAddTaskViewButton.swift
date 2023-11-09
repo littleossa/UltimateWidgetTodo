@@ -1,5 +1,5 @@
 //
-//  presentAddTaskViewButton.swift
+//  PresentAddTaskViewButton.swift
 //  UltimateWidgetTodo
 //
 //
@@ -8,18 +8,18 @@ import AppIntents
 import WidgetKit
 import SwiftUI
 
-struct presentAddTaskViewButton: View {
+struct PresentAddTaskViewButton: View {
     
-    enum AddTaskButtonType {
+    enum ButtonType {
         case floatingAction
         case fullScreen
     }
     
-    let type: AddTaskButtonType
+    let type: ButtonType
             
     var body: some View {
         
-        Button(intent: presentAddTaskViewIntent()) {
+        Button(intent: PresentAddTaskViewIntent()) {
             
             switch type {
             case .floatingAction:
@@ -33,7 +33,7 @@ struct presentAddTaskViewButton: View {
     }
 }
 
-struct presentAddTaskViewIntent: AppIntent {
+struct PresentAddTaskViewIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Present Add task view button"
     
