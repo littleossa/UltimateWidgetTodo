@@ -59,8 +59,7 @@ struct EmojiModeIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Do something
-        print(id)
+        WidgetTodoCore.shared.onTapEmojiModeKey()
         return .result()
     }
 }

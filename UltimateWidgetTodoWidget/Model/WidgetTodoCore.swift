@@ -105,6 +105,10 @@ class WidgetTodoCore: ObservableObject {
         }
     }
     
+    func onTapEmojiModeKey() {
+        keyboardInputRepository.changeMode(into: .emoji)
+    }
+    
     func onTapExtraPunctuationMarksKey() {
         keyboardInputRepository.changeMode(into: .extraPunctuationMarks)
     }
