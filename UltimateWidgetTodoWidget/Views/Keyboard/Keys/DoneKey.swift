@@ -17,10 +17,19 @@ struct DoneKey: View {
     
     let inputText: String
     let type: EditTaskType
+    
+    private var DoneKeyIntent: any AppIntent {
+        switch type {
+        case .addNewTask:
+            return AddTaskDoneKeyIntent()
+        case .editTask(let id):
+            return EditTaskDoneKeyIntent(taskId: id)
+        }
+    }
             
     var body: some View {
         
-        Button(intent: DoneKeyIntent(type: type)) {
+        Button(intent: DoneKeyIntent) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(.keyShadow)
@@ -50,24 +59,44 @@ struct DoneKey: View {
 }
 
 
-struct DoneKeyIntent: AppIntent {
+struct AddTaskDoneKeyIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Done key"
+    static var title: LocalizedStringResource = "Add Task Done key"
     
-    @Parameter(title: "Done Key")
+    @Parameter(title: "Add Task Done Key")
+    var id: String
+        
+    init() {
+        id = "AddTaskDoneKey"
+    }
+    
+    func perform() async throws -> some IntentResult {
+        await WidgetTodoCore.shared.onTapAddTaskDoneKey()
+        return .result()
+    }
+}
+
+struct EditTaskDoneKeyIntent: AppIntent {
+    
+    static var title: LocalizedStringResource = "Edit Task Done key"
+    
+    @Parameter(title: "Edit Task Done Key")
     var id: String
     
     var type: EditTaskType = .addNewTask
     
     init() {}
     
-    init(type: EditTaskType) {
-        id = "doneKey"
-        self.type = type
+    init(taskId: UUID) {
+        id = taskId.uuidString
     }
     
     func perform() async throws -> some IntentResult {
-        await WidgetTodoCore.shared.onTapDoneKey(type: type)
+        
+        if let uuid = UUID(uuidString: id) {
+            await WidgetTodoCore.shared.onTapEditTaskDoneKey(id: uuid)
+        }
         return .result()
     }
 }
+

@@ -62,6 +62,13 @@ class WidgetTodoCore: ObservableObject {
     
     // MARK: - Functions
     
+    func onTapAddTaskDoneKey() async {
+        let name = keyboardInputRepository.inputText
+        await taskRepository.addTask(name: name)
+        keyboardInputRepository.clearInputText()
+        screenStateRepository.changeScreen(into: .main)
+    }
+    
     func onTapAlphabetModeKey() {
         keyboardInputRepository.changeMode(into: .alphabet)
     }
@@ -83,14 +90,18 @@ class WidgetTodoCore: ObservableObject {
         screenStateRepository.changeScreen(into: .main)
     }
     
-    func onTapDoneKey(type: EditTaskType) async {
-        
+    func onTapEditTaskDoneKey(id: UUID) async {
         let name = keyboardInputRepository.inputText
-        switch type {
-        case .addNewTask:
-            await addTask(name: name)
-        case .editTask(let id):
-            await editTask(id: id, name: name)
+        do {
+            let task = try await taskRepository.fetchTask(id: id)
+            task.name = name
+            task.updateDate = Date()
+            keyboardInputRepository.clearInputText()
+            
+            screenStateRepository.changeScreen(into: .main)
+        } catch {
+            // TODO: Error Handling
+            print("error", error)
         }
     }
     
@@ -113,28 +124,6 @@ class WidgetTodoCore: ObservableObject {
     func onTapTaskListRow(id: UUID, name: String) {
         keyboardInputRepository.input(name)
         screenStateRepository.changeScreen(into: .editTask(id: id))
-    }
-    
-    // MARK: - Helper Functions
-    
-    private func addTask(name: String) async {
-        await taskRepository.addTask(name: name)
-        keyboardInputRepository.clearInputText()
-        screenStateRepository.changeScreen(into: .main)
-    }
-    
-    private func editTask(id: UUID, name: String) async {
-        do {
-            let task = try await taskRepository.fetchTask(id: id)
-            task.name = name
-            task.updateDate = Date()
-            keyboardInputRepository.clearInputText()
-            
-            screenStateRepository.changeScreen(into: .main)
-        } catch {
-            // TODO: Error Handling
-            print("error", error)
-        }
     }
 }
 
