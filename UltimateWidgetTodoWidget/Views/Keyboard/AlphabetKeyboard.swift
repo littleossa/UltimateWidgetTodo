@@ -16,14 +16,14 @@ struct AlphabetKeyboard: View {
         
         VStack(spacing: 10) {
             HStack(spacing: 6) {
-                ForEach(KeyboardInputRepository.topRowAlphabets, id: \.self) {
+                ForEach(KeyboardKey.alphabet.row.topKeys, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: core.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }
             }
             
             HStack(spacing: 6) {
-                ForEach(KeyboardInputRepository.centerRowAlphabets, id: \.self) {
+                ForEach(KeyboardKey.alphabet.row.centerKeys, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: core.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }
@@ -37,7 +37,7 @@ struct AlphabetKeyboard: View {
                     Spacer().frame(width: 6)
                 }
                 
-                ForEach(KeyboardInputRepository.bottomRowAlphabets, id: \.self) {
+                ForEach(KeyboardKey.alphabet.row.bottomKeys, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: core.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }

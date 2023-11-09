@@ -13,17 +13,17 @@ struct NumberAndPunctuationMarkKeyboard: View {
     
     private var topRowCharacters: [String] {
         if core.isNumberMode {
-            return KeyboardInputRepository.topRowNumbers
+            return KeyboardKey.numberAndPunctuationMarks.row.topKeys
         } else {
-            return KeyboardInputRepository.topRowExtraPunctuationMarks
+            return KeyboardKey.extraPunctuationMarks.row.topKeys
         }
     }
     
     private var centerRowCharacters: [String] {
         if core.isNumberMode {
-            return KeyboardInputRepository.centerRowPunctuationMarks
+            return KeyboardKey.numberAndPunctuationMarks.row.centerKeys
         } else {
-            return KeyboardInputRepository.centerRowExtraPunctuationMarks
+            return KeyboardKey.extraPunctuationMarks.row.centerKeys
         }
     }
     
@@ -59,7 +59,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
                     Spacer().frame(width: 12)
                 }
                 
-                ForEach(KeyboardInputRepository.bottomRowPunctuationMarks, id: \.self) {
+                ForEach(KeyboardKey.numberAndPunctuationMarks.row.bottomKeys, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 36, height: 34)
                 }

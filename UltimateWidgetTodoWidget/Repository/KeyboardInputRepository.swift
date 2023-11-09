@@ -6,22 +6,6 @@
 
 import Foundation
 
-extension KeyboardInputRepository {
-    // MARK: - Alphabet mode keys
-    static let topRowAlphabets = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
-    static let centerRowAlphabets = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
-    static let bottomRowAlphabets = ["Z", "X", "C", "V", "B", "N", "M"]
-    
-    // MARK: - Number mode keys
-    static let topRowNumbers = ["1", "2", "3", "4", "5" , "6", "7", "8", "9", "0"]
-    static let centerRowPunctuationMarks = ["-", "/", ":", ";", "(" , ")", "$", "&", "@", "“"]
-    static let bottomRowPunctuationMarks = [".", ",", "?", "!", "‘"]
-    // MARK: - Extra punctuation marks mode keys
-    static let topRowExtraPunctuationMarks = ["[", "]", "{", "}", "#" , "%", "^", "*", "+", "="]
-    static let centerRowExtraPunctuationMarks = ["_", "\\", "|", "~", "<" , ">", "€", "£", "¥", "•"]
-    
-}
-
 class KeyboardInputRepository {
     
     init(store: UserDefaultsStore = .shared) {
