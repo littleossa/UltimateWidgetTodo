@@ -8,6 +8,8 @@ import SwiftUI
 
 struct AlphabetKeyboard: View {
     
+    @Environment(\.widgetTodoCore) var core
+    
     let type: EditTaskType
     
     var body: some View {
@@ -15,14 +17,14 @@ struct AlphabetKeyboard: View {
         VStack(spacing: 10) {
             HStack(spacing: 6) {
                 ForEach(KeyboardInputRepository.topRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0)
+                    KeyboardLetterKey($0, isCapsLocked: core.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }
             }
             
             HStack(spacing: 6) {
                 ForEach(KeyboardInputRepository.centerRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0)
+                    KeyboardLetterKey($0, isCapsLocked: core.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }
             }
@@ -30,13 +32,13 @@ struct AlphabetKeyboard: View {
             HStack(spacing: 6) {
                 
                 HStack {
-                    CapsLockKey()
+                    CapsLockKey(isCapsLocked: core.isCapsLocked)
                         .frame(width: 36, height: 34)
                     Spacer().frame(width: 6)
                 }
                 
                 ForEach(KeyboardInputRepository.bottomRowAlphabets, id: \.self) {
-                    KeyboardLetterKey($0)
+                    KeyboardLetterKey($0, isCapsLocked: core.isCapsLocked)
                         .frame(width: 26, height: 34)
                 }
                 
@@ -55,7 +57,7 @@ struct AlphabetKeyboard: View {
                     .frame(width: 36, height: 34)
                 SpaceKey()
                     .frame(width: 154, height: 34)
-                DoneKey(type: type)
+                DoneKey(inputText: core.inputText, type: type)
                     .frame(width: 74, height: 34)
             }
         }

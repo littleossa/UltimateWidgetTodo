@@ -8,10 +8,11 @@ import SwiftUI
 
 struct NumberAndPunctuationMarkKeyboard: View {
     
+    @Environment(\.widgetTodoCore) var core
     let type: EditTaskType
     
     private var topRowCharacters: [String] {
-        if WidgetTodoCore.shared.isNumberMode {
+        if core.isNumberMode {
             return KeyboardInputRepository.topRowNumbers
         } else {
             return KeyboardInputRepository.topRowExtraPunctuationMarks
@@ -19,7 +20,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
     }
     
     private var centerRowCharacters: [String] {
-        if WidgetTodoCore.shared.isNumberMode {
+        if core.isNumberMode {
             return KeyboardInputRepository.centerRowPunctuationMarks
         } else {
             return KeyboardInputRepository.centerRowExtraPunctuationMarks
@@ -78,7 +79,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
                     .frame(width: 36, height: 34)
                 SpaceKey()
                     .frame(width: 154, height: 34)
-                DoneKey(type: type)
+                DoneKey(inputText: core.inputText, type: type)
                     .frame(width: 74, height: 34)
             }
         }

@@ -89,7 +89,8 @@ class UserDefaultsStore {
                 }
                 
             default:
-                fatalError("This screen name is not defined")
+                print("This screen name is not defined")
+                return .main
             }
         }
         set {

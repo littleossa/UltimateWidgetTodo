@@ -9,13 +9,14 @@ import WidgetKit
 
 struct WidgetKeyboard: View {
     
+    @Environment(\.widgetTodoCore) var core
     let type: EditTaskType
     
     var body: some View {
         
         VStack(spacing: 10) {
             
-            switch WidgetTodoCore.shared.keyboardInputMode {
+            switch core.keyboardInputMode {
             case .alphabet:
                 AlphabetKeyboard(type: type)
             case .emoji:

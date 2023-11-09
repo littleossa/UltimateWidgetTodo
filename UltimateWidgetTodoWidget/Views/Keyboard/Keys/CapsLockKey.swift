@@ -8,8 +8,8 @@ import AppIntents
 import SwiftUI
 
 struct CapsLockKey: View {
-        
-    init(isCapsLocked: Bool = WidgetTodoCore.shared.isCapsLocked) {
+            
+    init(isCapsLocked: Bool) {
         self.isCapsLocked = isCapsLocked
     }
     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct KeyboardLetterKey: View {
     
-    init(_ letter: String, isCapsLocked: Bool = WidgetTodoCore.shared.isCapsLocked) {
+    init(_ letter: String, isCapsLocked: Bool) {
         if isCapsLocked {
             self.letter = letter.uppercased()
         } else {

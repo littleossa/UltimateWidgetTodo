@@ -63,6 +63,7 @@
 		975484772AFBCD7100A09B11 /* KeyboardInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputRepository.swift */; };
 		975484782AFBCD7B00A09B11 /* ScreenStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484462AF5233900A09B11 /* ScreenStateRepository.swift */; };
 		975484792AFBCD7E00A09B11 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484712AFBC4EE00A09B11 /* TaskRepository.swift */; };
+		975484802AFC68EE00A09B11 /* WidgetTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -150,6 +151,7 @@
 		9754846D2AFA65FC00A09B11 /* EditTaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskType.swift; sourceTree = "<group>"; };
 		975484712AFBC4EE00A09B11 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTodoCore.swift; sourceTree = "<group>"; };
+		9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTodoView.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 				979E23BD2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift */,
 				979E23BF2AF1290D003559D2 /* UltimateWidgetTodoWidget.swift */,
 				979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */,
+				9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				979E23E82AF1BBBA003559D2 /* PresentAddTaskViewButton.swift in Sources */,
 				975484272AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				975484182AF44DC900A09B11 /* NumberModeKey.swift in Sources */,
+				975484802AFC68EE00A09B11 /* WidgetTodoView.swift in Sources */,
 				975484212AF455DE00A09B11 /* DoneKey.swift in Sources */,
 				975484152AF44B6A00A09B11 /* BackspaceKey.swift in Sources */,
 				975484072AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,

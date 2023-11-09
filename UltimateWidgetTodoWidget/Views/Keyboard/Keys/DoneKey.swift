@@ -10,7 +10,7 @@ import WidgetKit
 
 struct DoneKey: View {
     
-    init(inputText: String = WidgetTodoCore.shared.inputText, type: EditTaskType) {
+    init(inputText: String, type: EditTaskType) {
         self.inputText = inputText
         self.type = type
     }

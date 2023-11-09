@@ -7,7 +7,7 @@
 import Foundation
 import SwiftData
 
-class WidgetTodoCore {
+class WidgetTodoCore: ObservableObject {
     
     static let shared = WidgetTodoCore()
     static let test = WidgetTodoCore(isTestMode: true)
@@ -116,6 +116,24 @@ class WidgetTodoCore {
         } catch {
             // TODO: Error Handling
             print("error", error)
+        }
+    }
+}
+
+import SwiftUI
+
+struct WidgetTodoCoreEnvironmentKey: EnvironmentKey {
+    typealias Value = WidgetTodoCore
+    static var defaultValue: WidgetTodoCore = .shared
+}
+
+extension EnvironmentValues {
+    var widgetTodoCore: WidgetTodoCore {
+        get {
+            self[WidgetTodoCoreEnvironmentKey.self]
+        }
+        set {
+            self[WidgetTodoCoreEnvironmentKey.self] = newValue
         }
     }
 }
