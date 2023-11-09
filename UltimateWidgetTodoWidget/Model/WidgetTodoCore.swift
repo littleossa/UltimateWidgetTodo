@@ -4,8 +4,8 @@
 //
 //
 
-import Foundation
 import SwiftData
+import SwiftUI
 
 class WidgetTodoCore: ObservableObject {
     
@@ -120,7 +120,7 @@ class WidgetTodoCore: ObservableObject {
     }
 }
 
-import SwiftUI
+// MARK: - EnvironmentValues
 
 struct WidgetTodoCoreEnvironmentKey: EnvironmentKey {
     typealias Value = WidgetTodoCore
