@@ -11,34 +11,18 @@ struct NumberAndPunctuationMarkKeyboard: View {
     @Environment(\.widgetTodoCore) var core
     let type: EditTaskType
     
-    private var topRowCharacters: [String] {
-        if core.isNumberMode {
-            return KeyboardKey.numberAndPunctuationMarks.row.topKeys
-        } else {
-            return KeyboardKey.extraPunctuationMarks.row.topKeys
-        }
-    }
-    
-    private var centerRowCharacters: [String] {
-        if core.isNumberMode {
-            return KeyboardKey.numberAndPunctuationMarks.row.centerKeys
-        } else {
-            return KeyboardKey.extraPunctuationMarks.row.centerKeys
-        }
-    }
-    
     var body: some View {
         
         VStack(spacing: 10) {
             HStack(spacing: 6) {
-                ForEach(topRowCharacters, id: \.self) {
+                ForEach(core.keyboardTopRowKeys, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 26, height: 34)
                 }
             }
             
             HStack(spacing: 6) {
-                ForEach(centerRowCharacters, id: \.self) {
+                ForEach(core.keyboardCenterRowKeys, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 26, height: 34)
                 }
@@ -59,7 +43,7 @@ struct NumberAndPunctuationMarkKeyboard: View {
                     Spacer().frame(width: 12)
                 }
                 
-                ForEach(KeyboardKey.numberAndPunctuationMarks.row.bottomKeys, id: \.self) {
+                ForEach(core.keyboardBottomRowKeys, id: \.self) {
                     KeyboardLetterKey($0, isCapsLocked: false)
                         .frame(width: 36, height: 34)
                 }
