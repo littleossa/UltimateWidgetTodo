@@ -42,6 +42,19 @@ class WidgetTodoCore: ObservableObject {
         return keyboardInputRepository.inputMode
     }
     
+    var keyboardTopRowKeys: [String] {
+        switch keyboardInputMode {
+        case .alphabet:
+            return KeyboardKey.alphabet.row.topKeys
+        case .emoji:
+            return []
+        case .extraPunctuationMarks:
+            return KeyboardKey.extraPunctuationMarks.row.topKeys
+        case .number:
+            return             return KeyboardKey.alphabet.row.topKeys
+        }
+    }
+    
     var swiftDataContainer: ModelContainer {
         return taskRepository.container
     }
