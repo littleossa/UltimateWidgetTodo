@@ -1,12 +1,12 @@
 //
-//  AddTaskButtonImage.swift
+//  PlusButtonImage.swift
 //  UltimateWidgetTodo
 //
 //
 
 import SwiftUI
 
-struct AddTaskButtonImage: View {
+struct PlusButtonImage: View {
     var body: some View {
         ZStack {
             Image(systemName: "circle.fill")
@@ -20,6 +20,6 @@ struct AddTaskButtonImage: View {
 }
 
 #Preview {
-    AddTaskButtonImage()
+    PlusButtonImage()
         .frame(width: 44, height: 44)
 }

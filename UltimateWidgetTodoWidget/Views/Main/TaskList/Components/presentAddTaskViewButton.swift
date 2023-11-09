@@ -23,7 +23,7 @@ struct presentAddTaskViewButton: View {
             
             switch type {
             case .floatingAction:
-                AddTaskButtonImage()
+                PlusButtonImage()
             case .fullScreen:
                 Rectangle()
                     .fill(.white.opacity(0.0001))
