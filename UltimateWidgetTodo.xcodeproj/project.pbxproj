@@ -346,6 +346,16 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		975484812AFC6A2600A09B11 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				979E23BD2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift */,
+				979E23BF2AF1290D003559D2 /* UltimateWidgetTodoWidget.swift */,
+				9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
 		979E23962AF12679003559D2 = {
 			isa = PBXGroup;
 			children = (
@@ -415,10 +425,8 @@
 				9754843B2AF4666400A09B11 /* WidgetBackground */,
 				979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */,
 				979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */,
-				979E23BD2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift */,
-				979E23BF2AF1290D003559D2 /* UltimateWidgetTodoWidget.swift */,
+				975484812AFC6A2600A09B11 /* Contents */,
 				979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */,
-				9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
