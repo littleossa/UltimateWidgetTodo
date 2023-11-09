@@ -22,6 +22,8 @@ class WidgetTodoCore: ObservableObject {
     private let screenStateRepository: ScreenStateRepository
     private let taskRepository: TaskRepository
     
+    // MARK: - Properties
+    
     var currentScreen: ScreenType {
         return screenStateRepository.currentScreen
     }
@@ -38,26 +40,27 @@ class WidgetTodoCore: ObservableObject {
         return keyboardInputRepository.isNumberMode
     }
     
+    var keyboardBottomRowKeys: [String] {
+        return keyboardInputMode.keyboardRow.bottomKeys
+    }
+    
+    var keyboardCenterRowKeys: [String] {
+        return keyboardInputMode.keyboardRow.centerKeys
+    }
+    
     var keyboardInputMode: KeyboardInputMode {
         return keyboardInputRepository.inputMode
     }
     
     var keyboardTopRowKeys: [String] {
-        switch keyboardInputMode {
-        case .alphabet:
-            return KeyboardKey.alphabet.row.topKeys
-        case .emoji:
-            return []
-        case .extraPunctuationMarks:
-            return KeyboardKey.extraPunctuationMarks.row.topKeys
-        case .number:
-            return             return KeyboardKey.alphabet.row.topKeys
-        }
+        return keyboardInputMode.keyboardRow.topKeys
     }
     
     var swiftDataContainer: ModelContainer {
         return taskRepository.container
     }
+    
+    // MARK: - Functions
     
     func onTapAlphabetModeKey() {
         keyboardInputRepository.changeMode(into: .alphabet)
@@ -111,6 +114,8 @@ class WidgetTodoCore: ObservableObject {
         keyboardInputRepository.input(name)
         screenStateRepository.changeScreen(into: .editTask(id: id))
     }
+    
+    // MARK: - Helper Functions
     
     private func addTask(name: String) async {
         await taskRepository.addTask(name: name)
