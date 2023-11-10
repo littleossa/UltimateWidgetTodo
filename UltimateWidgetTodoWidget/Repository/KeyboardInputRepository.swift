@@ -16,11 +16,11 @@ class KeyboardInputRepository {
     private let frequentUsedEmojiLimitCount = 40
     private let store: UserDefaultsStore
     
-    var emojiKeyboardColumns: EmojiKeyboardColumns {
+    var emojiKeyboardColumns: [String] {
         let index = store.emojiKeyboardIndex
         if index > 0,
            index <= emojiKeyboardContents.keyboardLastIndex {
-            return emojiKeyboardContents.getKeyboardColumns(for: index)
+            return emojiKeyboardContents.getEmojis(for: index)
         }
         return .init(store.frequentlyUsedEmojis)
     }
