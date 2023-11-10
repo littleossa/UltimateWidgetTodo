@@ -20,7 +20,7 @@ struct WidgetKeyboard: View {
             case .alphabet:
                 AlphabetKeyboard(type: type)
             case .emoji:
-                EmptyView()
+                EmojiKeyboard()
             case .extraPunctuationMarks, .number:
                 NumberAndPunctuationMarkKeyboard(type: type)
             }
