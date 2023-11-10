@@ -45,10 +45,6 @@ class KeyboardInputRepository {
         return store.emojiKeyboardIndex == emojiKeyboardContents.keyboardLastIndex
     }
     
-    var isNumberMode: Bool {
-        return store.keyboardInputMode == .number
-    }
-    
     func appendFrequentUsedEmoji(_ emoji: String) {
         if store.frequentlyUsedEmojis.count == frequentUsedEmojiLimitCount {
             store.frequentlyUsedEmojis.removeLast()
