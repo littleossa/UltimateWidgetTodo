@@ -8,6 +8,8 @@ import SwiftUI
 
 struct KeyboardOverlayBackgroundView: View {
     
+    @Environment(\.widgetTodoCore) var core
+    
     var body: some View {
         VStack {
             Rectangle()
@@ -19,7 +21,7 @@ struct KeyboardOverlayBackgroundView: View {
             Spacer()
             
             Rectangle()
-                .fill(.keyboardBackground)
+                .fill(core.isEmojiMode ? .emojiKeyboardBackground : .keyboardBackground)
                 .frame(height: WidgetConfig.keyboardHeight)
         }
         .background(.widgetBackground)
