@@ -27,11 +27,11 @@ struct EmojiKeyboardContent {
     
     let keyboardStartIndex = 0
     var keyboardEndIndex: Int {
-    flagsEndIndex
+        return flagsEndIndex
     }
     
-    func getCategoryName(for page: Int) -> LocalizedStringKey {
-        switch page {
+    func getCategoryName(for index: Int) -> LocalizedStringKey {
+        switch index {
         case 0:
             return "FREQUENTLY USED"
         case 1...13:
@@ -56,9 +56,9 @@ struct EmojiKeyboardContent {
         }
     }
     
-    func getEmojis(for page: Int) -> [String] {
+    func getEmojis(for index: Int) -> [String] {
         
-        switch page {
+        switch index {
             // MARK: - Smily and people 1 ~ 13
         case 1:
             return ["😀", "😃", "😄", "😁", "😆", "🥹", "😅", "😂", "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "😒", "😞", "😔", "😟"]
