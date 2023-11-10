@@ -22,7 +22,7 @@ class KeyboardInputRepository {
            index <= emojiKeyboardContents.keyboardLastIndex {
             return emojiKeyboardContents.getKeyboardColumns(for: index)
         }
-        return .init(emojis: store.frequentlyUsedEmojis)
+        return .init(store.frequentlyUsedEmojis)
     }
     
     var emojiKeyboardIndex: Int {
