@@ -8,19 +8,28 @@ import AppIntents
 import SwiftUI
 
 struct AlphabetModeKey: View {
+    
+    init(hasKeyShape: Bool = true) {
+        self.hasKeyShape = hasKeyShape
+    }
+    
+    let hasKeyShape: Bool
             
     var body: some View {
         
         Button(intent: AlphabetModeKeyIntent()) {
+            
             ZStack {
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(.keyShadow)
-                    .offset(y: 1)
                 
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(.keyDarkGray)
-            }
-            .overlay {
+                if hasKeyShape {
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(.keyShadow)
+                        .offset(y: 1)
+                    
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(.keyDarkGray)
+                }
+                
                 Image(systemName: "abc")
                     .font(.system(size: 12))
                     .foregroundStyle(Color.label)
