@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct EmojiKeyboardContent {
+    
+    enum Category
         
     let smilyAndPeopleStartIndex = 1
     let smilyAndPeopleEndIndex = 13
