@@ -67,6 +67,8 @@
 		975484872AFDA2B700A09B11 /* EmojiKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484852AFD8C3300A09B11 /* EmojiKeyboard.swift */; };
 		975484892AFDAF4200A09B11 /* EmojiKeyboardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */; };
 		9754848A2AFDAF4200A09B11 /* EmojiKeyboardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */; };
+		9754848C2AFE2B8700A09B11 /* EmojiKeyboardColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754848B2AFE2B8700A09B11 /* EmojiKeyboardColumns.swift */; };
+		9754848D2AFE2B8700A09B11 /* EmojiKeyboardColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754848B2AFE2B8700A09B11 /* EmojiKeyboardColumns.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -157,6 +159,7 @@
 		9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTodoView.swift; sourceTree = "<group>"; };
 		975484852AFD8C3300A09B11 /* EmojiKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboard.swift; sourceTree = "<group>"; };
 		975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboardContent.swift; sourceTree = "<group>"; };
+		9754848B2AFE2B8700A09B11 /* EmojiKeyboardColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboardColumns.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 			children = (
 				975484732AFBCAB100A09B11 /* Enum */,
 				975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */,
+				9754848B2AFE2B8700A09B11 /* EmojiKeyboardColumns.swift */,
 				975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */,
 			);
 			path = Model;
@@ -618,6 +622,7 @@
 				975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */,
 				975484722AFBC4EE00A09B11 /* TaskRepository.swift in Sources */,
 				9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */,
+				9754848C2AFE2B8700A09B11 /* EmojiKeyboardColumns.swift in Sources */,
 				975484142AF44B6100A09B11 /* BackspaceKey.swift in Sources */,
 				979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */,
 				975484412AF4D34200A09B11 /* InputForm.swift in Sources */,
@@ -649,6 +654,7 @@
 				979E23E82AF1BBBA003559D2 /* PresentAddTaskViewButton.swift in Sources */,
 				975484272AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				975484182AF44DC900A09B11 /* NumberModeKey.swift in Sources */,
+				9754848D2AFE2B8700A09B11 /* EmojiKeyboardColumns.swift in Sources */,
 				975484802AFC68EE00A09B11 /* WidgetTodoView.swift in Sources */,
 				975484212AF455DE00A09B11 /* DoneKey.swift in Sources */,
 				975484152AF44B6A00A09B11 /* BackspaceKey.swift in Sources */,

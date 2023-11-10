@@ -6,22 +6,8 @@
 
 import Foundation
 
-class EmojiKeyboardContent {
-    
-    struct KeyboardColumns {
-        let column1: [String]
-        let column2: [String]
-        let column3: [String]
-        let column4: [String]
-        let column5: [String]
-        let column6: [String]
-        let column7: [String]
-        let column8: [String]
-    }
-    
-    // Frequently USED
-    // 40個最大
-    
+struct EmojiKeyboardContent {
+        
     let smilyAndPeopleStartIndex = 1
     let smilyAndPeopleEndIndex = 13
     let animalAndNatureStartIndex = 14
@@ -37,7 +23,11 @@ class EmojiKeyboardContent {
     let flagsStartIndex = 45
     let flagsEndIndex = 51
     
-    func getKeyboardColumns(for page: Int) -> KeyboardColumns {
+    var keyboardLastIndex: Int {
+        return flagsEndIndex
+    }
+    
+    func getKeyboardColumns(for page: Int) -> EmojiKeyboardColumns {
         
         switch page {
             // MARK: - Smily and people 1 ~ 13
