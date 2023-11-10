@@ -20,6 +20,8 @@ class UserDefaultsStore {
     
     enum Key: String, CaseIterable {
         case editTaskId
+        case emojiKeyboardIndex
+        case frequentlyUsedEmojis
         case inputText
         case isCapsLocked
         case keyboardInputMode
@@ -37,6 +39,25 @@ class UserDefaultsStore {
         }
         set {
             userDefaults.set(newValue?.uuidString, forKey: Key.editTaskId.rawValue)
+        }
+    }
+    
+    var emojiKeyboardIndex: Int {
+        get {
+            return userDefaults.integer(forKey: Key.emojiKeyboardIndex.rawValue)
+        }
+        set {
+            userDefaults.set(newValue, forKey: Key.emojiKeyboardIndex.rawValue)
+        }
+    }
+    
+    var frequentlyUsedEmojis: [String] {
+        get {
+            let emojis = userDefaults.array(forKey: Key.frequentlyUsedEmojis.rawValue) as? [String]
+            return emojis ?? []
+        }
+        set {
+            userDefaults.set(newValue, forKey: Key.frequentlyUsedEmojis.rawValue)
         }
     }
     
