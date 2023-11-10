@@ -25,8 +25,9 @@ struct EmojiKeyboardContent {
     let flagsStartIndex = 45
     let flagsEndIndex = 51
     
-    var keyboardLastIndex: Int {
-        return flagsEndIndex
+    let keyboardStartIndex = 0
+    var keyboardEndIndex: Int {
+    flagsEndIndex
     }
     
     func getCategoryName(for page: Int) -> LocalizedStringKey {

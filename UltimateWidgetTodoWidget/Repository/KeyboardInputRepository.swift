@@ -19,7 +19,7 @@ class KeyboardInputRepository {
     var emojiKeyboardColumns: [String] {
         let index = store.emojiKeyboardIndex
         if index > 0,
-           index <= emojiKeyboardContents.keyboardLastIndex {
+           index <= emojiKeyboardContents.keyboardEndIndex {
             return emojiKeyboardContents.getEmojis(for: index)
         }
         return .init(store.frequentlyUsedEmojis)
@@ -42,7 +42,7 @@ class KeyboardInputRepository {
     }
     
     var isLastPageOfEmoji: Bool {
-        return store.emojiKeyboardIndex == emojiKeyboardContents.keyboardLastIndex
+        return store.emojiKeyboardIndex == emojiKeyboardContents.keyboardEndIndex
     }
     
     func appendFrequentUsedEmoji(_ emoji: String) {
