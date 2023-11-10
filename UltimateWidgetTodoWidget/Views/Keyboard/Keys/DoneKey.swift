@@ -99,4 +99,3 @@ struct EditTaskDoneKeyIntent: AppIntent {
         return .result()
     }
 }
-
