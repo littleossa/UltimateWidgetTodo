@@ -8,19 +8,28 @@ import AppIntents
 import SwiftUI
 
 struct BackspaceKey: View {
+    
+    init(hasKeyShape: Bool = true) {
+        self.hasKeyShape = hasKeyShape
+    }
+    
+    let hasKeyShape: Bool
             
     var body: some View {
         
         Button(intent: BackspaceKeyIntent()) {
+            
             ZStack {
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(.keyShadow)
-                    .offset(y: 1)
                 
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(.keyDarkGray)
-            }
-            .overlay {
+                if hasKeyShape {
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(.keyShadow)
+                        .offset(y: 1)
+                    
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(.keyDarkGray)
+                }
+                
                 Image(systemName: "delete.backward")
                     .font(.system(size: 20))
                     .foregroundStyle(Color.label)
