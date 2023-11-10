@@ -12,7 +12,22 @@ class KeyboardInputRepository {
         self.store = store
     }
     
+    private let emojiKeyboardContents = EmojiKeyboardContent()
+    private let frequentUsedEmojiLimitCount = 40
     private let store: UserDefaultsStore
+    
+    var emojiKeyboardColumns: EmojiKeyboardColumns {
+        let index = store.emojiKeyboardIndex
+        if index > 0,
+           index <= emojiKeyboardContents.keyboardLastIndex {
+            return emojiKeyboardContents.getKeyboardColumns(for: index)
+        }
+        return .init(emojis: store.frequentlyUsedEmojis)
+    }
+    
+    var emojiKeyboardIndex: Int {
+        return store.emojiKeyboardIndex
+    }
     
     var inputMode: KeyboardInputMode {
         return store.keyboardInputMode
@@ -26,8 +41,19 @@ class KeyboardInputRepository {
         return store.isCapsLocked
     }
     
+    var isLastPageOfEmoji: Bool {
+        return store.emojiKeyboardIndex == emojiKeyboardContents.keyboardLastIndex
+    }
+    
     var isNumberMode: Bool {
         return store.keyboardInputMode == .number
+    }
+    
+    func appendFrequentUsedEmoji(_ emoji: String) {
+        if store.frequentlyUsedEmojis.count == frequentUsedEmojiLimitCount {
+            store.frequentlyUsedEmojis.removeLast()
+        }
+        store.frequentlyUsedEmojis.insert(emoji, at: 0)
     }
     
     func clearInputText() {
