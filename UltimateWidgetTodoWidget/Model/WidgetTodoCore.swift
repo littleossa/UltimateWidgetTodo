@@ -36,8 +36,12 @@ class WidgetTodoCore: ObservableObject {
         return keyboardInputRepository.isCapsLocked
     }
     
+    var isEmojiMode: Bool {
+        return keyboardInputRepository.inputMode == .emoji
+    }
+    
     var isNumberMode: Bool {
-        return keyboardInputRepository.isNumberMode
+        return keyboardInputRepository.inputMode == .number
     }
     
     var keyboardBottomRowKeys: [String] {
