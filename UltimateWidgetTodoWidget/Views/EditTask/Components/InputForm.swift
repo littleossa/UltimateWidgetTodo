@@ -37,6 +37,7 @@ struct InputForm: View {
                     
                     Spacer()
                 }
+                .contentTransition(.identity)
                 .frame(width: 280)
             }
     }

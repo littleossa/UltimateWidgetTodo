@@ -25,7 +25,7 @@ struct WidgetKeyboard: View {
                 NumberAndPunctuationMarkKeyboard(type: type)
             }
         }
-        .background(.clear)
+        .contentTransition(.identity)
         .buttonStyle(.plain)
     }
 }

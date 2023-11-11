@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct TaskListView: View {
     
@@ -17,6 +18,7 @@ struct TaskListView: View {
                     .frame(height: WidgetConfig.colorHeaderHeight - 16)
                 HStack(alignment: .bottom) {
                     Text(String(tasks.count))
+                        .contentTransition(.numericText())
                         .font(.system(size: 30))
                         .bold()
                     Text("tasks")

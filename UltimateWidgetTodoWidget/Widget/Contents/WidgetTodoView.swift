@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct WidgetTodoView: View {
     
@@ -22,6 +23,7 @@ struct WidgetTodoView: View {
                 EditTaskView(type: .editTask(id: id))
             }
         }
+        .contentTransition(.opacity)
         .modelContainer(core.swiftDataContainer)
     }
 }
