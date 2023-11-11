@@ -25,6 +25,7 @@ class UserDefaultsStore {
         case inputText
         case isCapsLocked
         case keyboardInputMode
+        case listDisplayIndex
         case screenType
     }
     
@@ -89,6 +90,15 @@ class UserDefaultsStore {
         }
         set {
             userDefaults.set(newValue.rawValue, forKey: Key.keyboardInputMode.rawValue)
+        }
+    }
+    
+    var listDisplayIndex: Int {
+        get {
+            return userDefaults.integer(forKey: Key.listDisplayIndex.rawValue)
+        }
+        set {
+            userDefaults.set(newValue, forKey: Key.listDisplayIndex.rawValue)
         }
     }
     
