@@ -16,19 +16,31 @@ struct TaskListView: View {
             VStack(spacing: 0) {
                 Spacer()
                     .frame(height: WidgetConfig.colorHeaderHeight - 16)
-                HStack(alignment: .bottom) {
-                    Text(String(tasks.count))
-                        .contentTransition(.numericText())
-                        .font(.system(size: 30))
-                        .bold()
-                    Text("tasks")
-                        .font(.system(size: 13))
-                        .fontWeight(.semibold)
-                        .offset(y: -4)
+                
+                HStack(spacing: 0) {
+                    
+                    HStack(alignment: .bottom, spacing: 4) {
+                        Text(String(tasks.count))
+                            .contentTransition(.numericText())
+                            .font(.system(size: 30))
+                            .bold()
+                        Text("tasks")
+                            .font(.system(size: 13))
+                            .fontWeight(.semibold)
+                            .offset(y: -4)
+                    }
+                    .foregroundStyle(Color.label)
                     
                     Spacer()
+
+                    Group {
+                        ListScrollButton(direction: .up)
+                            .frame(width: 44,  height: 40)
+                        ListScrollButton(direction: .down)
+                            .frame(width: 44,  height: 40)
+                    }
+                    .offset(x: 8)
                 }
-                .foregroundStyle(Color.label)
                 .frame(height: WidgetConfig.topBarHeight)
                 
                 Line()

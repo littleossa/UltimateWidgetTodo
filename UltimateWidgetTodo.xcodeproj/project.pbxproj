@@ -75,6 +75,8 @@
 		975484962AFF6A7800A09B11 /* EmojiCategoryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484942AFF6A7800A09B11 /* EmojiCategoryKey.swift */; };
 		975484982AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */; };
 		975484992AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */; };
+		9754849B2AFFA68700A09B11 /* ListScrollButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754849A2AFFA68700A09B11 /* ListScrollButton.swift */; };
+		9754849C2AFFA68700A09B11 /* ListScrollButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754849A2AFFA68700A09B11 /* ListScrollButton.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -169,6 +171,7 @@
 		975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEmojiKey.swift; sourceTree = "<group>"; };
 		975484942AFF6A7800A09B11 /* EmojiCategoryKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCategoryKey.swift; sourceTree = "<group>"; };
 		975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiKeyboardContent+Category.swift"; sourceTree = "<group>"; };
+		9754849A2AFFA68700A09B11 /* ListScrollButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScrollButton.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -334,6 +337,7 @@
 			children = (
 				9754845E2AF90C5A00A09B11 /* PlusButtonImage.swift */,
 				9754844F2AF5A91700A09B11 /* CompleteTaskButton.swift */,
+				9754849A2AFFA68700A09B11 /* ListScrollButton.swift */,
 				979E23E62AF1BBB7003559D2 /* PresentAddTaskViewButton.swift */,
 				9754844C2AF53F2B00A09B11 /* TaskListRow.swift */,
 			);
@@ -635,6 +639,7 @@
 				975484922AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */,
 				975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */,
 				975484982AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */,
+				9754849B2AFFA68700A09B11 /* ListScrollButton.swift in Sources */,
 				975484722AFBC4EE00A09B11 /* TaskRepository.swift in Sources */,
 				9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */,
 				975484142AF44B6100A09B11 /* BackspaceKey.swift in Sources */,
@@ -672,6 +677,7 @@
 				975484182AF44DC900A09B11 /* NumberModeKey.swift in Sources */,
 				975484802AFC68EE00A09B11 /* WidgetTodoView.swift in Sources */,
 				975484212AF455DE00A09B11 /* DoneKey.swift in Sources */,
+				9754849C2AFFA68700A09B11 /* ListScrollButton.swift in Sources */,
 				975484152AF44B6A00A09B11 /* BackspaceKey.swift in Sources */,
 				975484072AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,
 				9754845D2AF8E9A100A09B11 /* TaskEmptyView.swift in Sources */,
