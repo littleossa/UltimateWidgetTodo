@@ -125,6 +125,10 @@ class WidgetTodoCore: ObservableObject {
         }
     }
     
+    func onTapEmojiCategoryKey(_ category: EmojiKeyboardContent.Category) {
+        keyboardInputRepository.moveEmojiContent(for: category.info.startIndex)
+    }
+    
     func onTapEmojiKey(_ emoji: String) {
         keyboardInputRepository.appendFrequentUsedEmoji(emoji)
         keyboardInputRepository.input(emoji)
