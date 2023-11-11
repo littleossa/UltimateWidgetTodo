@@ -23,13 +23,13 @@ class ListDisplayRepository {
     }
     
     func scrollDownList() {
-        guard store.listDisplayIndex > 0
-        else { return }
-        store.listDisplayIndex -= 1
+        store.listDisplayIndex += 1
     }
     
     func scrollUpList() {
-        store.listDisplayIndex += 1
+        guard store.listDisplayIndex > 0
+        else { return }
+        store.listDisplayIndex -= 1
     }
 }
 
@@ -61,18 +61,19 @@ struct ListDisplayControl {
         return displayTasks
     }
     
-    var isDisableScrollDownButton: Bool {
-        if tasks.count <= displayLimitCount {
-            return true
-        }
-        return tasks.count <= currentIndex + displayLimitCount
-    }
-    
     var isDisableScrollUpButton: Bool {
         if tasks.count > displayLimitCount,
            currentIndex > 0 {
             return false
         }
         return true
+        
+    }
+    
+    var isDisableScrollDownButton: Bool {
+        if tasks.count <= displayLimitCount {
+            return true
+        }
+        return tasks.count <= currentIndex + displayLimitCount
     }
 }

@@ -25,7 +25,7 @@ class WidgetTodoCore: ObservableObject {
     private let taskRepository: TaskRepository
     
     // MARK: - Properties
-    
+        
     var currentEmojiCategory: EmojiKeyboardContent.Category {
         return keyboardInputRepository.currentEmojiCategory
     }
@@ -120,6 +120,10 @@ class WidgetTodoCore: ObservableObject {
         screenStateRepository.changeScreen(into: .main)
     }
     
+    func onTapCompleteTask(id: UUID) async throws {
+        try await taskRepository.deleteTask(id: id)
+    }
+    
     func onTapEditTaskDoneKey(id: UUID) async {
         let name = keyboardInputRepository.inputText
         if name.isEmpty { return }
@@ -172,8 +176,12 @@ class WidgetTodoCore: ObservableObject {
         screenStateRepository.changeScreen(into: .addTask)
     }
     
-    func onTapCompleteTask(id: UUID) async throws {
-        try await taskRepository.deleteTask(id: id)
+    func onTapScrollDownList() {
+        listDisplayRepository.scrollDownList()
+    }
+    
+    func onTapScrollUpList() {
+        listDisplayRepository.scrollUpList()
     }
     
     func onTapTaskListRow(id: UUID, name: String) {
