@@ -8,55 +8,57 @@ import SwiftUI
 
 struct EmojiKeyboard: View {
     
-    var frontEmoji: [String] {
-        var array =         Emoji.emoticons
-
-        if array.count >= 50 {
-            let startIndex = 50 // 削除を開始する位置
-            let endIndex = array.count // 配列の最後の要素の次の位置
-
-            array.removeSubrange(startIndex..<endIndex)
-            return Array(array)
-        } else {
-            return []
-        }
-    }
-
+    @Environment(\.widgetTodoCore) var core
+    
     var body: some View {
         
-        ScrollView {
-            LazyHGrid(rows: Array(repeating: GridItem(), count: 5), spacing: 4) { // カラム数の指定
-                ForEach(frontEmoji, id: \.self) { emoji in
+        VStack {
+            
+            HStack {
+                EmojiContentMoveKey(type: .left)
+                
+                Spacer()
+                
+                Text(core.currentEmojiCategory.rawValue)
+                    .font(.system(size: 10))
+                    .foregroundStyle(Color.placeholderGray)
+                
+                Spacer()
+                
+                EmojiContentMoveKey(type: .right)
+            }
+            
+            LazyHGrid(rows: Array(repeating: GridItem(), count: 4), spacing: 4) {
+                ForEach(core.currentEmojiContent, id: \.self) { emoji in
                     Text(emoji)
+                        .font(.system(size: 24))
+                        .padding(.bottom, 4)
                 }
             }
-        }
-    }
-}
-
-// MARK: - Preview
-#if DEBUG
-import WidgetKit
-
-struct EmojiKeyboardPreviewWidget: Widget {
-    let kind: String = "UltimateWidgetTodo"
-
-    var body: some WidgetConfiguration {
-        StaticConfiguration(
-            kind: kind,
-            provider: WidgetTodoProvider()
-        ) { entry in
-            EmojiKeyboard()
-                .containerBackground(for: .widget) {
-                    KeyboardOverlayBackgroundView()
+            .frame(height: 116)
+            .offset(y: 8)
+            
+            HStack {
+                AlphabetModeKey(hasKeyShape: false)
+                
+                Group {
+                    Text("🕐")
+                    Text("😃")
+                    Text("🐻‍❄️")
+                    Text("🍔")
+                    Text("⚽️")
+                    Text("🚗")
+                    Text("💡")
+                    Text("🔣")
+                    Text("🏁")
                 }
+                .opacity(0.4)
+                
+                BackspaceKey(hasKeyShape: false)
+            }
+            .font(.system(size: 14))
+            .offset(y: 8)
         }
+        .frame(height: WidgetConfig.keyboardHeight - 16)
     }
 }
-
-#Preview(as: .systemLarge) {
-    EmojiKeyboardPreviewWidget()
-} timeline: {
-    TaskEntry(date: .now)
-}
-#endif
