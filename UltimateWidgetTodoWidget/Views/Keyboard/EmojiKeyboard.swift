@@ -39,8 +39,7 @@ struct EmojiKeyboard: View {
                     }
                 }
                 
-                if core.currentEmojiCategory == .frequentlyUsed,
-                   core.frequentlyUsedEmojiCount <= 36 {
+                if core.currentEmojiContent.count <= 36 {
                     Spacer()
                 }
             }
