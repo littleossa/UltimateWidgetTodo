@@ -8,16 +8,16 @@ import SwiftUI
 
 extension EmojiKeyboardContent {
     
-    enum Category: String {
-        case activity
-        case animalsAndNature
-        case flags
-        case foodAndDrinkStartIndex
+    enum Category: String, CaseIterable, Identifiable {
         case frequentlyUsed
-        case objects
         case smilyAndPeople
-        case symbols
+        case animalsAndNature
+        case foodAndDrinkStartIndex
+        case activity
         case travelAndPlaces
+        case objects
+        case symbols
+        case flags
         
         struct Info {
             let icon: String
@@ -26,49 +26,55 @@ extension EmojiKeyboardContent {
             let endIndex: Int
         }
         
+        var id: String {
+            return rawValue
+        }
+        
         var info: Info {
             switch self {
-            case .activity:
-                return .init(icon: "⚽️",
-                             title: "ACTIVITY",
-                             startIndex: 24,
-                             endIndex: 26)
-            case .animalsAndNature:
-                return .init(icon: "🐻‍❄️",
-                             title: "ANIMALS & NATURE",
-                             startIndex: 14,
-                             endIndex: 19)
-            case .flags:
-                return .init(icon: "🏁",
-                             title: "FLAGS",
-                             startIndex: 45,
-                             endIndex: 51)
-            case .foodAndDrinkStartIndex:
-                return .init(icon: "🍔",
-                             title: "FOOD & DRINK",
-                             startIndex: 20,
-                             endIndex: 23)
             case .frequentlyUsed:
                 return .init(icon: "🕐",
                              title: "FREQUENTLY USED",
                              startIndex: 0,
                              endIndex: 0)
-            case .objects:
-                return .init(icon: "💡",
-                             title: "OBJECTS",
-                             startIndex: 31, endIndex: 36)
             case .smilyAndPeople:
                 return .init(icon: "😃",
                              title: "SMILEYS & PEOPLE",
-                             startIndex: 1, endIndex: 13)
-            case .symbols:
-                return .init(icon: "🔣",
-                             title: "SYMBOLS",
-                             startIndex: 37, endIndex: 44)
+                             startIndex: 1,
+                             endIndex: 13)
+            case .animalsAndNature:
+                return .init(icon: "🐻‍❄️",
+                             title: "ANIMALS & NATURE",
+                             startIndex: 14,
+                             endIndex: 19)
+            case .foodAndDrinkStartIndex:
+                return .init(icon: "🍔",
+                             title: "FOOD & DRINK",
+                             startIndex: 20,
+                             endIndex: 23)
+            case .activity:
+                return .init(icon: "⚽️",
+                             title: "ACTIVITY",
+                             startIndex: 24,
+                             endIndex: 26)
             case .travelAndPlaces:
                 return .init(icon: "🚗",
                              title: "TRAVEL & PLACES",
                              startIndex: 27, endIndex: 30)
+            case .objects:
+                return .init(icon: "💡",
+                             title: "OBJECTS",
+                             startIndex: 31, endIndex: 36)
+           
+            case .symbols:
+                return .init(icon: "🔣",
+                             title: "SYMBOLS",
+                             startIndex: 37, endIndex: 44)
+            case .flags:
+                return .init(icon: "🏁",
+                             title: "FLAGS",
+                             startIndex: 45,
+                             endIndex: 51)
             }
         }
     }
