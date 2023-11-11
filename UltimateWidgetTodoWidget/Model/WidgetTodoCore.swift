@@ -24,6 +24,14 @@ class WidgetTodoCore: ObservableObject {
     
     // MARK: - Properties
     
+    var currentEmojiCategory: EmojiKeyboardContent.Category {
+        return keyboardInputRepository.currentEmojiCategory
+    }
+    
+    var currentEmojiContent: [String] {
+        return keyboardInputRepository.currentEmojiContent
+    }
+    
     var currentScreen: ScreenType {
         return screenStateRepository.currentScreen
     }
