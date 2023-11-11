@@ -17,7 +17,7 @@ struct KeyboardEmojiKey: View {
     
     var body: some View {
         
-        Button(intent: KeyboardLetterKeyIntent(letter: emoji)) {
+        Button(intent: KeyboardEmojiKeyIntent(emoji: emoji)) {
             Text(emoji)
                 .font(.system(size: 24))
         }
