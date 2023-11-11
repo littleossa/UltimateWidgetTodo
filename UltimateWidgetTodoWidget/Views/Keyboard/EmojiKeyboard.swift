@@ -42,7 +42,7 @@ struct EmojiKeyboard: View {
                 .frame(width: 20)
             }
             
-            HStack {
+            HStack(spacing: 0) {
                 LazyHGrid(rows: Array(repeating: GridItem(), count: 4), spacing: 4) {
                     ForEach(core.currentEmojiContent, id: \.self) {
                         KeyboardEmojiKey($0)
