@@ -307,11 +307,11 @@
 				975484132AF44B6100A09B11 /* BackspaceKey.swift */,
 				9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */,
 				9754841F2AF455DE00A09B11 /* DoneKey.swift */,
+				9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */,
 				975484192AF44EFF00A09B11 /* EmojiModeKey.swift */,
 				975484662AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift */,
 				975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */,
 				975484162AF44DC400A09B11 /* NumberModeKey.swift */,
-				9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */,
 				9754841C2AF4529300A09B11 /* SpaceKey.swift */,
 			);
 			path = Keys;
