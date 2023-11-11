@@ -122,6 +122,7 @@ class WidgetTodoCore: ObservableObject {
     }
     
     func onTapCompleteTask(id: UUID) async throws {
+        listScrollTransition = .identity
         try await taskRepository.deleteTask(id: id)
     }
     
