@@ -16,7 +16,12 @@ class KeyboardInputRepository {
     private let frequentUsedEmojiLimitCount = 40
     private let store: UserDefaultsStore
     
-    var emojiKeyboardColumns: [String] {
+    var currentEmojiCategory: EmojiKeyboardContent.Category {
+        let index = store.emojiKeyboardIndex
+        return emojiKeyboardContents.getCategory(for: index)
+    }
+    
+    var currentEmojiContent: [String] {
         let index = store.emojiKeyboardIndex
         if index > 0,
            index <= emojiKeyboardContents.keyboardEndIndex {
@@ -70,6 +75,28 @@ class KeyboardInputRepository {
         else { return }
         inputText.removeLast()
         store.inputText = inputText
+    }
+    
+    func goBackEmojiContent() {
+        let currentIndex = store.emojiKeyboardIndex
+        if currentIndex == emojiKeyboardContents.keyboardStartIndex {
+            return
+        }
+        var index = currentIndex - 1
+        store.emojiKeyboardIndex = index
+    }
+    
+    func goForwardEmojiContent() {
+        let currentIndex = store.emojiKeyboardIndex
+        if currentIndex == emojiKeyboardContents.keyboardEndIndex {
+            return
+        }
+        var index = currentIndex + 1
+        store.emojiKeyboardIndex = index
+    }
+    
+    func moveEmojiContent(for index: Int) {
+        store.emojiKeyboardIndex = index
     }
     
     func toggleCapsLock() {
