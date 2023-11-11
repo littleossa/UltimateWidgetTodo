@@ -63,6 +63,8 @@ struct TaskListView: View {
                 ForEach(listDisplayControl.displayTasks) {
                     TaskListRow(task: $0)
                 }
+                .id("TaskListRows")
+                .transition(.push(from: core.listPushTransitionEdge))
                 
                 Spacer()
             }

@@ -25,6 +25,7 @@ class WidgetTodoCore: ObservableObject {
     private let taskRepository: TaskRepository
     
     // MARK: - Properties
+    @Published var listPushTransitionEdge: Edge = .top
         
     var currentEmojiCategory: EmojiKeyboardContent.Category {
         return keyboardInputRepository.currentEmojiCategory
@@ -177,10 +178,12 @@ class WidgetTodoCore: ObservableObject {
     }
     
     func onTapScrollDownList() {
+        listPushTransitionEdge = .bottom
         listDisplayRepository.scrollDownList()
     }
     
     func onTapScrollUpList() {
+        listPushTransitionEdge = .top
         listDisplayRepository.scrollUpList()
     }
     
