@@ -13,7 +13,6 @@ class KeyboardInputRepository {
     }
     
     private let emojiKeyboardContents = EmojiKeyboardContent()
-    private let frequentUsedEmojiLimitCount = 40
     private let store: UserDefaultsStore
     
     var currentEmojiCategory: EmojiKeyboardContent.Category {
@@ -53,7 +52,7 @@ class KeyboardInputRepository {
     func appendFrequentlyUsedEmoji(_ emoji: String) {
         
         store.frequentlyUsedEmojis.removeAll(where: { $0 == emoji })
-        if store.frequentlyUsedEmojis.count == frequentUsedEmojiLimitCount {
+        if store.frequentlyUsedEmojis.count == WidgetConfig.emojiKeyboardContentLimitCount {
             store.frequentlyUsedEmojis.removeLast()
         }
         store.frequentlyUsedEmojis.insert(emoji, at: 0)
