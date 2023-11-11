@@ -27,7 +27,7 @@ struct EmojiKeyboard: View {
                 
                 Spacer()
                 
-                Text(core.currentEmojiCategory.rawValue)
+                Text(core.currentEmojiCategory.info.title)
                     .font(.system(size: 11))
                     .bold()
                     .foregroundStyle(Color.placeholderGray)
@@ -57,25 +57,16 @@ struct EmojiKeyboard: View {
             .frame(height: 116)
             .offset(y: 8)
             
-            HStack {
+            HStack(spacing: 4) {
                 AlphabetModeKey(hasKeyShape: false)
                 
-                Group {
-                    Text("🕐")
-                    Text("😃")
-                    Text("🐻‍❄️")
-                    Text("🍔")
-                    Text("⚽️")
-                    Text("🚗")
-                    Text("💡")
-                    Text("🔣")
-                    Text("🏁")
+                ForEach(EmojiKeyboardContent.Category.allCases) {
+                    EmojiCategoryKey(category: $0,
+                                     currentCategory: core.currentEmojiCategory)
                 }
-                .opacity(0.4)
                 
                 BackspaceKey(hasKeyShape: false)
             }
-            .font(.system(size: 14))
             .offset(y: 8)
         }
         .frame(height: WidgetConfig.keyboardHeight - 16)
