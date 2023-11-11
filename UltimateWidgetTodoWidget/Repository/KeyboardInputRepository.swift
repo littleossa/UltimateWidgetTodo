@@ -82,7 +82,7 @@ class KeyboardInputRepository {
         if currentIndex == emojiKeyboardContents.keyboardStartIndex {
             return
         }
-        var index = currentIndex - 1
+        let index = currentIndex - 1
         store.emojiKeyboardIndex = index
     }
     
@@ -91,7 +91,7 @@ class KeyboardInputRepository {
         if currentIndex == emojiKeyboardContents.keyboardEndIndex {
             return
         }
-        var index = currentIndex + 1
+        let index = currentIndex + 1
         store.emojiKeyboardIndex = index
     }
     
