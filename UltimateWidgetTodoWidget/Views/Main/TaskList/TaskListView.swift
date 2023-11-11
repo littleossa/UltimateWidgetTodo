@@ -9,7 +9,12 @@ import WidgetKit
 
 struct TaskListView: View {
     
+    @Environment(\.widgetTodoCore) var core
     let tasks: [Task]
+    
+    private var listDisplayControl: ListDisplayControl {
+        return core.makeListDisplayControl(for: tasks)
+    }
     
     var body: some View {
         ZStack {
@@ -33,13 +38,19 @@ struct TaskListView: View {
                     
                     Spacer()
 
-                    Group {
-                        ListScrollButton(direction: .up)
-                            .frame(width: 44,  height: 40)
-                        ListScrollButton(direction: .down)
-                            .frame(width: 44,  height: 40)
+                    if listDisplayControl.canAppearScrollButtons {
+                        
+                        Group {
+                            ListScrollButton(direction: .up,
+                                             isDisabled: listDisplayControl.isDisableScrollUpButton)
+                                .frame(width: 44,  height: 40)
+                            ListScrollButton(direction: .down,
+                                             isDisabled: listDisplayControl.isDisableScrollDownButton)
+                                .frame(width: 44,  height: 40)
+                        }
+                        .offset(x: 8)
                     }
-                    .offset(x: 8)
+                    
                 }
                 .frame(height: WidgetConfig.topBarHeight)
                 
@@ -49,7 +60,7 @@ struct TaskListView: View {
                     .frame(height: 2)
                     .padding(.bottom, 4)
                 
-                ForEach(tasks) {
+                ForEach(listDisplayControl.displayTasks) {
                     TaskListRow(task: $0)
                 }
                 

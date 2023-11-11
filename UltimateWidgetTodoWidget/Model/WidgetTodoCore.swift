@@ -14,11 +14,13 @@ class WidgetTodoCore: ObservableObject {
         
     private init(isTestMode: Bool = false) {
         self.keyboardInputRepository = .init(store: isTestMode ? .testStore : .shared)
+        self.listDisplayRepository = .init(store: isTestMode ? .testStore : .shared)
         self.screenStateRepository = .init(store: isTestMode ? .testStore : .shared)
         self.taskRepository = .init(store: isTestMode ? .testStore : .shared)
     }
     
     private let keyboardInputRepository: KeyboardInputRepository
+    private let listDisplayRepository: ListDisplayRepository
     private let screenStateRepository: ScreenStateRepository
     private let taskRepository: TaskRepository
     
@@ -81,6 +83,10 @@ class WidgetTodoCore: ObservableObject {
     }
     
     // MARK: - Functions
+    
+    func makeListDisplayControl(for tasks: [Task]) -> ListDisplayControl {
+        return listDisplayRepository.makeListDisplayControl(for: tasks)
+    }
     
     func onTapAddTaskDoneKey() async {
         let name = keyboardInputRepository.inputText
