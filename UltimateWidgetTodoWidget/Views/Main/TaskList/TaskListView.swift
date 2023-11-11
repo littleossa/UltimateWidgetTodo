@@ -64,7 +64,7 @@ struct TaskListView: View {
                     TaskListRow(task: $0)
                 }
                 .id("TaskListRows")
-                .transition(.push(from: core.listPushTransitionEdge))
+                .transition(core.listScrollTransition)
                 
                 Spacer()
             }

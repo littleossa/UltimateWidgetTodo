@@ -19,7 +19,7 @@ struct ListScrollButton: View {
     
     private var scrollButtonIntent: any AppIntent {
         if isDisabled {
-            return DisableButtonIntent()
+            return ListScrollDisabledButtonIntent()
         }
         return direction == .down ? ListScrollDownButtonIntent() : ListScrollUpButtonIntent()
     }
@@ -82,19 +82,20 @@ struct ListScrollUpButtonIntent: AppIntent {
     }
 }
 
-struct DisableButtonIntent: AppIntent {
+struct ListScrollDisabledButtonIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Disable Button Intent"
+    static var title: LocalizedStringResource = "List Scroll Disable Button Intent"
     
-    @Parameter(title: "Disable Button Intent")
+    @Parameter(title: "List Scroll Disable Button Intent")
     var id: String
     
     init() {
-        self.id = "DisableButtonIntent"
+        self.id = "ListScrollDisableButtonIntent"
     }
     
     func perform() async throws -> some IntentResult {
         print("This does not work")
+        WidgetTodoCore.shared.onTapDisabledScroll()
         return .result()
     }
 }

@@ -25,7 +25,7 @@ class WidgetTodoCore: ObservableObject {
     private let taskRepository: TaskRepository
     
     // MARK: - Properties
-    @Published var listPushTransitionEdge: Edge = .top
+    @Published private(set) var listScrollTransition: AnyTransition = .identity
         
     var currentEmojiCategory: EmojiKeyboardContent.Category {
         return keyboardInputRepository.currentEmojiCategory
@@ -125,6 +125,11 @@ class WidgetTodoCore: ObservableObject {
         try await taskRepository.deleteTask(id: id)
     }
     
+    func onTapDisabledScroll() {
+        // need to Disable list animations
+        listScrollTransition = .identity
+    }
+    
     func onTapEditTaskDoneKey(id: UUID) async {
         let name = keyboardInputRepository.inputText
         if name.isEmpty { return }
@@ -178,12 +183,12 @@ class WidgetTodoCore: ObservableObject {
     }
     
     func onTapScrollDownList() {
-        listPushTransitionEdge = .bottom
+        listScrollTransition = .push(from: .bottom)
         listDisplayRepository.scrollDownList()
     }
     
     func onTapScrollUpList() {
-        listPushTransitionEdge = .top
+        listScrollTransition = .push(from: .top)
         listDisplayRepository.scrollUpList()
     }
     
