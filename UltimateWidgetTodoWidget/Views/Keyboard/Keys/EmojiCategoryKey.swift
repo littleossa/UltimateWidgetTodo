@@ -10,21 +10,40 @@ import SwiftUI
 struct EmojiCategoryKey: View {
     
     let category: EmojiKeyboardContent.Category
+    let currentCategory: EmojiKeyboardContent.Category
+    
+    private var isCategorySelected: Bool {
+      return category == currentCategory
+    }
     
     var body: some View {
-        Button(intent: EmojiCategoryKeyIntent()) {
+        Button(intent: EmojiCategoryKeyIntent(category: category)) {
             Text(category.info.icon)
-                .font(.system(size: 14))
-                .opacity(0.4)
+                .font(.system(size: 12))
+                .opacity(isCategorySelected ? 0.8 : 0.4)
+                .background  {
+                    if isCategorySelected {
+                        Circle()
+                            .fill(.keyDarkGray)
+                            .frame(width: 22, height: 22)
+                    }
+                }
+                .frame(width: 22, height: 22)
         }
     }
 }
 
 #Preview {
-    HStack {
-        EmojiCategoryKey(category: .smilyAndPeople)
-        EmojiCategoryKey(category: .animalsAndNature)
-    }
+    
+    Color.emojiKeyboardBackground
+        .overlay {
+            HStack {
+                EmojiCategoryKey(category: .smilyAndPeople,
+                                 currentCategory: .smilyAndPeople)
+                EmojiCategoryKey(category: .animalsAndNature,
+                                 currentCategory: .activity)
+            }
+        }
 }
 
 struct EmojiCategoryKeyIntent: AppIntent {
