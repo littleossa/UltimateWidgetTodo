@@ -15,7 +15,7 @@ struct EmojiKeyboard: View {
         VStack {
             
             HStack {
-                EmojiContentMoveKey(type: .left)
+                EmojiContentMoveKey(type: .back)
                 
                 Spacer()
                 
@@ -25,7 +25,7 @@ struct EmojiKeyboard: View {
                 
                 Spacer()
                 
-                EmojiContentMoveKey(type: .right)
+                EmojiContentMoveKey(type: .forward)
             }
             
             LazyHGrid(rows: Array(repeating: GridItem(), count: 4), spacing: 4) {

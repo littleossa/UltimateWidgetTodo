@@ -52,7 +52,7 @@ struct EmojiContentGoBackKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Move to left page
+        WidgetTodoCore.shared.onTapGoBackEmojiContentKey()
         return .result()
     }
 }
@@ -70,7 +70,7 @@ struct EmojiContentGoForwardRightKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Move to right page
+        WidgetTodoCore.shared.onTapGoForwardEmojiContentKey()
         return .result()
     }
 }
