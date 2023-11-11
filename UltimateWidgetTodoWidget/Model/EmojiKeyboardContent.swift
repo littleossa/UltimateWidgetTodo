@@ -4,53 +4,13 @@
 //
 //
 
-import SwiftUI
+import Foundation
 
 struct EmojiKeyboardContent {
     
-    enum Category: LocalizedStringKey {
-        case activity = "ACTIVITY"
-        case animalsAndNature = "ANIMALS & NATURE"
-        case flags = "FLAGS"
-        case foodAndDrinkStartIndex = "FOOD & DRINK"
-        case frequentlyUsed = "FREQUENTLY USED"
-        case objects = "OBJECTS"
-        case smilyAndPeople = "SMILEYS & PEOPLE"
-        case symbols = "SYMBOLS"
-        case travelAndPlaces = "TRAVEL & PLACES"
-        
-        struct Range {
-            let startIndex: Int
-            let endIndex: Int
-        }
-        
-        var range: Range {
-            switch self {
-            case .frequentlyUsed:
-                return .init(startIndex: 0, endIndex: 0)
-            case .smilyAndPeople:
-                return .init(startIndex: 1, endIndex: 13)
-            case .animalsAndNature:
-                return .init(startIndex: 14, endIndex: 19)
-            case .foodAndDrinkStartIndex:
-                return .init(startIndex: 20, endIndex: 23)
-            case .activity:
-                return .init(startIndex: 24, endIndex: 26)
-            case .travelAndPlaces:
-                return .init(startIndex: 27, endIndex: 30)
-            case .objects:
-                return .init(startIndex: 31, endIndex: 36)
-            case .symbols:
-                return .init(startIndex: 37, endIndex: 44)
-            case .flags:
-                return .init(startIndex: 45, endIndex: 51)
-            }
-        }
-    }
-    
     let keyboardStartIndex = 0
     var keyboardEndIndex: Int {
-        return Category.flags.range.endIndex
+        return Category.flags.info.endIndex
     }
     
     func getCategory(for index: Int) -> Category {

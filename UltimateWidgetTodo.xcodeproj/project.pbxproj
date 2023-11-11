@@ -71,6 +71,10 @@
 		975484902AFEEABF00A09B11 /* EmojiContentMoveKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */; };
 		975484922AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */; };
 		975484932AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */; };
+		975484952AFF6A7800A09B11 /* EmojiCategoryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484942AFF6A7800A09B11 /* EmojiCategoryKey.swift */; };
+		975484962AFF6A7800A09B11 /* EmojiCategoryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484942AFF6A7800A09B11 /* EmojiCategoryKey.swift */; };
+		975484982AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */; };
+		975484992AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -163,6 +167,8 @@
 		975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboardContent.swift; sourceTree = "<group>"; };
 		9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiContentMoveKey.swift; sourceTree = "<group>"; };
 		975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEmojiKey.swift; sourceTree = "<group>"; };
+		975484942AFF6A7800A09B11 /* EmojiCategoryKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCategoryKey.swift; sourceTree = "<group>"; };
+		975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiKeyboardContent+Category.swift"; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -236,6 +242,7 @@
 			children = (
 				975484732AFBCAB100A09B11 /* Enum */,
 				975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */,
+				975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */,
 				975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */,
 			);
 			path = Model;
@@ -311,6 +318,7 @@
 				9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */,
 				9754841F2AF455DE00A09B11 /* DoneKey.swift */,
 				9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */,
+				975484942AFF6A7800A09B11 /* EmojiCategoryKey.swift */,
 				975484192AF44EFF00A09B11 /* EmojiModeKey.swift */,
 				975484662AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift */,
 				975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */,
@@ -626,9 +634,11 @@
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
 				975484922AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */,
 				975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */,
+				975484982AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */,
 				975484722AFBC4EE00A09B11 /* TaskRepository.swift in Sources */,
 				9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */,
 				975484142AF44B6100A09B11 /* BackspaceKey.swift in Sources */,
+				975484952AFF6A7800A09B11 /* EmojiCategoryKey.swift in Sources */,
 				979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */,
 				975484412AF4D34200A09B11 /* InputForm.swift in Sources */,
 				975484892AFDAF4200A09B11 /* EmojiKeyboardContent.swift in Sources */,
@@ -668,7 +678,9 @@
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
 				9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */,
 				975484932AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */,
+				975484962AFF6A7800A09B11 /* EmojiCategoryKey.swift in Sources */,
 				975484022AF277B100A09B11 /* EditTaskView.swift in Sources */,
+				975484992AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */,
 				975484872AFDA2B700A09B11 /* EmojiKeyboard.swift in Sources */,
 				9754844D2AF53F2B00A09B11 /* TaskListRow.swift in Sources */,
 				975484542AF844B500A09B11 /* Line.swift in Sources */,
