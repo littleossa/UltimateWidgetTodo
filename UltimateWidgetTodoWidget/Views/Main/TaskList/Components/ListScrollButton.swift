@@ -15,6 +15,7 @@ struct ListScrollButton: View {
     }
     
     let direction: Direction
+    let isDisabled: Bool
     
     private var scrollButtonIntent: any AppIntent {
         return direction == .down ? ListScrollDownButtonIntent() : ListScrollUpButtonIntent()
@@ -25,7 +26,7 @@ struct ListScrollButton: View {
         Button(intent: scrollButtonIntent) {
             Image(systemName: direction == .down ? "chevron.down" : "chevron.up")
                 .font(.system(size: 22))
-                .foregroundStyle(.blue)
+                .foregroundStyle(isDisabled ? .gray: .blue)
         }
         .buttonStyle(.plain)
     }
@@ -33,8 +34,14 @@ struct ListScrollButton: View {
 
 #Preview {
     HStack {
-        ListScrollButton(direction: .up)
-        ListScrollButton(direction: .down)
+        ListScrollButton(direction: .up,
+                         isDisabled: true)
+        ListScrollButton(direction: .up,
+                         isDisabled: false)
+        ListScrollButton(direction: .down,
+                         isDisabled: true)
+        ListScrollButton(direction: .down,
+                         isDisabled: false)
     }
 }
 

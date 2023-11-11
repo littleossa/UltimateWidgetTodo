@@ -125,9 +125,7 @@ class UserDefaultsStore {
             }
         }
         set {
-            
             switch newValue {
-                
             case .main, .addTask:
                 break
             case .editTask(let id):
