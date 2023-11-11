@@ -12,7 +12,9 @@ struct EmojiKeyboard: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 4) {
+            
+            Spacer().frame(height: 4)
             
             HStack {
                 EmojiContentMoveKey(type: .back)
@@ -20,7 +22,8 @@ struct EmojiKeyboard: View {
                 Spacer()
                 
                 Text(core.currentEmojiCategory.rawValue)
-                    .font(.system(size: 10))
+                    .font(.system(size: 11))
+                    .bold()
                     .foregroundStyle(Color.placeholderGray)
                 
                 Spacer()
@@ -35,7 +38,11 @@ struct EmojiKeyboard: View {
                             .padding(.bottom, 4)
                     }
                 }
-                Spacer()
+                
+                if core.currentEmojiCategory == .frequentlyUsed,
+                   core.frequentlyUsedEmojiCount <= 36 {
+                    Spacer()
+                }
             }
             .frame(height: 116)
             .offset(y: 8)
