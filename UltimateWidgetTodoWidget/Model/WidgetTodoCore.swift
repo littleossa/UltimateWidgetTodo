@@ -90,6 +90,8 @@ class WidgetTodoCore: ObservableObject {
     
     func onTapAddTaskDoneKey() async {
         let name = keyboardInputRepository.inputText
+        if name.isEmpty { return }
+        
         await taskRepository.addTask(name: name)
         keyboardInputRepository.clearInputText()
         screenStateRepository.changeScreen(into: .main)
@@ -120,6 +122,8 @@ class WidgetTodoCore: ObservableObject {
     
     func onTapEditTaskDoneKey(id: UUID) async {
         let name = keyboardInputRepository.inputText
+        if name.isEmpty { return }
+
         do {
             let task = try await taskRepository.fetchTask(id: id)
             task.name = name
