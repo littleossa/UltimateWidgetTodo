@@ -28,11 +28,14 @@ struct EmojiKeyboard: View {
                 EmojiContentMoveKey(type: .forward)
             }
             
-            LazyHGrid(rows: Array(repeating: GridItem(), count: 4), spacing: 4) {
-                ForEach(core.currentEmojiContent, id: \.self) {
-                    KeyboardEmojiKey($0)
-                        .padding(.bottom, 4)
+            HStack {
+                LazyHGrid(rows: Array(repeating: GridItem(), count: 4), spacing: 4) {
+                    ForEach(core.currentEmojiContent, id: \.self) {
+                        KeyboardEmojiKey($0)
+                            .padding(.bottom, 4)
+                    }
                 }
+                Spacer()
             }
             .frame(height: 116)
             .offset(y: 8)
