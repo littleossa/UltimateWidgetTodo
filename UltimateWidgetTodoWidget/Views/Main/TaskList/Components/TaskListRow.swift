@@ -28,6 +28,10 @@ struct TaskListRow: View {
                                     .font(.system(size: 16))
                                 
                                 Spacer()
+                                
+                                Image(systemName: "chevron.right")
+                                    .font(.system(size: 12))
+                                    .foregroundStyle(Color.placeholderGray)
                             }
                         }
                 }
