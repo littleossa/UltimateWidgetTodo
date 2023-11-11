@@ -19,7 +19,7 @@ struct KeyboardEmojiKey: View {
         
         Button(intent: KeyboardEmojiKeyIntent(emoji: emoji)) {
             Text(emoji)
-                .font(.system(size: 24))
+                .font(.system(size: 20))
         }
         .buttonStyle(.plain)
     }
