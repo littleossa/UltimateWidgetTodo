@@ -50,7 +50,9 @@ class KeyboardInputRepository {
         return store.emojiKeyboardIndex == emojiKeyboardContents.keyboardEndIndex
     }
     
-    func appendFrequentUsedEmoji(_ emoji: String) {
+    func appendFrequentlyUsedEmoji(_ emoji: String) {
+        
+        store.frequentlyUsedEmojis.removeAll(where: { $0 == emoji })
         if store.frequentlyUsedEmojis.count == frequentUsedEmojiLimitCount {
             store.frequentlyUsedEmojis.removeLast()
         }
