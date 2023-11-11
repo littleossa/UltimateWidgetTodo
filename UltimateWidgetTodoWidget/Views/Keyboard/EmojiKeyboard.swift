@@ -17,7 +17,13 @@ struct EmojiKeyboard: View {
             Spacer().frame(height: 4)
             
             HStack {
-                EmojiContentMoveKey(type: .back)
+                
+                ZStack {
+                    if !core.isEmojiFirstContent {
+                        EmojiContentMoveKey(type: .back)
+                    }
+                }
+                .frame(width: 20)
                 
                 Spacer()
                 
@@ -28,7 +34,12 @@ struct EmojiKeyboard: View {
                 
                 Spacer()
                 
-                EmojiContentMoveKey(type: .forward)
+                ZStack {
+                    if !core.isEmojiLastContent {
+                        EmojiContentMoveKey(type: .forward)
+                    }
+                }
+                .frame(width: 20)
             }
             
             HStack {

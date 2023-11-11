@@ -44,6 +44,14 @@ class WidgetTodoCore: ObservableObject {
         return keyboardInputRepository.isCapsLocked
     }
     
+    var isEmojiFirstContent: Bool {
+        return currentEmojiCategory == .frequentlyUsed
+    }
+    
+    var isEmojiLastContent: Bool {
+        return keyboardInputRepository.isEmojiLastContent
+    }
+    
     var isEmojiMode: Bool {
         return keyboardInputRepository.inputMode == .emoji
     }

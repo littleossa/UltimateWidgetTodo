@@ -46,7 +46,7 @@ class KeyboardInputRepository {
         return store.isCapsLocked
     }
     
-    var isLastPageOfEmoji: Bool {
+    var isEmojiLastContent: Bool {
         return store.emojiKeyboardIndex == emojiKeyboardContents.keyboardEndIndex
     }
     
