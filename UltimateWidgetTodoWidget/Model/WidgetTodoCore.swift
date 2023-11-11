@@ -106,6 +106,8 @@ class WidgetTodoCore: ObservableObject {
     }
     
     func onTapCloseButton() {
+        keyboardInputRepository.changeMode(into: .alphabet)
+        keyboardInputRepository.moveEmojiContent(for: 0)
         keyboardInputRepository.clearInputText()
         screenStateRepository.changeScreen(into: .main)
     }
@@ -116,8 +118,10 @@ class WidgetTodoCore: ObservableObject {
             let task = try await taskRepository.fetchTask(id: id)
             task.name = name
             task.updateDate = Date()
-            keyboardInputRepository.clearInputText()
             
+            keyboardInputRepository.changeMode(into: .alphabet)
+            keyboardInputRepository.moveEmojiContent(for: 0)
+            keyboardInputRepository.clearInputText()
             screenStateRepository.changeScreen(into: .main)
         } catch {
             // TODO: Error Handling
