@@ -59,8 +59,10 @@ struct EmojiCategoryKeyIntent: AppIntent {
         self.id = category.rawValue
     }
     
-    func perform() async throws -> some IntentResult {
-        // TODO: Change Emoji Category
+    func perform() async throws -> some IntentResult {        
+        if let category = EmojiKeyboardContent.Category(rawValue: id) {
+            WidgetTodoCore.shared.onTapEmojiCategoryKey(category)
+        }
         return .result()
     }
 }
