@@ -29,9 +29,8 @@ struct EmojiKeyboard: View {
             }
             
             LazyHGrid(rows: Array(repeating: GridItem(), count: 4), spacing: 4) {
-                ForEach(core.currentEmojiContent, id: \.self) { emoji in
-                    Text(emoji)
-                        .font(.system(size: 24))
+                ForEach(core.currentEmojiContent, id: \.self) {
+                    KeyboardEmojiKey($0)
                         .padding(.bottom, 4)
                 }
             }

@@ -69,6 +69,8 @@
 		9754848A2AFDAF4200A09B11 /* EmojiKeyboardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */; };
 		9754848F2AFEEABF00A09B11 /* EmojiContentMoveKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */; };
 		975484902AFEEABF00A09B11 /* EmojiContentMoveKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */; };
+		975484922AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */; };
+		975484932AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -160,6 +162,7 @@
 		975484852AFD8C3300A09B11 /* EmojiKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboard.swift; sourceTree = "<group>"; };
 		975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboardContent.swift; sourceTree = "<group>"; };
 		9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiContentMoveKey.swift; sourceTree = "<group>"; };
+		975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEmojiKey.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -310,6 +313,7 @@
 				9754848E2AFEEABF00A09B11 /* EmojiContentMoveKey.swift */,
 				975484192AF44EFF00A09B11 /* EmojiModeKey.swift */,
 				975484662AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift */,
+				975484912AFF515E00A09B11 /* KeyboardEmojiKey.swift */,
 				975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */,
 				975484162AF44DC400A09B11 /* NumberModeKey.swift */,
 				9754841C2AF4529300A09B11 /* SpaceKey.swift */,
@@ -620,6 +624,7 @@
 				975484752AFBCB0100A09B11 /* WidgetTodoCore.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
+				975484922AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */,
 				975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */,
 				975484722AFBC4EE00A09B11 /* TaskRepository.swift in Sources */,
 				9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */,
@@ -662,6 +667,7 @@
 				9754845D2AF8E9A100A09B11 /* TaskEmptyView.swift in Sources */,
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
 				9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */,
+				975484932AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */,
 				975484022AF277B100A09B11 /* EditTaskView.swift in Sources */,
 				975484872AFDA2B700A09B11 /* EmojiKeyboard.swift in Sources */,
 				9754844D2AF53F2B00A09B11 /* TaskListRow.swift in Sources */,

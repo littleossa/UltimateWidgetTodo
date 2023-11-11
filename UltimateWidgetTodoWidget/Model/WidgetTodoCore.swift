@@ -117,6 +117,11 @@ class WidgetTodoCore: ObservableObject {
         }
     }
     
+    func onTapEmojiKey(_ emoji: String) {
+        keyboardInputRepository.appendFrequentUsedEmoji(emoji)
+        keyboardInputRepository.input(emoji)
+    }
+    
     func onTapEmojiModeKey() {
         keyboardInputRepository.changeMode(into: .emoji)
     }
