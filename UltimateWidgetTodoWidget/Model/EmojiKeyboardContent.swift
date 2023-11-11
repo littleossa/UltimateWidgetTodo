@@ -8,53 +8,74 @@ import SwiftUI
 
 struct EmojiKeyboardContent {
     
-    enum Category
+    enum Category: LocalizedStringKey {
+        case activity = "ACTIVITY"
+        case animalsAndNature = "ANIMALS & NATURE"
+        case flags = "FLAGS"
+        case foodAndDrinkStartIndex = "FOOD & DRINK"
+        case frequentlyUsed = "FREQUENTLY USED"
+        case objects = "OBJECTS"
+        case smilyAndPeople = "SMILEYS & PEOPLE"
+        case symbols = "SYMBOLS"
+        case travelAndPlaces = "TRAVEL & PLACES"
         
-    let smilyAndPeopleStartIndex = 1
-    let smilyAndPeopleEndIndex = 13
-    let animalAndNatureStartIndex = 14
-    let animalAndNatureEndIndex = 19
-    let foodAndDrinkStartIndex = 20
-    let foodAndDrinkEndIndex = 23
-    let activityStartIndex = 24
-    let activityEndIndex = 26
-    let travelAndPlacesStartIndex = 27
-    let travelAndPlacesEndIndex = 30
-    let objectsStartIndex = 31
-    let objectsEndIndex = 36
-    let symbolsStartIndex = 37
-    let symbolsEndIndex = 44
-    let flagsStartIndex = 45
-    let flagsEndIndex = 51
+        struct Range {
+            let startIndex: Int
+            let endIndex: Int
+        }
+        
+        var range: Range {
+            switch self {
+            case .frequentlyUsed:
+                return .init(startIndex: 0, endIndex: 0)
+            case .smilyAndPeople:
+                return .init(startIndex: 1, endIndex: 13)
+            case .animalsAndNature:
+                return .init(startIndex: 14, endIndex: 19)
+            case .foodAndDrinkStartIndex:
+                return .init(startIndex: 20, endIndex: 23)
+            case .activity:
+                return .init(startIndex: 24, endIndex: 26)
+            case .travelAndPlaces:
+                return .init(startIndex: 27, endIndex: 30)
+            case .objects:
+                return .init(startIndex: 31, endIndex: 36)
+            case .symbols:
+                return .init(startIndex: 37, endIndex: 44)
+            case .flags:
+                return .init(startIndex: 45, endIndex: 51)
+            }
+        }
+    }
     
     let keyboardStartIndex = 0
     var keyboardEndIndex: Int {
-        return flagsEndIndex
+        return Category.flags.range.endIndex
     }
     
-    func getCategoryName(for index: Int) -> LocalizedStringKey {
+    func getCategory(for index: Int) -> Category {
         switch index {
         case 0:
-            return "FREQUENTLY USED"
+            return .frequentlyUsed
         case 1...13:
-            return "SMILEYS & PEOPLE"
+            return .smilyAndPeople
         case 14...19:
-            return "ANIMALS & NATURE"
+            return .animalsAndNature
         case 20...23:
-            return "FOOD & DRINK"
+            return .foodAndDrinkStartIndex
         case 24...26:
-            return "ACTIVITY"
+            return .activity
         case 27...30:
-            return "TRAVEL & PLACES"
+            return .travelAndPlaces
         case 31...36:
-            return "OBJECTS"
+            return .objects
         case 37...44:
-            return "SYMBOLS"
+            return .symbols
         case 45...51:
-            return "FLAGS"
+            return .flags
         
         default:
-            return ""
+            return .frequentlyUsed
         }
     }
     
