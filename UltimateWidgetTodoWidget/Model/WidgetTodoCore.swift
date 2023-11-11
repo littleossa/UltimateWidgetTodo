@@ -125,6 +125,14 @@ class WidgetTodoCore: ObservableObject {
         keyboardInputRepository.changeMode(into: .extraPunctuationMarks)
     }
     
+    func onTapGoBackEmojiContentKey() {
+        keyboardInputRepository.goBackEmojiContent()
+    }
+    
+    func onTapGoForwardEmojiContentKey() {
+        keyboardInputRepository.goForwardEmojiContent()
+    }
+    
     func onTapNumberModeKey() {
         keyboardInputRepository.changeMode(into: .number)
     }
