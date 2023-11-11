@@ -9,6 +9,8 @@ import WidgetKit
 
 struct EditTaskView: View {
     
+    @Environment(\.widgetTodoCore) var core
+    
     let type: EditTaskType
     
     var body: some View {
@@ -46,7 +48,7 @@ struct EditTaskView: View {
             
             InputForm(text: WidgetTodoCore.shared.inputText)
                         
-            Spacer().frame(height: 26)
+            Spacer().frame(height: core.isEmojiMode ? 14 : 26)
                         
             WidgetKeyboard(type: type)
         }
