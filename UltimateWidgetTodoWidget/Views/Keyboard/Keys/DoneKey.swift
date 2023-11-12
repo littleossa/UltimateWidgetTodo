@@ -71,7 +71,12 @@ struct AddTaskDoneKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        await WidgetTodoCore.shared.onTapAddTaskDoneKey()
+        do {
+            try await WidgetTodoCore.shared.onTapAddTaskDoneKey()
+        } catch {
+            let widgetError = error as? WidgetError
+            WidgetTodoCore.shared.showError(widgetError ?? .unknown)
+        }
         return .result()
     }
 }
@@ -94,7 +99,12 @@ struct EditTaskDoneKeyIntent: AppIntent {
     func perform() async throws -> some IntentResult {
         
         if let uuid = UUID(uuidString: id) {
-            await WidgetTodoCore.shared.onTapEditTaskDoneKey(id: uuid)
+            do {
+                try await WidgetTodoCore.shared.onTapEditTaskDoneKey(id: uuid)
+            } catch {
+                let widgetError = error as? WidgetError
+                WidgetTodoCore.shared.showError(widgetError ?? .taskEditingFailure)
+            }
         }
         return .result()
     }

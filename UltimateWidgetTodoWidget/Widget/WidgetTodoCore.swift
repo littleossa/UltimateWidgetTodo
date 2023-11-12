@@ -93,9 +93,12 @@ class WidgetTodoCore: ObservableObject {
         return listDisplayRepository.makeListDisplayControl(for: tasks)
     }
     
-    func onTapAddTaskDoneKey() async {
+    func onTapAddTaskDoneKey() async throws {
         let name = keyboardInputRepository.inputText
         if name.isEmpty { return }
+        
+        guard name.count <= WidgetConfig.taskNameLimitCount
+        else { throw WidgetError.taskNameLimitExceeded }
         
         listDisplayRepository.updateIndex(to: 0)
         await taskRepository.addTask(name: name)
@@ -128,14 +131,9 @@ class WidgetTodoCore: ObservableObject {
         closeEditTaskView()
     }
     
-    func onTapCompleteTask(id: UUID) async {
-        do {
-            try await taskRepository.deleteTask(id: id)
-            listScrollTransition = .identity
-        } catch {
-            // TODO: - Error handling
-            print("Error")
-        }
+    func onTapCompleteTask(id: UUID) async throws {
+        try await taskRepository.deleteTask(id: id)
+        listScrollTransition = .identity
     }
     
     func onTapDisabledScroll() {
@@ -143,24 +141,22 @@ class WidgetTodoCore: ObservableObject {
         listScrollTransition = .identity
     }
     
-    func onTapEditTaskDoneKey(id: UUID) async {
+    func onTapEditTaskDoneKey(id: UUID) async throws {
         let name = keyboardInputRepository.inputText
         if name.isEmpty { return }
         
-        do {
-            let task = try await taskRepository.fetchTask(id: id)
-            task.name = name
-            task.updateDate = Date()
-            
-            keyboardInputRepository.changeMode(into: .alphabet)
-            keyboardInputRepository.moveEmojiContent(for: 0)
-            keyboardInputRepository.clearInputText()
-            
-            screenStateRepository.changeScreen(into: .main)
-        } catch {
-            // TODO: - Error handling
-            print("Error")
-        }
+        guard name.count <= WidgetConfig.taskNameLimitCount
+        else { throw WidgetError.taskNameLimitExceeded }
+        
+        let task = try await taskRepository.fetchTask(id: id)
+        task.name = name
+        task.updateDate = Date()
+        
+        keyboardInputRepository.changeMode(into: .alphabet)
+        keyboardInputRepository.moveEmojiContent(for: 0)
+        keyboardInputRepository.clearInputText()
+        
+        screenStateRepository.changeScreen(into: .main)
     }
     
     func onTapEmojiCategoryKey(_ category: EmojiKeyboardContent.Category) {
@@ -245,7 +241,8 @@ extension EnvironmentValues {
 
 enum WidgetError: String, Error {
     case unknown
-    case taskDeletion
+    case taskEditingFailure
+    case taskDeletionFailure
     case taskNameLimitExceeded
     
     struct Info {
@@ -260,14 +257,28 @@ enum WidgetError: String, Error {
             return .init(code: 0,
                          title: "Unknown Error",
                          message: "An unknown error occurred.")
-        case .taskDeletion:
+        case .taskEditingFailure:
             return .init(code: 1,
+                         title: "Unable to edit the task",
+                         message: "An error occurred while editing the task.")
+        case .taskDeletionFailure:
+            return .init(code: 2,
                          title: "Unable to delete the task",
                          message: "An error occurred while deleting the task.")
         case .taskNameLimitExceeded:
-            return .init(code: 2,
+            return .init(code: 3,
                          title: "Task Name Limit Exceeded",
                          message: "The task name exceeds the allowed character limit of \(WidgetConfig.taskNameLimitCount) characters. Please shorten the task name.")
         }
+    }
+}
+
+extension Error {
+    
+    func isEqual(to widgetError: WidgetError) -> Bool {
+        guard let error = self as? WidgetError
+        else { return false }
+        
+        return error == widgetError
     }
 }
