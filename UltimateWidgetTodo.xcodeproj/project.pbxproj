@@ -91,6 +91,7 @@
 		975484B32B00EEAC00A09B11 /* WidgetCenter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484B22B00EEAC00A09B11 /* WidgetCenter+Extensions.swift */; };
 		975484B72B00FAAB00A09B11 /* AppTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484B62B00FAAB00A09B11 /* AppTitleView.swift */; };
 		975484BD2B011AEE00A09B11 /* EmojiKeyboardContentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484BC2B011AEE00A09B11 /* EmojiKeyboardContentTest.swift */; };
+		975484C02B011E4E00A09B11 /* KeyboardInputRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484BF2B011E4E00A09B11 /* KeyboardInputRepositoryTests.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -195,6 +196,7 @@
 		975484B22B00EEAC00A09B11 /* WidgetCenter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetCenter+Extensions.swift"; sourceTree = "<group>"; };
 		975484B62B00FAAB00A09B11 /* AppTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitleView.swift; sourceTree = "<group>"; };
 		975484BC2B011AEE00A09B11 /* EmojiKeyboardContentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboardContentTest.swift; sourceTree = "<group>"; };
+		975484BF2B011E4E00A09B11 /* KeyboardInputRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputRepositoryTests.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		975484302AF45E6D00A09B11 /* UltimateWidgetTodoTests */ = {
 			isa = PBXGroup;
 			children = (
+				975484BE2B011E2B00A09B11 /* RepositoryTests */,
 				975484BA2B011A9400A09B11 /* DataStoreTests */,
 				975484BB2B011ACA00A09B11 /* ModelTests */,
 			);
@@ -458,6 +461,14 @@
 				975484BC2B011AEE00A09B11 /* EmojiKeyboardContentTest.swift */,
 			);
 			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		975484BE2B011E2B00A09B11 /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				975484BF2B011E4E00A09B11 /* KeyboardInputRepositoryTests.swift */,
+			);
+			path = RepositoryTests;
 			sourceTree = "<group>";
 		};
 		979E23962AF12679003559D2 = {
@@ -689,6 +700,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975484C02B011E4E00A09B11 /* KeyboardInputRepositoryTests.swift in Sources */,
 				975484BD2B011AEE00A09B11 /* EmojiKeyboardContentTest.swift in Sources */,
 				975484322AF45E6D00A09B11 /* UserDefaultsStoreTests.swift in Sources */,
 			);
