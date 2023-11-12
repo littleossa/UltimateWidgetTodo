@@ -12,12 +12,14 @@ class WidgetTodoCore: ObservableObject {
     static let shared = WidgetTodoCore()
     static let test = WidgetTodoCore(isTestMode: true)
         
-    // TODO:
     private init(isTestMode: Bool = false) {
-        self.keyboardInputRepository = .init(store: isTestMode ? .testStore : .shared)
-        self.listDisplayRepository = .init(store: isTestMode ? .testStore : .shared)
-        self.screenStateRepository = .init(store: isTestMode ? .testStore : .shared)
-        self.todoItemRepository = .init(store: isTestMode ? .testStore : .shared)
+        let userDefaultsStore: UserDefaultsStore = isTestMode ? .testStore : .shared
+        let swiftDataStore: SwiftDataStore = isTestMode ? .testStore : .shared
+        
+        self.keyboardInputRepository = .init(store: userDefaultsStore)
+        self.listDisplayRepository = .init(store: userDefaultsStore)
+        self.screenStateRepository = .init(store: userDefaultsStore)
+        self.todoItemRepository = .init(store: swiftDataStore)
     }
     
     private let keyboardInputRepository: KeyboardInputRepository
