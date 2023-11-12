@@ -79,6 +79,8 @@
 		9754849C2AFFA68700A09B11 /* ListScrollButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754849A2AFFA68700A09B11 /* ListScrollButton.swift */; };
 		9754849E2AFFB15400A09B11 /* ListDisplayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754849D2AFFB15400A09B11 /* ListDisplayRepository.swift */; };
 		9754849F2AFFC2CD00A09B11 /* ListDisplayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754849D2AFFB15400A09B11 /* ListDisplayRepository.swift */; };
+		975484A12B00DBA300A09B11 /* WidgetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484A02B00DBA300A09B11 /* WidgetError.swift */; };
+		975484A22B00DBC000A09B11 /* WidgetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484A02B00DBA300A09B11 /* WidgetError.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -175,6 +177,7 @@
 		975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiKeyboardContent+Category.swift"; sourceTree = "<group>"; };
 		9754849A2AFFA68700A09B11 /* ListScrollButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScrollButton.swift; sourceTree = "<group>"; };
 		9754849D2AFFB15400A09B11 /* ListDisplayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDisplayRepository.swift; sourceTree = "<group>"; };
+		975484A02B00DBA300A09B11 /* WidgetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetError.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -372,6 +375,7 @@
 				9754846D2AFA65FC00A09B11 /* EditTaskType.swift */,
 				975484282AF45D4400A09B11 /* KeyboardInputMode.swift */,
 				975484492AF52D1500A09B11 /* ScreenType.swift */,
+				975484A02B00DBA300A09B11 /* WidgetError.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -633,6 +637,7 @@
 				975484062AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,
 				9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */,
 				975484442AF4DE1700A09B11 /* CloseButton.swift in Sources */,
+				975484A22B00DBC000A09B11 /* WidgetError.swift in Sources */,
 				975484482AF5299200A09B11 /* ScreenStateRepository.swift in Sources */,
 				979E23DC2AF14510003559D2 /* Task.swift in Sources */,
 				9754848F2AFEEABF00A09B11 /* EmojiContentMoveKey.swift in Sources */,
@@ -666,6 +671,7 @@
 				975484902AFEEABF00A09B11 /* EmojiContentMoveKey.swift in Sources */,
 				9754842A2AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */,
 				975484602AF90C5A00A09B11 /* PlusButtonImage.swift in Sources */,
+				975484A12B00DBA300A09B11 /* WidgetError.swift in Sources */,
 				975484432AF4DDEA00A09B11 /* CloseButton.swift in Sources */,
 				975484652AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift in Sources */,
 				975484792AFBCD7E00A09B11 /* TaskRepository.swift in Sources */,
