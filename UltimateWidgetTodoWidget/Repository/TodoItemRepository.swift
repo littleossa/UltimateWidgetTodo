@@ -37,8 +37,7 @@ class TodoItemRepository {
         if let item = try store.context.fetch(descriptor).first {
             return item
         } else {
-            // TODO: throw error
-            throw NSError(domain: "todo item not found", code: 1)
+            throw WidgetError.todoItemFetchingFailure
         }
     }
 }
