@@ -128,9 +128,14 @@ class WidgetTodoCore: ObservableObject {
         closeEditTaskView()
     }
     
-    func onTapCompleteTask(id: UUID) async throws {
-        listScrollTransition = .identity
-        try await taskRepository.deleteTask(id: id)
+    func onTapCompleteTask(id: UUID) async {
+        do {
+            try await taskRepository.deleteTask(id: id)
+            listScrollTransition = .identity
+        } catch {
+            // TODO: - Error handling
+            print("Error")
+        }
     }
     
     func onTapDisabledScroll() {
@@ -138,19 +143,24 @@ class WidgetTodoCore: ObservableObject {
         listScrollTransition = .identity
     }
     
-    func onTapEditTaskDoneKey(id: UUID) async throws {
+    func onTapEditTaskDoneKey(id: UUID) async {
         let name = keyboardInputRepository.inputText
         if name.isEmpty { return }
         
-        let task = try await taskRepository.fetchTask(id: id)
-        task.name = name
-        task.updateDate = Date()
-        
-        keyboardInputRepository.changeMode(into: .alphabet)
-        keyboardInputRepository.moveEmojiContent(for: 0)
-        keyboardInputRepository.clearInputText()
-        
-        screenStateRepository.changeScreen(into: .main)
+        do {
+            let task = try await taskRepository.fetchTask(id: id)
+            task.name = name
+            task.updateDate = Date()
+            
+            keyboardInputRepository.changeMode(into: .alphabet)
+            keyboardInputRepository.moveEmojiContent(for: 0)
+            keyboardInputRepository.clearInputText()
+            
+            screenStateRepository.changeScreen(into: .main)
+        } catch {
+            // TODO: - Error handling
+            print("Error")
+        }
     }
     
     func onTapEmojiCategoryKey(_ category: EmojiKeyboardContent.Category) {

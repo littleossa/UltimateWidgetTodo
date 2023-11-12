@@ -43,9 +43,8 @@ struct CompleteTaskIntent: AppIntent {
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
-            try await WidgetTodoCore.shared.onTapCompleteTask(id: uuid)
+            await WidgetTodoCore.shared.onTapCompleteTask(id: uuid)
         }
-        
         return .result()
     }
 }
