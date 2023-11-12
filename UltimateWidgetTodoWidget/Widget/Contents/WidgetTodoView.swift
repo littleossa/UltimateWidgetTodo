@@ -13,19 +13,23 @@ struct WidgetTodoView: View {
     
     var body: some View {
         
-        Group {
+        ZStack {
             switch core.currentScreen {
             case .main:
                 MainView()
-                    .transition(core.listPresentingTransition)
+                    .transition(.opacity)
             case .addTask:
                 EditTaskView(type: .addNewTask)
-                    .transition(.push(from: .bottom))
+                    .transition(.asymmetric(insertion: .push(from: .top),
+                                            removal: .push(from: .top)))
+
             case let .editTask(id):
                 EditTaskView(type: .editTask(id: id))
-                    .transition(.push(from: .leading))
+                    .transition(.asymmetric(insertion: .push(from: .trailing),
+                                            removal: .push(from: .trailing)))
             }
         }
+        .alert(widgetError: core.error)
         .modelContainer(core.swiftDataContainer)
     }
 }

@@ -26,7 +26,6 @@ class WidgetTodoCore: ObservableObject {
     
     // MARK: - Properties
     @Published private(set) var listScrollTransition: AnyTransition = .identity
-    @Published private(set) var listPresentingTransition: AnyTransition = .identity
         
     var currentEmojiCategory: EmojiKeyboardContent.Category {
         return keyboardInputRepository.currentEmojiCategory
@@ -38,6 +37,10 @@ class WidgetTodoCore: ObservableObject {
     
     var currentScreen: ScreenType {
         return screenStateRepository.currentScreen
+    }
+    
+    var error: WidgetError? {
+        return screenStateRepository.error
     }
     
     var inputText: String {
@@ -98,7 +101,6 @@ class WidgetTodoCore: ObservableObject {
         await taskRepository.addTask(name: name)
         keyboardInputRepository.clearInputText()
         
-        listPresentingTransition = .push(from: .top)
         screenStateRepository.changeScreen(into: .main)
     }
     
@@ -119,12 +121,10 @@ class WidgetTodoCore: ObservableObject {
     }
     
     func onTapCloseAddTaskViewButton() {
-        listPresentingTransition = .push(from: .top)
         closeEditTaskView()
     }
     
     func onTapCloseEditTaskViewButton() {
-        listPresentingTransition = .push(from: .trailing)
         closeEditTaskView()
     }
     
@@ -150,7 +150,6 @@ class WidgetTodoCore: ObservableObject {
         keyboardInputRepository.moveEmojiContent(for: 0)
         keyboardInputRepository.clearInputText()
         
-        listPresentingTransition = .push(from: .trailing)
         screenStateRepository.changeScreen(into: .main)
     }
     
@@ -184,7 +183,6 @@ class WidgetTodoCore: ObservableObject {
     }
     
     func onTapPresentAddTaskView() {
-        listPresentingTransition = .push(from: .bottom)
         screenStateRepository.changeScreen(into: .addTask)
     }
     
@@ -200,13 +198,14 @@ class WidgetTodoCore: ObservableObject {
     
     func onTapTaskListRow(id: UUID, name: String) {
         keyboardInputRepository.input(name)
-        listPresentingTransition = .push(from: .leading)
         screenStateRepository.changeScreen(into: .editTask(id: id))
     }
     
     func showError(_ error: WidgetError) {
-        
+        screenStateRepository.setError(error)
     }
+    
+    // MARK: - Helper Function
     
     private func closeEditTaskView() {
         keyboardInputRepository.changeMode(into: .alphabet)
