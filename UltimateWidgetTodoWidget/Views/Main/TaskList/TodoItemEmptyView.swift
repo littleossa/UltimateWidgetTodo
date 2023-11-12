@@ -1,5 +1,5 @@
 //
-//  TaskEmptyView.swift
+//  TodoItemEmptyView.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TaskEmptyView: View {
+struct TodoItemEmptyView: View {
         
     var body: some View {
         ZStack {
@@ -31,7 +31,7 @@ struct TaskEmptyView: View {
                 
                 Spacer()
             }
-            PresentAddTaskViewButton(type: .fullScreen)
+            PresentAddItemViewButton(type: .fullScreen)
         }
     }
 }
@@ -40,7 +40,7 @@ struct TaskEmptyView: View {
 #if DEBUG
 import WidgetKit
 
-struct TaskEmptyPreviewWidget: Widget {
+struct TodoItemEmptyPreviewWidget: Widget {
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
@@ -48,7 +48,7 @@ struct TaskEmptyPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            TaskEmptyView()
+            TodoItemEmptyView()
                 .containerBackground(for: .widget) {
                     WidgetBackgroundView()
                 }
@@ -58,8 +58,8 @@ struct TaskEmptyPreviewWidget: Widget {
 }
 
 #Preview(as: .systemLarge) {
-    TaskEmptyPreviewWidget()
+    TodoItemEmptyPreviewWidget()
 } timeline: {
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }
 #endif

@@ -9,7 +9,7 @@ import SwiftUI
 struct NumberAndPunctuationMarkKeyboard: View {
     
     @Environment(\.widgetTodoCore) var core
-    let type: EditTaskType
+    let type: EditTodoItemType
     
     var body: some View {
         
@@ -71,5 +71,5 @@ struct NumberAndPunctuationMarkKeyboard: View {
 }
 
 #Preview {
-    NumberAndPunctuationMarkKeyboard(type: .addNewTask)
+    NumberAndPunctuationMarkKeyboard(type: .addNewTodoItem)
 }

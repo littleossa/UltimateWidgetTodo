@@ -7,19 +7,19 @@
 import WidgetKit
 
 struct WidgetTodoProvider: TimelineProvider {
-    func placeholder(in context: Context) -> TaskEntry {
-        TaskEntry(date: Date())
+    func placeholder(in context: Context) -> WidgetTodoEntry {
+        WidgetTodoEntry(date: Date())
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (TaskEntry) -> ()) {
-        let entry = TaskEntry(date: Date())
+    func getSnapshot(in context: Context, completion: @escaping (WidgetTodoEntry) -> ()) {
+        let entry = WidgetTodoEntry(date: Date())
         completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<TaskEntry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<WidgetTodoEntry>) -> ()) {
         
         // Entries are not used but it must be set for rendering the widget
-        let entries: [TaskEntry] = [TaskEntry(date: .now)]
+        let entries: [WidgetTodoEntry] = [WidgetTodoEntry(date: .now)]
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }

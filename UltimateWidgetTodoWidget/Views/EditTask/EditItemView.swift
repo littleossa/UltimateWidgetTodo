@@ -1,5 +1,5 @@
 //
-//  EditTaskView.swift
+//  EditItemView.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,11 +7,11 @@
 import SwiftUI
 import WidgetKit
 
-struct EditTaskView: View {
+struct EditItemView: View {
     
     @Environment(\.widgetTodoCore) var core
     
-    let type: EditTaskType
+    let type: EditTodoItemType
     
     var body: some View {
         VStack(spacing: 0) {
@@ -60,7 +60,7 @@ struct EditTaskView: View {
 
 // MARK: - Preview
 #if DEBUG
-struct EditTaskPreviewWidget: Widget {
+struct EditItemPreviewWidget: Widget {
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
@@ -68,16 +68,16 @@ struct EditTaskPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            EditTaskView(type: .addNewTask)
+            EditItemView(type: .addNewTodoItem)
                 .modelContainer(SwiftDataStore.testStore.container)
         }
     }
 }
 
 #Preview(as: .systemLarge) {
-    EditTaskPreviewWidget()
+    EditItemPreviewWidget()
 } timeline: {
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }
 #endif
 

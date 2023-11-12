@@ -9,14 +9,14 @@ import SwiftUI
 
 struct CloseButton: View {
     
-    let type: EditTaskType
+    let type: EditTodoItemType
     
     private var closeButtonIntent: any AppIntent {
         switch type {
-        case .addNewTask:
-            return CloseAddTaskViewButtonIntent()
-        case .editTask:
-            return CloseEditTaskViewButtonIntent()
+        case .addNewTodoItem:
+            return CloseAddItemViewButtonIntent()
+        case .editTodoItem:
+            return CloseEditItemViewButtonIntent()
         }
     }
     
@@ -33,41 +33,41 @@ struct CloseButton: View {
 
 #Preview {
     HStack {
-        CloseButton(type: .addNewTask)
-        CloseButton(type: .editTask(id: UUID()))
+        CloseButton(type: .addNewTodoItem)
+        CloseButton(type: .editTodoItem(id: UUID()))
     }
 }
 
-struct CloseAddTaskViewButtonIntent: AppIntent {
+struct CloseAddItemViewButtonIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Close Add Task View Button"
+    static var title: LocalizedStringResource = "Close Add Item View Button"
     
-    @Parameter(title: "Close Add Task View Button")
+    @Parameter(title: "Close Add Item View Button")
     var id: String
     
     init() {
-        id = "closeAddTaskViewButton"
+        id = "closeAddItemViewButton"
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore.shared.onTapCloseAddTaskViewButton()
+        WidgetTodoCore.shared.onTapCloseAddItemViewButton()
         return .result()
     }
 }
 
-struct CloseEditTaskViewButtonIntent: AppIntent {
+struct CloseEditItemViewButtonIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Close Edit Task View Button"
+    static var title: LocalizedStringResource = "Close Edit Item View Button"
     
-    @Parameter(title: "Close Edit Task View Button")
+    @Parameter(title: "Close Edit Item View Button")
     var id: String
     
     init() {
-        id = "closeEditTaskViewButton"
+        id = "closeEditItemViewButton"
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore.shared.onTapCloseEditTaskViewButton()
+        WidgetTodoCore.shared.onTapCloseEditItemViewButton()
         return .result()
     }
 }

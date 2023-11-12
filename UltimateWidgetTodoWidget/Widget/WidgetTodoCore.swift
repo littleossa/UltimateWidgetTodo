@@ -12,17 +12,18 @@ class WidgetTodoCore: ObservableObject {
     static let shared = WidgetTodoCore()
     static let test = WidgetTodoCore(isTestMode: true)
         
+    // TODO:
     private init(isTestMode: Bool = false) {
         self.keyboardInputRepository = .init(store: isTestMode ? .testStore : .shared)
         self.listDisplayRepository = .init(store: isTestMode ? .testStore : .shared)
         self.screenStateRepository = .init(store: isTestMode ? .testStore : .shared)
-        self.taskRepository = .init(store: isTestMode ? .testStore : .shared)
+        self.todoItemRepository = .init(store: isTestMode ? .testStore : .shared)
     }
     
     private let keyboardInputRepository: KeyboardInputRepository
     private let listDisplayRepository: ListDisplayRepository
     private let screenStateRepository: ScreenStateRepository
-    private let taskRepository: TaskRepository
+    private let todoItemRepository: TodoItemRepository
     
     // MARK: - Properties
     @Published private(set) var listScrollTransition: AnyTransition = .identity
@@ -84,24 +85,24 @@ class WidgetTodoCore: ObservableObject {
     }
     
     var swiftDataContainer: ModelContainer {
-        return taskRepository.container
+        return todoItemRepository.container
     }
     
     // MARK: - Functions
     
-    func makeListDisplayControl(for tasks: [Task]) -> ListDisplayControl {
-        return listDisplayRepository.makeListDisplayControl(for: tasks)
+    func makeListDisplayControl(for items: [TodoItem]) -> ListDisplayControl {
+        return listDisplayRepository.makeListDisplayControl(for: items)
     }
     
-    func onTapAddTaskDoneKey() async throws {
+    func onTapAddItemDoneKey() async throws {
         let name = keyboardInputRepository.inputText
         if name.isEmpty { return }
         
-        guard name.count <= WidgetConfig.taskNameLimitCount
-        else { throw WidgetError.taskNameLimitExceeded }
+        guard name.count <= WidgetConfig.todoItemNameLimitCount
+        else { throw WidgetError.todoItemNameLimitExceeded }
         
         listDisplayRepository.updateIndex(to: 0)
-        await taskRepository.addTask(name: name)
+        await todoItemRepository.addItem(name: name)
         keyboardInputRepository.clearInputText()
         
         screenStateRepository.changeScreen(into: .main)
@@ -123,16 +124,16 @@ class WidgetTodoCore: ObservableObject {
         keyboardInputRepository.input(character)
     }
     
-    func onTapCloseAddTaskViewButton() {
-        closeEditTaskView()
+    func onTapCloseAddItemViewButton() {
+        closeEditItemView()
     }
     
-    func onTapCloseEditTaskViewButton() {
-        closeEditTaskView()
+    func onTapCloseEditItemViewButton() {
+        closeEditItemView()
     }
     
-    func onTapCompleteTask(id: UUID) async throws {
-        try await taskRepository.deleteTask(id: id)
+    func onTapCompleteTodoItem(id: UUID) async throws {
+        try await todoItemRepository.deleteItem(id: id)
         listScrollTransition = .identity
     }
     
@@ -141,16 +142,16 @@ class WidgetTodoCore: ObservableObject {
         listScrollTransition = .identity
     }
     
-    func onTapEditTaskDoneKey(id: UUID) async throws {
+    func onTapEditItemDoneKey(id: UUID) async throws {
         let name = keyboardInputRepository.inputText
         if name.isEmpty { return }
         
-        guard name.count <= WidgetConfig.taskNameLimitCount
-        else { throw WidgetError.taskNameLimitExceeded }
+        guard name.count <= WidgetConfig.todoItemNameLimitCount
+        else { throw WidgetError.todoItemNameLimitExceeded }
         
-        let task = try await taskRepository.fetchTask(id: id)
-        task.name = name
-        task.updateDate = Date()
+        let item = try await todoItemRepository.fetchItem(id: id)
+        item.name = name
+        item.updateDate = Date()
         
         keyboardInputRepository.changeMode(into: .alphabet)
         keyboardInputRepository.moveEmojiContent(for: 0)
@@ -192,8 +193,8 @@ class WidgetTodoCore: ObservableObject {
         keyboardInputRepository.changeMode(into: .number)
     }
     
-    func onTapPresentAddTaskView() {
-        screenStateRepository.changeScreen(into: .addTask)
+    func onTapPresentAddItemView() {
+        screenStateRepository.changeScreen(into: .addTodoItem)
     }
     
     func onTapScrollDownList() {
@@ -206,9 +207,9 @@ class WidgetTodoCore: ObservableObject {
         listDisplayRepository.scrollUpList()
     }
     
-    func onTapTaskListRow(id: UUID, name: String) {
+    func onTapTodoItemListRow(id: UUID, name: String) {
         keyboardInputRepository.input(name)
-        screenStateRepository.changeScreen(into: .editTask(id: id))
+        screenStateRepository.changeScreen(into: .editTodoItem(id: id))
     }
     
     func showError(_ error: WidgetError) {
@@ -217,7 +218,7 @@ class WidgetTodoCore: ObservableObject {
     
     // MARK: - Helper Function
     
-    private func closeEditTaskView() {
+    private func closeEditItemView() {
         keyboardInputRepository.changeMode(into: .alphabet)
         keyboardInputRepository.moveEmojiContent(for: 0)
         keyboardInputRepository.clearInputText()

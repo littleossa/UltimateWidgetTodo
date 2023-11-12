@@ -1,5 +1,5 @@
 //
-//  PresentAddTaskViewButton.swift
+//  PresentAddItemViewButton.swift
 //  UltimateWidgetTodo
 //
 //
@@ -8,7 +8,7 @@ import AppIntents
 import WidgetKit
 import SwiftUI
 
-struct PresentAddTaskViewButton: View {
+struct PresentAddItemViewButton: View {
     
     enum ButtonType {
         case floatingAction
@@ -19,7 +19,7 @@ struct PresentAddTaskViewButton: View {
             
     var body: some View {
         
-        Button(intent: PresentAddTaskViewIntent()) {
+        Button(intent: PresentAddItemViewIntent()) {
             
             switch type {
             case .floatingAction:
@@ -33,25 +33,25 @@ struct PresentAddTaskViewButton: View {
     }
 }
 
-struct PresentAddTaskViewIntent: AppIntent {
+struct PresentAddItemViewIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Present Add task view button"
+    static var title: LocalizedStringResource = "Present Add Item view button"
     
-    @Parameter(title: "Present Add task view button")
+    @Parameter(title: "Present Add item view button")
     var id: String
     
     init() {
-        self.id = "presentAddTaskViewButton"
+        self.id = "presentAddItemViewButton"
     }
     
     func perform() async throws -> some IntentResult {
-        WidgetTodoCore.shared.onTapPresentAddTaskView()
+        WidgetTodoCore.shared.onTapPresentAddItemView()
         return .result()
     }
 }
 
 #Preview(as: .systemLarge) {
-    TaskListPreviewWidget()
+    TodoItemListPreviewWidget()
 } timeline: {
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }

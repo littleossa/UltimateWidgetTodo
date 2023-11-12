@@ -19,7 +19,7 @@ class UserDefaultsStore {
     private let userDefaults: UserDefaults
     
     enum Key: String, CaseIterable {
-        case editTaskId
+        case editTodoItemId
         case emojiKeyboardIndex
         case error
         case frequentlyUsedEmojis
@@ -30,17 +30,17 @@ class UserDefaultsStore {
         case screenType
     }
     
-    /// The ID required to navigate to the task editing screen
-    private var editTaskId: UUID? {
+    /// The ID required to navigate to the todo item editing screen
+    private var editTodoItemId: UUID? {
         get {
-            guard let value = userDefaults.string(forKey: Key.editTaskId.rawValue),
+            guard let value = userDefaults.string(forKey: Key.editTodoItemId.rawValue),
                   let uuid = UUID(uuidString: value)
             else { return nil }
             
             return uuid
         }
         set {
-            userDefaults.set(newValue?.uuidString, forKey: Key.editTaskId.rawValue)
+            userDefaults.set(newValue?.uuidString, forKey: Key.editTodoItemId.rawValue)
         }
     }
     
@@ -121,12 +121,12 @@ class UserDefaultsStore {
             switch value {
             case ScreenType.main.screenName:
                 return .main
-            case ScreenType.addTask.screenName:
-                return .addTask
-            case ScreenType.editTask(id: UUID()).screenName:
+            case ScreenType.addTodoItem.screenName:
+                return .addTodoItem
+            case ScreenType.editTodoItem(id: UUID()).screenName:
                 
-                if let editTaskId {
-                    return .editTask(id: editTaskId)
+                if let editTodoItemId {
+                    return .editTodoItem(id: editTodoItemId)
                 } else {
                     fatalError("The screen name cannot be retrieved due to the lack of an editing ID")
                 }
@@ -138,10 +138,10 @@ class UserDefaultsStore {
         }
         set {
             switch newValue {
-            case .main, .addTask:
+            case .main, .addTodoItem:
                 break
-            case .editTask(let id):
-                editTaskId = id
+            case .editTodoItem(let id):
+                editTodoItemId = id
             }
             userDefaults.set(newValue.screenName, forKey: Key.screenType.rawValue)
         }

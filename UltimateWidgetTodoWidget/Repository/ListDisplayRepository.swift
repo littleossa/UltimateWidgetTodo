@@ -17,9 +17,9 @@ class ListDisplayRepository {
         return store.listDisplayIndex
     }
     
-    func makeListDisplayControl(for tasks: [Task]) -> ListDisplayControl {
+    func makeListDisplayControl(for items: [TodoItem]) -> ListDisplayControl {
         return ListDisplayControl(currentIndex: currentIndex,
-                                  tasks: tasks)
+                                  items: items)
     }
     
     func scrollDownList() {
@@ -40,33 +40,33 @@ class ListDisplayRepository {
 
 struct ListDisplayControl {
     
-    init(currentIndex: Int, tasks: [Task]) {
+    init(currentIndex: Int, items: [TodoItem]) {
         self.currentIndex = currentIndex
-        self.tasks = tasks
+        self.items = items
     }
     
     private let currentIndex: Int
-    private let tasks: [Task]
-    private let displayLimitCount = WidgetConfig.displayTaskLimitCount
+    private let items: [TodoItem]
+    private let displayLimitCount = WidgetConfig.displayTodoItemLimitCount
     
     var canAppearScrollButtons: Bool {
-        return tasks.count > displayLimitCount
+        return items.count > displayLimitCount
     }
     
-    var displayTasks: [Task] {
-        if tasks.count <= displayLimitCount {
-            return tasks
+    var displayItems: [TodoItem] {
+        if items.count <= displayLimitCount {
+            return items
         }
         
-        let endIndex = min(currentIndex + displayLimitCount, tasks.count)
+        let endIndex = min(currentIndex + displayLimitCount, items.count)
         let startIndex = min(currentIndex, endIndex - displayLimitCount)
-        let displayTasks = Array(tasks[startIndex..<endIndex])
+        let displayItems = Array(items[startIndex..<endIndex])
         
-        return displayTasks
+        return displayItems
     }
     
     var isDisableScrollUpButton: Bool {
-        if tasks.count > displayLimitCount,
+        if items.count > displayLimitCount,
            currentIndex > 0 {
             return false
         }
@@ -75,9 +75,9 @@ struct ListDisplayControl {
     }
     
     var isDisableScrollDownButton: Bool {
-        if tasks.count <= displayLimitCount {
+        if items.count <= displayLimitCount {
             return true
         }
-        return tasks.count <= currentIndex + displayLimitCount
+        return items.count <= currentIndex + displayLimitCount
     }
 }

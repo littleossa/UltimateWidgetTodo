@@ -8,9 +8,9 @@ import SwiftUI
 
 enum WidgetError: String, Error {
     case unknown
-    case taskEditingFailure
-    case taskDeletionFailure
-    case taskNameLimitExceeded
+    case todoItemEditingFailure
+    case todoItemDeletionFailure
+    case todoItemNameLimitExceeded
     
     struct Info {
         let code: Int
@@ -24,18 +24,18 @@ enum WidgetError: String, Error {
             return .init(code: 0,
                          title: "Unknown Error",
                          message: "An unknown error occurred.")
-        case .taskEditingFailure:
+        case .todoItemEditingFailure:
             return .init(code: 1,
-                         title: "Unable to edit the task",
-                         message: "An error occurred while editing the task.")
-        case .taskDeletionFailure:
+                         title: "Unable to edit the TODO item",
+                         message: "An error occurred while editing the item.")
+        case .todoItemDeletionFailure:
             return .init(code: 2,
-                         title: "Unable to delete the task",
-                         message: "An error occurred while deleting the task.")
-        case .taskNameLimitExceeded:
+                         title: "Unable to delete the TODO item",
+                         message: "An error occurred while deleting the item.")
+        case .todoItemNameLimitExceeded:
             return .init(code: 3,
-                         title: "Task Name Limit Exceeded",
-                         message: "The task name exceeds the allowed character limit of \(WidgetConfig.taskNameLimitCount) characters. Please shorten the task name.")
+                         title: "TODO Item Name Limit Exceeded",
+                         message: "The item name exceeds the allowed character limit of \(WidgetConfig.todoItemNameLimitCount) characters. Please shorten this.")
         }
     }
 }

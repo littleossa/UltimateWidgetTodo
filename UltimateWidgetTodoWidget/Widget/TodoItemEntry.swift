@@ -1,12 +1,12 @@
 //
-//  TaskEntry.swift
+//  WidgetTodoEntry.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
 
 import WidgetKit
 
-struct TaskEntry: TimelineEntry {
+struct WidgetTodoEntry: TimelineEntry {
     let date: Date
 }
 

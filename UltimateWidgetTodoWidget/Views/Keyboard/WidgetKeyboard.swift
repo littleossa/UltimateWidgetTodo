@@ -10,7 +10,7 @@ import WidgetKit
 struct WidgetKeyboard: View {
     
     @Environment(\.widgetTodoCore) var core
-    let type: EditTaskType
+    let type: EditTodoItemType
     
     var body: some View {
         
@@ -31,7 +31,7 @@ struct WidgetKeyboard: View {
 }
 
 #Preview(as: .systemLarge) {
-    EditTaskPreviewWidget()
+    EditItemPreviewWidget()
 } timeline: {
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }

@@ -40,7 +40,7 @@ struct KeyboardOverlayBackgroundPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            EditTaskView(type: .addNewTask)
+            EditItemView(type: .addNewTodoItem)
                 .containerBackground(for: .widget) {
                     KeyboardOverlayBackgroundView()
                 }
@@ -52,6 +52,6 @@ struct KeyboardOverlayBackgroundPreviewWidget: Widget {
 #Preview(as: .systemLarge) {
     KeyboardOverlayBackgroundPreviewWidget()
 } timeline: {
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }
 #endif

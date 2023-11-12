@@ -9,17 +9,17 @@ import Foundation
 enum ScreenType: Equatable {
         
     case main
-    case addTask
-    case editTask(id: UUID)
+    case addTodoItem
+    case editTodoItem(id: UUID)
     
     var screenName: String {
         switch self {
         case .main:
             return "main"
-        case .addTask:
-            return "addTask"
-        case .editTask:
-            return "editTask"
+        case .addTodoItem:
+            return "addTodoItem"
+        case .editTodoItem:
+            return "editTodoItem"
         }
     }
 }

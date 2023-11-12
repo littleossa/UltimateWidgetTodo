@@ -78,7 +78,7 @@ extension View {
 }
 
 #Preview {
-    WidgetTodoErrorView(error: .taskNameLimitExceeded) {
+    WidgetTodoErrorView(error: .todoItemNameLimitExceeded) {
         Text("content")
     }
 }

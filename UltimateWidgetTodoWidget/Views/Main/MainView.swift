@@ -11,16 +11,16 @@ import WidgetKit
 struct MainView: View {
     
     @Environment(\.modelContext) private var modelContext
-    @Query (sort: \Task.createDate, order: .reverse)
-    private var tasks: [Task]
+    @Query (sort: \TodoItem.createDate, order: .reverse)
+    private var items: [TodoItem]
 
     var body: some View {
         
         Group {
-            if tasks.isEmpty {
-                TaskEmptyView()
+            if items.isEmpty {
+                TodoItemEmptyView()
             } else {
-                TaskListView(tasks: tasks)
+                TodoItemListView(items: items)
             }
         }
         .containerBackground(for: .widget) {
@@ -48,6 +48,6 @@ struct MainPreviewWidget: Widget {
 #Preview(as: .systemLarge) {
     MainPreviewWidget()
 } timeline: {
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }
 #endif

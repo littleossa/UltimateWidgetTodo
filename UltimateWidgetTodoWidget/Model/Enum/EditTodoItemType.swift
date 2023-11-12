@@ -1,29 +1,29 @@
 //
-//  EditTaskType.swift
+//  EditTodoItemType.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
 
 import SwiftUI
 
-enum EditTaskType {
-    case addNewTask
-    case editTask(id: UUID)
+enum EditTodoItemType {
+    case addNewTodoItem
+    case editTodoItem(id: UUID)
     
     var displayLabel: LocalizedStringKey {
         switch self {
-        case .addNewTask:
+        case .addNewTodoItem:
             return "New"
-        case .editTask:
+        case .editTodoItem:
             return "Edit"
         }
     }
     
     var closeButtonImageName: String {
         switch self {
-        case .addNewTask:
+        case .addNewTodoItem:
             return "xmark"
-        case .editTask:
+        case .editTodoItem:
             return "chevron.left"
         }
     }

@@ -25,6 +25,6 @@ struct UltimateWidgetTodoWidget: Widget {
 #Preview(as: .systemLarge) {
     UltimateWidgetTodoWidget()
 } timeline: {
-    TaskEntry(date: .now)
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }

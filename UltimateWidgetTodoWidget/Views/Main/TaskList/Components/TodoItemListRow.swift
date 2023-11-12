@@ -1,5 +1,5 @@
 //
-//  TaskListRow.swift
+//  TodoItemListRow.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -8,23 +8,23 @@ import AppIntents
 import SwiftUI
 import WidgetKit
 
-struct TaskListRow: View {
+struct TodoItemListRow: View {
     
-    let task: Task
+    let item: TodoItem
     
     var body: some View {
         
         VStack(spacing: 0) {
             HStack {
-                CompleteTaskButton(task: task)
+                CompleteTodoItemButton(item: item)
                 
-                Button(intent: TaskListRowSelectIntent(task: task)) {
+                Button(intent: TodoItemListRowSelectIntent(item: item)) {
                     Rectangle()
                         .fill(.widgetBackground.opacity(0.001))
                         .overlay {
                             
                             HStack {
-                                Text(task.name)
+                                Text(item.name)
                                     .font(.system(size: 16))
                                 
                                 Spacer()
@@ -49,26 +49,26 @@ struct TaskListRow: View {
     }
 }
 
-struct TaskListRowSelectIntent: AppIntent {
+struct TodoItemListRowSelectIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Task List Row"
+    static var title: LocalizedStringResource = "TODO Item List Row"
     
-    @Parameter(title: "Task ID")
+    @Parameter(title: "Item ID")
     var id: String
     
-    @Parameter(title: "Task name")
+    @Parameter(title: "Item name")
     var name: String
     
     init() {}
     
-    init(task: Task) {
-        self.id = task.taskId.uuidString
-        self.name = task.name
+    init(item: TodoItem) {
+        self.id = item.itemId.uuidString
+        self.name = item.name
     }
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
-            WidgetTodoCore.shared.onTapTaskListRow(id: uuid, name: name)
+            WidgetTodoCore.shared.onTapTodoItemListRow(id: uuid, name: name)
         }
         return .result()
     }

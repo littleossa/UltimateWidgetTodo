@@ -44,6 +44,6 @@ struct WidgetBackgroundPreviewWidget: Widget {
 #Preview(as: .systemLarge) {
     WidgetBackgroundPreviewWidget()
 } timeline: {
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }
 #endif

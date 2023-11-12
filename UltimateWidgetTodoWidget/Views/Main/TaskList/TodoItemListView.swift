@@ -1,5 +1,5 @@
 //
-//  TaskListView.swift
+//  TodoItemListView.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,13 +7,13 @@
 import SwiftUI
 import WidgetKit
 
-struct TaskListView: View {
+struct TodoItemListView: View {
     
     @Environment(\.widgetTodoCore) var core
-    let tasks: [Task]
+    let items: [TodoItem]
     
     private var listDisplayControl: ListDisplayControl {
-        return core.makeListDisplayControl(for: tasks)
+        return core.makeListDisplayControl(for: items)
     }
     
     var body: some View {
@@ -25,7 +25,7 @@ struct TaskListView: View {
                 HStack(spacing: 0) {
                     
                     HStack(alignment: .bottom, spacing: 4) {
-                        Text(String(tasks.count))
+                        Text(String(items.count))
                             .contentTransition(.numericText())
                             .font(.system(size: 30))
                             .bold()
@@ -60,10 +60,10 @@ struct TaskListView: View {
                     .frame(height: 2)
                     .padding(.bottom, 4)
                 
-                ForEach(listDisplayControl.displayTasks) {
-                    TaskListRow(task: $0)
+                ForEach(listDisplayControl.displayItems) {
+                    TodoItemListRow(item: $0)
                 }
-                .id("TaskListRows")
+                .id("TodoItemListRows")
                 .transition(core.listScrollTransition)
                 
                 Spacer()
@@ -75,7 +75,7 @@ struct TaskListView: View {
                 HStack {
                     Spacer()
                     
-                    PresentAddTaskViewButton(type: .floatingAction)
+                    PresentAddItemViewButton(type: .floatingAction)
                     .frame(width: 44, height: 44)
                 }
             }
@@ -87,7 +87,7 @@ struct TaskListView: View {
 #if DEBUG
 import WidgetKit
 
-struct TaskListPreviewWidget: Widget {
+struct TodoItemListPreviewWidget: Widget {
     let kind: String = "UltimateWidgetTodo"
 
     var body: some WidgetConfiguration {
@@ -95,7 +95,7 @@ struct TaskListPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            TaskListView(tasks: [])
+            TodoItemListView(items: [])
                 .containerBackground(for: .widget) {
                     WidgetBackgroundView()
                 }
@@ -105,8 +105,8 @@ struct TaskListPreviewWidget: Widget {
 }
 
 #Preview(as: .systemLarge) {
-    TaskListPreviewWidget()
+    TodoItemListPreviewWidget()
 } timeline: {
-    TaskEntry(date: .now)
+    WidgetTodoEntry(date: .now)
 }
 #endif

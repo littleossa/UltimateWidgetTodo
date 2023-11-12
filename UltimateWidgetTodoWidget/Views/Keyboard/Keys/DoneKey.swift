@@ -10,20 +10,20 @@ import WidgetKit
 
 struct DoneKey: View {
     
-    init(inputText: String, type: EditTaskType) {
+    init(inputText: String, type: EditTodoItemType) {
         self.inputText = inputText
         self.type = type
     }
     
     let inputText: String
-    let type: EditTaskType
+    let type: EditTodoItemType
     
     private var DoneKeyIntent: any AppIntent {
         switch type {
-        case .addNewTask:
-            return AddTaskDoneKeyIntent()
-        case .editTask(let id):
-            return EditTaskDoneKeyIntent(taskId: id)
+        case .addNewTodoItem:
+            return AddItemDoneKeyIntent()
+        case .editTodoItem(let id):
+            return EditItemDoneKeyIntent(itemId: id)
         }
     }
             
@@ -52,27 +52,27 @@ struct DoneKey: View {
     Color.keyboardBackground
         .overlay {
             HStack {
-                DoneKey(inputText: "", type: .addNewTask)
-                DoneKey(inputText: "something", type: .addNewTask)
+                DoneKey(inputText: "", type: .addNewTodoItem)
+                DoneKey(inputText: "something", type: .addNewTodoItem)
             }
         }
 }
 
 
-struct AddTaskDoneKeyIntent: AppIntent {
+struct AddItemDoneKeyIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Add Task Done key"
+    static var title: LocalizedStringResource = "Add Item Done key"
     
-    @Parameter(title: "Add Task Done Key")
+    @Parameter(title: "Add Item Done Key")
     var id: String
         
     init() {
-        id = "AddTaskDoneKey"
+        id = "AddItemDoneKey"
     }
     
     func perform() async throws -> some IntentResult {
         do {
-            try await WidgetTodoCore.shared.onTapAddTaskDoneKey()
+            try await WidgetTodoCore.shared.onTapAddItemDoneKey()
         } catch {
             let widgetError = error as? WidgetError
             WidgetTodoCore.shared.showError(widgetError ?? .unknown)
@@ -81,29 +81,29 @@ struct AddTaskDoneKeyIntent: AppIntent {
     }
 }
 
-struct EditTaskDoneKeyIntent: AppIntent {
+struct EditItemDoneKeyIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Edit Task Done key"
+    static var title: LocalizedStringResource = "Edit Item Done key"
     
-    @Parameter(title: "Edit Task Done Key")
+    @Parameter(title: "Edit Item Done Key")
     var id: String
     
-    var type: EditTaskType = .addNewTask
+    var type: EditTodoItemType = .addNewTodoItem
     
     init() {}
     
-    init(taskId: UUID) {
-        id = taskId.uuidString
+    init(itemId: UUID) {
+        id = itemId.uuidString
     }
     
     func perform() async throws -> some IntentResult {
         
         if let uuid = UUID(uuidString: id) {
             do {
-                try await WidgetTodoCore.shared.onTapEditTaskDoneKey(id: uuid)
+                try await WidgetTodoCore.shared.onTapEditItemDoneKey(id: uuid)
             } catch {
                 let widgetError = error as? WidgetError
-                WidgetTodoCore.shared.showError(widgetError ?? .taskEditingFailure)
+                WidgetTodoCore.shared.showError(widgetError ?? .todoItemEditingFailure)
             }
         }
         return .result()

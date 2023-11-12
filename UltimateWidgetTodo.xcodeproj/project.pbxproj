@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		975484022AF277B100A09B11 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484012AF277B100A09B11 /* EditTaskView.swift */; };
+		975484022AF277B100A09B11 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484012AF277B100A09B11 /* EditItemView.swift */; };
 		975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484032AF2787500A09B11 /* WidgetKeyboard.swift */; };
 		975484062AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */; };
 		975484072AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */; };
@@ -40,14 +40,14 @@
 		975484482AF5299200A09B11 /* ScreenStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484462AF5233900A09B11 /* ScreenStateRepository.swift */; };
 		9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484492AF52D1500A09B11 /* ScreenType.swift */; };
 		9754844B2AF52D2600A09B11 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484492AF52D1500A09B11 /* ScreenType.swift */; };
-		9754844D2AF53F2B00A09B11 /* TaskListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754844C2AF53F2B00A09B11 /* TaskListRow.swift */; };
-		975484502AF5A91700A09B11 /* CompleteTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754844F2AF5A91700A09B11 /* CompleteTaskButton.swift */; };
+		9754844D2AF53F2B00A09B11 /* TodoItemListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754844C2AF53F2B00A09B11 /* TodoItemListRow.swift */; };
+		975484502AF5A91700A09B11 /* CompleteTodoItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754844F2AF5A91700A09B11 /* CompleteTodoItemButton.swift */; };
 		975484522AF8434600A09B11 /* WidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484512AF8434600A09B11 /* WidgetBackgroundView.swift */; };
 		975484542AF844B500A09B11 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484532AF844B500A09B11 /* Line.swift */; };
 		975484572AF8E0AE00A09B11 /* LinerGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484562AF8E0AE00A09B11 /* LinerGradient+Extensions.swift */; };
-		9754845A2AF8E1F400A09B11 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484592AF8E1F400A09B11 /* TaskListView.swift */; };
+		9754845A2AF8E1F400A09B11 /* TodoItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484592AF8E1F400A09B11 /* TodoItemListView.swift */; };
 		9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754840E2AF445F100A09B11 /* Color+Extensions.swift */; };
-		9754845D2AF8E9A100A09B11 /* TaskEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */; };
+		9754845D2AF8E9A100A09B11 /* TodoItemEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754845C2AF8E9A100A09B11 /* TodoItemEmptyView.swift */; };
 		9754845F2AF90C5A00A09B11 /* PlusButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754845E2AF90C5A00A09B11 /* PlusButtonImage.swift */; };
 		975484602AF90C5A00A09B11 /* PlusButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754845E2AF90C5A00A09B11 /* PlusButtonImage.swift */; };
 		975484632AF90ED000A09B11 /* AlphabetKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484622AF90ED000A09B11 /* AlphabetKeyboard.swift */; };
@@ -55,14 +55,14 @@
 		975484672AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484662AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift */; };
 		975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484662AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift */; };
 		9754846A2AF98FCE00A09B11 /* AlphabetModeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484692AF98FCE00A09B11 /* AlphabetModeKey.swift */; };
-		9754846E2AFA65FC00A09B11 /* EditTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754846D2AFA65FC00A09B11 /* EditTaskType.swift */; };
-		9754846F2AFB02E000A09B11 /* EditTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754846D2AFA65FC00A09B11 /* EditTaskType.swift */; };
-		975484722AFBC4EE00A09B11 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484712AFBC4EE00A09B11 /* TaskRepository.swift */; };
+		9754846E2AFA65FC00A09B11 /* EditTodoItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754846D2AFA65FC00A09B11 /* EditTodoItemType.swift */; };
+		9754846F2AFB02E000A09B11 /* EditTodoItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754846D2AFA65FC00A09B11 /* EditTodoItemType.swift */; };
+		975484722AFBC4EE00A09B11 /* TodoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484712AFBC4EE00A09B11 /* TodoItemRepository.swift */; };
 		975484752AFBCB0100A09B11 /* WidgetTodoCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */; };
 		975484762AFBCD6000A09B11 /* WidgetTodoCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */; };
 		975484772AFBCD7100A09B11 /* KeyboardInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputRepository.swift */; };
 		975484782AFBCD7B00A09B11 /* ScreenStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484462AF5233900A09B11 /* ScreenStateRepository.swift */; };
-		975484792AFBCD7E00A09B11 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484712AFBC4EE00A09B11 /* TaskRepository.swift */; };
+		975484792AFBCD7E00A09B11 /* TodoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484712AFBC4EE00A09B11 /* TodoItemRepository.swift */; };
 		975484802AFC68EE00A09B11 /* WidgetTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */; };
 		975484872AFDA2B700A09B11 /* EmojiKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484852AFD8C3300A09B11 /* EmojiKeyboard.swift */; };
 		975484892AFDAF4200A09B11 /* EmojiKeyboardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */; };
@@ -102,12 +102,12 @@
 		979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */; };
 		979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */; };
 		979E23D52AF12DEA003559D2 /* SwiftDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */; };
-		979E23D62AF12FCB003559D2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* Task.swift */; };
+		979E23D62AF12FCB003559D2 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* TodoItem.swift */; };
 		979E23D92AF14281003559D2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23CF2AF12B22003559D2 /* MainView.swift */; };
 		979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */; };
-		979E23DC2AF14510003559D2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* Task.swift */; };
+		979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A62AF12679003559D2 /* TodoItem.swift */; };
 		979E23E42AF1A7B1003559D2 /* WidgetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */; };
-		979E23E82AF1BBBA003559D2 /* PresentAddTaskViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E62AF1BBB7003559D2 /* PresentAddTaskViewButton.swift */; };
+		979E23E82AF1BBBA003559D2 /* PresentAddItemViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23E62AF1BBB7003559D2 /* PresentAddItemViewButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,7 +142,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		975484012AF277B100A09B11 /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		975484012AF277B100A09B11 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		975484032AF2787500A09B11 /* WidgetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKeyboard.swift; sourceTree = "<group>"; };
 		975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLetterKey.swift; sourceTree = "<group>"; };
 		9754840B2AF2FE9E00A09B11 /* CapsLockKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsLockKey.swift; sourceTree = "<group>"; };
@@ -162,20 +162,20 @@
 		975484422AF4DDEA00A09B11 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		975484462AF5233900A09B11 /* ScreenStateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateRepository.swift; sourceTree = "<group>"; };
 		975484492AF52D1500A09B11 /* ScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
-		9754844C2AF53F2B00A09B11 /* TaskListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRow.swift; sourceTree = "<group>"; };
-		9754844F2AF5A91700A09B11 /* CompleteTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTaskButton.swift; sourceTree = "<group>"; };
+		9754844C2AF53F2B00A09B11 /* TodoItemListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemListRow.swift; sourceTree = "<group>"; };
+		9754844F2AF5A91700A09B11 /* CompleteTodoItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTodoItemButton.swift; sourceTree = "<group>"; };
 		975484512AF8434600A09B11 /* WidgetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundView.swift; sourceTree = "<group>"; };
 		975484532AF844B500A09B11 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		975484562AF8E0AE00A09B11 /* LinerGradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinerGradient+Extensions.swift"; sourceTree = "<group>"; };
-		975484592AF8E1F400A09B11 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
-		9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEmptyView.swift; sourceTree = "<group>"; };
+		975484592AF8E1F400A09B11 /* TodoItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemListView.swift; sourceTree = "<group>"; };
+		9754845C2AF8E9A100A09B11 /* TodoItemEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemEmptyView.swift; sourceTree = "<group>"; };
 		9754845E2AF90C5A00A09B11 /* PlusButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonImage.swift; sourceTree = "<group>"; };
 		975484622AF90ED000A09B11 /* AlphabetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetKeyboard.swift; sourceTree = "<group>"; };
 		975484642AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAndPunctuationMarkKeyboard.swift; sourceTree = "<group>"; };
 		975484662AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraPunctuationMarksKey.swift; sourceTree = "<group>"; };
 		975484692AF98FCE00A09B11 /* AlphabetModeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetModeKey.swift; sourceTree = "<group>"; };
-		9754846D2AFA65FC00A09B11 /* EditTaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskType.swift; sourceTree = "<group>"; };
-		975484712AFBC4EE00A09B11 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		9754846D2AFA65FC00A09B11 /* EditTodoItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTodoItemType.swift; sourceTree = "<group>"; };
+		975484712AFBC4EE00A09B11 /* TodoItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemRepository.swift; sourceTree = "<group>"; };
 		975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTodoCore.swift; sourceTree = "<group>"; };
 		9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTodoView.swift; sourceTree = "<group>"; };
 		975484852AFD8C3300A09B11 /* EmojiKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboard.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		979E23A62AF12679003559D2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		979E23A62AF12679003559D2 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		979E23B62AF1290C003559D2 /* UltimateWidgetTodoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UltimateWidgetTodoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23B82AF1290D003559D2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -210,7 +210,7 @@
 		979E23CF2AF12B22003559D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataStore.swift; sourceTree = "<group>"; };
 		979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConfig.swift; sourceTree = "<group>"; };
-		979E23E62AF1BBB7003559D2 /* PresentAddTaskViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAddTaskViewButton.swift; sourceTree = "<group>"; };
+		979E23E62AF1BBB7003559D2 /* PresentAddItemViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAddItemViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				9754846C2AFA640C00A09B11 /* Components */,
-				975484012AF277B100A09B11 /* EditTaskView.swift */,
+				975484012AF277B100A09B11 /* EditItemView.swift */,
 			);
 			path = EditTask;
 			sourceTree = "<group>";
@@ -327,8 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				9754846B2AFA63F900A09B11 /* Components */,
-				975484592AF8E1F400A09B11 /* TaskListView.swift */,
-				9754845C2AF8E9A100A09B11 /* TaskEmptyView.swift */,
+				975484592AF8E1F400A09B11 /* TodoItemListView.swift */,
+				9754845C2AF8E9A100A09B11 /* TodoItemEmptyView.swift */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -355,11 +355,11 @@
 		9754846B2AFA63F900A09B11 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9754844F2AF5A91700A09B11 /* CompleteTaskButton.swift */,
+				9754844F2AF5A91700A09B11 /* CompleteTodoItemButton.swift */,
 				9754849A2AFFA68700A09B11 /* ListScrollButton.swift */,
 				9754845E2AF90C5A00A09B11 /* PlusButtonImage.swift */,
-				979E23E62AF1BBB7003559D2 /* PresentAddTaskViewButton.swift */,
-				9754844C2AF53F2B00A09B11 /* TaskListRow.swift */,
+				979E23E62AF1BBB7003559D2 /* PresentAddItemViewButton.swift */,
+				9754844C2AF53F2B00A09B11 /* TodoItemListRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 				975484382AF4614700A09B11 /* KeyboardInputRepository.swift */,
 				9754849D2AFFB15400A09B11 /* ListDisplayRepository.swift */,
 				975484462AF5233900A09B11 /* ScreenStateRepository.swift */,
-				975484712AFBC4EE00A09B11 /* TaskRepository.swift */,
+				975484712AFBC4EE00A09B11 /* TodoItemRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -387,7 +387,7 @@
 		975484732AFBCAB100A09B11 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				9754846D2AFA65FC00A09B11 /* EditTaskType.swift */,
+				9754846D2AFA65FC00A09B11 /* EditTodoItemType.swift */,
 				975484282AF45D4400A09B11 /* KeyboardInputMode.swift */,
 				975484492AF52D1500A09B11 /* ScreenType.swift */,
 				975484A02B00DBA300A09B11 /* WidgetError.swift */,
@@ -534,7 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				979E23D42AF12DEA003559D2 /* SwiftDataStore.swift */,
-				979E23A62AF12679003559D2 /* Task.swift */,
+				979E23A62AF12679003559D2 /* TodoItem.swift */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -680,7 +680,7 @@
 			files = (
 				975484392AF4614700A09B11 /* KeyboardInputRepository.swift in Sources */,
 				9754844B2AF52D2600A09B11 /* ScreenType.swift in Sources */,
-				9754846F2AFB02E000A09B11 /* EditTaskType.swift in Sources */,
+				9754846F2AFB02E000A09B11 /* EditTodoItemType.swift in Sources */,
 				975484452AF4DEB600A09B11 /* WidgetConfig.swift in Sources */,
 				975484262AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				9754845F2AF90C5A00A09B11 /* PlusButtonImage.swift in Sources */,
@@ -695,7 +695,7 @@
 				975484442AF4DE1700A09B11 /* CloseButton.swift in Sources */,
 				975484A22B00DBC000A09B11 /* WidgetError.swift in Sources */,
 				975484482AF5299200A09B11 /* ScreenStateRepository.swift in Sources */,
-				979E23DC2AF14510003559D2 /* Task.swift in Sources */,
+				979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */,
 				9754848F2AFEEABF00A09B11 /* EmojiContentMoveKey.swift in Sources */,
 				9754841A2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
@@ -707,7 +707,7 @@
 				975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */,
 				975484982AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */,
 				9754849B2AFFA68700A09B11 /* ListScrollButton.swift in Sources */,
-				975484722AFBC4EE00A09B11 /* TaskRepository.swift in Sources */,
+				975484722AFBC4EE00A09B11 /* TodoItemRepository.swift in Sources */,
 				9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */,
 				975484142AF44B6100A09B11 /* BackspaceKey.swift in Sources */,
 				975484B12B00ED1100A09B11 /* LinerGradient+Extensions.swift in Sources */,
@@ -735,10 +735,10 @@
 				975484432AF4DDEA00A09B11 /* CloseButton.swift in Sources */,
 				975484AB2B00E2AB00A09B11 /* ErrorOKButton.swift in Sources */,
 				975484652AF916B900A09B11 /* NumberAndPunctuationMarkKeyboard.swift in Sources */,
-				975484792AFBCD7E00A09B11 /* TaskRepository.swift in Sources */,
+				975484792AFBCD7E00A09B11 /* TodoItemRepository.swift in Sources */,
 				979E23C02AF1290D003559D2 /* UltimateWidgetTodoWidget.swift in Sources */,
 				975484632AF90ED000A09B11 /* AlphabetKeyboard.swift in Sources */,
-				975484502AF5A91700A09B11 /* CompleteTaskButton.swift in Sources */,
+				975484502AF5A91700A09B11 /* CompleteTodoItemButton.swift in Sources */,
 				979E23CE2AF129FB003559D2 /* TodoItemEntry.swift in Sources */,
 				975484402AF4D32200A09B11 /* InputForm.swift in Sources */,
 				9754841B2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
@@ -746,7 +746,7 @@
 				975484522AF8434600A09B11 /* WidgetBackgroundView.swift in Sources */,
 				975484A42B00DCAC00A09B11 /* WidgetTodoErrorView.swift in Sources */,
 				975484762AFBCD6000A09B11 /* WidgetTodoCore.swift in Sources */,
-				979E23E82AF1BBBA003559D2 /* PresentAddTaskViewButton.swift in Sources */,
+				979E23E82AF1BBBA003559D2 /* PresentAddItemViewButton.swift in Sources */,
 				975484272AF45A0B00A09B11 /* UserDefaultsStore.swift in Sources */,
 				975484182AF44DC900A09B11 /* NumberModeKey.swift in Sources */,
 				975484802AFC68EE00A09B11 /* WidgetTodoView.swift in Sources */,
@@ -754,24 +754,24 @@
 				9754849C2AFFA68700A09B11 /* ListScrollButton.swift in Sources */,
 				975484152AF44B6A00A09B11 /* BackspaceKey.swift in Sources */,
 				975484072AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,
-				9754845D2AF8E9A100A09B11 /* TaskEmptyView.swift in Sources */,
+				9754845D2AF8E9A100A09B11 /* TodoItemEmptyView.swift in Sources */,
 				979E23CC2AF1296E003559D2 /* TodoTaskProvider.swift in Sources */,
 				9754844A2AF52D1500A09B11 /* ScreenType.swift in Sources */,
 				975484932AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */,
 				975484962AFF6A7800A09B11 /* EmojiCategoryKey.swift in Sources */,
-				975484022AF277B100A09B11 /* EditTaskView.swift in Sources */,
+				975484022AF277B100A09B11 /* EditItemView.swift in Sources */,
 				975484992AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift in Sources */,
 				975484872AFDA2B700A09B11 /* EmojiKeyboard.swift in Sources */,
-				9754844D2AF53F2B00A09B11 /* TaskListRow.swift in Sources */,
+				9754844D2AF53F2B00A09B11 /* TodoItemListRow.swift in Sources */,
 				975484542AF844B500A09B11 /* Line.swift in Sources */,
 				9754848A2AFDAF4200A09B11 /* EmojiKeyboardContent.swift in Sources */,
-				979E23D62AF12FCB003559D2 /* Task.swift in Sources */,
+				979E23D62AF12FCB003559D2 /* TodoItem.swift in Sources */,
 				9754841E2AF4529300A09B11 /* SpaceKey.swift in Sources */,
 				975484572AF8E0AE00A09B11 /* LinerGradient+Extensions.swift in Sources */,
 				975484672AF98BB000A09B11 /* ExtraPunctuationMarksKey.swift in Sources */,
 				979E23D92AF14281003559D2 /* MainView.swift in Sources */,
-				9754845A2AF8E1F400A09B11 /* TaskListView.swift in Sources */,
-				9754846E2AFA65FC00A09B11 /* EditTaskType.swift in Sources */,
+				9754845A2AF8E1F400A09B11 /* TodoItemListView.swift in Sources */,
+				9754846E2AFA65FC00A09B11 /* EditTodoItemType.swift in Sources */,
 				975484772AFBCD7100A09B11 /* KeyboardInputRepository.swift in Sources */,
 				975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */,
 				975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */,

@@ -11,7 +11,7 @@ class SwiftDataStore {
     
     private init(isTesting: Bool) {
         let schema = Schema([
-            Task.self,
+            TodoItem.self,
         ])
         let configuration = ModelConfiguration(schema: schema,
                                                isStoredInMemoryOnly: isTesting)

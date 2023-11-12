@@ -10,7 +10,7 @@ struct AlphabetKeyboard: View {
     
     @Environment(\.widgetTodoCore) var core
     
-    let type: EditTaskType
+    let type: EditTodoItemType
     
     var body: some View {
         

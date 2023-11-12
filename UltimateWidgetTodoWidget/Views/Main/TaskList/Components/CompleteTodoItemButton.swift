@@ -1,5 +1,5 @@
 //
-//  CompleteTaskButton.swift
+//  CompleteTodoItemButton.swift
 //  UltimateWidgetTodoWidgetExtension
 //
 //
@@ -7,19 +7,19 @@
 import AppIntents
 import SwiftUI
 
-struct CompleteTaskButton: View {
+struct CompleteTodoItemButton: View {
     
-    let task: Task
+    let item: TodoItem
     
     var body: some View {
-        Toggle(isOn: false, intent: CompleteTaskIntent(task: task)) {
+        Toggle(isOn: false, intent: CompleteTodoItemIntent(item: item)) {
             EmptyView()
         }
-        .toggleStyle(TaskToggleStyle())
+        .toggleStyle(TodoItemToggleStyle())
     }
 }
 
-struct TaskToggleStyle: ToggleStyle {
+struct TodoItemToggleStyle: ToggleStyle {
         
     func makeBody(configuration: Configuration) -> some View {
         Image(systemName: configuration.isOn ? "checkmark.circle.fill" : "circle")
@@ -28,26 +28,26 @@ struct TaskToggleStyle: ToggleStyle {
     }
 }
 
-struct CompleteTaskIntent: AppIntent {
+struct CompleteTodoItemIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "Complete Task"
+    static var title: LocalizedStringResource = "Complete TODO Item"
     
-    @Parameter(title: "Task ID")
+    @Parameter(title: "Item ID")
     var id: String
     
     init() {}
     
-    init(task: Task) {
-        self.id = task.taskId.uuidString
+    init(item: TodoItem) {
+        self.id = item.itemId.uuidString
     }
     
     func perform() async throws -> some IntentResult {
         if let uuid = UUID(uuidString: id) {
             
             do {
-                try await WidgetTodoCore.shared.onTapCompleteTask(id: uuid)
+                try await WidgetTodoCore.shared.onTapCompleteTodoItem(id: uuid)
             } catch {
-                WidgetTodoCore.shared.showError(.taskDeletionFailure)
+                WidgetTodoCore.shared.showError(.todoItemDeletionFailure)
             }
         }
         return .result()
