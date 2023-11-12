@@ -88,6 +88,8 @@
 		975484AE2B00EBC600A09B11 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484AD2B00EBC600A09B11 /* OnboardingView.swift */; };
 		975484B02B00EC4300A09B11 /* UIControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484AF2B00EC4300A09B11 /* UIControl+Extensions.swift */; };
 		975484B12B00ED1100A09B11 /* LinerGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484562AF8E0AE00A09B11 /* LinerGradient+Extensions.swift */; };
+		975484B32B00EEAC00A09B11 /* WidgetCenter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484B22B00EEAC00A09B11 /* WidgetCenter+Extensions.swift */; };
+		975484B72B00FAAB00A09B11 /* AppTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484B62B00FAAB00A09B11 /* AppTitleView.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -189,6 +191,8 @@
 		975484AA2B00E2AB00A09B11 /* ErrorOKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorOKButton.swift; sourceTree = "<group>"; };
 		975484AD2B00EBC600A09B11 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		975484AF2B00EC4300A09B11 /* UIControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extensions.swift"; sourceTree = "<group>"; };
+		975484B22B00EEAC00A09B11 /* WidgetCenter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetCenter+Extensions.swift"; sourceTree = "<group>"; };
+		975484B62B00FAAB00A09B11 /* AppTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitleView.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -444,8 +448,10 @@
 			children = (
 				979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */,
 				979E23A42AF12679003559D2 /* ContentView.swift */,
+				975484B62B00FAAB00A09B11 /* AppTitleView.swift */,
 				975484AD2B00EBC600A09B11 /* OnboardingView.swift */,
 				975484AF2B00EC4300A09B11 /* UIControl+Extensions.swift */,
+				975484B22B00EEAC00A09B11 /* WidgetCenter+Extensions.swift */,
 				979E23AA2AF1267A003559D2 /* Preview Content */,
 			);
 			path = UltimateWidgetTodo;
@@ -664,8 +670,10 @@
 				9754845F2AF90C5A00A09B11 /* PlusButtonImage.swift in Sources */,
 				9754841D2AF4529300A09B11 /* SpaceKey.swift in Sources */,
 				975484292AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */,
+				975484B32B00EEAC00A09B11 /* WidgetCenter+Extensions.swift in Sources */,
 				9754849F2AFFC2CD00A09B11 /* ListDisplayRepository.swift in Sources */,
 				975484062AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */,
+				975484B72B00FAAB00A09B11 /* AppTitleView.swift in Sources */,
 				975484AC2B00E39600A09B11 /* ErrorOKButton.swift in Sources */,
 				9754840C2AF2FE9E00A09B11 /* CapsLockKey.swift in Sources */,
 				975484442AF4DE1700A09B11 /* CloseButton.swift in Sources */,
