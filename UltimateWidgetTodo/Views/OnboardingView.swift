@@ -49,7 +49,12 @@ struct OnboardingView: View {
                 .frame(height: 40)
             
             Button("Back to Home Screen") {
+                
                 UIControl.backToHomeScreenOfDevice()
+                Task {
+                    try await Task.sleep(for: .seconds(0.2))
+                    exit(0)
+                }
             }
             .foregroundColor(.white)
             .bold()
