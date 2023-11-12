@@ -388,10 +388,25 @@
 			children = (
 				979E23BD2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift */,
 				979E23BF2AF1290D003559D2 /* UltimateWidgetTodoWidget.swift */,
-				975484A32B00DCAC00A09B11 /* WidgetTodoErrorView.swift */,
 				9754847E2AFC68B800A09B11 /* WidgetTodoView.swift */,
 			);
 			path = Contents;
+			sourceTree = "<group>";
+		};
+		975484A62B00E1ED00A09B11 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				975484A72B00E24200A09B11 /* Components */,
+				975484A32B00DCAC00A09B11 /* WidgetTodoErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		975484A72B00E24200A09B11 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		979E23962AF12679003559D2 = {
@@ -475,6 +490,7 @@
 			children = (
 				975484092AF2FDBC00A09B11 /* Main */,
 				9754843E2AF4D30800A09B11 /* EditTask */,
+				975484A62B00E1ED00A09B11 /* ErrorView */,
 				975484082AF2FD8B00A09B11 /* Keyboard */,
 				975484532AF844B500A09B11 /* Line.swift */,
 			);
