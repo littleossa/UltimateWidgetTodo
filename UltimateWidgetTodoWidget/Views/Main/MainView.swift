@@ -11,7 +11,7 @@ import WidgetKit
 struct MainView: View {
     
     @Environment(\.modelContext) private var modelContext
-    @Query (sort: \Task.createDate, order: .forward)
+    @Query (sort: \Task.createDate, order: .reverse)
     private var tasks: [Task]
 
     var body: some View {
