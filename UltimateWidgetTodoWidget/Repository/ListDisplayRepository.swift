@@ -13,7 +13,8 @@ class ListDisplayRepository {
     }
     
     private let store: UserDefaultsStore
-    private var currentIndex: Int {
+    
+    var currentIndex: Int {
         return store.listDisplayIndex
     }
     
