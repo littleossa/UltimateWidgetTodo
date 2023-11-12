@@ -249,7 +249,6 @@
 				975484732AFBCAB100A09B11 /* Enum */,
 				975484882AFDAF4200A09B11 /* EmojiKeyboardContent.swift */,
 				975484972AFF6E5700A09B11 /* EmojiKeyboardContent+Category.swift */,
-				975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,9 +337,9 @@
 		9754846B2AFA63F900A09B11 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9754845E2AF90C5A00A09B11 /* PlusButtonImage.swift */,
 				9754844F2AF5A91700A09B11 /* CompleteTaskButton.swift */,
 				9754849A2AFFA68700A09B11 /* ListScrollButton.swift */,
+				9754845E2AF90C5A00A09B11 /* PlusButtonImage.swift */,
 				979E23E62AF1BBB7003559D2 /* PresentAddTaskViewButton.swift */,
 				9754844C2AF53F2B00A09B11 /* TaskListRow.swift */,
 			);
@@ -458,6 +457,7 @@
 				979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */,
 				975484812AFC6A2600A09B11 /* Contents */,
 				979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */,
+				975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
