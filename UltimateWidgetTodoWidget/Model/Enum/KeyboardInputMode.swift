@@ -18,7 +18,6 @@ enum KeyboardInputMode: String {
                 centerKeys: ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
                 bottomKeys: ["Z", "X", "C", "V", "B", "N", "M"]
             )
-            // TODO: Emoji keys
         case .emoji:
             return .init(
                 topKeys: [],
