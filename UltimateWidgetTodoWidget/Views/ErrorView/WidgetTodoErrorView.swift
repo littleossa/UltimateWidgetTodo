@@ -36,20 +36,17 @@ struct WidgetTodoErrorView<Content: View>: View {
                     
                     Spacer()
                     
-                    VStack {
+                    VStack(spacing: 0) {
                         
                         Divider()
                             .background(.keyShadow)
                         
-                        Spacer().frame(height: 16)
+                        Spacer().frame(height: 4)
                         
-                        Text("OK")
-                            .font(.system(size: 26))
-                            .bold()
-                            .foregroundStyle(.blue)
+                        ErrorOKButton()
+                            .frame(height: 60)
                         
-                        Spacer().frame(height: 16)
-
+                        Spacer().frame(height: 4)
                     }
                 }
                 .foregroundStyle(Color.label)
@@ -62,6 +59,7 @@ struct WidgetTodoErrorView<Content: View>: View {
                             .padding()
                     }
             }
+            .transition(.opacity)
     }
 }
 
