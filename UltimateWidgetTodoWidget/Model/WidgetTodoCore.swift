@@ -184,6 +184,7 @@ class WidgetTodoCore: ObservableObject {
     }
     
     func onTapPresentAddTaskView() {
+        listPresentingTransition = .push(from: .bottom)
         screenStateRepository.changeScreen(into: .addTask)
     }
     
@@ -199,6 +200,7 @@ class WidgetTodoCore: ObservableObject {
     
     func onTapTaskListRow(id: UUID, name: String) {
         keyboardInputRepository.input(name)
+        listPresentingTransition = .push(from: .leading)
         screenStateRepository.changeScreen(into: .editTask(id: id))
     }
     
