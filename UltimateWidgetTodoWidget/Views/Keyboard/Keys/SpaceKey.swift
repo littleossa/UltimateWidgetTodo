@@ -48,8 +48,7 @@ struct SpaceKeyIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        // TODO: Do something
-        print(id)
+        WidgetTodoCore.shared.onTapCharacterKey(" ")
         return .result()
     }
 }
