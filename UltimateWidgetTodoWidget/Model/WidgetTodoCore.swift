@@ -93,6 +93,7 @@ class WidgetTodoCore: ObservableObject {
         let name = keyboardInputRepository.inputText
         if name.isEmpty { return }
         
+        listDisplayRepository.updateIndex(to: 0)
         await taskRepository.addTask(name: name)
         keyboardInputRepository.clearInputText()
         screenStateRepository.changeScreen(into: .main)
