@@ -94,7 +94,11 @@ struct EditTaskDoneKeyIntent: AppIntent {
     func perform() async throws -> some IntentResult {
         
         if let uuid = UUID(uuidString: id) {
-            await WidgetTodoCore.shared.onTapEditTaskDoneKey(id: uuid)
+            do {
+                try await WidgetTodoCore.shared.onTapEditTaskDoneKey(id: uuid)
+            } catch {
+                // TODO: present alert
+            }
         }
         return .result()
     }
