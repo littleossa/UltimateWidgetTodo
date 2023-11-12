@@ -31,6 +31,10 @@ class ListDisplayRepository {
         else { return }
         store.listDisplayIndex -= 1
     }
+    
+    func updateIndex(to index: Int) {
+        store.listDisplayIndex = index
+    }
 }
 
 
