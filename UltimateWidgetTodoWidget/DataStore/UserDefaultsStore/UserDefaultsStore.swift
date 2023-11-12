@@ -21,6 +21,7 @@ class UserDefaultsStore {
     enum Key: String, CaseIterable {
         case editTaskId
         case emojiKeyboardIndex
+        case error
         case frequentlyUsedEmojis
         case inputText
         case isCapsLocked
@@ -52,9 +53,20 @@ class UserDefaultsStore {
         }
     }
     
+    var error: WidgetError? {
+        get {
+            let value = userDefaults.string(forKey: Key.error.rawValue) ?? ""
+            return WidgetError(rawValue: value)
+        }
+        set {
+            let value = newValue?.rawValue ?? ""
+            userDefaults.set(value, forKey: Key.error.rawValue)
+        }
+    }
+    
     var frequentlyUsedEmojis: [String] {
         get {
-            let emojis = userDefaults.array(forKey: Key.frequentlyUsedEmojis.rawValue) as? [String]
+            let emojis = userDefaults.stringArray(forKey: Key.frequentlyUsedEmojis.rawValue)
             return emojis ?? []
         }
         set {
