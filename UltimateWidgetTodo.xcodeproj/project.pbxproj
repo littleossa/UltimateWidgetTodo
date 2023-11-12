@@ -422,6 +422,25 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		975484B82B01029E00A09B11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				975484B62B00FAAB00A09B11 /* AppTitleView.swift */,
+				979E23A42AF12679003559D2 /* ContentView.swift */,
+				975484AD2B00EBC600A09B11 /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		975484B92B0102AD00A09B11 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				975484AF2B00EC4300A09B11 /* UIControl+Extensions.swift */,
+				975484B22B00EEAC00A09B11 /* WidgetCenter+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		979E23962AF12679003559D2 = {
 			isa = PBXGroup;
 			children = (
@@ -447,11 +466,8 @@
 			isa = PBXGroup;
 			children = (
 				979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */,
-				979E23A42AF12679003559D2 /* ContentView.swift */,
-				975484B62B00FAAB00A09B11 /* AppTitleView.swift */,
-				975484AD2B00EBC600A09B11 /* OnboardingView.swift */,
-				975484AF2B00EC4300A09B11 /* UIControl+Extensions.swift */,
-				975484B22B00EEAC00A09B11 /* WidgetCenter+Extensions.swift */,
+				975484B82B01029E00A09B11 /* Views */,
+				975484B92B0102AD00A09B11 /* Extensions */,
 				979E23AA2AF1267A003559D2 /* Preview Content */,
 			);
 			path = UltimateWidgetTodo;
