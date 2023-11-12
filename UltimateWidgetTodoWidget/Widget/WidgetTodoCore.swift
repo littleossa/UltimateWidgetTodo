@@ -238,13 +238,3 @@ extension EnvironmentValues {
         }
     }
 }
-
-extension Error {
-    
-    func isEqual(to widgetError: WidgetError) -> Bool {
-        guard let error = self as? WidgetError
-        else { return false }
-        
-        return error == widgetError
-    }
-}
