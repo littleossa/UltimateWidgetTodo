@@ -96,6 +96,7 @@
 		975484C42B01271000A09B11 /* ListDisplayControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484C12B0126F600A09B11 /* ListDisplayControl.swift */; };
 		975484C62B01279700A09B11 /* ListControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484C52B01279700A09B11 /* ListControlTests.swift */; };
 		975484C82B01323700A09B11 /* ListDisplayRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484C72B01323700A09B11 /* ListDisplayRepositoryTests.swift */; };
+		975484CA2B01343500A09B11 /* ScreenStateRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484C92B01343500A09B11 /* ScreenStateRepositoryTests.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -204,6 +205,7 @@
 		975484C12B0126F600A09B11 /* ListDisplayControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDisplayControl.swift; sourceTree = "<group>"; };
 		975484C52B01279700A09B11 /* ListControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControlTests.swift; sourceTree = "<group>"; };
 		975484C72B01323700A09B11 /* ListDisplayRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDisplayRepositoryTests.swift; sourceTree = "<group>"; };
+		975484C92B01343500A09B11 /* ScreenStateRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateRepositoryTests.swift; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 			children = (
 				975484BF2B011E4E00A09B11 /* KeyboardInputRepositoryTests.swift */,
 				975484C72B01323700A09B11 /* ListDisplayRepositoryTests.swift */,
+				975484C92B01343500A09B11 /* ScreenStateRepositoryTests.swift */,
 			);
 			path = RepositoryTests;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				975484C02B011E4E00A09B11 /* KeyboardInputRepositoryTests.swift in Sources */,
 				975484C62B01279700A09B11 /* ListControlTests.swift in Sources */,
 				975484BD2B011AEE00A09B11 /* EmojiKeyboardContentTest.swift in Sources */,
+				975484CA2B01343500A09B11 /* ScreenStateRepositoryTests.swift in Sources */,
 				975484322AF45E6D00A09B11 /* UserDefaultsStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
