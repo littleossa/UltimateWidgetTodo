@@ -85,6 +85,9 @@
 		975484A52B00DCE900A09B11 /* WidgetTodoErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484A32B00DCAC00A09B11 /* WidgetTodoErrorView.swift */; };
 		975484AB2B00E2AB00A09B11 /* ErrorOKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484AA2B00E2AB00A09B11 /* ErrorOKButton.swift */; };
 		975484AC2B00E39600A09B11 /* ErrorOKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484AA2B00E2AB00A09B11 /* ErrorOKButton.swift */; };
+		975484AE2B00EBC600A09B11 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484AD2B00EBC600A09B11 /* OnboardingView.swift */; };
+		975484B02B00EC4300A09B11 /* UIControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484AF2B00EC4300A09B11 /* UIControl+Extensions.swift */; };
+		975484B12B00ED1100A09B11 /* LinerGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484562AF8E0AE00A09B11 /* LinerGradient+Extensions.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -184,6 +187,8 @@
 		975484A02B00DBA300A09B11 /* WidgetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetError.swift; sourceTree = "<group>"; };
 		975484A32B00DCAC00A09B11 /* WidgetTodoErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTodoErrorView.swift; sourceTree = "<group>"; };
 		975484AA2B00E2AB00A09B11 /* ErrorOKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorOKButton.swift; sourceTree = "<group>"; };
+		975484AD2B00EBC600A09B11 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		975484AF2B00EC4300A09B11 /* UIControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extensions.swift"; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -439,6 +444,8 @@
 			children = (
 				979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */,
 				979E23A42AF12679003559D2 /* ContentView.swift */,
+				975484AD2B00EBC600A09B11 /* OnboardingView.swift */,
+				975484AF2B00EC4300A09B11 /* UIControl+Extensions.swift */,
 				979E23AA2AF1267A003559D2 /* Preview Content */,
 			);
 			path = UltimateWidgetTodo;
@@ -670,6 +677,7 @@
 				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
 				975484752AFBCB0100A09B11 /* WidgetTodoCore.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
+				975484AE2B00EBC600A09B11 /* OnboardingView.swift in Sources */,
 				975484172AF44DC400A09B11 /* NumberModeKey.swift in Sources */,
 				975484922AFF515E00A09B11 /* KeyboardEmojiKey.swift in Sources */,
 				975484682AF98C0B00A09B11 /* ExtraPunctuationMarksKey.swift in Sources */,
@@ -678,12 +686,14 @@
 				975484722AFBC4EE00A09B11 /* TaskRepository.swift in Sources */,
 				9754845B2AF8E2CC00A09B11 /* Color+Extensions.swift in Sources */,
 				975484142AF44B6100A09B11 /* BackspaceKey.swift in Sources */,
+				975484B12B00ED1100A09B11 /* LinerGradient+Extensions.swift in Sources */,
 				975484952AFF6A7800A09B11 /* EmojiCategoryKey.swift in Sources */,
 				975484A52B00DCE900A09B11 /* WidgetTodoErrorView.swift in Sources */,
 				979E23DB2AF1450D003559D2 /* SwiftDataStore.swift in Sources */,
 				975484412AF4D34200A09B11 /* InputForm.swift in Sources */,
 				975484892AFDAF4200A09B11 /* EmojiKeyboardContent.swift in Sources */,
 				975484202AF455DE00A09B11 /* DoneKey.swift in Sources */,
+				975484B02B00EC4300A09B11 /* UIControl+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
