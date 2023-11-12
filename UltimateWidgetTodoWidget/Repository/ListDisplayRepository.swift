@@ -18,11 +18,6 @@ class ListDisplayRepository {
         return store.listDisplayIndex
     }
     
-    func makeListDisplayControl(for items: [TodoItem]) -> ListDisplayControl {
-        return ListDisplayControl(currentIndex: currentIndex,
-                                  items: items)
-    }
-    
     func scrollDownList() {
         store.listDisplayIndex += 1
     }

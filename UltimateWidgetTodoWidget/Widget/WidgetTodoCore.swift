@@ -93,7 +93,8 @@ class WidgetTodoCore: ObservableObject {
     // MARK: - Functions
     
     func makeListDisplayControl(for items: [TodoItem]) -> ListDisplayControl {
-        return listDisplayRepository.makeListDisplayControl(for: items)
+        return ListDisplayControl(currentIndex: listDisplayRepository.currentIndex,
+                                  items: items)
     }
     
     func onTapAddItemDoneKey() async throws {
