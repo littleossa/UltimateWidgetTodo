@@ -291,7 +291,7 @@
 		975484302AF45E6D00A09B11 /* UltimateWidgetTodoTests */ = {
 			isa = PBXGroup;
 			children = (
-				975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */,
+				975484BA2B011A9400A09B11 /* DataStoreTests */,
 			);
 			path = UltimateWidgetTodoTests;
 			sourceTree = "<group>";
@@ -439,6 +439,14 @@
 				975484B22B00EEAC00A09B11 /* WidgetCenter+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		975484BA2B011A9400A09B11 /* DataStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */,
+			);
+			path = DataStoreTests;
 			sourceTree = "<group>";
 		};
 		979E23962AF12679003559D2 = {
