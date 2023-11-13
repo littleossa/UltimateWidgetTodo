@@ -13,9 +13,15 @@ extension SwiftDataStore {
     
     @MainActor
     func fetchItem() -> [TodoItem] {
-        let descriptor = FetchDescriptor<TodoItem>()
+        let descriptor = FetchDescriptor<TodoItem>(sortBy: [SortDescriptor(\.createDate, order: .reverse)])
         let items = try? self.context.fetch(descriptor)
         return items ?? []
+    }
+    
+    @MainActor
+    func clear() {
+        try? self.context.delete(model: TodoItem.self)
+        try? self.context.save()
     }
     
     func createItems(count: Int) -> [TodoItem] {
