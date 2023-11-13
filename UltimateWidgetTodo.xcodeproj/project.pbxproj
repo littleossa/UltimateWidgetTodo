@@ -276,7 +276,7 @@
 		975484092AF2FDBC00A09B11 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				975484582AF8E1B500A09B11 /* TaskList */,
+				975484582AF8E1B500A09B11 /* TodoItemList */,
 				979E23CF2AF12B22003559D2 /* MainView.swift */,
 			);
 			path = Main;
@@ -331,13 +331,13 @@
 			path = WidgetBackground;
 			sourceTree = "<group>";
 		};
-		9754843E2AF4D30800A09B11 /* EditTask */ = {
+		9754843E2AF4D30800A09B11 /* EditTodoItem */ = {
 			isa = PBXGroup;
 			children = (
 				9754846C2AFA640C00A09B11 /* Components */,
 				975484012AF277B100A09B11 /* EditItemView.swift */,
 			);
-			path = EditTask;
+			path = EditTodoItem;
 			sourceTree = "<group>";
 		};
 		975484552AF8E09300A09B11 /* Extensions */ = {
@@ -349,14 +349,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		975484582AF8E1B500A09B11 /* TaskList */ = {
+		975484582AF8E1B500A09B11 /* TodoItemList */ = {
 			isa = PBXGroup;
 			children = (
 				9754846B2AFA63F900A09B11 /* Components */,
 				975484592AF8E1F400A09B11 /* TodoItemListView.swift */,
 				9754845C2AF8E9A100A09B11 /* TodoItemEmptyView.swift */,
 			);
-			path = TaskList;
+			path = TodoItemList;
 			sourceTree = "<group>";
 		};
 		975484612AF90E8E00A09B11 /* Keys */ = {
@@ -585,7 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				975484092AF2FDBC00A09B11 /* Main */,
-				9754843E2AF4D30800A09B11 /* EditTask */,
+				9754843E2AF4D30800A09B11 /* EditTodoItem */,
 				975484A62B00E1ED00A09B11 /* ErrorView */,
 				975484082AF2FD8B00A09B11 /* Keyboard */,
 				975484532AF844B500A09B11 /* Line.swift */,
