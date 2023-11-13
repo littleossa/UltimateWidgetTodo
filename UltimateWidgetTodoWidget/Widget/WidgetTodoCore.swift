@@ -127,12 +127,11 @@ class WidgetTodoCore: ObservableObject {
         keyboardInputRepository.input(character)
     }
     
-    func onTapCloseAddItemViewButton() {
-        closeEditItemView()
-    }
-    
     func onTapCloseEditItemViewButton() {
-        closeEditItemView()
+        keyboardInputRepository.changeMode(into: .alphabet)
+        keyboardInputRepository.moveEmojiContent(for: 0)
+        keyboardInputRepository.clearInputText()
+        screenStateRepository.changeScreen(into: .main)
     }
     
     func onTapCompleteTodoItem(id: UUID) async throws {
@@ -217,15 +216,6 @@ class WidgetTodoCore: ObservableObject {
     
     func showError(_ error: WidgetError) {
         screenStateRepository.setError(error)
-    }
-    
-    // MARK: - Helper Function
-    
-    private func closeEditItemView() {
-        keyboardInputRepository.changeMode(into: .alphabet)
-        keyboardInputRepository.moveEmojiContent(for: 0)
-        keyboardInputRepository.clearInputText()
-        screenStateRepository.changeScreen(into: .main)
     }
 }
 

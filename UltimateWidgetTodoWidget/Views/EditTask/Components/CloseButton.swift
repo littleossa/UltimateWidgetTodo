@@ -11,18 +11,9 @@ struct CloseButton: View {
     
     let type: EditTodoItemType
     
-    private var closeButtonIntent: any AppIntent {
-        switch type {
-        case .addNewTodoItem:
-            return CloseAddItemViewButtonIntent()
-        case .editTodoItem:
-            return CloseEditItemViewButtonIntent()
-        }
-    }
-    
     var body: some View {
         
-        Button(intent: closeButtonIntent) {
+        Button(intent: CloseEditItemViewButtonIntent()) {
             Image(systemName: type.closeButtonImageName)
                 .font(.system(size: 24))
         }
@@ -35,23 +26,6 @@ struct CloseButton: View {
     HStack {
         CloseButton(type: .addNewTodoItem)
         CloseButton(type: .editTodoItem(id: UUID()))
-    }
-}
-
-struct CloseAddItemViewButtonIntent: AppIntent {
-    
-    static var title: LocalizedStringResource = "Close Add Item View Button"
-    
-    @Parameter(title: "Close Add Item View Button")
-    var id: String
-    
-    init() {
-        id = "closeAddItemViewButton"
-    }
-    
-    func perform() async throws -> some IntentResult {
-        WidgetTodoCore.shared.onTapCloseAddItemViewButton()
-        return .result()
     }
 }
 
