@@ -19,7 +19,7 @@ struct TodoItemEmptyView: View {
                     Text("What's your task?")
                         .font(.system(size: 32))
                         .bold()
-                        .foregroundStyle(Color.black)
+                        .foregroundStyle(LinearGradient.ultimateBlue)
                     
                     Text("Start by adding a new one.")
                         .font(.system(size: 20))
