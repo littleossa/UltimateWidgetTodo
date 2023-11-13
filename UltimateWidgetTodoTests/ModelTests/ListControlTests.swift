@@ -9,24 +9,28 @@ import XCTest
 
 final class ListControlTests: XCTestCase {
     
-    let testStore: SwiftDataStore = .testStore
+    var testStore: SwiftDataStore = .testStore
+    
+    override func setUpWithError() throws {
+        testStore = .testStore
+    }
     
     func test_canAppearScrollButtons() {
         
         XCTContext.runActivity(named: "Items count is less than display limit") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount - 1)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount - 1)
             let control = ListDisplayControl(currentIndex: 0, items: items)
             XCTAssertFalse(control.canAppearScrollButtons)
         }
         
         XCTContext.runActivity(named: "Items count is equal to display limit") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount)
             let control = ListDisplayControl(currentIndex: 0, items: items)
             XCTAssertFalse(control.canAppearScrollButtons)
         }
         
         XCTContext.runActivity(named: "Items count is greater than display limit") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount + 1)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount + 1)
             let control = ListDisplayControl(currentIndex: 0, items: items)
             XCTAssertTrue(control.canAppearScrollButtons)
         }
@@ -34,7 +38,7 @@ final class ListControlTests: XCTestCase {
     
     func test_displayItems() {
         
-        let items = createItems(count: 10)
+        let items = testStore.createItems(count: 10)
         
         XCTContext.runActivity(named: "Current index is 0") { _ in
             let control = ListDisplayControl(currentIndex: 0, items: items)
@@ -82,25 +86,25 @@ final class ListControlTests: XCTestCase {
     func testIsDisableScrollUpButton() {
         
         XCTContext.runActivity(named: "Items count is less than display limit") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount - 1)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount - 1)
             let control = ListDisplayControl(currentIndex: 0, items: items)
             XCTAssertTrue(control.isDisableScrollUpButton)
         }
         
         XCTContext.runActivity(named: "Items count is equal to display limit") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount)
             let control = ListDisplayControl(currentIndex: 0, items: items)
             XCTAssertTrue(control.isDisableScrollUpButton)
         }
         
         XCTContext.runActivity(named: "Items count is greater than display limit and current index is 0") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount + 1)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount + 1)
             let control = ListDisplayControl(currentIndex: 0, items: items)
             XCTAssertTrue(control.isDisableScrollUpButton)
         }
         
         XCTContext.runActivity(named: "Items count is greater than display limit and current index is 8") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount + 8)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount + 8)
             let control = ListDisplayControl(currentIndex: 8, items: items)
             XCTAssertFalse(control.isDisableScrollUpButton)
         }
@@ -109,39 +113,27 @@ final class ListControlTests: XCTestCase {
     func test_isDisableScrollDownButton() {
         
         XCTContext.runActivity(named: "Items count is less than display limit") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount - 1)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount - 1)
             let control = ListDisplayControl(currentIndex: 0, items: items)
             XCTAssertTrue(control.isDisableScrollDownButton)
         }
         
         XCTContext.runActivity(named: "Items count is equal to display limit") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount)
             let control = ListDisplayControl(currentIndex: 0, items: items)
             XCTAssertTrue(control.isDisableScrollDownButton)
         }
         
         XCTContext.runActivity(named: "Items count is greater than display limit and current index is at the end") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount + 1)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount + 1)
             let control = ListDisplayControl(currentIndex: items.count - 1, items: items)
             XCTAssertTrue(control.isDisableScrollDownButton)
         }
         
         XCTContext.runActivity(named: "Items count is greater than display limit and current index is not at the end") { _ in
-            let items = createItems(count: WidgetConfig.displayTodoItemLimitCount + 20)
+            let items = testStore.createItems(count: WidgetConfig.displayTodoItemLimitCount + 20)
             let control = ListDisplayControl(currentIndex: 10, items: items)
             XCTAssertFalse(control.isDisableScrollDownButton)
         }
-    }
-}
-
-extension ListControlTests {
-    
-    private func createItems(count: Int) -> [TodoItem] {
-        var items: [TodoItem] = []
-        for i in 0..<count {
-            let newItem = TodoItem(name: "\(i)", createDate: Date())
-            items.append(newItem)
-        }
-        return items
     }
 }
