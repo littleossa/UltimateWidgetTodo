@@ -99,6 +99,7 @@
 		975484CA2B01343500A09B11 /* ScreenStateRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484C92B01343500A09B11 /* ScreenStateRepositoryTests.swift */; };
 		975484CC2B01365A00A09B11 /* TodoItemRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484CB2B01365A00A09B11 /* TodoItemRepositoryTests.swift */; };
 		975484CE2B01AE1800A09B11 /* WidgetTodoCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484CD2B01AE1800A09B11 /* WidgetTodoCoreTests.swift */; };
+		975484D12B01EBD400A09B11 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484D02B01EBD400A09B11 /* XCTestCase+Extensions.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
 		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
@@ -210,6 +211,7 @@
 		975484C92B01343500A09B11 /* ScreenStateRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateRepositoryTests.swift; sourceTree = "<group>"; };
 		975484CB2B01365A00A09B11 /* TodoItemRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemRepositoryTests.swift; sourceTree = "<group>"; };
 		975484CD2B01AE1800A09B11 /* WidgetTodoCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTodoCoreTests.swift; sourceTree = "<group>"; };
+		975484D02B01EBD400A09B11 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
 		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		975484302AF45E6D00A09B11 /* UltimateWidgetTodoTests */ = {
 			isa = PBXGroup;
 			children = (
+				975484CF2B01EBAC00A09B11 /* Extension */,
 				975484BE2B011E2B00A09B11 /* RepositoryTests */,
 				975484BA2B011A9400A09B11 /* DataStoreTests */,
 				975484BB2B011ACA00A09B11 /* ModelTests */,
@@ -488,6 +491,14 @@
 				975484CB2B01365A00A09B11 /* TodoItemRepositoryTests.swift */,
 			);
 			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
+		975484CF2B01EBAC00A09B11 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				975484D02B01EBD400A09B11 /* XCTestCase+Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		979E23962AF12679003559D2 = {
@@ -723,6 +734,7 @@
 				975484C02B011E4E00A09B11 /* KeyboardInputRepositoryTests.swift in Sources */,
 				975484CE2B01AE1800A09B11 /* WidgetTodoCoreTests.swift in Sources */,
 				975484C62B01279700A09B11 /* ListControlTests.swift in Sources */,
+				975484D12B01EBD400A09B11 /* XCTestCase+Extensions.swift in Sources */,
 				975484BD2B011AEE00A09B11 /* EmojiKeyboardContentTest.swift in Sources */,
 				975484CA2B01343500A09B11 /* ScreenStateRepositoryTests.swift in Sources */,
 				975484CC2B01365A00A09B11 /* TodoItemRepositoryTests.swift in Sources */,
