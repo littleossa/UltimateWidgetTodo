@@ -11,7 +11,7 @@ final class WidgetTodoCoreTests: XCTestCase {
     
     let core = WidgetTodoCore.test
     let store = UserDefaultsStore.testStore
-    let swiftDataStore = SwiftDataStore.testStore
+    var swiftDataStore = SwiftDataStore.testStore
     
     override func setUpWithError() throws {
         store.removeAll()
@@ -20,8 +20,8 @@ final class WidgetTodoCoreTests: XCTestCase {
     func test_currentEmojiCategory() {
         
         XCTAssertEqual(core.currentEmojiCategory, .frequentlyUsed)
-        XCTAssertEqual(core.currentEmojiCategory, .smilyAndPeople)
         core.onTapEmojiCategoryKey(.smilyAndPeople)
+        XCTAssertEqual(core.currentEmojiCategory, .smilyAndPeople)
         core.onTapEmojiCategoryKey(.animalsAndNature)
         XCTAssertEqual(core.currentEmojiCategory, .animalsAndNature)
         core.onTapEmojiCategoryKey(.flags)
