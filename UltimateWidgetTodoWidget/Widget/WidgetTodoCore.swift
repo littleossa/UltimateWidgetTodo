@@ -196,6 +196,7 @@ class WidgetTodoCore: ObservableObject {
     }
     
     func onTapPresentAddItemView() {
+        keyboardInputRepository.toggleCapsLock(to: true)
         screenStateRepository.changeScreen(into: .addTodoItem)
     }
     
