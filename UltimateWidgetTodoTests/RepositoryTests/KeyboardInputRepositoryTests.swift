@@ -166,5 +166,14 @@ final class KeyboardInputRepositoryTests: XCTestCase {
         XCTAssertFalse(repository.isCapsLocked)
         repository.toggleCapsLock()
         XCTAssertTrue(repository.isCapsLocked)
+        
+        repository.toggleCapsLock(to: true)
+        XCTAssertTrue(repository.isCapsLocked)
+        repository.toggleCapsLock(to: false)
+        XCTAssertFalse(repository.isCapsLocked)
+        repository.toggleCapsLock(to: false)
+        XCTAssertFalse(repository.isCapsLocked)
+        repository.toggleCapsLock(to: true)
+        XCTAssertTrue(repository.isCapsLocked)
     }
 }

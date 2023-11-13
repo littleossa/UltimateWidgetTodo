@@ -100,7 +100,12 @@ class KeyboardInputRepository {
         store.emojiKeyboardIndex = index
     }
     
-    func toggleCapsLock() {
-        store.isCapsLocked.toggle()
+    func toggleCapsLock(to isCapsLocked: Bool? = nil) {
+        
+        if let isCapsLocked {
+            store.isCapsLocked = isCapsLocked
+        } else {
+            store.isCapsLocked.toggle()
+        }
     }
 }
