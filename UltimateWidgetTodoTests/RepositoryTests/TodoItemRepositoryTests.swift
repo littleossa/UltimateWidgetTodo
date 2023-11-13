@@ -14,17 +14,17 @@ final class TodoItemRepositoryTests: XCTestCase {
     
     @MainActor
     func testAddItem() {
-        var items = repository.fetchItem()
+        var items = SwiftDataStore.testStore.fetchItem()
         XCTAssertEqual(items.count, 0)
         let itemName = "Test Item"
         repository.addItem(name: itemName)
-        items = repository.fetchItem()
+        items = SwiftDataStore.testStore.fetchItem()
         XCTAssertEqual(items.count, 1)
         XCTAssertEqual(items[0].name, itemName)
         
         let itemName2 = "Test Item2"
         repository.addItem(name: itemName2)
-        items = repository.fetchItem()
+        items = SwiftDataStore.testStore.fetchItem()
         XCTAssertEqual(items.count, 2)
         XCTAssertEqual(items[1].name, itemName2)
     }
@@ -33,13 +33,13 @@ final class TodoItemRepositoryTests: XCTestCase {
     func test_deleteItem() {
         let itemName = "Item to be deleted"
         repository.addItem(name: itemName)
-        var items = repository.fetchItem()
+        var items = SwiftDataStore.testStore.fetchItem()
         XCTAssertEqual(items.count, 1)
         let id = items[0].itemId
         
         do {
             try repository.deleteItem(id: id)
-            items = repository.fetchItem()
+            items = SwiftDataStore.testStore.fetchItem()
             XCTAssertEqual(items.count, 0)
         } catch {
             XCTFail("Failed to delete the item: \(error)")
@@ -47,11 +47,11 @@ final class TodoItemRepositoryTests: XCTestCase {
     }
     
     @MainActor
-    func testFetchItem() {
+    func test_fetchItem() {
         
         let itemName = "Test Item"
         repository.addItem(name: itemName)
-        let items = repository.fetchItem()
+        let items = SwiftDataStore.testStore.fetchItem()
         XCTAssertEqual(items.count, 1)
         let id = items[0].itemId
         
@@ -66,12 +66,21 @@ final class TodoItemRepositoryTests: XCTestCase {
     }
 }
 
-fileprivate extension TodoItemRepository {
+extension SwiftDataStore {
     
     @MainActor
     func fetchItem() -> [TodoItem] {
         let descriptor = FetchDescriptor<TodoItem>()
-        let items = try? SwiftDataStore.testStore.context.fetch(descriptor)
+        let items = try? self.context.fetch(descriptor)
         return items ?? []
+    }
+    
+    func createItems(count: Int) -> [TodoItem] {
+        var items: [TodoItem] = []
+        for i in 0..<count {
+            let newItem = TodoItem(name: "\(i)", createDate: Date())
+            items.append(newItem)
+        }
+        return items
     }
 }
