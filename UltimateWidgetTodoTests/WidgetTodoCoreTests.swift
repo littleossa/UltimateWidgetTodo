@@ -13,8 +13,10 @@ final class WidgetTodoCoreTests: XCTestCase {
     let store = UserDefaultsStore.testStore
     var swiftDataStore = SwiftDataStore.testStore
     
+    @MainActor
     override func setUpWithError() throws {
         store.removeAll()
+        swiftDataStore.clear()
     }
     
     func test_currentEmojiCategory() {
