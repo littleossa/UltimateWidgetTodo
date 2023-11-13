@@ -50,8 +50,10 @@ struct PresentAddItemViewIntent: AppIntent {
     }
 }
 
+#if DEBUG
 #Preview(as: .systemLarge) {
     TodoItemListPreviewWidget()
 } timeline: {
     WidgetTodoEntry(date: .now)
 }
+#endif

@@ -30,8 +30,10 @@ struct WidgetKeyboard: View {
     }
 }
 
+#if DEBUG
 #Preview(as: .systemLarge) {
     EditItemPreviewWidget()
 } timeline: {
     WidgetTodoEntry(date: .now)
 }
+#endif
