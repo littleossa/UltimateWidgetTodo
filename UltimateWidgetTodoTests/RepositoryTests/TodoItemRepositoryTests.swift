@@ -10,10 +10,16 @@ import XCTest
 
 final class TodoItemRepositoryTests: XCTestCase {
     
-    let repository = TodoItemRepository(store: .testStore)
+    @MainActor
+    override func setUpWithError() throws {
+        SwiftDataStore.testStore.clear()
+    }
     
     @MainActor
-    func testAddItem() {
+    func test_addItem() {
+        let repository = TodoItemRepository(store: .testStore)
+        SwiftDataStore.testStore.clear()
+
         var items = SwiftDataStore.testStore.fetchItem()
         XCTAssertEqual(items.count, 0)
         let itemName = "Test Item"
@@ -21,16 +27,19 @@ final class TodoItemRepositoryTests: XCTestCase {
         items = SwiftDataStore.testStore.fetchItem()
         XCTAssertEqual(items.count, 1)
         XCTAssertEqual(items[0].name, itemName)
-        
         let itemName2 = "Test Item2"
         repository.addItem(name: itemName2)
         items = SwiftDataStore.testStore.fetchItem()
         XCTAssertEqual(items.count, 2)
-        XCTAssertEqual(items[1].name, itemName2)
+        XCTAssertEqual(items[0].name, itemName2)
+        XCTAssertEqual(items[1].name, itemName)
     }
     
     @MainActor
     func test_deleteItem() {
+        let repository = TodoItemRepository(store: .testStore)
+        SwiftDataStore.testStore.clear()
+
         let itemName = "Item to be deleted"
         repository.addItem(name: itemName)
         var items = SwiftDataStore.testStore.fetchItem()
@@ -48,7 +57,9 @@ final class TodoItemRepositoryTests: XCTestCase {
     
     @MainActor
     func test_fetchItem() {
-        
+        let repository = TodoItemRepository(store: .testStore)
+        SwiftDataStore.testStore.clear()
+
         let itemName = "Test Item"
         repository.addItem(name: itemName)
         let items = SwiftDataStore.testStore.fetchItem()
