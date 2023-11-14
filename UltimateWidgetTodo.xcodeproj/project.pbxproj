@@ -31,7 +31,6 @@
 		9754842A2AF45D4400A09B11 /* KeyboardInputMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484282AF45D4400A09B11 /* KeyboardInputMode.swift */; };
 		975484322AF45E6D00A09B11 /* UserDefaultsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */; };
 		975484392AF4614700A09B11 /* KeyboardInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484382AF4614700A09B11 /* KeyboardInputRepository.swift */; };
-		9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */; };
 		975484402AF4D32200A09B11 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843F2AF4D32200A09B11 /* InputForm.swift */; };
 		975484412AF4D34200A09B11 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9754843F2AF4D32200A09B11 /* InputForm.swift */; };
 		975484432AF4DDEA00A09B11 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484422AF4DDEA00A09B11 /* CloseButton.swift */; };
@@ -168,7 +167,6 @@
 		9754842F2AF45E6D00A09B11 /* UltimateWidgetTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltimateWidgetTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		975484312AF45E6D00A09B11 /* UserDefaultsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStoreTests.swift; sourceTree = "<group>"; };
 		975484382AF4614700A09B11 /* KeyboardInputRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInputRepository.swift; sourceTree = "<group>"; };
-		9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOverlayBackgroundView.swift; sourceTree = "<group>"; };
 		9754843F2AF4D32200A09B11 /* InputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputForm.swift; sourceTree = "<group>"; };
 		975484422AF4DDEA00A09B11 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		975484462AF5233900A09B11 /* ScreenStateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStateRepository.swift; sourceTree = "<group>"; };
@@ -325,7 +323,6 @@
 		9754843B2AF4666400A09B11 /* WidgetBackground */ = {
 			isa = PBXGroup;
 			children = (
-				9754843C2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift */,
 				975484512AF8434600A09B11 /* WidgetBackgroundView.swift */,
 			);
 			path = WidgetBackground;
@@ -851,7 +848,6 @@
 				975484102AF445F100A09B11 /* Color+Extensions.swift in Sources */,
 				979E23BE2AF1290D003559D2 /* UltimateWidgetTodoWidgetBundle.swift in Sources */,
 				979E23D52AF12DEA003559D2 /* SwiftDataStore.swift in Sources */,
-				9754843D2AF466A800A09B11 /* KeyboardOverlayBackgroundView.swift in Sources */,
 				9754846A2AF98FCE00A09B11 /* AlphabetModeKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
