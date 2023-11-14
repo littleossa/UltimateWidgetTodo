@@ -18,42 +18,38 @@ struct AddItemView: View {
                 .fill(.black.opacity(0.001))
                 .frame(height: WidgetConfig.colorHeaderHeight + 16)
             
-            Color.widgetBackground
-                .overlay {
-                    VStack(spacing: 0) {
-                        
-                        HStack {
-                            CloseButton(type: .addNewTodoItem)
-                                .frame(width: WidgetConfig.topBarHeight,
-                                       height: WidgetConfig.topBarHeight)
-                            
-                            Spacer()
-                            
-                            Text(EditTodoItemType.addNewTodoItem.displayLabel)
-                                .font(.system(size: 20))
-                                .bold()
-                                .foregroundStyle(Color.label)
-                            
-                            Spacer()
-                            
-                            Spacer()
-                                .frame(width: WidgetConfig.topBarHeight,
-                                       height: WidgetConfig.topBarHeight)
-                        }
-                        .frame(height: WidgetConfig.topBarHeight)
-                        
-                        Spacer()
-                        
-                        InputForm(text: WidgetTodoCore.shared.inputText)
-                        
-                        Spacer().frame(height: 8)
-                        WidgetKeyboard(type: .addNewTodoItem)
-                    }
-                    .background(.widgetBackground)
+            VStack(spacing: 0) {
+                
+                HStack {
+                    CloseButton(type: .addNewTodoItem)
+                        .frame(width: WidgetConfig.topBarHeight,
+                               height: WidgetConfig.topBarHeight)
+                    
+                    Spacer()
+                    
+                    Text(EditTodoItemType.addNewTodoItem.displayLabel)
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundStyle(Color.label)
+                    
+                    Spacer()
+                    
+                    Spacer()
+                        .frame(width: WidgetConfig.topBarHeight,
+                               height: WidgetConfig.topBarHeight)
                 }
-                .padding(.top, 8)
-                .clipShape(.rect(cornerRadius: 12, style: .circular))
-                .contentTransition(.identity)
+                .frame(height: WidgetConfig.topBarHeight)
+                
+                Spacer()
+                
+                InputForm(text: WidgetTodoCore.shared.inputText)
+                
+                Spacer().frame(height: 8)
+                WidgetKeyboard(type: .addNewTodoItem)
+            }
+            .background(.widgetBackground)
+            .clipShape(.rect(cornerRadius: 12, style: .circular))
+            .contentTransition(.identity)
         }
         .background(.widgetBackground.opacity(0.001))
     }
@@ -84,10 +80,3 @@ struct AddItemPreviewWidget: Widget {
     WidgetTodoEntry(date: .now)
 }
 #endif
-
-struct AddItemContentView: View {
-    
-    var body: some View {
-        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
-    }
-}
