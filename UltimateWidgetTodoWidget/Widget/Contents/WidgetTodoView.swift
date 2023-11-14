@@ -19,9 +19,12 @@ struct WidgetTodoView: View {
                 MainView()
                     .transition(.opacity)
             case .addTodoItem:
-                EditItemView(type: .addNewTodoItem)
+                AddItemView()
                     .transition(.asymmetric(insertion: .push(from: .top),
                                             removal: .push(from: .top)))
+                    .background {
+                        MainView()
+                    }
 
             case let .editTodoItem(id):
                 EditItemView(type: .editTodoItem(id: id))

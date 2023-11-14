@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		975310FD2B03B0A4003582C2 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975310FC2B03B0A4003582C2 /* AddItemView.swift */; };
 		975484022AF277B100A09B11 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484012AF277B100A09B11 /* EditItemView.swift */; };
 		975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484032AF2787500A09B11 /* WidgetKeyboard.swift */; };
 		975484062AF27A2900A09B11 /* KeyboardLetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */; };
@@ -152,6 +153,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		975310FC2B03B0A4003582C2 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		975484012AF277B100A09B11 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		975484032AF2787500A09B11 /* WidgetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKeyboard.swift; sourceTree = "<group>"; };
 		975484052AF27A2900A09B11 /* KeyboardLetterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLetterKey.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				9754846C2AFA640C00A09B11 /* Components */,
+				975310FC2B03B0A4003582C2 /* AddItemView.swift */,
 				975484012AF277B100A09B11 /* EditItemView.swift */,
 			);
 			path = EditTodoItem;
@@ -814,6 +817,7 @@
 				975484402AF4D32200A09B11 /* InputForm.swift in Sources */,
 				9754841B2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
 				975484782AFBCD7B00A09B11 /* ScreenStateRepository.swift in Sources */,
+				975310FD2B03B0A4003582C2 /* AddItemView.swift in Sources */,
 				975484522AF8434600A09B11 /* WidgetBackgroundView.swift in Sources */,
 				975484A42B00DCAC00A09B11 /* WidgetTodoErrorView.swift in Sources */,
 				975484762AFBCD6000A09B11 /* WidgetTodoCore.swift in Sources */,
