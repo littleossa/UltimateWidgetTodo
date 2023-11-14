@@ -212,6 +212,7 @@ class WidgetTodoCore: ObservableObject {
     
     func onTapTodoItemListRow(id: UUID, name: String) {
         keyboardInputRepository.input(name)
+        keyboardInputRepository.toggleCapsLock(to: false)
         screenStateRepository.changeScreen(into: .editTodoItem(id: id))
     }
     
