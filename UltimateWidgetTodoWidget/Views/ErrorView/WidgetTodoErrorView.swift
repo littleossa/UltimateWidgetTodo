@@ -18,47 +18,45 @@ struct WidgetTodoErrorView<Content: View>: View {
     
     var body: some View {
         
-        RoundedRectangle(cornerRadius: 8)
-            .fill(.keyboardBackground)
-            .frame(width: 300, height: 300)
+        Color.black.opacity(0.7)
             .overlay {
-                VStack(spacing: 8){
-                    
-                    Spacer().frame(height: 8)
-                    
-                    Text(error.info.title)
-                        .font(.system(size: 26))
-                        .bold()
-                        .padding(.horizontal)
-                    Text(error.info.message)
-                        .font(.system(size: 18))
-                        .padding(.horizontal)
-                    
-                    Spacer()
-                    
-                    VStack(spacing: 0) {
-                        
-                        Divider()
-                            .background(.keyShadow)
-                        
-                        Spacer().frame(height: 4)
-                        
-                        ErrorOKButton()
-                            .frame(height: 60)
-                        
-                        Spacer().frame(height: 4)
+                
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(.keyboardBackground)
+                    .frame(width: 284, height: 284)
+                    .overlay {
+                        VStack(spacing: 8){
+                            
+                            Spacer().frame(height: 8)
+                            
+                            Text(error.info.title)
+                                .font(.system(size: 26))
+                                .bold()
+                                .padding(.horizontal)
+                            Text(error.info.message)
+                                .font(.system(size: 18))
+                                .padding(.horizontal)
+                            
+                            Spacer()
+                            
+                            VStack(spacing: 0) {
+                                
+                                Divider()
+                                    .background(.keyShadow)
+                                
+                                Spacer().frame(height: 4)
+                                
+                                ErrorOKButton()
+                                    .frame(height: 60)
+                                
+                                Spacer().frame(height: 4)
+                            }
+                        }
+                        .foregroundStyle(Color.label)
+                        .multilineTextAlignment(.center)
                     }
-                }
-                .foregroundStyle(Color.label)
-                .multilineTextAlignment(.center)
             }
-            .containerBackground(for: .widget) {
-                Color.black.opacity(0.7)
-                    .background {
-                        content
-                            .padding()
-                    }
-            }
+            .background(content)
             .transition(.opacity)
     }
 }
