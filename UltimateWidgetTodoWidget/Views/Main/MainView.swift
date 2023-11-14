@@ -16,15 +16,14 @@ struct MainView: View {
 
     var body: some View {
         
-        Group {
-            if items.isEmpty {
-                TodoItemEmptyView()
-            } else {
-                TodoItemListView(items: items)
+        WidgetBackgroundView {
+            Group {
+                if items.isEmpty {
+                    TodoItemEmptyView()
+                } else {
+                    TodoItemListView(items: items)
+                }
             }
-        }
-        .containerBackground(for: .widget) {
-            WidgetBackgroundView()
         }
     }
 }

@@ -13,12 +13,10 @@ struct EmojiKeyboard: View {
     var body: some View {
         
         VStack(spacing: 4) {
-            
-            Spacer().frame(height: 4)
-            
+                        
             HStack {
                 
-                ZStack {
+                ZStack(alignment: .leading) {
                     if !core.isEmojiFirstContent {
                         EmojiContentMoveKey(type: .back)
                     }
@@ -34,15 +32,22 @@ struct EmojiKeyboard: View {
                 
                 Spacer()
                 
-                ZStack {
+                ZStack(alignment: .trailing) {
                     if !core.isEmojiLastContent {
                         EmojiContentMoveKey(type: .forward)
                     }
                 }
                 .frame(width: 20)
             }
-            
+            .padding(.horizontal, 8)
+            .padding(.bottom, 8)
+                        
             HStack(spacing: 0) {
+                
+                if core.currentEmojiContent.count <= 36 {
+                    Spacer().frame(width: 6)
+                }
+                
                 LazyHGrid(rows: Array(repeating: GridItem(), count: 4), spacing: 4) {
                     ForEach(core.currentEmojiContent, id: \.self) {
                         KeyboardEmojiKey($0)
@@ -55,7 +60,6 @@ struct EmojiKeyboard: View {
                 }
             }
             .frame(height: 116)
-            .offset(y: 8)
             
             HStack(spacing: 4) {
                 AlphabetModeKey(hasKeyShape: false)
@@ -67,8 +71,7 @@ struct EmojiKeyboard: View {
                 
                 BackspaceKey(hasKeyShape: false)
             }
-            .offset(y: 8)
         }
-        .frame(height: WidgetConfig.keyboardHeight - 16)
+        .frame(width: 300)
     }
 }

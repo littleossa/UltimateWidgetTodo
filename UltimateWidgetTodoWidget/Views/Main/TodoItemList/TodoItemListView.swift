@@ -9,6 +9,7 @@ import WidgetKit
 
 struct TodoItemListView: View {
     
+    @Environment(\.widgetContentMargins) var margins
     @Environment(\.widgetTodoCore) var core
     let items: [TodoItem]
     
@@ -19,8 +20,6 @@ struct TodoItemListView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                Spacer()
-                    .frame(height: WidgetConfig.colorHeaderHeight - 16)
                 
                 HStack(spacing: 0) {
                     
@@ -35,6 +34,7 @@ struct TodoItemListView: View {
                             .offset(y: -4)
                     }
                     .foregroundStyle(Color.label)
+                    .padding(.leading, margins.leading)
                     
                     Spacer()
 
@@ -58,13 +58,14 @@ struct TodoItemListView: View {
                     .stroke(style: .init(lineWidth: 2))
                     .foregroundStyle(.gray)
                     .frame(height: 2)
-                    .padding(.bottom, 4)
                 
                 ForEach(listDisplayControl.displayItems) {
                     TodoItemListRow(item: $0)
                 }
                 .id("TodoItemListRows")
                 .transition(core.listScrollTransition)
+                .padding(.trailing, margins.trailing)
+                .padding(.leading, margins.leading)
                 
                 Spacer()
             }
@@ -79,6 +80,8 @@ struct TodoItemListView: View {
                     .frame(width: 44, height: 44)
                 }
             }
+            .padding(.trailing, margins.trailing)
+            .padding(.bottom, 4)
         }
     }
 }
@@ -95,10 +98,9 @@ struct TodoItemListPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            TodoItemListView(items: [])
-                .containerBackground(for: .widget) {
-                    WidgetBackgroundView()
-                }
+            WidgetBackgroundView {
+                TodoItemListView(items: [])
+            }
                 .modelContainer(SwiftDataStore.testStore.container)
         }
     }

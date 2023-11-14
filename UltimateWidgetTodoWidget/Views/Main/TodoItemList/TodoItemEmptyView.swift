@@ -48,10 +48,9 @@ struct TodoItemEmptyPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            TodoItemEmptyView()
-                .containerBackground(for: .widget) {
-                    WidgetBackgroundView()
-                }
+            WidgetBackgroundView {
+                TodoItemEmptyView()
+            }
                 .modelContainer(SwiftDataStore.testStore.container)
         }
     }

@@ -6,15 +6,27 @@
 
 import SwiftUI
 
-struct WidgetBackgroundView: View {
+struct WidgetBackgroundView<Content: View>: View {
+    
+    init(needsBottomSpacer: Bool = true, @ViewBuilder content: () -> Content) {
+        self.content = content()
+        self.needsBottomSpacer = needsBottomSpacer
+    }
+    
+    let content: Content
+    let needsBottomSpacer: Bool
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             Rectangle()
                 .fill(LinearGradient.ultimateBlue)
                 .frame(height: WidgetConfig.colorHeaderHeight)
             
-            Spacer()
+            content
+            
+            if needsBottomSpacer {
+                Spacer()
+            }
         }
         .background(.widgetBackground)
     }
@@ -32,10 +44,9 @@ struct WidgetBackgroundPreviewWidget: Widget {
             kind: kind,
             provider: WidgetTodoProvider()
         ) { entry in
-            MainView()
-                .containerBackground(for: .widget) {
-                    WidgetBackgroundView()
-                }
+            WidgetBackgroundView {
+                MainView()
+            }
                 .modelContainer(SwiftDataStore.testStore.container)
         }
     }

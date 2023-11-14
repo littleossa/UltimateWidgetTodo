@@ -19,6 +19,7 @@ struct UltimateWidgetTodoWidget: Widget {
         .supportedFamilies([.systemLarge])
         .configurationDisplayName("Ultimate Widget Todo")
         .description("This is an Ultimate Todo List App with a Widget.")
+        .contentMarginsDisabled()
     }
 }
 
