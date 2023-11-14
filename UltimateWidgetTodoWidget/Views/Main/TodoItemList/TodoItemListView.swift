@@ -48,7 +48,6 @@ struct TodoItemListView: View {
                                              isDisabled: listDisplayControl.isDisableScrollDownButton)
                                 .frame(width: 44,  height: 40)
                         }
-                        .offset(x: 8)
                     }
                     
                 }
