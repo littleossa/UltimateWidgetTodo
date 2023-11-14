@@ -11,6 +11,6 @@ class WidgetConfig {
     static let emojiKeyboardContentLimitCount = 40
     static let displayTodoItemLimitCount = 6
     static let keyboardHeight: CGFloat = 194
-    static let todoItemNameLimitCount = 30
+    static let todoItemNameLimitCount = 26
     static let topBarHeight: CGFloat = 40
 }
