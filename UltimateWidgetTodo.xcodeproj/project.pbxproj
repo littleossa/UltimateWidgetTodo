@@ -568,10 +568,10 @@
 		979E23D12AF12D1B003559D2 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				975484812AFC6A2600A09B11 /* Contents */,
 				9754843B2AF4666400A09B11 /* WidgetBackground */,
 				979E23CD2AF129FB003559D2 /* TodoItemEntry.swift */,
 				979E23CB2AF1296E003559D2 /* TodoTaskProvider.swift */,
-				975484812AFC6A2600A09B11 /* Contents */,
 				979E23E22AF1A7A1003559D2 /* WidgetConfig.swift */,
 				975484742AFBCB0100A09B11 /* WidgetTodoCore.swift */,
 			);
