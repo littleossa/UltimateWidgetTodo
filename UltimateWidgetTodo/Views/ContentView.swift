@@ -37,7 +37,7 @@ struct ContentView: View {
                 return
             }
             widgetInstallState = .installed
-            try await Task.sleep(for: .seconds(1.5))
+            try await Task.sleep(for: .seconds(0.75))
             await UIControl.backToHomeScreenOfDevice()
             try await Task.sleep(for: .seconds(0.2))
             exit(0)
