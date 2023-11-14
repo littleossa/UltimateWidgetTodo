@@ -49,7 +49,7 @@ struct EditItemView: View {
                 
                 InputForm(text: WidgetTodoCore.shared.inputText)
                 
-                Spacer().frame(height: 16)
+                Spacer().frame(height: 8)
                 
                 WidgetKeyboard(type: type)
             }
