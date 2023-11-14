@@ -196,14 +196,13 @@ final class WidgetTodoCoreTests: XCTestCase {
         
         XCTAssertEqual(core.currentScreen, .addTodoItem)
         
-        // This text is over 30 characters
-        core.onTapCharacterKey("This text is over 30 characters")
+        // This text is over 26 characters - 28 count
+        core.onTapCharacterKey("This text is over 26 letters")
         
         await XCTAssertThrowsAsyncError(try await core.onTapAddItemDoneKey()) { error in
             XCTAssertEqual(error as? WidgetError, .todoItemNameLimitExceeded)
         }
-        
-        XCTAssertEqual(core.inputText, "This text is over 30 characters")
+        XCTAssertEqual(core.inputText, "This text is over 26 letters")
         XCTAssertEqual(store.listDisplayIndex, 1)
         
         items = swiftDataStore.fetchItem()
@@ -212,6 +211,7 @@ final class WidgetTodoCoreTests: XCTestCase {
         XCTAssertEqual(core.currentScreen, .addTodoItem)
         
         // This text is meeting the condition
+        core.onTapBackspaceKey()
         core.onTapBackspaceKey()
         try await core.onTapAddItemDoneKey()
         
@@ -303,14 +303,14 @@ final class WidgetTodoCoreTests: XCTestCase {
         
         XCTAssertEqual(core.currentScreen, .editTodoItem(id: id!))
         
-        // This text is over 30 characters
-        core.onTapCharacterKey("This text is over 30 characters")
+        // This text is over 26 characters - 28 count
+        core.onTapCharacterKey("This text is over 26 letters")
         
         await XCTAssertThrowsAsyncError(try await core.onTapEditItemDoneKey(id: id!)) { error in
             XCTAssertEqual(error as? WidgetError, .todoItemNameLimitExceeded)
         }
         
-        XCTAssertEqual(core.inputText, "This text is over 30 characters")
+        XCTAssertEqual(core.inputText, "This text is over 26 letters")
         XCTAssertEqual(store.listDisplayIndex, 1)
         
         item = swiftDataStore.fetchItem().first
@@ -321,6 +321,7 @@ final class WidgetTodoCoreTests: XCTestCase {
         
         // This text is meeting the condition
         core.onTapBackspaceKey()
+        core.onTapBackspaceKey()
         try await core.onTapEditItemDoneKey(id: id!)
         
         XCTAssertTrue(core.inputText.isEmpty)
@@ -328,7 +329,7 @@ final class WidgetTodoCoreTests: XCTestCase {
         
         item = swiftDataStore.fetchItem().first
         XCTAssertNotNil(item)
-        XCTAssertEqual(item?.name, "This text is over 30 character")
+        XCTAssertEqual(item?.name, "This text is over 26 lette")
         XCTAssertNotEqual(item?.updateDate, updateDate)
         
         XCTAssertEqual(core.currentScreen, .main)
@@ -400,6 +401,19 @@ final class WidgetTodoCoreTests: XCTestCase {
             XCTAssertEqual(control.displayItems[0].name, "3")
             XCTAssertEqual(control.displayItems[5].name, "8")
         }
+    }
+    
+    func test_onTapTodoItemListRow() {
+        
+        let uuid = UUID()
+        XCTAssertTrue(core.inputText.isEmpty)
+        XCTAssertEqual(core.currentScreen, .main)
+        core.onTapCapsLockKey()
+        XCTAssertTrue(core.inputText.isEmpty)
+        core.onTapTodoItemListRow(id: uuid, name: "Test")
+        XCTAssertEqual(core.currentScreen, .editTodoItem(id: uuid))
+        XCTAssertEqual(core.inputText, "Test")
+        XCTAssertFalse(core.isCapsLocked)
     }
     
     func test_showError() {
