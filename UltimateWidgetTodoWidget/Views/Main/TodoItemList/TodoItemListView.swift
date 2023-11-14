@@ -55,9 +55,10 @@ struct TodoItemListView: View {
                 .frame(height: WidgetConfig.topBarHeight)
                 
                 Line()
-                    .stroke(style: .init(lineWidth: 2))
+                    .stroke(style: .init(lineWidth: 1))
                     .foregroundStyle(.gray)
-                    .frame(height: 2)
+                    .frame(height: 1)
+                    .shadow(color: .gray, radius: 1, x: 0, y: 1)
                 
                 ForEach(listDisplayControl.displayItems) {
                     TodoItemListRow(item: $0)
