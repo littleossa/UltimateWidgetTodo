@@ -15,16 +15,23 @@ struct WidgetTodoView: View {
         
         ZStack {
             switch core.currentScreen {
-            case .main:
-                MainView()
-                    .transition(.opacity)
-            case .addTodoItem:
-                AddItemView()
-                    .transition(.asymmetric(insertion: .push(from: .top),
-                                            removal: .push(from: .top)))
-                    .background {
-                        MainView()
+            case .main, .addTodoItem:
+                
+                ZStack {
+                    MainView()
+                        .transition(.opacity)
+                    
+                    if core.currentScreen == .addTodoItem {
+                        
+                        Color.black.opacity(0.7)
+                            .contentTransition(.opacity)
+                        
+                        AddItemView()
+                            .frame(height: core.currentScreen == .addTodoItem ? nil : 0)
+                            .transition(.asymmetric(insertion: .push(from: .top),
+                                                    removal: .push(from: .top)))
                     }
+                }
 
             case let .editTodoItem(id):
                 EditItemView(type: .editTodoItem(id: id))
