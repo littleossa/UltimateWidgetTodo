@@ -14,7 +14,7 @@ struct InputForm: View {
         RoundedRectangle(cornerRadius: 6)
             .stroke(lineWidth: 1)
             .foregroundStyle(.keyboardBackground)
-            .frame(width: 280, height: 40)
+            .frame(width: 296, height: 40)
             .overlay {
                 
                 HStack(spacing: 0) {
@@ -38,7 +38,7 @@ struct InputForm: View {
                     Spacer()
                 }
                 .contentTransition(.identity)
-                .frame(width: 280)
+                .frame(width: 296)
             }
     }
     
