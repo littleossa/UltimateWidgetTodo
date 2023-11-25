@@ -16,7 +16,9 @@ struct UltimateWidgetTodoApp: App {
     var body: some Scene {
         WindowGroup {
             switch widgetInstallState {
-            case .checking, .installed:
+            case .checking:
+                EmptyView()
+            case .installed:
                 AppTitleView(installState: widgetInstallState)
             case .error, .notInstall:
                 OnboardingView()
