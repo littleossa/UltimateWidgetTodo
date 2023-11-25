@@ -27,12 +27,12 @@ struct UltimateWidgetTodoApp: App {
             else { return }
             
             Task {
-                await checkInstalledWidget()
+                await checkWidgetInstallState()
             }
         }
     }
     
-    private func checkInstalledWidget() async {
+    private func checkWidgetInstallState() async {
         widgetInstallState = .checking
         
         do {
