@@ -38,7 +38,7 @@ struct UltimateWidgetTodoApp: App {
         widgetInstallState = .checking
         
         do {
-            try await Task.sleep(for: .seconds(0.01))
+            try await Task.sleep(for: .seconds(0.05))
             let info = try await WidgetCenter.shared.getInstalledWidgetInfo()
             
             if info.isEmpty {
