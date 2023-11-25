@@ -102,7 +102,6 @@
 		975484D12B01EBD400A09B11 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484D02B01EBD400A09B11 /* XCTestCase+Extensions.swift */; };
 		975484D32B01EC2000A09B11 /* SwiftDataStore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484D22B01EC2000A09B11 /* SwiftDataStore+Extensions.swift */; };
 		979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */; };
-		979E23A52AF12679003559D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E23A42AF12679003559D2 /* ContentView.swift */; };
 		979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */; };
 		979E23B92AF1290D003559D2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979E23B82AF1290D003559D2 /* WidgetKit.framework */; };
 		979E23BB2AF1290D003559D2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979E23BA2AF1290D003559D2 /* SwiftUI.framework */; };
@@ -216,7 +215,6 @@
 		975484D22B01EC2000A09B11 /* SwiftDataStore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftDataStore+Extensions.swift"; sourceTree = "<group>"; };
 		979E239F2AF12679003559D2 /* UltimateWidgetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimateWidgetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateWidgetTodoApp.swift; sourceTree = "<group>"; };
-		979E23A42AF12679003559D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		979E23A62AF12679003559D2 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		979E23AB2AF1267A003559D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		979E23B62AF1290C003559D2 /* UltimateWidgetTodoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UltimateWidgetTodoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -452,7 +450,6 @@
 			isa = PBXGroup;
 			children = (
 				975484B62B00FAAB00A09B11 /* AppTitleView.swift */,
-				979E23A42AF12679003559D2 /* ContentView.swift */,
 				975484AD2B00EBC600A09B11 /* OnboardingView.swift */,
 			);
 			path = Views;
@@ -771,7 +768,6 @@
 				979E23DC2AF14510003559D2 /* TodoItem.swift in Sources */,
 				9754848F2AFEEABF00A09B11 /* EmojiContentMoveKey.swift in Sources */,
 				9754841A2AF44EFF00A09B11 /* EmojiModeKey.swift in Sources */,
-				979E23A52AF12679003559D2 /* ContentView.swift in Sources */,
 				975484752AFBCB0100A09B11 /* WidgetTodoCore.swift in Sources */,
 				979E23A32AF12679003559D2 /* UltimateWidgetTodoApp.swift in Sources */,
 				975484AE2B00EBC600A09B11 /* OnboardingView.swift in Sources */,
