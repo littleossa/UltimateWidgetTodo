@@ -19,7 +19,7 @@ struct UltimateWidgetTodoApp: App {
             case .checking:
                 EmptyView()
             case .installed:
-                AppTitleView(installState: widgetInstallState)
+                ProhibitedView()
             case .error, .notInstall:
                 OnboardingView()
             }
