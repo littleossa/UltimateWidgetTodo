@@ -35,8 +35,8 @@ struct WidgetTodoView: View {
 
             case let .editTodoItem(id):
                 EditItemView(type: .editTodoItem(id: id))
-                    .transition(.asymmetric(insertion: .push(from: .trailing),
-                                            removal: .push(from: .trailing)))
+                    .transition(.asymmetric(insertion: .push(from: .leading),
+                                            removal: .push(from: .leading)))
             }
         }
         .alert(widgetError: core.error)
