@@ -44,13 +44,6 @@ struct EmojiContentGoBackKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Emoji content go back key"
     
-    @Parameter(title: "Emoji content go back key")
-    var id: String
-    
-    init() {
-        id = "emojiContentGoBackKey"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapGoBackEmojiContentKey()
         return .result()
@@ -61,13 +54,6 @@ struct EmojiContentGoBackKeyIntent: AppIntent {
 struct EmojiContentGoForwardRightKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Emoji content go forward key"
-    
-    @Parameter(title: "Emoji content go forward key")
-    var id: String
-    
-    init() {
-        id = "emojiContentGoForwardKey"
-    }
     
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapGoForwardEmojiContentKey()

@@ -43,7 +43,7 @@ struct KeyboardLetterKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Keyboard letter key"
     
-    @Parameter(title: "Keyboard letter key")
+    @Parameter(title: "Keyboard letter key value")
     var letter: String
     
     init() {}

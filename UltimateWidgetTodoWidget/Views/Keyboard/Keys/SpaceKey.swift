@@ -40,13 +40,6 @@ struct SpaceKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Space key"
     
-    @Parameter(title: "Space key")
-    var id: String
-    
-    init() {
-        id = "spaceKey"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapCharacterKey(" ")
         return .result()

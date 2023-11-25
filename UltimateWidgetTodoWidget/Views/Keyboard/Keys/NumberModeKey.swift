@@ -41,13 +41,6 @@ struct NumberModeIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Number Mode key"
     
-    @Parameter(title: "Number Mode key")
-    var id: String
-    
-    init() {
-        id = "numberModekey"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapNumberModeKey()
         return .result()

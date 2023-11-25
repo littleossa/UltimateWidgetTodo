@@ -63,13 +63,6 @@ struct AddItemDoneKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Add Item Done key"
     
-    @Parameter(title: "Add Item Done Key")
-    var id: String
-        
-    init() {
-        id = "AddItemDoneKey"
-    }
-    
     func perform() async throws -> some IntentResult {
         do {
             try await WidgetTodoCore.shared.onTapAddItemDoneKey()
@@ -85,11 +78,9 @@ struct EditItemDoneKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Edit Item Done key"
     
-    @Parameter(title: "Edit Item Done Key")
+    @Parameter(title: "Edit Item ID")
     var id: String
-    
-    var type: EditTodoItemType = .addNewTodoItem
-    
+        
     init() {}
     
     init(itemId: UUID) {

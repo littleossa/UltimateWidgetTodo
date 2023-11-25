@@ -52,13 +52,6 @@ struct CapsLockKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Caps lock key"
     
-    @Parameter(title: "Is Caps Locked")
-    var id: String
-    
-    init() {
-        id = "isCapsLocked"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapCapsLockKey()
         return .result()

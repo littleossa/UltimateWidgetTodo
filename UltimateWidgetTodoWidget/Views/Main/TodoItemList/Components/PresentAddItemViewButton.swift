@@ -37,13 +37,6 @@ struct PresentAddItemViewIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Present Add Item view button"
     
-    @Parameter(title: "Present Add item view button")
-    var id: String
-    
-    init() {
-        self.id = "presentAddItemViewButton"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapPresentAddItemView()
         return .result()

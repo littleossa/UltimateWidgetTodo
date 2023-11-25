@@ -50,7 +50,7 @@ struct EmojiCategoryKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Emoji Category Key"
     
-    @Parameter(title: "Emoji Category Key")
+    @Parameter(title: "Emoji Category ID")
     var id: String
     
     init() {}

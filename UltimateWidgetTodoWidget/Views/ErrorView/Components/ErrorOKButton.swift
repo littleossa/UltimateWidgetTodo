@@ -35,13 +35,6 @@ struct ErrorOKButtonIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Error OK Button"
     
-    @Parameter(title: "Error OK Button")
-    var id: String
-    
-    init() {
-        id = "errorOKButton"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapErrorOKButton()
         return .result()

@@ -41,13 +41,6 @@ struct ExtraPunctuationMarksKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "More punctuation marks key"
     
-    @Parameter(title: "More punctuation marks key")
-    var id: String
-    
-    init() {
-        id = "morePunctuationMarksKey"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapExtraPunctuationMarksKey()
         return .result()

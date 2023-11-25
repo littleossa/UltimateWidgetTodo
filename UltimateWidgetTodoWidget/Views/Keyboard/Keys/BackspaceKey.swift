@@ -50,13 +50,6 @@ struct BackspaceKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Backspace key"
     
-    @Parameter(title: "Backspace Key")
-    var id: String
-    
-    init() {
-        id = "backspaceKey"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapBackspaceKey()
         return .result()

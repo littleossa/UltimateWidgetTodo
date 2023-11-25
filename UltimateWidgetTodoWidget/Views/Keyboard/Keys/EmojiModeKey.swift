@@ -51,13 +51,6 @@ struct EmojiModeIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Emoji Mode key"
     
-    @Parameter(title: "Emoji Mode key")
-    var id: String
-    
-    init() {
-        id = "emojiModekey"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapEmojiModeKey()
         return .result()

@@ -50,13 +50,6 @@ struct AlphabetModeKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Alphabet Mode key"
     
-    @Parameter(title: "Alphabet Mode key")
-    var id: String
-    
-    init() {
-        id = "alphabetModekey"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapAlphabetModeKey()
         return .result()

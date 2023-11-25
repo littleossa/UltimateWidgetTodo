@@ -33,13 +33,6 @@ struct CloseEditItemViewButtonIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Close Edit Item View Button"
     
-    @Parameter(title: "Close Edit Item View Button")
-    var id: String
-    
-    init() {
-        id = "closeEditItemViewButton"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapCloseEditItemViewButton()
         return .result()

@@ -29,7 +29,7 @@ struct KeyboardEmojiKeyIntent: AppIntent {
     
     static var title: LocalizedStringResource = "Keyboard emoji key"
     
-    @Parameter(title: "Keyboard emoji key")
+    @Parameter(title: "Keyboard emoji key value")
     var emoji: String
     
     init() {}

@@ -52,13 +52,6 @@ struct ListScrollDownButtonIntent: AppIntent {
     
     static var title: LocalizedStringResource = "List Scroll Down Button"
     
-    @Parameter(title: "List Scroll Down Button")
-    var id: String
-    
-    init() {
-        self.id = "listScrollDown"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapScrollDownList()
         return .result()
@@ -69,13 +62,6 @@ struct ListScrollUpButtonIntent: AppIntent {
     
     static var title: LocalizedStringResource = "List Scroll Up Button"
     
-    @Parameter(title: "List Scroll Up Button")
-    var id: String
-    
-    init() {
-        self.id = "listScrollUp"
-    }
-    
     func perform() async throws -> some IntentResult {
         WidgetTodoCore.shared.onTapScrollUpList()
         return .result()
@@ -84,14 +70,7 @@ struct ListScrollUpButtonIntent: AppIntent {
 
 struct ListScrollDisabledButtonIntent: AppIntent {
     
-    static var title: LocalizedStringResource = "List Scroll Disable Button Intent"
-    
-    @Parameter(title: "List Scroll Disable Button Intent")
-    var id: String
-    
-    init() {
-        self.id = "ListScrollDisableButtonIntent"
-    }
+    static var title: LocalizedStringResource = "List Scroll Disable Button"
     
     func perform() async throws -> some IntentResult {
         print("This does not work")
