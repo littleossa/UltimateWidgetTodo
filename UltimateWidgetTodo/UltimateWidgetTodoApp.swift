@@ -15,13 +15,11 @@ struct UltimateWidgetTodoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                switch widgetInstallState {
-                case .checking, .installed:
-                    AppTitleView(installState: widgetInstallState)
-                case .error, .notInstall:
-                    OnboardingView()
-                }
+            switch widgetInstallState {
+            case .checking, .installed:
+                AppTitleView(installState: widgetInstallState)
+            case .error, .notInstall:
+                OnboardingView()
             }
         }
         .onChange(of: scenePhase) { _, newValue in
@@ -38,6 +36,7 @@ struct UltimateWidgetTodoApp: App {
         widgetInstallState = .checking
         
         do {
+            try await Task.sleep(for: .seconds(0.01))
             let info = try await WidgetCenter.shared.getInstalledWidgetInfo()
             
             if info.isEmpty {
