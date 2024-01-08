@@ -18,8 +18,16 @@ struct WidgetTodoProvider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<WidgetTodoEntry>) -> ()) {
         
-        // Entries are not used but it must be set for rendering the widget
-        let entries: [WidgetTodoEntry] = [WidgetTodoEntry(date: .now)]
+        var entries: [WidgetTodoEntry] = []
+        
+        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        let currentDate = Date()
+        for hourOffset in 0 ..< 5 {
+            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+            let entry = WidgetTodoEntry(date: entryDate)
+            entries.append(entry)
+        }
+        
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
