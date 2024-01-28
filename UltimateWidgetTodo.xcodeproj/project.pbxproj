@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9733A7532B65F55300970996 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9733A7522B65F55300970996 /* PrivacyInfo.xcprivacy */; };
 		975310FD2B03B0A4003582C2 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975310FC2B03B0A4003582C2 /* AddItemView.swift */; };
 		975484022AF277B100A09B11 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484012AF277B100A09B11 /* EditItemView.swift */; };
 		975484042AF2787500A09B11 /* WidgetKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975484032AF2787500A09B11 /* WidgetKeyboard.swift */; };
@@ -152,6 +153,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9733A7522B65F55300970996 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		975310FC2B03B0A4003582C2 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		975484012AF277B100A09B11 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		975484032AF2787500A09B11 /* WidgetKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKeyboard.swift; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				979E23A22AF12679003559D2 /* UltimateWidgetTodoApp.swift */,
+				9733A7522B65F55300970996 /* PrivacyInfo.xcprivacy */,
 				975484B82B01029E00A09B11 /* Views */,
 				975484B92B0102AD00A09B11 /* Extensions */,
 				979E23AA2AF1267A003559D2 /* Preview Content */,
@@ -710,6 +713,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9733A7532B65F55300970996 /* PrivacyInfo.xcprivacy in Resources */,
 				979E23AC2AF1267A003559D2 /* Preview Assets.xcassets in Resources */,
 				975484122AF4494300A09B11 /* Assets.xcassets in Resources */,
 			);
